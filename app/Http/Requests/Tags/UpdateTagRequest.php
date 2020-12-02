@@ -1,15 +1,15 @@
 <?php
 
-namespace App\Http\Requests\Categories;
+namespace App\Http\Requests\Tags;
 
 use Illuminate\Foundation\Http\FormRequest;
 
 /**
- * Class StoreCategoryRequest
+ * Class UpdateDictionaryRequest
+ * @property int $id
  * @property array $name
- * @property string $slug
  */
-class StoreCategoryRequest extends FormRequest
+class UpdateTagRequest extends FormRequest
 {
 
     /**
@@ -26,10 +26,9 @@ class StoreCategoryRequest extends FormRequest
     public function rules()
     {
         return [
+            'id' => 'required|int|exists:tags,id',
             'name' => 'required|array',
-            'name.*' => 'string|nullable|max:128',
-            'slug' => 'required|string|max:128|unique:categories,slug',
-            'active' => 'required|bool',
+            'name.*' => 'string|nullable|max:128'
         ];
     }
 

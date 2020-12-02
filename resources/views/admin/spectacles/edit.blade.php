@@ -30,6 +30,11 @@
                                      id="{{ $language->locale }}">
                                     <div class="m-3">
                                         @foreach($spectacle->getTranslatable() as $field)
+                                            @php
+                                                $oldLocale = old($field);
+                                                $oldLocaleVal = $oldLocale[$language->locale] ?? null;
+                                            @endphp
+
                                             <div class="form-group col-md-12 col-sm-12 col-xs-12">
                                                 <label class=""
                                                        for="{{ $name = $field . '[' . $language->locale . ']' }}">
@@ -40,7 +45,7 @@
                                                     type="text"
                                                     name="{{ $name }}"
                                                     id="{{ $name }}"
-                                                    value="{{ old($name, columnTrans($spectacle, $field, $language->locale)) }}" />
+                                                    value="{{ $oldLocaleVal ?? columnTrans($spectacle, $field, $language->locale) }}" />
                                                 @if($errors->has($name))
                                                     <span class="text-danger">{{ $errors->first($name) }}</span>
                                                 @endif
@@ -107,6 +112,46 @@
                             <span class="text-danger">{{ $errors->first($name) }}</span>
                         @endif
                         <span class="help-block">{{ __("cruds.spectacles.fields.{$name}_helper") }}</span>
+                    </div>
+
+                    <div class="form-group col-md-12 col-sm-12 col-xs-12">
+                        <label class="" for="{{ $name = 'category_ids' }}">{{ __('global.categories') }}</label>
+                        <div style="padding-bottom: 4px">
+                        <span class="btn btn-info btn-xs select-all"
+                              style="border-radius: 0">{{ __('global.select_all') }}</span>
+                            <span class="btn btn-info btn-xs deselect-all"
+                                  style="border-radius: 0">{{ __('global.deselect_all') }}</span>
+                        </div>
+                        <select class="form-control select2 {{ $errors->has($name) ? 'is-invalid' : '' }}"
+                                name="{{ $name }}[]"
+                                id="{{ $name }}" multiple >
+                            @foreach($categories as $id => $category)
+                                <option value="{{ $id }}" {{ in_array($id, old($name, $categoryIds)) ? 'selected' : '' }}>{{ $category }}</option>
+                            @endforeach
+                        </select>
+                        @if($errors->has($name))
+                            <span class="text-danger">{{ $errors->first($name) }}</span>
+                        @endif
+                    </div>
+
+                    <div class="form-group col-md-12 col-sm-12 col-xs-12">
+                        <label class="" for="{{ $name = 'tag_ids' }}">{{ __('global.tags') }}</label>
+                        <div style="padding-bottom: 4px">
+                        <span class="btn btn-info btn-xs select-all"
+                              style="border-radius: 0">{{ __('global.select_all') }}</span>
+                            <span class="btn btn-info btn-xs deselect-all"
+                                  style="border-radius: 0">{{ __('global.deselect_all') }}</span>
+                        </div>
+                        <select class="form-control select2 {{ $errors->has($name) ? 'is-invalid' : '' }}"
+                                name="{{ $name }}[]"
+                                id="{{ $name }}" multiple >
+                            @foreach($tags as $id => $tag)
+                                <option value="{{ $id }}" {{ in_array($id, old($name, $tagIds)) ? 'selected' : '' }}>{{ $tag }}</option>
+                            @endforeach
+                        </select>
+                        @if($errors->has($name))
+                            <span class="text-danger">{{ $errors->first($name) }}</span>
+                        @endif
                     </div>
 
                     <div class="form-group col-md-12 col-sm-12 col-xs-12">
@@ -287,14 +332,14 @@
                 }
             },
             init: function () {
-                @php $mediaList = $spectacle->getMedia($name = 'image_gallery'); @endphp
+                @php $mediaList = $spectacle->getMedia('image_gallery'); @endphp
                 @if($mediaList)
                     @foreach($mediaList as $media)
                         var file = {!! json_encode($media) !!}
                             this.options.addedfile.call(this, file)
                         this.options.thumbnail.call(this, file, '{{ $media->getUrl('thumb') }}')
                         file.previewElement.classList.add('dz-complete')
-                        $('form').append('<input type="hidden" name="{{ $name }}" value="' + file.file_name + '">')
+                        $('form').append('<input type="hidden" name="image_gallery[]" value="' + file.file_name + '">')
                         this.options.maxFiles = this.options.maxFiles - 1
                     @endforeach
                 @endif

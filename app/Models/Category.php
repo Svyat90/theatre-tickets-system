@@ -2,9 +2,8 @@
 
 namespace App\Models;
 
-use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
-use Spatie\Translatable\HasTranslations;
+use Illuminate\Database\Eloquent\Relations\BelongsToMany;
 
 /**
  * Class Dictionary
@@ -12,9 +11,9 @@ use Spatie\Translatable\HasTranslations;
  * @property array $name
  * @property string $slug
  */
-class Category extends Model
+class Category extends BaseModel
 {
-    use SoftDeletes, HasTranslations;
+    use SoftDeletes;
 
     /**
      * @var array|string[]
@@ -56,4 +55,13 @@ class Category extends Model
     {
         return $query->where('active', true);
     }
+
+    /**
+     * @return BelongsToMany
+     */
+    public function spectacles()
+    {
+        return $this->belongsToMany(Spectacle::class, 'spectacle_category', 'category_id', 'spectacle_id');
+    }
+
 }

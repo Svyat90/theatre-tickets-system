@@ -16,6 +16,8 @@ use App\Traits\MediaUploadingTrait;
 use App\Http\Requests\Spectacles\StoreSpectacleRequest;
 use App\Http\Requests\Spectacles\UpdateSpectacleRequest;
 use App\Http\Requests\Spectacles\MassDestroySpectacleRequest;
+use App\Repositories\CategoryRepository;
+use App\Repositories\TagRepository;
 
 class SpectacleController extends AdminController
 {
@@ -60,13 +62,18 @@ class SpectacleController extends AdminController
     }
 
     /**
-     * @param Spectacle $spectacle
+     * @param Spectacle          $spectacle
+     * @param CategoryRepository $categoryRepository
+     * @param TagRepository      $tagRepository
      *
      * @return View
      */
-    public function create(Spectacle $spectacle) : View
+    public function create(Spectacle $spectacle, CategoryRepository $categoryRepository, TagRepository $tagRepository) : View
     {
-        return view('admin.spectacles.create', compact('spectacle'));
+        $categories = $categoryRepository->getListForSelect();
+        $tags = $tagRepository->getListForSelect();
+
+        return view('admin.spectacles.create', compact('spectacle', 'categories', 'tags'));
     }
 
     /**
@@ -88,17 +95,26 @@ class SpectacleController extends AdminController
      */
     public function show(Spectacle $spectacle)
     {
+        $spectacle->load('categories', 'tags');
+
         return view('admin.spectacles.show', compact('spectacle'));
     }
 
     /**
-     * @param Spectacle $spectacle
+     * @param Spectacle          $spectacle
+     * @param CategoryRepository $categoryRepository
+     * @param TagRepository      $tagRepository
      *
      * @return Application|Factory|View
      */
-    public function edit(Spectacle $spectacle)
+    public function edit(Spectacle $spectacle, CategoryRepository $categoryRepository, TagRepository $tagRepository)
     {
-        return view('admin.spectacles.edit', compact('spectacle'));
+        $categories = $categoryRepository->getListForSelect();
+        $tags = $tagRepository->getListForSelect();
+        $categoryIds = $this->repository->getRelatedCategoryIds($spectacle);
+        $tagIds = $this->repository->getRelatedTagIds($spectacle);
+
+        return view('admin.spectacles.edit', compact('spectacle', 'categories', 'tags', 'categoryIds', 'tagIds'));
     }
 
     /**

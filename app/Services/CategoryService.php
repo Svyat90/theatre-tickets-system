@@ -8,8 +8,6 @@ use App\Http\Requests\Categories\StoreCategoryRequest;
 use App\Http\Requests\Categories\UpdateCategoryRequest;
 use App\Models\Category;
 use App\Repositories\CategoryRepository;
-use Carbon\Carbon;
-use Illuminate\Support\Collection;
 use Yajra\DataTables\Facades\DataTables;
 
 class CategoryService

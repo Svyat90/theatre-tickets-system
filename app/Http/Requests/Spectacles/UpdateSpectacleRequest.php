@@ -52,6 +52,10 @@ class UpdateSpectacleRequest extends FormRequest
             'image_detail' => 'required|string',
             'image_gallery' => 'required|array',
             'image_gallery.*' => 'required|string',
+            'category_ids'   => 'sometimes|array',
+            'category_ids.*' => 'integer|exists:categories,id',
+            'tag_ids'   => 'sometimes|array',
+            'tag_ids.*' => 'integer|exists:tags,id',
         ];
     }
 

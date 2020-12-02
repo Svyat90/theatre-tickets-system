@@ -53,4 +53,6 @@ return [
 	"logout" => "Logout",
     "welcome" => "Welcome to Admin Panel",
     "parent" => "Parent",
+    "tags" => "Tags",
+    "spectacles" => "Spectacles",
 ];

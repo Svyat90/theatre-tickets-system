@@ -23,6 +23,32 @@ class SpectacleRepository extends Model
     }
 
     /**
+     * @param Spectacle $spectacle
+     *
+     * @return array
+     */
+    public function getRelatedCategoryIds(Spectacle $spectacle) : array
+    {
+        return $spectacle
+            ->categories
+            ->pluck('id')
+            ->toArray();
+    }
+
+    /**
+     * @param Spectacle $spectacle
+     *
+     * @return array
+     */
+    public function getRelatedTagIds(Spectacle $spectacle) : array
+    {
+        return $spectacle
+            ->tags
+            ->pluck('id')
+            ->toArray();
+    }
+
+    /**
      * @return Collection
      */
     public function getCollectionToIndex() : Collection
@@ -37,23 +63,23 @@ class SpectacleRepository extends Model
      */
     public function saveSpectacle(array $data) : Spectacle
     {
-        $category = new Spectacle($data);
-        $category->save();
+        $spectacle = new Spectacle($data);
+        $spectacle->save();
 
-        return $category->refresh();
+        return $spectacle->refresh();
     }
 
     /**
      * @param array    $data
-     * @param Spectacle $category
+     * @param Spectacle $spectacle
      *
      * @return Spectacle
      */
-    public function updateData(array $data, Spectacle $category) : Spectacle
+    public function updateData(array $data, Spectacle $spectacle) : Spectacle
     {
-        $category->update($data);
+        $spectacle->update($data);
 
-        return $category->refresh();
+        return $spectacle->refresh();
     }
 
     /**

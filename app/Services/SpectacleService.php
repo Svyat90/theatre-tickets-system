@@ -10,6 +10,7 @@ use App\Models\Spectacle;
 use App\Repositories\SpectacleRepository;
 use Yajra\DataTables\Facades\DataTables;
 use Mockery\Exception;
+use Spatie\MediaLibrary\MediaCollections\Models\Media;
 
 class SpectacleService
 {
@@ -62,27 +63,42 @@ class SpectacleService
     {
         $inputData = $request->validated();
         $spectacle = $this->repository->saveSpectacle($inputData);
-        $this->handleUploadedImages($inputData, $spectacle);
+
+        $this->handleStoreUploadedImages($inputData, $spectacle);
+        $this->handleRelationships($spectacle, $request);
 
         return $spectacle;
     }
 
     /**
      * @param UpdateSpectacleRequest $request
-     * @param Spectacle              $category
+     * @param Spectacle              $spectacle
      *
      * @return Spectacle
      */
-    public function updateDictionary(UpdateSpectacleRequest $request, Spectacle $category) : Spectacle
+    public function updateDictionary(UpdateSpectacleRequest $request, Spectacle $spectacle) : Spectacle
     {
-        return $this->repository->updateData($request->validated(), $category);
+        $this->handleUpdateUploadedImages($request->validated(), $spectacle);
+        $this->handleRelationships($spectacle, $request);
+
+        return $this->repository->updateData($request->validated(), $spectacle);
+    }
+
+    /**
+     * @param Spectacle $spectacle
+     * @param StoreSpectacleRequest|UpdateSpectacleRequest $request
+     */
+    private function handleRelationships(Spectacle $spectacle, $request) : void
+    {
+        $spectacle->tags()->sync($request->tag_ids);
+        $spectacle->categories()->sync($request->category_ids);
     }
 
     /**
      * @param array     $inputData
      * @param Spectacle $spectacle
      */
-    private function handleUploadedImages(array $inputData, Spectacle $spectacle) : void
+    private function handleStoreUploadedImages(array $inputData, Spectacle $spectacle) : void
     {
         $fields = ['image_grid', 'image_detail', 'image_gallery'];
 
@@ -102,12 +118,25 @@ class SpectacleService
     }
 
     /**
+     * @param array     $inputData
+     * @param Spectacle $spectacle
+     */
+    private function handleUpdateUploadedImages(array $inputData, Spectacle $spectacle) : void
+    {
+        if (! $inputData['image_grid']) {
+            if ($spectacle->image_grid !== $inputData['image_grid']) {
+                $this->attachMedia($spectacle, 'image_grid', $inputData['image_grid']);
+            }
+
+        } else {
+            $this->detachMedia($spectacle, 'image_grid');
+        }
+    }
+
+    /**
      * @param Spectacle $spectacle
      * @param string    $field
      * @param string    $name
-     *
-     * @throws \Spatie\MediaLibrary\MediaCollections\Exceptions\FileDoesNotExist
-     * @throws \Spatie\MediaLibrary\MediaCollections\Exceptions\FileIsTooBig
      */
     private function attachMedia(Spectacle $spectacle, string $field, string $name) : void
     {
@@ -119,4 +148,19 @@ class SpectacleService
         } catch (Exception $e) {}
     }
 
+    /**
+     * @param Spectacle $spectacle
+     * @param string    $field
+     */
+    private function detachMedia(Spectacle $spectacle, string $field) : void
+    {
+        try {
+            $spectacle
+                ->getMedia($field)
+                ->each(function (Media $media) {
+                    $media->delete();
+                });
+
+        } catch (Exception $e) {}
+    }
 }

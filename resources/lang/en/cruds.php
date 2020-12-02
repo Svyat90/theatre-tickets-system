@@ -73,4 +73,12 @@ return [
             'active_helper'       => ''
         ],
     ],
+    'tags'                     => [
+        'title'          => 'Tags',
+        'title_singular' => 'Tag',
+        'fields'         => [
+            'name'              => 'Name',
+            'name_helper'       => '',
+        ],
+    ],
 ];

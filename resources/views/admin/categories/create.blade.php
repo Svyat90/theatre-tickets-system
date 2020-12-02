@@ -24,6 +24,8 @@
 
                         <div class="tab-content">
                             @foreach($languages as $language)
+                                @php $oldLocale = old('name'); @endphp
+
                                 <div class="tab-pane {{ $loop->index === 0 ? 'show active' : '' }}" role="tabpanel"
                                      id="{{ $language->locale }}">
                                     <div class="m-3">
@@ -35,7 +37,7 @@
                                                    type="text"
                                                    name={{ $name }}"
                                                    id={{ $name }}"
-                                                   value="{{ old($name, '') }}">
+                                                   value="{{ $oldLocale[$language->locale] ?? "" }}">
                                             @if($errors->has($name))
                                                 <span class="text-danger">{{ $errors->first($name) }}</span>
                                             @endif
