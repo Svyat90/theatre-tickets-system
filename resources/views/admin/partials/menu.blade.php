@@ -16,7 +16,17 @@
                 </li>
 
                 <li class="nav-item">
-                    <a href="{{ route("admin.categories.index") }}" class="nav-link {{ request()->is("admin/categories") ? 'active' : '' }}" >
+                    <a href="{{ route("admin.spectacles.index") }}" class="nav-link {{ request()->is("admin/spectacles") || request()->is("admin/spectacles/*") ? 'active' : '' }}" >
+                        <i class="fa-fw nav-icon fas fa-book">
+                        </i>
+                        <p>
+                            {{ trans('cruds.spectacles.title') }}
+                        </p>
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a href="{{ route("admin.categories.index") }}" class="nav-link {{ request()->is("admin/categories") || request()->is("admin/categories/*") ? 'active' : '' }}" >
                         <i class="fa-fw nav-icon fas fa-book">
                         </i>
                         <p>

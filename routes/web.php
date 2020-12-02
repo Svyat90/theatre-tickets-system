@@ -6,7 +6,7 @@ use App\Http\Controllers\Admin\HomeController;
 use App\Http\Controllers\Admin\ChangePasswordController;
 use App\Http\Controllers\Admin\CategoryController;
 use App\Http\Controllers\Admin\TranslationController;
-use App\Http\Controllers\Admin\LanguageController;
+use App\Http\Controllers\Admin\SpectacleController;
 
 /*
 |--------------------------------------------------------------------------
@@ -32,6 +32,11 @@ Route::prefix('admin')->as('admin.')->middleware('auth')->group(function () {
     // Categories
     Route::delete('categories/multi-destroy', [CategoryController::class, 'massDestroy'])->name('categories.multi_destroy');
     Route::resource('categories', 'Admin\CategoryController');
+
+    // Spectacles
+    Route::delete('spectacles/multi-destroy', [SpectacleController::class, 'massDestroy'])->name('spectacles.multi_destroy');
+    Route::post('spectacles/media', [SpectacleController::class, 'storeMedia'])->name('spectacles.store_media');
+    Route::resource('spectacles', 'Admin\SpectacleController');
 
     // Translations
     Route::get('translations', [TranslationController::class, 'edit'])->name('translations.edit');

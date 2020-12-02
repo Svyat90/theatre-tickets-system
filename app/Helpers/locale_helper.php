@@ -29,7 +29,7 @@ if (! function_exists('columnTrans')) {
         $locales = $model->getTranslations($column);
 
         return $locale
-            ? $locales[$locale]
+            ? $locales[$locale] ?? ''
             : $locales[app()->getLocale()] ?? '';
     }
 
@@ -44,7 +44,7 @@ if (! function_exists('isTranslable')) {
      */
     function isTranslable(Model $model, string $column) : bool
     {
-        return in_array($column, $model->translatable ?? []);
+        return in_array($column, $model->getTranslatable() ?? []);
     }
 
 }
