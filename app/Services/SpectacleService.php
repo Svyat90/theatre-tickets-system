@@ -9,8 +9,8 @@ use App\Http\Requests\Spectacles\UpdateSpectacleRequest;
 use App\Models\Spectacle;
 use App\Repositories\SpectacleRepository;
 use Yajra\DataTables\Facades\DataTables;
-use Mockery\Exception;
-use Spatie\MediaLibrary\MediaCollections\Models\Media;
+use App\Helpers\MediaHelper;
+use App\Helpers\ImageHelper;
 
 class SpectacleService
 {
@@ -49,8 +49,9 @@ class SpectacleService
             ->editColumn('active', fn ($row) => LabelHelper::boolLabel($row->active))
             ->editColumn('start_at', fn ($row) => $row->start_at)
             ->editColumn('created_at', fn ($row) => $row->created_at)
+            ->addColumn('image', fn ($row) => ImageHelper::thumbImage($row->image_grid))
             ->addColumn('actions', fn ($row) => DatatablesHelper::renderActionsRow($row, 'spectacles'))
-            ->rawColumns(['actions', 'placeholder', 'active'])
+            ->rawColumns(['actions', 'placeholder', 'active', 'image'])
             ->make(true);
     }
 
@@ -64,7 +65,7 @@ class SpectacleService
         $inputData = $request->validated();
         $spectacle = $this->repository->saveSpectacle($inputData);
 
-        $this->handleStoreUploadedImages($inputData, $spectacle);
+        $this->handleMediaFiles($request, $spectacle);
         $this->handleRelationships($spectacle, $request);
 
         return $spectacle;
@@ -78,10 +79,21 @@ class SpectacleService
      */
     public function updateDictionary(UpdateSpectacleRequest $request, Spectacle $spectacle) : Spectacle
     {
-        $this->handleUpdateUploadedImages($request->validated(), $spectacle);
+        $this->handleMediaFiles($request, $spectacle);
         $this->handleRelationships($spectacle, $request);
 
         return $this->repository->updateData($request->validated(), $spectacle);
+    }
+
+    /**
+     * @param StoreSpectacleRequest|UpdateSpectacleRequest   $request
+     * @param Spectacle $spectacle
+     */
+    private function handleMediaFiles($request, Spectacle $spectacle) : void
+    {
+        MediaHelper::handleMedia($spectacle, 'image_grid', $request->image_grid);
+        MediaHelper::handleMedia($spectacle, 'image_detail', $request->image_detail);
+        MediaHelper::handleMediaCollect($spectacle, 'image_gallery', $request->image_gallery);
     }
 
     /**
@@ -94,73 +106,4 @@ class SpectacleService
         $spectacle->categories()->sync($request->category_ids);
     }
 
-    /**
-     * @param array     $inputData
-     * @param Spectacle $spectacle
-     */
-    private function handleStoreUploadedImages(array $inputData, Spectacle $spectacle) : void
-    {
-        $fields = ['image_grid', 'image_detail', 'image_gallery'];
-
-        collect($fields)->each(function ($field) use ($spectacle, $inputData) {
-            $value = $inputData[$field];
-            if (! $value) return;
-
-            if (is_array($value)) {
-                foreach ($value as $val) {
-                    $this->attachMedia($spectacle, $field, $val);
-                }
-                return;
-            }
-
-            $this->attachMedia($spectacle, $field, $value);
-        });
-    }
-
-    /**
-     * @param array     $inputData
-     * @param Spectacle $spectacle
-     */
-    private function handleUpdateUploadedImages(array $inputData, Spectacle $spectacle) : void
-    {
-        if (! $inputData['image_grid']) {
-            if ($spectacle->image_grid !== $inputData['image_grid']) {
-                $this->attachMedia($spectacle, 'image_grid', $inputData['image_grid']);
-            }
-
-        } else {
-            $this->detachMedia($spectacle, 'image_grid');
-        }
-    }
-
-    /**
-     * @param Spectacle $spectacle
-     * @param string    $field
-     * @param string    $name
-     */
-    private function attachMedia(Spectacle $spectacle, string $field, string $name) : void
-    {
-        try {
-            $spectacle
-                ->addMedia(storage_path('tmp/uploads/' . $name))
-                ->toMediaCollection($field);
-
-        } catch (Exception $e) {}
-    }
-
-    /**
-     * @param Spectacle $spectacle
-     * @param string    $field
-     */
-    private function detachMedia(Spectacle $spectacle, string $field) : void
-    {
-        try {
-            $spectacle
-                ->getMedia($field)
-                ->each(function (Media $media) {
-                    $media->delete();
-                });
-
-        } catch (Exception $e) {}
-    }
 }

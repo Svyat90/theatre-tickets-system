@@ -5,7 +5,8 @@ namespace App\Http\Requests\Spectacles;
 use Illuminate\Foundation\Http\FormRequest;
 
 /**
- * Class StoreCategoryRequest
+ * Class StoreSpectacleRequest
+ *
  * @property array $name
  * @property array $author
  * @property array $producer
@@ -15,6 +16,11 @@ use Illuminate\Foundation\Http\FormRequest;
  * @property int $duration
  * @property string $start_at
  * @property boolean $active
+ * @property string $image_grid
+ * @property string $image_detail
+ * @property array $image_gallery
+ * @property array $category_ids
+ * @property array $tag_ids
  */
 class StoreSpectacleRequest extends FormRequest
 {

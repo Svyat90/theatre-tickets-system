@@ -213,7 +213,7 @@
             removedfile: function (file) {
                 file.previewElement.remove()
                 if (file.status !== 'error') {
-                    $('form').find('input[name="file"]').remove()
+                    $('form').find('input[name="image_grid"]').remove()
                     this.options.maxFiles = this.options.maxFiles + 1
                 }
             },
@@ -256,7 +256,7 @@
             removedfile: function (file) {
                 file.previewElement.remove()
                 if (file.status !== 'error') {
-                    $('form').find('input[name="file"]').remove()
+                    $('form').find('input[name="image_detail"]').remove()
                     this.options.maxFiles = this.options.maxFiles + 1
                 }
             },

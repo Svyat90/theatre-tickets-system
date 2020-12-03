@@ -4,6 +4,7 @@ return [
     'base' => [
         'fields'         => [
             'id'                => 'ID',
+            'image'             => 'Image',
             'created_at'        => 'Created at',
             'updated_at'        => 'Updated at',
             'deleted_at'        => 'Deleted at',

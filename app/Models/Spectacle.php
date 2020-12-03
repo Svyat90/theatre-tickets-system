@@ -6,6 +6,9 @@ use Spatie\MediaLibrary\HasMedia;
 use Spatie\MediaLibrary\InteractsWithMedia;
 use Spatie\MediaLibrary\MediaCollections\Models\Media;
 use Illuminate\Database\Eloquent\Relations\BelongsToMany;
+use Illuminate\Support\Collection;
+use Spatie\MediaLibrary\MediaCollections\MediaCollection;
+use Spatie\Image\Exceptions\InvalidManipulation;
 
 /**
  * Class Spectacle
@@ -19,9 +22,9 @@ use Illuminate\Database\Eloquent\Relations\BelongsToMany;
  * @property int $duration
  * @property int $min_age
  * @property bool $active
- * @property string $image_grid
- * @property string $image_detail
- * @property string $image_gallery
+ * @property Media $image_grid
+ * @property Media $image_detail
+ * @property MediaCollection $image_gallery
  */
 class Spectacle extends BaseModel implements HasMedia
 {
@@ -43,16 +46,11 @@ class Spectacle extends BaseModel implements HasMedia
     ];
 
     /**
-     * @param Media|null $media
-     *
-     * @throws \Spatie\Image\Exceptions\InvalidManipulation
+     * @var string[]
      */
-    public function registerMediaConversions(Media $media = null) : void
-    {
-        $this->addMediaConversion('thumb')
-            ->width(150)
-            ->sharpen(10);
-    }
+    protected $appends = [
+        'image_grid', 'image_detail', 'image_gallery'
+    ];
 
     /**
      * @return BelongsToMany
@@ -68,6 +66,71 @@ class Spectacle extends BaseModel implements HasMedia
     public function tags()
     {
         return $this->belongsToMany(Tag::class, 'spectacle_tag', 'spectacle_id', 'tag_id');
+    }
+
+    /**
+     * @param Media|null $media
+     *
+     * @throws InvalidManipulation
+     */
+    public function registerMediaConversions(Media $media = null) : void
+    {
+        $this->addMediaConversion('thumb')
+            ->width(50)
+            ->width(50)
+            ->sharpen(10);
+    }
+
+    /**
+     * @return Media|null
+     */
+    public function getImageGridAttribute()
+    {
+        if (! $media = $this->getMedia('image_grid')->last()) {
+            return null;
+        }
+
+        return $this->fillMedia($media);
+    }
+
+    /**
+     * @return Media|null
+     */
+    public function getImageDetailAttribute()
+    {
+        if (! $media = $this->getMedia('image_detail')->last()) {
+            return null;
+        }
+
+        return $this->fillMedia($media);
+    }
+
+    /**
+     * @return Collection|null
+     */
+    public function getImageGalleryAttribute()
+    {
+        if (! $mediaCollect = $this->getMedia('image_gallery')) {
+            return null;
+        }
+
+        return $mediaCollect->map(function (Media $media) {
+            return $this->fillMedia($media);
+        });
+    }
+
+    /**
+     * @param Media $media
+     *
+     * @return Media
+     */
+    private function fillMedia(Media $media)
+    {
+        $media->url = $media->getUrl();
+        $media->file_name = $media->getAttribute('file_name');
+        $media->thumb = $media->getUrl('thumb');
+
+        return $media;
     }
 
 }

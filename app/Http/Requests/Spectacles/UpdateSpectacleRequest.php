@@ -6,6 +6,7 @@ use Illuminate\Foundation\Http\FormRequest;
 
 /**
  * Class UpdateDictionaryRequest
+ *
  * @property int $id
  * @property array $name
  * @property array $author
@@ -16,6 +17,11 @@ use Illuminate\Foundation\Http\FormRequest;
  * @property int $duration
  * @property string $start_at
  * @property boolean $active
+ * @property string $image_grid
+ * @property string $image_detail
+ * @property array $image_gallery
+ * @property array $category_ids
+ * @property array $tag_ids
  */
 class UpdateSpectacleRequest extends FormRequest
 {

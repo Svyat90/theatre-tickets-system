@@ -223,7 +223,7 @@
             removedfile: function (file) {
                 file.previewElement.remove()
                 if (file.status !== 'error') {
-                    $('form').find('input[name="file"]').remove()
+                    $('form').find('input[name="image_grid"]').remove()
                     this.options.maxFiles = this.options.maxFiles + 1
                 }
             },
@@ -275,7 +275,7 @@
             removedfile: function (file) {
                 file.previewElement.remove()
                 if (file.status !== 'error') {
-                    $('form').find('input[name="file"]').remove()
+                    $('form').find('input[name="image_detail"]').remove()
                     this.options.maxFiles = this.options.maxFiles + 1
                 }
             },
@@ -327,7 +327,7 @@
             removedfile: function (file) {
                 file.previewElement.remove()
                 if (file.status !== 'error') {
-                    $('form').find('input[name="file"]').remove()
+                    $('form').find('input[id="image_gallery_' + file.id + '"]').remove()
                     this.options.maxFiles = this.options.maxFiles + 1
                 }
             },
@@ -339,7 +339,7 @@
                             this.options.addedfile.call(this, file)
                         this.options.thumbnail.call(this, file, '{{ $media->getUrl('thumb') }}')
                         file.previewElement.classList.add('dz-complete')
-                        $('form').append('<input type="hidden" name="image_gallery[]" value="' + file.file_name + '">')
+                        $('form').append('<input type="hidden" id="image_gallery_{{ $media->id }}" name="image_gallery[]" value="' + file.file_name + '">')
                         this.options.maxFiles = this.options.maxFiles - 1
                     @endforeach
                 @endif

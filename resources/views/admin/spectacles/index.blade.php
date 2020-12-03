@@ -24,6 +24,9 @@
                         {{ __('cruds.base.fields.id') }}
                     </th>
                     <th>
+                        {{ __('cruds.base.fields.image') }}
+                    </th>
+                    <th>
                         {{ __('cruds.spectacles.fields.name') }} ({{ app()->getLocale() }})
                     </th>
                     <th>
@@ -105,6 +108,7 @@
                 columns: [
                     {data: 'placeholder', name: 'placeholder'},
                     {data: 'id', name: 'id'},
+                    {data: 'image', name: 'image'},
                     {data: 'name', name: 'name'},
                     {data: 'author', name: 'author'},
                     {data: 'producer', name: 'producer'},
