@@ -13,7 +13,7 @@ use App\Models\Blog\ArticleCategory;
 use App\Http\Requests\Blog\ArticleCategories\UpdateArticleCategoryRequest;
 use App\Http\Requests\Blog\ArticleCategories\MassDestroyArticleCategoryRequest;
 use App\Http\Requests\Blog\ArticleCategories\StoreArticleCategoryRequest;
-use App\Services\Articles\ArticleCategoryService;
+use App\Services\Blog\ArticleCategoryService;
 
 class ArticleCategoryController extends AdminController
 {

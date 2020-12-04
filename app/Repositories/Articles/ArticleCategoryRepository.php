@@ -11,12 +11,17 @@ class ArticleCategoryRepository extends Model
 {
 
     /**
+     * @param int $exceptId
+     *
      * @return Collection
      */
-    public function getListForSelect() : Collection
+    public function getListForSelect(int $exceptId = 0) : Collection
     {
         return ArticleCategory::query()
             ->get()
+            ->filter(function ($item) use ($exceptId) {
+                return $item->id !== $exceptId;
+            })
             ->groupBy('id', true)
             ->map(function (Collection $items) {
                 return columnTrans($items->shift(), 'name');

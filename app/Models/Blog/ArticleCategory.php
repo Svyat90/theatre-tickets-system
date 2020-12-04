@@ -3,14 +3,16 @@
 namespace App\Models\Blog;
 
 use Illuminate\Database\Eloquent\SoftDeletes;
-use Illuminate\Database\Eloquent\Relations\BelongsTo;
+use Illuminate\Database\Eloquent\Relations\HasMany;
 use App\Models\BaseModel;
+use Illuminate\Support\Collection;
 
 /**
  * Class Dictionary
  * @property int $id
  * @property array $name
  * @property string $slug
+ * @property Collection articles
  */
 class ArticleCategory extends BaseModel
 {
@@ -34,26 +36,11 @@ class ArticleCategory extends BaseModel
     ];
 
     /**
-     * @var string[]
+     * @return HasMany
      */
-    protected $casts = [
-        'active' => 'boolean',
-        'name' => 'json'
-    ];
-
-    /**
-     * @var string[]
-     */
-    protected $hidden = [
-        'active', 'created_at', 'updated_at', 'deleted_at'
-    ];
-
-//    /**
-//     * @return BelongsTo
-//     */
-//    public function articles()
-//    {
-//        return $this->belongsTo(Article::class, 'article_category_id', 'category_id', 'article_id');
-//    }
+    public function articles()
+    {
+        return $this->hasMany(Article::class);
+    }
 
 }

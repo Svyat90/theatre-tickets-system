@@ -55,7 +55,7 @@
                     </a>
                 </li>
 
-                <li class="nav-item has-treeview {{ request()->is('admin/article_categories*') ? 'menu-open' : '' }}">
+                <li class="nav-item has-treeview {{ request()->is('admin/article_categories*') || request()->is("admin/articles*") ? 'menu-open' : '' }}">
                     <a class="nav-link nav-dropdown-toggle" href="#">
                         <i class="fa-fw nav-icon fas fa-file-alt"></i>
                         <p>
@@ -70,6 +70,15 @@
                                 </i>
                                 <p>
                                     {{ trans('cruds.categories.title') }}
+                                </p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="{{ route("admin.articles.index") }}" class="nav-link {{ request()->is("admin/articles") || request()->is("admin/articles/*") ? 'active' : '' }}" >
+                                <i class="fa-fw nav-icon fas fa-book">
+                                </i>
+                                <p>
+                                    {{ trans('cruds.articles.title') }}
                                 </p>
                             </a>
                         </li>

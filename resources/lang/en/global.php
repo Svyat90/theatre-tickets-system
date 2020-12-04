@@ -59,5 +59,6 @@ return [
     "spectacles" => "Spectacles",
     "pages" => "Pages",
     "articles" => "Articles",
+    "article_category" => "Article Category",
     "blog" => "Blog",
 ];

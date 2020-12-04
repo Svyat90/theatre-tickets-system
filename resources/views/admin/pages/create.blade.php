@@ -114,8 +114,8 @@
                     <div class="form-group col-md-4 col-sm-4 col-xs-4">
                         <label class="required" for="{{ $name = 'on_header' }}">{{ __("cruds.pages.fields.$name") }}</label>
                         <select name="{{ $name }}" id="{{ $name }}" class="form-control">
-                            <option value="0" {{ old($name, null) === "0" ? 'selected' : '' }}>{{ __('global.no') }}</option>
-                            <option value="1" {{ old($name, null) === "1" ? 'selected' : '' }}>{{ __('global.yes') }}</option>
+                            <option value="0" {{ old($name, null) == "0" ? 'selected' : '' }}>{{ __('global.no') }}</option>
+                            <option value="1" {{ old($name, null) == "1" ? 'selected' : '' }}>{{ __('global.yes') }}</option>
                         </select>
                         @if($errors->has($name))
                             <span class="text-danger">{{ $errors->first($name) }}</span>
@@ -126,8 +126,8 @@
                     <div class="form-group col-md-4 col-sm-4 col-xs-4">
                         <label class="required" for="{{ $name = 'on_footer' }}">{{ __("cruds.pages.fields.$name") }}</label>
                         <select name="{{ $name }}" id="{{ $name }}" class="form-control">
-                            <option value="0" {{ old($name, null) === "0" ? 'selected' : '' }}>{{ __('global.no') }}</option>
-                            <option value="1" {{ old($name, null) === "1" ? 'selected' : '' }}>{{ __('global.yes') }}</option>
+                            <option value="0" {{ old($name, null) == "0" ? 'selected' : '' }}>{{ __('global.no') }}</option>
+                            <option value="1" {{ old($name, null) == "1" ? 'selected' : '' }}>{{ __('global.yes') }}</option>
                         </select>
                         @if($errors->has($name))
                             <span class="text-danger">{{ $errors->first($name) }}</span>
@@ -138,8 +138,8 @@
                     <div class="form-group col-md-4 col-sm-4 col-xs-4">
                         <label class="required" for="{{ $name = 'active' }}">{{ __("cruds.pages.fields.$name") }}</label>
                         <select name="{{ $name }}" id="{{ $name }}" class="form-control">
-                            <option value="0" {{ old($name, null) === "0" ? 'selected' : '' }}>{{ __('global.no') }}</option>
-                            <option value="1" {{ old($name, null) === "1" ? 'selected' : '' }}>{{ __('global.yes') }}</option>
+                            <option value="0" {{ old($name, null) == "0" ? 'selected' : '' }}>{{ __('global.no') }}</option>
+                            <option value="1" {{ old($name, null) == "1" ? 'selected' : '' }}>{{ __('global.yes') }}</option>
                         </select>
                         @if($errors->has($name))
                             <span class="text-danger">{{ $errors->first($name) }}</span>

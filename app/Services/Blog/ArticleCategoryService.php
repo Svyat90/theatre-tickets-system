@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Services\Articles;
+namespace App\Services\Blog;
 
 use Yajra\DataTables\Facades\DataTables;
 use App\Helpers\LabelHelper;
