@@ -58,4 +58,6 @@ return [
     "tags" => "Tags",
     "spectacles" => "Spectacles",
     "pages" => "Pages",
+    "articles" => "Articles",
+    "blog" => "Blog",
 ];

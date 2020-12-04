@@ -9,6 +9,7 @@ use App\Http\Controllers\Admin\TranslationController;
 use App\Http\Controllers\Admin\SpectacleController;
 use App\Http\Controllers\Admin\TagController;
 use App\Http\Controllers\Admin\PageController;
+use App\Http\Controllers\Admin\Blog\ArticleCategoryController;
 
 /*
 |--------------------------------------------------------------------------
@@ -21,7 +22,7 @@ use App\Http\Controllers\Admin\PageController;
 |
 */
 
-Auth::routes();
+Auth::routes(['register' => false]);
 
 Route::get('/', function () {
     return view('welcome');
@@ -40,6 +41,12 @@ Route::prefix('admin')->as('admin.')->middleware('auth')->group(function () {
     Route::delete('pages/multi-destroy', [PageController::class, 'massDestroy'])->name('pages.multi_destroy');
     Route::post('pages/media', [PageController::class, 'storeMedia'])->name('pages.store_media');
     Route::resource('pages', 'Admin\PageController');
+
+    /** Blog **/
+    // ArticleCategories
+    Route::delete('article_categories/multi-destroy', [ArticleCategoryController::class, 'massDestroy'])->name('article_categories.multi_destroy');
+    Route::resource('article_categories', 'Admin\Blog\ArticleCategoryController');
+    /** Blog **/
 
     // Categories
     Route::delete('categories/multi-destroy', [CategoryController::class, 'massDestroy'])->name('categories.multi_destroy');

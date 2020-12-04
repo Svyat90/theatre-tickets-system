@@ -34,6 +34,18 @@ return [
             'active_helper'       => '',
         ],
     ],
+    'article_categories'                     => [
+        'title'          => 'Article Categories',
+        'title_singular' => 'Article Category',
+        'fields'         => [
+            'name'              => 'Name',
+            'name_helper'       => '',
+            'slug'              => 'Slug',
+            'slug_helper'       => '',
+            'active'              => 'Active',
+            'active_helper'       => '',
+        ],
+    ],
     'spectacles'                     => [
         'title'          => 'Spectacles',
         'title_singular' => 'Spectacle',
