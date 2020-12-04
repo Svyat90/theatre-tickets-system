@@ -1,20 +1,19 @@
 <?php
 
-namespace App\Models\Blog;
+namespace App\Models\Workers;
 
 use Illuminate\Database\Eloquent\SoftDeletes;
-use Illuminate\Database\Eloquent\Relations\HasMany;
 use App\Models\BaseModel;
 use Illuminate\Support\Collection;
 
 /**
- * Class ArticleCategory
+ * Class WorkerCategory
  * @property int $id
  * @property array $name
  * @property string $slug
  * @property Collection articles
  */
-class ArticleCategory extends BaseModel
+class WorkerCategory extends BaseModel
 {
     use SoftDeletes;
 
@@ -26,7 +25,7 @@ class ArticleCategory extends BaseModel
     /**
      * @var string
      */
-    public $table = 'article_categories';
+    public $table = 'worker_categories';
 
     /**
      * @var string[]
@@ -35,12 +34,12 @@ class ArticleCategory extends BaseModel
         'name', 'slug', 'active'
     ];
 
-    /**
-     * @return HasMany
-     */
-    public function articles()
-    {
-        return $this->hasMany(Article::class);
-    }
+//    /**
+//     * @return HasMany
+//     */
+//    public function articles()
+//    {
+//        return $this->hasMany(Worker::class);
+//    }
 
 }

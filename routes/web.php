@@ -11,6 +11,7 @@ use App\Http\Controllers\Admin\TagController;
 use App\Http\Controllers\Admin\PageController;
 use App\Http\Controllers\Admin\Blog\ArticleCategoryController;
 use App\Http\Controllers\Admin\Blog\ArticleController;
+use App\Http\Controllers\Admin\Workers\WorkerCategoryController;
 
 /*
 |--------------------------------------------------------------------------
@@ -51,6 +52,10 @@ Route::prefix('admin')->as('admin.')->middleware('auth')->group(function () {
     // ArticleCategories
     Route::delete('article_categories/multi-destroy', [ArticleCategoryController::class, 'massDestroy'])->name('article_categories.multi_destroy');
     Route::resource('article_categories', 'Admin\Blog\ArticleCategoryController');
+
+    // WorkerCategories
+    Route::delete('worker_categories/multi-destroy', [WorkerCategoryController::class, 'massDestroy'])->name('worker_categories.multi_destroy');
+    Route::resource('worker_categories', 'Admin\Workers\WorkerCategoryController');
 
     // Categories
     Route::delete('categories/multi-destroy', [CategoryController::class, 'massDestroy'])->name('categories.multi_destroy');

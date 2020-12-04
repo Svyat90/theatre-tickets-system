@@ -85,6 +85,36 @@
                     </ul>
                 </li>
 
+                <li class="nav-item has-treeview {{ request()->is('admin/worker_categories*') || request()->is("admin/articles*") ? 'menu-open' : '' }}">
+                    <a class="nav-link nav-dropdown-toggle" href="#">
+                        <i class="fa-fw nav-icon fas fa-file-alt"></i>
+                        <p>
+                            {{ trans('global.workers') }}
+                            <i class="right fa fa-fw fa-angle-left nav-icon"></i>
+                        </p>
+                    </a>
+                    <ul class="nav nav-treeview">
+                        <li class="nav-item">
+                            <a href="{{ route("admin.worker_categories.index") }}" class="nav-link {{ request()->is("admin/worker_categories") || request()->is("admin/worker_categories/*") ? 'active' : '' }}" >
+                                <i class="fa-fw nav-icon fas fa-book">
+                                </i>
+                                <p>
+                                    {{ trans('cruds.categories.title') }}
+                                </p>
+                            </a>
+                        </li>
+{{--                        <li class="nav-item">--}}
+{{--                            <a href="{{ route("admin.articles.index") }}" class="nav-link {{ request()->is("admin/articles") || request()->is("admin/articles/*") ? 'active' : '' }}" >--}}
+{{--                                <i class="fa-fw nav-icon fas fa-book">--}}
+{{--                                </i>--}}
+{{--                                <p>--}}
+{{--                                    {{ trans('cruds.articles.title') }}--}}
+{{--                                </p>--}}
+{{--                            </a>--}}
+{{--                        </li>--}}
+                    </ul>
+                </li>
+
                 <li class="nav-item has-treeview {{ request()->is('admin/translations*') ? 'menu-open' : '' }}">
                     <a class="nav-link nav-dropdown-toggle" href="#">
                         <i class="fa-fw nav-icon fas fa-file-alt"></i>

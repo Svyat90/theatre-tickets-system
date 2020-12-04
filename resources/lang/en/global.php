@@ -61,4 +61,5 @@ return [
     "articles" => "Articles",
     "article_category" => "Article Category",
     "blog" => "Blog",
+    "workers" => "Workers",
 ];

@@ -46,6 +46,18 @@ return [
             'active_helper'       => '',
         ],
     ],
+    'worker_categories'                     => [
+        'title'          => 'Worker Categories',
+        'title_singular' => 'Worker Category',
+        'fields'         => [
+            'name'              => 'Name',
+            'name_helper'       => '',
+            'slug'              => 'Slug',
+            'slug_helper'       => '',
+            'active'              => 'Active',
+            'active_helper'       => '',
+        ],
+    ],
     'spectacles'                     => [
         'title'          => 'Spectacles',
         'title_singular' => 'Spectacle',
