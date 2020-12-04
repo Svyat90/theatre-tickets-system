@@ -36,6 +36,16 @@
                 </li>
 
                 <li class="nav-item">
+                    <a href="{{ route("admin.pages.index") }}" class="nav-link {{ request()->is("admin/pages") || request()->is("admin/pages/*") ? 'active' : '' }}" >
+                        <i class="fa-fw nav-icon fas fa-book">
+                        </i>
+                        <p>
+                            {{ trans('cruds.pages.title') }}
+                        </p>
+                    </a>
+                </li>
+
+                <li class="nav-item">
                     <a href="{{ route("admin.tags.index") }}" class="nav-link {{ request()->is("admin/tags") || request()->is("admin/tags/*") ? 'active' : '' }}" >
                         <i class="fa-fw nav-icon fas fa-book">
                         </i>

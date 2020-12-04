@@ -8,6 +8,7 @@ use App\Http\Controllers\Admin\CategoryController;
 use App\Http\Controllers\Admin\TranslationController;
 use App\Http\Controllers\Admin\SpectacleController;
 use App\Http\Controllers\Admin\TagController;
+use App\Http\Controllers\Admin\PageController;
 
 /*
 |--------------------------------------------------------------------------
@@ -34,6 +35,11 @@ Route::prefix('admin')->as('admin.')->middleware('auth')->group(function () {
     Route::delete('spectacles/multi-destroy', [SpectacleController::class, 'massDestroy'])->name('spectacles.multi_destroy');
     Route::post('spectacles/media', [SpectacleController::class, 'storeMedia'])->name('spectacles.store_media');
     Route::resource('spectacles', 'Admin\SpectacleController');
+
+    // Pages
+    Route::delete('pages/multi-destroy', [PageController::class, 'massDestroy'])->name('pages.multi_destroy');
+    Route::post('pages/media', [PageController::class, 'storeMedia'])->name('pages.store_media');
+    Route::resource('pages', 'Admin\PageController');
 
     // Categories
     Route::delete('categories/multi-destroy', [CategoryController::class, 'massDestroy'])->name('categories.multi_destroy');

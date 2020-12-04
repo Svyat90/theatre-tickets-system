@@ -4,10 +4,19 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 use Spatie\Translatable\HasTranslations;
+use Spatie\MediaLibrary\MediaCollections\Models\Media;
+use Spatie\MediaLibrary\InteractsWithMedia;
+use Spatie\MediaLibrary\HasMedia;
+use Spatie\Image\Exceptions\InvalidManipulation;
 
-abstract class BaseModel extends Model
+/**
+ * Class BaseModel
+ *
+ * @property Media $image
+ */
+abstract class BaseModel extends Model implements HasMedia
 {
-    use HasTranslations;
+    use HasTranslations, InteractsWithMedia;
 
     /**
      * @var array|string[]
@@ -15,11 +24,64 @@ abstract class BaseModel extends Model
     protected array $translatable = [];
 
     /**
+     * @var array
+     */
+    protected $appends = ['image'];
+
+    /**
      * @return array|string[]
      */
     public function getTranslatable() : array
     {
         return $this->translatable;
+    }
+
+    /**
+     * @param $query
+     * @return mixed
+     */
+    public function scopeActive($query)
+    {
+        return $query->where('active', true);
+    }
+
+    /**
+     * @param Media|null $media
+     *
+     * @throws InvalidManipulation
+     */
+    public function registerMediaConversions(Media $media = null) : void
+    {
+        $this->addMediaConversion('thumb')
+            ->width(50)
+            ->width(50)
+            ->sharpen(10);
+    }
+
+    /**
+     * @return Media|null
+     */
+    public function getImageAttribute()
+    {
+        if (! $media = $this->getMedia('image')->last()) {
+            return null;
+        }
+
+        return $this->fillMedia($media);
+    }
+
+    /**
+     * @param Media $media
+     *
+     * @return Media
+     */
+    protected function fillMedia(Media $media)
+    {
+        $media->url = $media->getUrl();
+        $media->file_name = $media->getAttribute('file_name');
+        $media->thumb = $media->getUrl('thumb');
+
+        return $media;
     }
 
 }

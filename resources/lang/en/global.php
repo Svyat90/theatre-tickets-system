@@ -28,6 +28,8 @@ return [
 		"delete" => "Delete selected",
 		"zero_selected" => "No rows selected",
     ],
+    "no" => "No",
+    "yes" => "Yes",
 	"back_to_list" => "Back to list",
 	"categories" => "Categories",
 	"sub_categories" => "Sub Categories",
@@ -55,4 +57,5 @@ return [
     "parent" => "Parent",
     "tags" => "Tags",
     "spectacles" => "Spectacles",
+    "pages" => "Pages",
 ];

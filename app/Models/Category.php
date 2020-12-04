@@ -48,15 +48,6 @@ class Category extends BaseModel
     ];
 
     /**
-     * @param $query
-     * @return mixed
-     */
-    public function scopeActive($query)
-    {
-        return $query->where('active', true);
-    }
-
-    /**
      * @return BelongsToMany
      */
     public function spectacles()

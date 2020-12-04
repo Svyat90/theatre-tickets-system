@@ -8,7 +8,6 @@ use Spatie\MediaLibrary\MediaCollections\Models\Media;
 use Illuminate\Database\Eloquent\Relations\BelongsToMany;
 use Illuminate\Support\Collection;
 use Spatie\MediaLibrary\MediaCollections\MediaCollection;
-use Spatie\Image\Exceptions\InvalidManipulation;
 
 /**
  * Class Spectacle
@@ -26,10 +25,8 @@ use Spatie\Image\Exceptions\InvalidManipulation;
  * @property Media $image_detail
  * @property MediaCollection $image_gallery
  */
-class Spectacle extends BaseModel implements HasMedia
+class Spectacle extends BaseModel
 {
-    use InteractsWithMedia;
-
     /**
      * @var array|string[]
      */
@@ -69,19 +66,6 @@ class Spectacle extends BaseModel implements HasMedia
     }
 
     /**
-     * @param Media|null $media
-     *
-     * @throws InvalidManipulation
-     */
-    public function registerMediaConversions(Media $media = null) : void
-    {
-        $this->addMediaConversion('thumb')
-            ->width(50)
-            ->width(50)
-            ->sharpen(10);
-    }
-
-    /**
      * @return Media|null
      */
     public function getImageGridAttribute()
@@ -117,20 +101,6 @@ class Spectacle extends BaseModel implements HasMedia
         return $mediaCollect->map(function (Media $media) {
             return $this->fillMedia($media);
         });
-    }
-
-    /**
-     * @param Media $media
-     *
-     * @return Media
-     */
-    private function fillMedia(Media $media)
-    {
-        $media->url = $media->getUrl();
-        $media->file_name = $media->getAttribute('file_name');
-        $media->thumb = $media->getUrl('thumb');
-
-        return $media;
     }
 
 }
