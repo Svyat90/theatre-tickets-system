@@ -16,26 +16,6 @@
                 </li>
 
                 <li class="nav-item">
-                    <a href="{{ route("admin.spectacles.index") }}" class="nav-link {{ request()->is("admin/spectacles") || request()->is("admin/spectacles/*") ? 'active' : '' }}" >
-                        <i class="fa-fw nav-icon fas fa-book">
-                        </i>
-                        <p>
-                            {{ trans('cruds.spectacles.title') }}
-                        </p>
-                    </a>
-                </li>
-
-                <li class="nav-item">
-                    <a href="{{ route("admin.categories.index") }}" class="nav-link {{ request()->is("admin/categories") || request()->is("admin/categories/*") ? 'active' : '' }}" >
-                        <i class="fa-fw nav-icon fas fa-book">
-                        </i>
-                        <p>
-                            {{ trans('cruds.categories.title') }}
-                        </p>
-                    </a>
-                </li>
-
-                <li class="nav-item">
                     <a href="{{ route("admin.pages.index") }}" class="nav-link {{ request()->is("admin/pages") || request()->is("admin/pages/*") ? 'active' : '' }}" >
                         <i class="fa-fw nav-icon fas fa-book">
                         </i>
@@ -53,6 +33,36 @@
                             {{ trans('cruds.tags.title') }}
                         </p>
                     </a>
+                </li>
+
+                <li class="nav-item has-treeview {{ request()->is('admin/spectacles*') || request()->is("admin/categories*") ? 'menu-open' : '' }}">
+                    <a class="nav-link nav-dropdown-toggle" href="#">
+                        <i class="fa-fw nav-icon fas fa-file-alt"></i>
+                        <p>
+                            {{ trans('global.spectacles') }}
+                            <i class="right fa fa-fw fa-angle-left nav-icon"></i>
+                        </p>
+                    </a>
+                    <ul class="nav nav-treeview">
+                        <li class="nav-item">
+                            <a href="{{ route("admin.categories.index") }}" class="nav-link {{ request()->is("admin/categories") || request()->is("admin/categories/*") ? 'active' : '' }}" >
+                                <i class="fa-fw nav-icon fas fa-book">
+                                </i>
+                                <p>
+                                    {{ trans('cruds.categories.title') }}
+                                </p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="{{ route("admin.spectacles.index") }}" class="nav-link {{ request()->is("admin/spectacles") || request()->is("admin/spectacles/*") ? 'active' : '' }}" >
+                                <i class="fa-fw nav-icon fas fa-book">
+                                </i>
+                                <p>
+                                    {{ trans('global.list') }}
+                                </p>
+                            </a>
+                        </li>
+                    </ul>
                 </li>
 
                 <li class="nav-item has-treeview {{ request()->is('admin/article_categories*') || request()->is("admin/articles*") ? 'menu-open' : '' }}">
@@ -85,11 +95,11 @@
                     </ul>
                 </li>
 
-                <li class="nav-item has-treeview {{ request()->is('admin/worker_categories*') || request()->is("admin/articles*") ? 'menu-open' : '' }}">
+                <li class="nav-item has-treeview {{ request()->is('admin/worker_categories*') || request()->is("admin/workers*") ? 'menu-open' : '' }}">
                     <a class="nav-link nav-dropdown-toggle" href="#">
                         <i class="fa-fw nav-icon fas fa-file-alt"></i>
                         <p>
-                            {{ trans('global.workers') }}
+                            {{ trans('global.team') }}
                             <i class="right fa fa-fw fa-angle-left nav-icon"></i>
                         </p>
                     </a>
@@ -103,15 +113,15 @@
                                 </p>
                             </a>
                         </li>
-{{--                        <li class="nav-item">--}}
-{{--                            <a href="{{ route("admin.articles.index") }}" class="nav-link {{ request()->is("admin/articles") || request()->is("admin/articles/*") ? 'active' : '' }}" >--}}
-{{--                                <i class="fa-fw nav-icon fas fa-book">--}}
-{{--                                </i>--}}
-{{--                                <p>--}}
-{{--                                    {{ trans('cruds.articles.title') }}--}}
-{{--                                </p>--}}
-{{--                            </a>--}}
-{{--                        </li>--}}
+                        <li class="nav-item">
+                            <a href="{{ route("admin.workers.index") }}" class="nav-link {{ request()->is("admin/workers") || request()->is("admin/workers/*") ? 'active' : '' }}" >
+                                <i class="fa-fw nav-icon fas fa-book">
+                                </i>
+                                <p>
+                                    {{ trans('cruds.workers.title') }}
+                                </p>
+                            </a>
+                        </li>
                     </ul>
                 </li>
 

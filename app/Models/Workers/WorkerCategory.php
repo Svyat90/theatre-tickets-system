@@ -5,9 +5,11 @@ namespace App\Models\Workers;
 use Illuminate\Database\Eloquent\SoftDeletes;
 use App\Models\BaseModel;
 use Illuminate\Support\Collection;
+use Illuminate\Database\Eloquent\Relations\HasMany;
 
 /**
  * Class WorkerCategory
+ *
  * @property int $id
  * @property array $name
  * @property string $slug
@@ -34,12 +36,12 @@ class WorkerCategory extends BaseModel
         'name', 'slug', 'active'
     ];
 
-//    /**
-//     * @return HasMany
-//     */
-//    public function articles()
-//    {
-//        return $this->hasMany(Worker::class);
-//    }
+    /**
+     * @return HasMany
+     */
+    public function workers()
+    {
+        return $this->hasMany(Worker::class);
+    }
 
 }

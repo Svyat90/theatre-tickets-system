@@ -2,8 +2,6 @@
 
 namespace App\Providers;
 
-use App\Repositories\LanguageRepository;
-use App\Services\LanguageService;
 use Illuminate\Support\Facades\Schema;
 use Illuminate\Support\ServiceProvider;
 

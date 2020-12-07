@@ -62,4 +62,6 @@ return [
     "article_category" => "Article Category",
     "blog" => "Blog",
     "workers" => "Workers",
+    "worker_category" => "Worker Category",
+    "team" => "Team",
 ];

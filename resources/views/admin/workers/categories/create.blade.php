@@ -53,8 +53,8 @@
                     <div class="form-group col-md-12 col-sm-12 col-xs-12">
                         <label class="required" for="{{ $name = 'active' }}">{{ __("cruds.worker_categories.fields.$name") }}</label>
                         <select name="{{ $name }}" id="{{ $name }}" class="form-control">
-                            <option value="0" {{ old($name, null) === "0" ? 'selected' : '' }}>{{ __('global.no') }}</option>
-                            <option value="1" {{ old($name, null) === "1" ? 'selected' : '' }}>{{ __('global.yes') }}</option>
+                            <option value="0" {{ old($name, null) == "0" ? 'selected' : '' }}>{{ __('global.no') }}</option>
+                            <option value="1" {{ old($name, null) == "1" ? 'selected' : '' }}>{{ __('global.yes') }}</option>
                         </select>
                         @if($errors->has($name))
                             <span class="text-danger">{{ $errors->first($name) }}</span>

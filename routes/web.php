@@ -12,6 +12,7 @@ use App\Http\Controllers\Admin\PageController;
 use App\Http\Controllers\Admin\Blog\ArticleCategoryController;
 use App\Http\Controllers\Admin\Blog\ArticleController;
 use App\Http\Controllers\Admin\Workers\WorkerCategoryController;
+use App\Http\Controllers\Admin\Workers\WorkerController;
 
 /*
 |--------------------------------------------------------------------------
@@ -52,6 +53,11 @@ Route::prefix('admin')->as('admin.')->middleware('auth')->group(function () {
     // ArticleCategories
     Route::delete('article_categories/multi-destroy', [ArticleCategoryController::class, 'massDestroy'])->name('article_categories.multi_destroy');
     Route::resource('article_categories', 'Admin\Blog\ArticleCategoryController');
+
+    // Workers
+    Route::delete('workers/multi-destroy', [WorkerController::class, 'massDestroy'])->name('workers.multi_destroy');
+    Route::post('workers/media', [WorkerController::class, 'storeMedia'])->name('workers.store_media');
+    Route::resource('workers', 'Admin\Workers\WorkerController');
 
     // WorkerCategories
     Route::delete('worker_categories/multi-destroy', [WorkerCategoryController::class, 'massDestroy'])->name('worker_categories.multi_destroy');

@@ -161,5 +161,21 @@ return [
             'image'              => 'Image',
             'image_helper'       => '',
         ],
+    ],
+    'workers'                     => [
+        'title'          => 'Workers',
+        'title_singular' => 'Worker',
+        'fields'         => [
+            'name'              => 'Name',
+            'name_helper'       => '',
+            'title'              => 'Title',
+            'title_helper'       => '',
+            'active'              => 'Active',
+            'active_helper'       => '',
+            'on_home'              => 'On Home',
+            'on_home_helper'       => '',
+            'image'              => 'Image',
+            'image_helper'       => '',
+        ],
     ]
 ];
