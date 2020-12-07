@@ -11,9 +11,17 @@ use App\Repositories\PageRepository;
 use Yajra\DataTables\Facades\DataTables;
 use App\Helpers\MediaHelper;
 use App\Helpers\ImageHelper;
+use App\Traits\FilterConstantsTrait;
 
 class PageService
 {
+    use FilterConstantsTrait;
+
+    public const TYPE_SLIDER = 'slider';
+    public const TYPE_GALLERY = 'gallery';
+    public const TYPE_QUOTE = 'quote';
+    public const TYPE_ASSEMBLY = 'assembly';
+
     /**
      * @var PageRepository
      */
@@ -42,6 +50,7 @@ class PageService
             ->editColumn('id', fn ($row) => $row->id)
             ->editColumn('name', fn ($row) => columnTrans($row, 'name'))
             ->editColumn('title', fn ($row) => columnTrans($row, 'title'))
+            ->editColumn('type', fn ($row) => $row->type)
             ->editColumn('order', fn ($row) => $row->order)
             ->editColumn('on_header', fn ($row) => LabelHelper::boolLabel($row->on_header))
             ->editColumn('on_footer', fn ($row) => LabelHelper::boolLabel($row->on_footer))
@@ -61,7 +70,7 @@ class PageService
      */
     public function createPage(StorePageRequest $request) : Page
     {
-        $page = $this->repository->savePage($request->validated());
+        $page = $this->repository->savePage($request->all());
 
         $this->handleMediaFiles($request, $page);
         $this->handleParent($page, $request->parent_id);
@@ -70,12 +79,20 @@ class PageService
     }
 
     /**
+     * @return array
+     */
+    public function getTypes() : array
+    {
+        return $this->filterConstants('TYPE');
+    }
+
+    /**
      * @param UpdatePageRequest $request
      * @param Page              $page
      *
      * @return Page
      */
-    public function updateDictionary(UpdatePageRequest $request, Page $page) : Page
+    public function updatePage(UpdatePageRequest $request, Page $page) : Page
     {
         $this->handleMediaFiles($request, $page);
         $this->handleParent($page, $request->parent_id);

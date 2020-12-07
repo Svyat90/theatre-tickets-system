@@ -6,6 +6,7 @@ use App\Models\Page;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Collection;
 use App\Helpers\SlugHelper;
+use App\Services\PageService;
 
 class PageRepository extends Model
 {
@@ -26,6 +27,39 @@ class PageRepository extends Model
             ->map(function (Collection $items) {
                 return columnTrans($items->shift(), 'name');
             });
+    }
+
+    /**
+     * @return Collection
+     */
+    public function getSliderList() : Collection
+    {
+        return Page::query()
+            ->active()
+            ->where('type', PageService::TYPE_SLIDER)
+            ->get();
+    }
+
+    /**
+     * @return Collection
+     */
+    public function getAssemblyList() : Collection
+    {
+        return Page::query()
+            ->active()
+            ->where('type', PageService::TYPE_ASSEMBLY)
+            ->get();
+    }
+
+    /**
+     * @return Collection
+     */
+    public function getQuotesList() : Collection
+    {
+        return Page::query()
+            ->active()
+            ->where('type', PageService::TYPE_QUOTE)
+            ->get();
     }
 
     /**
@@ -55,6 +89,8 @@ class PageRepository extends Model
      */
     public function savePage(array $data) : Page
     {
+        unset($data['image']);
+
         $page = new Page($data);
         $page->slug = SlugHelper::generate('page');
         $page->save();

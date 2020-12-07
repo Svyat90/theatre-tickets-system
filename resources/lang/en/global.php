@@ -63,4 +63,5 @@ return [
     "workers" => "Workers",
     "worker_category" => "Worker Category",
     "team" => "Team",
+    "type" => "Type",
 ];

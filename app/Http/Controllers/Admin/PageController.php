@@ -59,8 +59,9 @@ class PageController extends AdminController
     public function create(Page $page) : View
     {
         $pages = $this->service->repository->getListForSelect();
+        $types = $this->service->getTypes();
 
-        return view('admin.pages.create', compact('page',  'pages'));
+        return view('admin.pages.create', compact('page',  'pages', 'types'));
     }
 
     /**
@@ -94,8 +95,9 @@ class PageController extends AdminController
     {
         $pages = $this->service->repository->getListForSelect($page->id);
         $parentId = $this->service->repository->getParentId($page);
+        $types = $this->service->getTypes();
 
-        return view('admin.pages.edit', compact('page', 'pages', 'parentId'));
+        return view('admin.pages.edit', compact('page', 'pages', 'parentId', 'types'));
     }
 
     /**
@@ -106,7 +108,7 @@ class PageController extends AdminController
      */
     public function update(UpdatePageRequest $request, Page $page)
     {
-        $page = $this->service->updateDictionary($request, $page);
+        $page = $this->service->updatePage($request, $page);
 
         return redirect()->route('admin.pages.show', $page->id);
     }

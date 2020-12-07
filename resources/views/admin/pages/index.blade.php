@@ -33,6 +33,9 @@
                         {{ __('cruds.pages.fields.title') }} ({{ app()->getLocale() }})
                     </th>
                     <th>
+                        {{ __('cruds.pages.fields.type') }}
+                    </th>
+                    <th>
                         {{ __('cruds.pages.fields.order') }}
                     </th>
                     <th>
@@ -108,6 +111,7 @@
                     {data: 'image', name: 'image'},
                     {data: 'name', name: 'name'},
                     {data: 'title', name: 'title'},
+                    {data: 'type', name: 'type'},
                     {data: 'order', name: 'order'},
                     {data: 'on_header', name: 'on_header'},
                     {data: 'on_footer', name: 'on_footer'},

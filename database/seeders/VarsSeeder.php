@@ -12,21 +12,36 @@ class VarsSeeder extends Seeder
      * @var array
      */
     private array $vars = [
-        'spectacles' => [
-            'ru' => 'Спектакли',
-            'ro' => 'Спектакли',
-            'en' => 'Spectacles'
+        'home_add_to_cart' => [
+            'ru' => 'Добавить в корзину',
+            'ro' => 'Adaugă în coș',
+            'en' => 'Add to cart'
         ],
-        'gallery' => [
-            'ru' => 'Галерея',
-            'ro' => 'Галерея',
-            'en' => 'Gallery'
+        'home_famous_quotes' => [
+            'ru' => 'Известные цитаты',
+            'ro' => 'Citate celebre',
+            'en' => 'Famous quotes'
         ],
-        'contacts' => [
-            'ru' => 'Контакты',
-            'ro' => 'Контакты',
-            'en' => 'Contact'
+        'home_in_assembly' => [
+            'ru' => 'В сборке',
+            'ro' => 'In montare',
+            'en' => 'In assembly'
         ],
+//        'spectacles' => [
+//            'ru' => 'Спектакли',
+//            'ro' => 'Спектакли',
+//            'en' => 'Spectacles'
+//        ],
+//        'gallery' => [
+//            'ru' => 'Галерея',
+//            'ro' => 'Галерея',
+//            'en' => 'Gallery'
+//        ],
+//        'contacts' => [
+//            'ru' => 'Контакты',
+//            'ro' => 'Контакты',
+//            'en' => 'Contact'
+//        ],
     ];
 
     /**

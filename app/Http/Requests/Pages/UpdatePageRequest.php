@@ -3,6 +3,8 @@
 namespace App\Http\Requests\Pages;
 
 use Illuminate\Foundation\Http\FormRequest;
+use Illuminate\Validation\Rule;
+use App\Services\PageService;
 
 /**
  * Class UpdateDictionaryRequest
@@ -31,9 +33,11 @@ class UpdatePageRequest extends FormRequest
     }
 
     /**
+     * @param PageService $pageService
+     *
      * @return string[]
      */
-    public function rules()
+    public function rules(PageService $pageService)
     {
         return [
             'parent_id' => 'sometimes|int',
@@ -51,7 +55,8 @@ class UpdatePageRequest extends FormRequest
             'content' => 'sometimes|array',
             'content.*' => 'string|nullable',
             'date' => 'sometimes|nullable|string',
-            'image' => 'sometimes|string'
+            'image' => 'sometimes|string',
+            'type' => 'sometimes|nullable|' . Rule::in($pageService->getTypes())
         ];
     }
 

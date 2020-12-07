@@ -35,8 +35,13 @@ class Page extends BaseModel
      */
     protected $fillable = [
         'name', 'title', 'description', 'content', 'url',
-        'order', 'on_header', 'on_footer', 'active', 'date'
+        'order', 'on_header', 'on_footer', 'active', 'date', 'type'
     ];
+
+    /**
+     * @var string[]
+     */
+    protected $dates = ['date'];
 
     /**
      * @return BelongsTo

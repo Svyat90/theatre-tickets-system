@@ -1,0 +1,228 @@
+.contacte {
+  background-color: #161616;
+}
+
+.contacte .main-content {
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.contacte .form-heading {
+  margin-left: 62px;
+}
+
+.contacts {
+  width: 540px;
+}
+
+.contacts .form-heading {
+  margin-top: 45px;
+  margin-bottom: 40px;
+}
+
+.write-us .form-heading {
+  margin-bottom: 46px;
+}
+
+.write-us {
+  width: 540px;
+  margin-left: 30px;
+  padding: 45px 70px 30px;
+  background-color: #202020;
+}
+
+.contacts-info {
+  margin-bottom: 73px;
+  font-size: 14px;
+  line-height: 25px;
+  color: #FFFFFF;
+}
+
+.info-name {
+  color: #afafaf;
+}
+
+.contacts-map {
+  display: block;
+  cursor: pointer;
+  position: relative;
+  height: 277px;
+ /* padding-top: 37px;
+  padding-bottom: 80px;
+  /* background-image: url(../img/contacts-map.jpg); */
+  background-size: 100%;
+  text-decoration: none !important;
+}
+
+.map-message {
+  z-index: 1;
+  width: 249px;
+  position: absolute;
+  top: 37px;
+  left: calc(50% - 125px);
+  margin: 0 auto;
+  padding: 19px 12px 16px 16px;
+  background-image: url(../img/contacts-map-msg.png);
+  background-size: 100%;
+}
+
+.map-text {
+  margin-bottom: 15px;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 20px;
+  color: #161616;
+}
+
+.form-input-wr {
+  position: relative;
+  margin-bottom: 21px;
+  cursor: pointer;
+}
+
+.form-input-wr:first-child,
+.form-input-wr:nth-child(4) {
+  margin-bottom: 28px;
+}
+
+.input-text:focus~.floating-label,
+.input-text:not(:focus):valid~.floating-label {
+  top: -6px;
+  left: 20px;
+  font-size: 10px;
+  opacity: 1;
+  color: #afafaf;
+}
+
+.input-text {
+  width: 100%;
+  font-size: 14px;
+  padding-left: 20px;
+  height: 50px;
+  background-color: #202020;
+  border: 1px solid #4F4F4F;
+  border-radius: 4px;
+  color: #fff;
+  cursor: pointer;
+}
+
+.input-text:focus {
+  outline: none;
+  border: 1px solid #afafaf;
+}
+
+.floating-label {
+  font-size: 14px;
+  line-height: 14px;
+  display: block;
+  background-color: #202020;
+  color: #6d6d6d;
+  padding-left: 3px;
+  padding-right: 3px;
+  position: absolute;
+  pointer-events: none;
+  height: 15px;
+  left: 20px;
+  top: 17px;
+  transition: 0.2s ease all;
+}
+
+.form-input-wr textarea {
+  height: 110px;
+  padding-top: 10px;
+  margin-bottom: 0;
+}
+
+.bt {
+  display: block;
+  width: 171px;
+  height: 50px;
+  text-align: center;
+  margin: 0 auto;
+  border: none;
+  outline: none !important;
+  transition: background-color ease 0.4s;
+}
+
+.home-btn {
+  background-color: #BA2126;
+}
+
+.home-btn:hover {
+  background-color: #ca3136;
+}
+
+.home-link {
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 30px;
+  color: #C6A564 !important;
+  text-decoration: none !important;
+  text-transform: uppercase;
+}
+
+@media (max-width: 1200px) {
+  .contacts-map {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+}
+
+@media (max-width: 991px) {
+  .contacte .main-content {
+    flex-direction: column;
+    padding-top: 0;
+  }
+
+  .contacte .heading-imgwr .bg {
+    background-position: center;
+  }
+
+  .contacte .main-content>* {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .contacts-info {
+    text-align: center;
+  }
+
+  .contacts {
+    margin-bottom: 30px;
+  }
+
+  .write-us {
+    margin-left: 0;
+  }
+}
+
+@media (max-width: 767px) {
+  .contacte .heading-imgwr .bg {
+    height: 350px;
+    background-size: cover;
+    align-items: start;
+  }
+
+  .contacts .form-heading,
+  .write-us .form-heading {
+    margin-left: 0;
+  }
+}
+
+@media (max-width: 575px) {
+  .contacte .heading-imgwr .bg {
+    height: calc(46vw);
+    align-items: center;
+  }
+
+  .contacte .main-content {
+    padding-left: 13px !important;
+    padding-right: 13px;
+  }
+
+  .write-us {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}

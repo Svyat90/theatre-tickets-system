@@ -144,6 +144,8 @@ return [
             'on_footer_helper'       => '',
             'image'              => 'Image',
             'image_helper'       => '',
+            'type'              => 'Type',
+            'type_helper'       => '',
         ],
     ],
     'articles'                     => [

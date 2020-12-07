@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Database\Eloquent\Model;
+use App\Repositories\VarRepository;
 
 if (! function_exists('localeColumn')) {
 
@@ -45,6 +46,22 @@ if (! function_exists('isTranslable')) {
     function isTranslable(Model $model, string $column) : bool
     {
         return in_array($column, $model->getTranslatable() ?? []);
+    }
+
+}
+
+if (! function_exists('getVar')) {
+
+    /**
+     * @param string $key
+     *
+     * @return string|null
+     */
+    function getVar(string $key) : ? string
+    {
+        $service = app(VarRepository::class);
+
+        return $service->getVar($key);
     }
 
 }

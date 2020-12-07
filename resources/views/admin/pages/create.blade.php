@@ -112,6 +112,21 @@
                     </div>
 
                     <div class="form-group col-md-4 col-sm-4 col-xs-4">
+                        <label class="" for="{{ $name = 'type' }}">{{ __('global.type') }}</label>
+                        <select class="form-control {{ $errors->has($name) ? 'is-invalid' : '' }}"
+                                name="{{ $name }}"
+                                id="{{ $name }}" >
+                            <option>{{ trans('global.pleaseSelect') }}</option>
+                            @foreach($types as $id => $type)
+                                <option value="{{ $type }}" {{ $id == old($name, 0) ? 'selected' : '' }}>{{ $type }}</option>
+                            @endforeach
+                        </select>
+                        @if($errors->has($name))
+                            <span class="text-danger">{{ $errors->first($name) }}</span>
+                        @endif
+                    </div>
+
+                    <div class="form-group col-md-4 col-sm-4 col-xs-4">
                         <label class="required" for="{{ $name = 'on_header' }}">{{ __("cruds.pages.fields.$name") }}</label>
                         <select name="{{ $name }}" id="{{ $name }}" class="form-control">
                             <option value="0" {{ old($name, null) == "0" ? 'selected' : '' }}>{{ __('global.no') }}</option>

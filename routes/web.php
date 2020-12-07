@@ -7,7 +7,6 @@ use App\Http\Controllers\Admin\ChangePasswordController;
 use App\Http\Controllers\Admin\CategoryController;
 use App\Http\Controllers\Admin\TranslationController;
 use App\Http\Controllers\Admin\SpectacleController;
-use \App\Http\Controllers\Admin\VarController;
 use App\Http\Controllers\Admin\PageController;
 use App\Http\Controllers\Admin\Blog\ArticleCategoryController;
 use App\Http\Controllers\Admin\Blog\ArticleController;
@@ -30,6 +29,9 @@ Auth::routes(['register' => false]);
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('/', 'Front\HomeController@redirectToHome');
+Route::get('home', 'Front\HomeController@index')->name('front.home');
 
 // Admin
 Route::prefix('admin')->as('admin.')->middleware('auth')->group(function () {

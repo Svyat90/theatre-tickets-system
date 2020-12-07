@@ -10,6 +10,20 @@ class VarRepository extends Model
 {
 
     /**
+     * @param string $key
+     *
+     * @return string|null
+     */
+    public function getVar(string $key) : ? string
+    {
+        return VarModel::query()
+            ->where('key_ru', $key . '_ru')
+            ->orWhere('key_ro', $key . '_ro')
+            ->orWhere('key_en', $key . '_en')
+            ->value('val_' . app()->getLocale());
+    }
+
+    /**
      * @return Collection
      */
     public function getCollectionToIndex() : Collection
