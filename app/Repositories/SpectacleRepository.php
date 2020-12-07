@@ -5,6 +5,7 @@ namespace App\Repositories;
 use App\Models\Spectacle;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Collection;
+use App\Helpers\SlugHelper;
 
 class SpectacleRepository extends Model
 {
@@ -36,19 +37,6 @@ class SpectacleRepository extends Model
     }
 
     /**
-     * @param Spectacle $spectacle
-     *
-     * @return array
-     */
-    public function getRelatedTagIds(Spectacle $spectacle) : array
-    {
-        return $spectacle
-            ->tags
-            ->pluck('id')
-            ->toArray();
-    }
-
-    /**
      * @return Collection
      */
     public function getCollectionToIndex() : Collection
@@ -64,6 +52,7 @@ class SpectacleRepository extends Model
     public function saveSpectacle(array $data) : Spectacle
     {
         $spectacle = new Spectacle($data);
+        $spectacle->slug = SlugHelper::generate('spectacle');
         $spectacle->save();
 
         return $spectacle->refresh();

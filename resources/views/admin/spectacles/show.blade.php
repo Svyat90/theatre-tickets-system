@@ -66,18 +66,10 @@
                     {{ trans('global.categories') }}
                 </a>
             </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#access_users" role="tab" data-toggle="tab">
-                    {{ trans('global.tags') }}
-                </a>
-            </li>
         </ul>
         <div class="tab-content">
             <div class="tab-pane" role="tabpanel" id="related_categories">
                 @includeIf('admin.partials.relationships.related-categories', ['categories' => $spectacle->categories])
-            </div>
-            <div class="tab-pane" role="tabpanel" id="access_users">
-                @includeIf('admin.partials.relationships.related-tags', ['tags' => $spectacle->tags])
             </div>
         </div>
     </div>

@@ -98,12 +98,22 @@ return [
             'active_helper'       => ''
         ],
     ],
-    'tags'                     => [
-        'title'          => 'Tags',
-        'title_singular' => 'Tag',
+    'vars'                     => [
+        'title'          => 'Vars',
+        'title_singular' => 'Var',
         'fields'         => [
-            'name'              => 'Name',
-            'name_helper'       => '',
+            'key_ru'              => 'Key (ru)',
+            'key_ru_helper'       => '',
+            'key_ro'              => 'Key (ro)',
+            'key_ro_helper'       => '',
+            'key_en'              => 'Key (en)',
+            'key_en_helper'       => '',
+            'val_ru'              => 'Val (ru)',
+            'val_ru_helper'       => '',
+            'val_ro'              => 'Val (ro)',
+            'val_ro_helper'       => '',
+            'val_en'              => 'Val (en)',
+            'val_en_helper'       => '',
         ],
     ],
     'pages'                     => [

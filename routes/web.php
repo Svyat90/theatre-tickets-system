@@ -7,7 +7,7 @@ use App\Http\Controllers\Admin\ChangePasswordController;
 use App\Http\Controllers\Admin\CategoryController;
 use App\Http\Controllers\Admin\TranslationController;
 use App\Http\Controllers\Admin\SpectacleController;
-use App\Http\Controllers\Admin\TagController;
+use \App\Http\Controllers\Admin\VarController;
 use App\Http\Controllers\Admin\PageController;
 use App\Http\Controllers\Admin\Blog\ArticleCategoryController;
 use App\Http\Controllers\Admin\Blog\ArticleController;
@@ -67,9 +67,8 @@ Route::prefix('admin')->as('admin.')->middleware('auth')->group(function () {
     Route::delete('categories/multi-destroy', [CategoryController::class, 'massDestroy'])->name('categories.multi_destroy');
     Route::resource('categories', 'Admin\CategoryController');
 
-    // Tags
-    Route::delete('tags/multi-destroy', [TagController::class, 'massDestroy'])->name('tags.multi_destroy');
-    Route::resource('tags', 'Admin\TagController');
+    // Vars
+    Route::resource('vars', 'Admin\VarController')->except('create', 'store', 'destroy');
 
     // Translations
     Route::get('translations', [TranslationController::class, 'edit'])->name('translations.edit');

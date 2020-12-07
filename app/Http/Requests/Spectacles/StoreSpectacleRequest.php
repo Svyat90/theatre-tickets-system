@@ -11,7 +11,6 @@ use Illuminate\Foundation\Http\FormRequest;
  * @property array $author
  * @property array $producer
  * @property array $description
- * @property string $slug
  * @property int $min_age
  * @property int $duration
  * @property string $start_at
@@ -20,7 +19,6 @@ use Illuminate\Foundation\Http\FormRequest;
  * @property string $image_detail
  * @property array $image_gallery
  * @property array $category_ids
- * @property array $tag_ids
  */
 class StoreSpectacleRequest extends FormRequest
 {
@@ -47,7 +45,6 @@ class StoreSpectacleRequest extends FormRequest
             'producer.*' => 'string|nullable|max:128',
             'description' => 'sometimes|array',
             'description.*' => 'string|nullable',
-            'slug' => 'required|string|max:128|unique:spectacles,slug',
             'min_age' => 'required|int|min:1|max:18',
             'duration' => 'required|int',
             'start_at' => 'required|string',
@@ -57,9 +54,7 @@ class StoreSpectacleRequest extends FormRequest
             'image_gallery' => 'required|array',
             'image_gallery.*' => 'required|string',
             'category_ids'   => 'sometimes|array',
-            'category_ids.*' => 'integer|exists:categories,id',
-            'tag_ids'   => 'sometimes|array',
-            'tag_ids.*' => 'integer|exists:tags,id',
+            'category_ids.*' => 'integer|exists:categories,id'
         ];
     }
 

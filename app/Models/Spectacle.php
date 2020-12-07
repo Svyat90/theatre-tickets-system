@@ -58,14 +58,6 @@ class Spectacle extends BaseModel
     }
 
     /**
-     * @return BelongsToMany
-     */
-    public function tags()
-    {
-        return $this->belongsToMany(Tag::class, 'spectacle_tag', 'spectacle_id', 'tag_id');
-    }
-
-    /**
      * @return Media|null
      */
     public function getImageGridAttribute()

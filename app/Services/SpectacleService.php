@@ -102,7 +102,6 @@ class SpectacleService
      */
     private function handleRelationships(Spectacle $spectacle, $request) : void
     {
-        $spectacle->tags()->sync($request->tag_ids);
         $spectacle->categories()->sync($request->category_ids);
     }
 
