@@ -33,9 +33,9 @@
                                         </div>
                                         <div class="slide-img">
                                             <picture>
-                                                <source srcset="{{ $slider->image ? $slider->image->getFullUrl() : '' }}" media="(min-width: 576px)">
-                                                <source srcset="{{ $slider->image ? $slider->image->getFullUrl() : '' }}" media="(min-width: 280px">
-                                                <img src="{{ $slider->image ? $slider->image->getFullUrl() : '' }}" alt="">
+                                                <source srcset="{{ MediaHelper::getImageUrl($slider) }}" media="(min-width: 576px)">
+                                                <source srcset="{{ MediaHelper::getImageUrl($slider) }}" media="(min-width: 280px">
+                                                <img src="{{ MediaHelper::getImageUrl($slider) }}" alt="">
                                             </picture>
                                         </div>
                                     </div>
@@ -414,51 +414,60 @@
                 </div>
             </div>
             <div class="home-gallery d-flex">
-                <div class="home-gallery-col col-l">
-                    <div class="home-heading-wr d-flex">
-                        <h2 class="form-heading">Galery</h2>
-                        <a class="main-link d-flex">Toate pozele <span class="material-icons">navigate_next</span></a>
-                    </div>
-                    <p class="gallery-text">
-                        În zilele de 26 iunie, ora 23.30 pe TVR INTERNATIONAL și 27 iunie, ora 12.30 pe TVR MOLDOVA va fi
-                        difuzat
-                        spectacolul CIULEANDRA de Liviu Rebreanu, un spectacol de Sandu Grecu.În zilele de 26 iunie, ora
-                        23.30 pe
-                        TVR INTERNATIONAL și 27 iunie, ora 12.30 pe TVR MOLDOVA va fi difuzat spectacolul CIULEANDRA de
-                        Liviu
-                        Rebreanu, un spectacol de Sandu Grecu.
-                    </p>
-                    <div class="gallery-img-wr mb55">
-                        <a href="#">
-                            <img src="{{ asset('front/img/home-g-1.jpg') }}" alt="">
-                        </a>
-                        <a class="img-name">Un spectacol de Viorel CORNESCU</a>
-                        <p class="img-date">05.04.2019</p>
-                    </div>
-                    <div class="gallery-img-wr pl95 mmb39">
-                        <a href="#">
-                            <img src="{{ asset('front/img/home-g-2.jpg') }}" alt="">
-                        </a>
-                        <a class="img-name">Un spectacol de Viorel CORNESCU</a>
-                        <p class="img-date">05.04.2019</p>
-                    </div>
-                </div>
-                <div class="home-gallery-col">
-                    <div class="gallery-img-wr pl95 mb115">
-                        <a href="#">
-                            <img src="{{ asset('front/img/home-g-3.jpg') }}" alt="">
-                        </a>
-                        <a class="img-name">Un spectacol de Viorel CORNESCU</a>
-                        <p class="img-date">05.04.2019</p>
-                    </div>
-                    <div class="gallery-img-wr pr95 mpt70">
-                        <a href="#">
-                            <img src="{{ asset('front/img/home-g-4.jpg') }}" alt="">
-                        </a>
-                        <a class="img-name">Un spectacol de Viorel CORNESCU</a>
-                        <p class="img-date">05.04.2019</p>
-                    </div>
-                </div>
+                @foreach($gallery as $chunkKey => $chunkItems)
+                    @if($chunkKey === 0)
+                        <div class="home-gallery-col col-l">
+                            <div class="home-heading-wr d-flex">
+                                <h2 class="form-heading">{{ getVar('home_gallery_title') }}</h2>
+                                <a class="main-link d-flex">{{ getVar('home_all_photos') }}<span class="material-icons">navigate_next</span></a>
+                            </div>
+                            <p class="gallery-text">
+                                {{ getVar('home_gallery_text') }}
+                            </p>
+                            @foreach ($chunkItems as $chunkItem)
+                                @if($loop->index === 0)
+                                    <div class="gallery-img-wr mb55">
+                                        <a href="#">
+                                            <img src="{{ MediaHelper::getImageUrl($chunkItem) }}" alt="">
+                                        </a>
+                                        <a class="img-name">{{ columnTrans($chunkItem, 'title') }}</a>
+                                        <p class="img-date">{{ $chunkItem->date->format('d.m.Y') }}</p>
+                                    </div>
+                                @else
+                                    <div class="gallery-img-wr pl95 mmb39">
+                                        <a href="#">
+                                            <img src="{{ MediaHelper::getImageUrl($chunkItem) }}" alt="">
+                                        </a>
+                                        <a class="img-name">{{ columnTrans($chunkItem, 'title') }}</a>
+                                        <p class="img-date">{{ $chunkItem->date->format('d.m.Y') }}</p>
+                                    </div>
+                                @endif
+                            @endforeach
+                        </div>
+                    @else
+                        <div class="home-gallery-col">
+                            @foreach ($chunkItems as $chunkItem)
+                                @if($loop->index === 0)
+                                    <div class="gallery-img-wr pl95 mb115">
+                                        <a href="#">
+                                            <img src="{{ MediaHelper::getImageUrl($chunkItem) }}" alt="">
+                                        </a>
+                                        <a class="img-name">{{ columnTrans($chunkItem, 'title') }}</a>
+                                        <p class="img-date">{{ $chunkItem->date->format('d.m.Y') }}</p>
+                                    </div>
+                                @else
+                                    <div class="gallery-img-wr pr95 mpt70">
+                                        <a href="#">
+                                            <img src="{{ MediaHelper::getImageUrl($chunkItem) }}" alt="">
+                                        </a>
+                                        <a class="img-name">{{ columnTrans($chunkItem, 'title') }}</a>
+                                        <p class="img-date">{{ $chunkItem->date->format('d.m.Y') }}</p>
+                                    </div>
+                                @endif
+                            @endforeach
+                        </div>
+                    @endif
+                @endforeach
             </div>
             <div class="home-citate">
                 <div class="citate-bg-wr"></div>

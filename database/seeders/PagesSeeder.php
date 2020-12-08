@@ -35,7 +35,11 @@ class PagesSeeder extends Seeder
             ],
          ],
         'gallery' => [
-            //
+            'title' => [
+                'ru' => 'Un spectacol de Viorel CORNESCU',
+                'ro' => 'Un spectacol de Viorel CORNESCU',
+                'en' => 'Un spectacol de Viorel CORNESCU',
+            ],
         ],
         'quotes' => [
             'name' => [
@@ -88,6 +92,25 @@ class PagesSeeder extends Seeder
         $this->seedSlider();
         $this->seedQuotes();
         $this->seedAssemblies();
+        $this->seedGallery();
+    }
+
+    private function seedGallery()
+    {
+        $insertData = $this->pages['gallery'];
+
+        $i = 0;
+        while ($i < 4) {
+            $insertData['type'] = $this->pageService::TYPE_GALLERY;
+            $insertData['active'] = true;
+            $insertData['date'] = now()->addWeeks(rand(1, 5))->toDateString();
+            $page =$this->pageService->createPage(new StorePageRequest($insertData));
+            $i++;
+
+            $page
+                ->addMediaFromUrl(asset("front/img/home-g-{$i}.jpg"))
+                ->toMediaCollection('image');
+        }
     }
 
     private function seedAssemblies() : void

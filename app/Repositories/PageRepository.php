@@ -65,6 +65,18 @@ class PageRepository extends Model
     /**
      * @return Collection
      */
+    public function getGalleryList() : Collection
+    {
+        return Page::query()
+            ->active()
+            ->where('type', PageService::TYPE_GALLERY)
+            ->get()
+            ->chunk(2);
+    }
+
+    /**
+     * @return Collection
+     */
     public function getCollectionToIndex() : Collection
     {
         return Page::query()->get();

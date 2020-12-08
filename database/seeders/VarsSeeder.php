@@ -27,15 +27,25 @@ class VarsSeeder extends Seeder
             'ro' => 'In montare',
             'en' => 'In assembly'
         ],
+        'home_all_photos' => [
+            'ru' => 'ВСЕ ФОТОГРАФИИ',
+            'ro' => 'TOATE POZELE',
+            'en' => 'ALL PHOTOS'
+        ],
+        'home_gallery_title' => [
+            'ru' => 'Галерея',
+            'ro' => 'Galery',
+            'en' => 'Gallery'
+        ],
+        'home_gallery_text' => [
+            'ru' => 'În zilele de 26 iunie, ora 23.30 pe TVR INTERNATIONAL și 27 iunie, ora 12.30 pe TVR MOLDOVA va fi difuzat spectacolul CIULEANDRA de Liviu Rebreanu, un spectacol de Sandu Grecu.În zilele de 26 iunie, ora 23.30 pe TVR INTERNATIONAL și 27 iunie, ora 12.30 pe TVR MOLDOVA va fi difuzat spectacolul CIULEANDRA de Liviu Rebreanu, un spectacol de Sandu Grecu.',
+            'ro' => 'În zilele de 26 iunie, ora 23.30 pe TVR INTERNATIONAL și 27 iunie, ora 12.30 pe TVR MOLDOVA va fi difuzat spectacolul CIULEANDRA de Liviu Rebreanu, un spectacol de Sandu Grecu.În zilele de 26 iunie, ora 23.30 pe TVR INTERNATIONAL și 27 iunie, ora 12.30 pe TVR MOLDOVA va fi difuzat spectacolul CIULEANDRA de Liviu Rebreanu, un spectacol de Sandu Grecu.',
+            'en' => 'În zilele de 26 iunie, ora 23.30 pe TVR INTERNATIONAL și 27 iunie, ora 12.30 pe TVR MOLDOVA va fi difuzat spectacolul CIULEANDRA de Liviu Rebreanu, un spectacol de Sandu Grecu.În zilele de 26 iunie, ora 23.30 pe TVR INTERNATIONAL și 27 iunie, ora 12.30 pe TVR MOLDOVA va fi difuzat spectacolul CIULEANDRA de Liviu Rebreanu, un spectacol de Sandu Grecu.'
+        ],
 //        'spectacles' => [
 //            'ru' => 'Спектакли',
 //            'ro' => 'Спектакли',
 //            'en' => 'Spectacles'
-//        ],
-//        'gallery' => [
-//            'ru' => 'Галерея',
-//            'ro' => 'Галерея',
-//            'en' => 'Gallery'
 //        ],
 //        'contacts' => [
 //            'ru' => 'Контакты',
@@ -69,7 +79,7 @@ class VarsSeeder extends Seeder
             $insertData['created_at'] = $dateNow;
             $insertData['updated_at'] = $dateNow;
 
-            VarModel::query()->insert($insertData);
+            VarModel::query()->insertOrIgnore($insertData);
         });
     }
 }

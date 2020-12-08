@@ -29,7 +29,8 @@ class HomeController extends Controller
         return view('front.home', [
             'sliders' => $this->service->repository->getSliderList(),
             'quotes' => $this->service->repository->getQuotesList(),
-            'assemblies' => $this->service->repository->getAssemblyList()
+            'assemblies' => $this->service->repository->getAssemblyList(),
+            'gallery' => $this->service->repository->getGalleryList()
         ]);
     }
 
