@@ -20,6 +20,39 @@ class ArticleRepository extends Model
     }
 
     /**
+     * @return Model|null
+     */
+    public function getArticleWithVideo() : ? Article
+    {
+        return Article::query()
+            ->active()
+            ->latest()
+            ->where('on_home', true)
+            ->whereNotNull('video_url')
+            ->first();
+    }
+
+    /**
+     * @param int|null $exceptId
+     *
+     * @return Collection
+     */
+    public function getListToHome(? int $exceptId) : Collection
+    {
+        $builder =  Article::query();
+
+        if ($exceptId) {
+            $builder->where('id', '<>', $exceptId);
+        }
+
+        return $builder->active()
+            ->latest()
+            ->where('on_home', true)
+            ->limit(4)
+            ->get();
+    }
+
+    /**
      * @param array $data
      *
      * @return Article

@@ -7,8 +7,8 @@
 
 @section('content')
     <main class="main spectacole">
-        <img class="spec-main-bg spec-face-1" src="{{ asset('front/img/spectacole-face-1.png') }}" alt="">
-        <img class="spec-main-bg spec-face-2" src="{{ asset('front/img/spectacole-face-2.png') }}" alt="">
+{{--        <img class="spec-main-bg spec-face-1" src="{{ asset('front/img/spectacole-face-1.png') }}" alt="">--}}
+{{--        <img class="spec-main-bg spec-face-2" src="{{ asset('front/img/spectacole-face-2.png') }}" alt="">--}}
         <div class="page-heading">
             <div class="heading-imgwr">
                 <div class="bg"></div>

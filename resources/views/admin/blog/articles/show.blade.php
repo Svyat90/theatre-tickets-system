@@ -29,7 +29,7 @@
                     </tr>
 
                     @foreach($article->getFillable() as $field)
-                        @if($field === 'active' || $field === 'on_header' || $field === 'on_footer')
+                        @if($field === 'active' || $field === 'on_header' || $field === 'on_footer' || $field === 'on_home')
                             <tr>
                                 <th>
                                     {{ __("cruds.articles.fields.{$field}") }}

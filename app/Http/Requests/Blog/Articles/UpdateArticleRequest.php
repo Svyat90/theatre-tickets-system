@@ -12,6 +12,7 @@ use Illuminate\Foundation\Http\FormRequest;
  * @property boolean $active
  * @property boolean $on_header
  * @property boolean $on_footer
+ * @property boolean $on_home
  * @property array $name
  * @property array $title
  * @property array $content
@@ -40,6 +41,7 @@ class UpdateArticleRequest extends FormRequest
             'active' => 'required|bool',
             'on_header' => 'required|bool',
             'on_footer' => 'required|bool',
+            'on_home' => 'required|bool',
             'name' => 'sometimes|array',
             'name.*' => 'string|nullable|max:128',
             'title' => 'sometimes|array',

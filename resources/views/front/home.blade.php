@@ -130,83 +130,56 @@
             <div class="home-noutati d-flex">
                 <div class="noutati-col noutati-col-video">
                     <div class="home-heading-wr d-flex">
-                        <h2 class="form-heading">Noutati</h2>
-                        <a class="main-link d-flex">Toate noutati<span class="material-icons">navigate_next</span></a>
+                        <h2 class="form-heading">{{ $vars['news'] }}</h2>
+                        <a class="main-link d-flex" href="{{ route('articles.index') }}">{{ $vars['news_all'] }}<span class="material-icons">navigate_next</span></a>
                     </div>
-                    <div class="main-video-wr">
-                        <div class="video_wrapper video_wrapper_full js-videoWrapper">
-                            <iframe class="videoIframe js-videoIframe" src="" frameborder="0" allowTransparency="true"
-                                    allowfullscreen
-                                    data-src="https://www.youtube.com/embed/G4cJ4wviwS8?autoplay=1&modestbranding=1&rel=0&hl=ru&showinfo=0&color=white"></iframe>
-                            <button class="videoPoster js-videoPoster"></button>
+                    @if($articleVideo)
+                        <div class="main-video-wr">
+                            <div class="video_wrapper video_wrapper_full js-videoWrapper">
+                                <iframe class="videoIframe js-videoIframe" src="" frameborder="0" allowTransparency="true"
+                                        allowfullscreen
+                                        data-src="{{ $articleVideo->video_url }}?autoplay=1&modestbranding=1&rel=0&hl=ru&showinfo=0&color=white"></iframe>
+                                <button class="videoPoster js-videoPoster"></button>
+                            </div>
+                            <div class="video-description" style="width: 100%;">
+                                <p class="video-title">
+                                    {{ $articleVideo->name }}
+                                </p>
+                                <p class="video-date">
+                                    {{ $articleVideo->date ? $articleVideo->date->format('d. m. Y') : '' }}
+                                </p>
+                            </div>
                         </div>
-                        <div class="video-description">
-                            <p class="video-title">
-                                Teatru tv teatru la tine acasă cu tvr moldova șI tvr international
-                            </p>
-                            <p class="video-date">
-                                22. 07. 2020
-                            </p>
-                        </div>
-                    </div>
+                    @endif
                 </div>
                 <div class="noutati-col noutati-col-text">
-                    <div class="text-note d-flex pb30 bb">
-                        <div class="note-img">
-                            <img src="{{ asset('front/img/home-note1.jpg') }}" alt="">
+                    @foreach($articles as $article)
+                        @php
+                            $class = '';
+                            if ($loop->first) {
+                                $class = 'pb30 bb';
+                            } elseif ($loop->last) {
+                                $class = 'pt30';
+                            } else {
+                                $class = 'pb30 pt30 bb';
+                            }
+                        @endphp
+
+                        <div class="text-note d-flex {{ $class }}">
+                            <div class="note-img">
+                                <img src="{{ MediaHelper::getImageUrl($article) }}" alt="">
+                            </div>
+                            <div class="note-desc">
+                                <a class="note-title" href="{{ route('articles.show', $article->id) }}">
+                                    {{ $article->name }}
+                                </a>
+                                <p class="desc-text">
+                                    {{ $article->title }}
+                                </p>
+                                <a class="main-link" href="{{ route('articles.show', $article->id) }}">{{ $vars['news_details'] }} <span class="material-icons">navigate_next</span></a>
+                            </div>
                         </div>
-                        <div class="note-desc">
-                            <a class="note-title">
-                                Teatru tv teatru la tine acasă cu tvr moldova șI tvr international
-                            </a>
-                            <p class="desc-text">
-                                Proiect de colaborare șI promovare a spectacolelor teatrului național satiricus la tv
-                            </p>
-                            <a class="main-link">Detali <span class="material-icons">navigate_next</span></a>
-                        </div>
-                    </div>
-                    <div class="text-note d-flex pb30 pt30 bb">
-                        <div class="note-img">
-                            <img src="{{ asset('front/img/home-note1.jpg') }}" alt="">
-                        </div>
-                        <div class="note-desc">
-                            <a class="note-title">
-                                Teatru tv teatru la tine acasă cu tvr moldova șI tvr international
-                            </a>
-                            <p class="desc-text">
-                                Proiect de colaborare șI promovare a spectacolelor teatrului național satiricus la tv
-                            </p>
-                            <a class="main-link">Detali <span class="material-icons">navigate_next</span></a>
-                        </div>
-                    </div>
-                    <div class="text-note d-flex pb30 pt30 bb">
-                        <div class="note-img">
-                            <img src="{{ asset('front/img/home-note1.jpg') }}" alt="">
-                        </div>
-                        <div class="note-desc">
-                            <a class="note-title">
-                                Teatru tv teatru la tine acasă cu tvr moldova șI tvr international
-                            </a>
-                            <p class="desc-text">
-                                Proiect de colaborare șI promovare a spectacolelor teatrului național satiricus la tv
-                            </p>
-                            <a class="main-link">Detali <span class="material-icons">navigate_next</span></a>
-                        </div>
-                    </div>
-                    <div class="text-note d-flex pt30">
-                        <div class="note-img">
-                            <img src="{{ asset('front/img/home-note1.jpg') }}" alt="">
-                        </div>
-                        <div class="note-desc">
-                            <a class="note-title">
-                                Teatru tv teatru la tine acasă cu tvr moldova șI tvr international
-                            </a>
-                            <p class="desc-text">
-                                Proiect de colaborare șI promovare a spectacolelor teatrului național satiricus la tv
-                            </p>
-                            <a class="main-link">Detali <span class="material-icons">navigate_next</span></a>
-                        </div>
-                    </div>
+                    @endforeach
                 </div>
             </div>
             <div class="home-gallery d-flex">

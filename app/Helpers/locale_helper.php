@@ -59,6 +59,8 @@ if (! function_exists('getVar')) {
      */
     function getVar(string $key) : ? string
     {
+        // ToDo share $vars
+
         $service = app(VarRepository::class);
 
         return $service->getVar($key);

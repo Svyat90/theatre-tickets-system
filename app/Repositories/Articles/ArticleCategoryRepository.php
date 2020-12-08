@@ -37,6 +37,19 @@ class ArticleCategoryRepository extends Model
     }
 
     /**
+     * @param int $categoryId
+     *
+     * @return Collection
+     */
+    public function getArticles(int $categoryId) : Collection
+    {
+        return ArticleCategory::query()
+            ->find($categoryId)
+            ->first()
+            ->articles;
+     }
+
+    /**
      * @param array $data
      *
      * @return ArticleCategory

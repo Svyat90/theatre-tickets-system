@@ -24,6 +24,18 @@ class VarRepository extends Model
     }
 
     /**
+     * @return array
+     */
+    public function getAllVars() : array
+    {
+        return VarModel::query()
+            ->pluck(
+                'val_' . app()->getLocale(),
+                'key_' . app()->getLocale()
+            )->toArray();
+    }
+
+    /**
      * @return Collection
      */
     public function getCollectionToIndex() : Collection

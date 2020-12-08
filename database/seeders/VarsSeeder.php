@@ -72,6 +72,21 @@ class VarsSeeder extends Seeder
             'ro' => 'MIN',
             'en' => 'MIN'
         ],
+        'news' => [
+            'ru' => 'Новости',
+            'ro' => 'Noutati',
+            'en' => 'News'
+        ],
+        'news_details' => [
+            'ru' => 'Детали',
+            'ro' => 'Detali',
+            'en' => 'Details'
+        ],
+        'news_all' => [
+            'ru' => 'Все новости',
+            'ro' => 'Toate noutati',
+            'en' => 'All news'
+        ],
 //        'spectacles' => [
 //            'ru' => 'Спектакли',
 //            'ro' => 'Спектакли',

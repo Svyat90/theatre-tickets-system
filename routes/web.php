@@ -35,6 +35,7 @@ Route::namespace('Front')->group(function () {
     Route::get('/', [HomeController::class, 'redirectToHome']);
     Route::get('home', [HomeController::class, 'index'])->name('front.home');
     Route::resource('spectacles', 'SpectacleController')->only('index', 'show');
+    Route::resource('articles', 'ArticleController')->only('index', 'show');
 });
 
 // Admin

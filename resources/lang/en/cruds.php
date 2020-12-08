@@ -172,6 +172,8 @@ return [
             'on_header_helper'       => '',
             'on_footer'              => 'On Footer',
             'on_footer_helper'       => '',
+            'on_home'              => 'On Home',
+            'on_home_helper'       => '',
             'image'              => 'Image',
             'image_helper'       => '',
         ],

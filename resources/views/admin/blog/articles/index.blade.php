@@ -39,6 +39,9 @@
                         {{ __('cruds.articles.fields.on_footer') }}
                     </th>
                     <th>
+                        {{ __('cruds.articles.fields.on_home') }}
+                    </th>
+                    <th>
                         {{ __('cruds.articles.fields.active') }}
                     </th>
                     <th>
@@ -107,6 +110,7 @@
                     {data: 'title', name: 'title'},
                     {data: 'on_header', name: 'on_header'},
                     {data: 'on_footer', name: 'on_footer'},
+                    {data: 'on_home', name: 'on_home'},
                     {data: 'active', name: 'active'},
                     {data: 'date', name: 'date'},
                     {data: 'created_at', name: 'created_at'},

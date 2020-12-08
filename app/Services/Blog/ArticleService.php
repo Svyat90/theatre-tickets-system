@@ -11,6 +11,8 @@ use App\Helpers\MediaHelper;
 use App\Helpers\ImageHelper;
 use App\Repositories\Articles\ArticleRepository;
 use App\Models\Blog\Article;
+use Illuminate\Support\Collection;
+use App\Repositories\Articles\ArticleCategoryRepository;
 
 class ArticleService
 {
@@ -44,13 +46,28 @@ class ArticleService
             ->editColumn('title', fn ($row) => columnTrans($row, 'title'))
             ->editColumn('on_header', fn ($row) => LabelHelper::boolLabel($row->on_header))
             ->editColumn('on_footer', fn ($row) => LabelHelper::boolLabel($row->on_footer))
+            ->editColumn('on_home', fn ($row) => LabelHelper::boolLabel($row->on_home))
             ->editColumn('active', fn ($row) => LabelHelper::boolLabel($row->active))
             ->editColumn('date', fn ($row) => $row->date)
             ->editColumn('created_at', fn ($row) => $row->created_at)
             ->addColumn('image', fn ($row) => ImageHelper::thumbImage($row->image))
             ->addColumn('actions', fn ($row) => DatatablesHelper::renderActionsRow($row, 'articles'))
-            ->rawColumns(['actions', 'placeholder', 'on_header', 'on_footer', 'active', 'image'])
+            ->rawColumns(['actions', 'placeholder', 'on_header', 'on_footer', 'on_home', 'active', 'image'])
             ->make(true);
+    }
+
+    /**
+     * @param int|null $categoryId
+     *
+     * @return Collection
+     */
+    public function getList(? int $categoryId)
+    {
+        if ($categoryId) {
+            return app(ArticleCategoryRepository::class)->getArticles($categoryId);
+        }
+
+        return $this->repository->getCollectionToIndex();
     }
 
     /**
@@ -60,7 +77,7 @@ class ArticleService
      */
     public function createArticle(StoreArticleRequest $request) : Article
     {
-        $article = $this->repository->saveArticle($request->validated());
+        $article = $this->repository->saveArticle($request->all());
 
         $this->handleMediaFiles($request, $article);
         $this->handleCategory($article, $request->article_category_id);
