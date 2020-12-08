@@ -16,6 +16,7 @@ use Illuminate\Foundation\Http\FormRequest;
  * @property int $duration
  * @property string $start_at
  * @property boolean $active
+ * @property boolean $is_premiera
  * @property string $image_grid
  * @property string $image_detail
  * @property array $image_gallery
@@ -51,6 +52,7 @@ class UpdateSpectacleRequest extends FormRequest
             'duration' => 'required|int',
             'start_at' => 'required|string',
             'active' => 'required|bool',
+            'is_premiera' => 'required|bool',
             'image_grid' => 'required|string',
             'image_detail' => 'required|string',
             'image_gallery' => 'required|array',

@@ -16,14 +16,14 @@
                                     <div class="slide-wr d-flex">
                                         <div class="slide-desc d-flex">
                                             <div class="slide-text d-flex">
-                                                <p class="month">{{ $slider->date ? $slider->date->format('F') : '' }}</p>
-                                                <p class="day">{{ $slider->date ? $slider->date->format('d') : '' }}</p>
+                                                    <p class="month">{{  DateHelper::month($slider) }}</p>
+                                                <p class="day">{{ DateHelper::day($slider) }}</p>
                                                 <p class="author d-flex">
-                                                    <span class="name">{{ columnTrans($slider, 'name') }}</span>
-                                                    <span class="time">{{ $slider->date ? $slider->date->format('H:i') : '' }}</span>
+                                                    <span class="name">{{ $slider->name }}</span>
+                                                    <span class="time">{{ DateHelper::time($slider) }}</span>
                                                 </p>
-                                                <h1 class="spec-name">{{ columnTrans($slider, 'title') }}</h1>
-                                                <p class="spec-desc">{{ columnTrans($slider, 'description') }}</p>
+                                                <h1 class="spec-name">{{ $slider->title }}</h1>
+                                                <p class="spec-desc">{{ $slider->description }}</p>
                                                 <button class="bt home-btn">
                                                     <a href="{{ $slider->url }}" class="home-link">
                                                         {{ getVar('home_add_to_cart') }}
@@ -68,269 +68,65 @@
         </div>
         <div class="main-content">
             <div class="home-heading-wr d-flex">
-                <h2 class="form-heading">Repertoriu</h2>
-                <a class="main-link d-flex">Toate spectacole <span class="material-icons">navigate_next</span></a>
+                <h2 class="form-heading">{{ getVar('spectacles_repertoire') }}</h2>
+                <a class="main-link d-flex">{{ getVar('spectacles_all') }} <span class="material-icons">navigate_next</span></a>
             </div>
             <div class="cart-tickets d-flex">
-                <div class="cart-ticket d-flex">
-                    <div class="circle circle-bottom"></div>
-                    <div class="circle circle-top"></div>
-                    <div class="col-date premiere d-flex">
-                        <p class="premiere-text">
-                            Premiere
-                        </p>
-                        <div class="heading-date">
-                            <p class="m-age">12+</p>
-                            <p class="day">Duminica</p>
-                            <h4 class="num-day">26</h4>
-                            <p class="month">Iulie</p>
-                        </div>
-                    </div>
-                    <div class="col-content d-flex">
-                        <div class="heading-title">
-                            <p class="title-author">William Shakespeare</p>
-                            <p class="title-group">un spectacol de Sandu GRECU</p>
-                            <a href="#" class="title-name">Hamlet</a>
-                        </div>
-                        <div class="ticket-info">
-                            <div class="info-time">
-                                <span class="info-text">23:30</span>
-                            </div>
-                            <div class="info-duration mr-auto">
-                                <span class="info-text">150 MIN</span>
-                            </div>
-                            <div class="info-age">
-                                <span class="info-sala">SALA MARE</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-tickets d-flex">
-                        <div class="tickets-wr">
-                            <p class="home-link">Pret: 40-100 lei</p>
-                            <a href="#" class="ticket-buy-link">cumpara bitele</a>
-                        </div>
-                        <div class="tickets-total">
-                            <p class="total-text d-flex">
-                                <span class="home-age">SALA MARE</span>
-                                <span class="home-age-num">12+</span>
+                @foreach($spectacles as $spectacle)
+                    <div class="cart-ticket d-flex">
+                        <div class="circle circle-bottom"></div>
+                        <div class="circle circle-top"></div>
+                        <div class="col-date premiere d-flex">
+                            <p class="premiere-text">
+                                @if($spectacle->is_premiera)
+                                {{ getVar('spectacles_premiera') }}
+                                @endif
                             </p>
-                        </div>
-                    </div>
-                </div>
-                <div class="cart-ticket d-flex">
-                    <div class="circle circle-bottom"></div>
-                    <div class="circle circle-top"></div>
-                    <div class="col-date premiere d-flex">
-                        <p class="premiere-text">
-                            Premiere
-                        </p>
-                        <div class="heading-date">
-                            <p class="m-age">12+</p>
-                            <p class="day">Duminica</p>
-                            <h4 class="num-day">26</h4>
-                            <p class="month">Iulie</p>
-                        </div>
-                    </div>
-                    <div class="col-content d-flex">
-                        <div class="heading-title">
-                            <p class="title-author">William Shakespeare</p>
-                            <p class="title-group">un spectacol de Sandu GRECU</p>
-                            <a href="#" class="title-name">Ce vrăji a mai făcut soția mea?</a>
-                        </div>
-                        <div class="ticket-info">
-                            <div class="info-time">
-                                <span class="info-text">23:30</span>
-                            </div>
-                            <div class="info-duration mr-auto">
-                                <span class="info-text">150 MIN</span>
+                            <div class="heading-date">
+                                <p class="m-age">{{ $spectacle->min_age }}+</p>
+                                <p class="day">{{ DateHelper::dayWeek($spectacle, 'start_at') }}</p>
+                                <h4 class="num-day">{{ DateHelper::day($spectacle, 'start_at') }}</h4>
+                                <p class="month">{{ DateHelper::month($spectacle, 'start_at') }}</p>
                             </div>
                         </div>
-                    </div>
-                    <div class="col-tickets d-flex">
-                        <div class="tickets-wr">
-                            <p class="home-link">Pret: 40-100 lei</p>
-                            <a href="#" class="ticket-buy-link link-busy">cumpara bitele</a>
-                        </div>
-                        <div class="tickets-total">
-                            <p class="total-text d-flex">
-                                <span class="home-age">SALA MARE</span>
-                                <span class="home-age-num">12+</span>
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                <div class="cart-ticket d-flex">
-                    <div class="circle circle-bottom"></div>
-                    <div class="circle circle-top"></div>
-                    <div class="col-date premiere d-flex">
-                        <p class="premiere-text">
-                            Premiere
-                        </p>
-                        <div class="heading-date">
-                            <p class="m-age">12+</p>
-                            <p class="day">Duminica</p>
-                            <h4 class="num-day">26</h4>
-                            <p class="month">Iulie</p>
-                        </div>
-                    </div>
-                    <div class="col-content d-flex">
-                        <div class="heading-title">
-                            <p class="title-author">William Shakespeare</p>
-                            <p class="title-group">un spectacol de Sandu GRECU</p>
-                            <a href="#" class="title-name">Vânătoarea de şobolani</a>
-                        </div>
-                        <div class="ticket-info">
-                            <div class="info-time">
-                                <span class="info-text">23:30</span>
+                        <div class="col-content d-flex"
+                            style="{{ 'background: linear-gradient(269.55deg, rgba(32, 32, 32, 0) 85.72%, #202020 99.54%), url(' . MediaHelper::getImageUrl($spectacle, 'image_grid') . ') no-repeat !important;' }}">
+                            <div class="heading-title">
+                                <p class="title-author">{{ $spectacle->author }}</p>
+                                <p class="title-group">{{ $spectacle->producer }}</p>
+                                <a href="#" class="title-name">{{ $spectacle->name }}</a>
                             </div>
-                            <div class="info-duration mr-auto">
-                                <span class="info-text">150 MIN</span>
+                            <div class="ticket-info">
+                                <div class="info-time">
+                                    <span class="info-text">{{  DateHelper::time($spectacle, 'start_at') }}</span>
+                                </div>
+                                <div class="info-duration mr-auto">
+                                    <span class="info-text">{{  $spectacle->duration  }} {{ getVar('spectacles_min') }}</span>
+                                </div>
+                                <div class="info-age">
+                                    <span class="info-sala">SALA MARE</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-tickets d-flex">
+                            <div class="tickets-wr">
+                                <p class="home-link">Pret: 40-100 lei</p>
+                                <a href="#" class="ticket-buy-link">{{ getVar('spectacles_buy_tickets') }}</a>
+                            </div>
+                            <div class="tickets-total">
+                                <p class="total-text d-flex">
+                                    <span class="home-age">SALA MARE</span>
+                                    <span class="home-age-num">{{ $spectacle->min_age }}+</span>
+                                </p>
                             </div>
                         </div>
                     </div>
-                    <div class="col-tickets d-flex">
-                        <div class="tickets-wr">
-                            <p class="home-link">Pret: 40-100 lei</p>
-                            <a href="#" class="ticket-buy-link link-red">cumpara bitele</a>
-                        </div>
-                        <div class="tickets-total">
-                            <p class="total-text d-flex">
-                                <span class="home-age">SALA MARE</span>
-                                <span class="home-age-num">12+</span>
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                <div class="cart-ticket d-flex">
-                    <div class="circle circle-bottom"></div>
-                    <div class="circle circle-top"></div>
-                    <div class="col-date d-flex">
-                        <p class="premiere-text">
-                            Premiere
-                        </p>
-                        <div class="heading-date">
-                            <p class="m-age">12+</p>
-                            <p class="day">Duminica</p>
-                            <h4 class="num-day">26</h4>
-                            <p class="month">Iulie</p>
-                        </div>
-                    </div>
-                    <div class="col-content d-flex">
-                        <div class="heading-title">
-                            <p class="title-author">William Shakespeare</p>
-                            <p class="title-group">un spectacol de Sandu GRECU</p>
-                            <a href="#" class="title-name">Bună dimineața, tăticule</a>
-                        </div>
-                        <div class="ticket-info">
-                            <div class="info-time">
-                                <span class="info-text">23:30</span>
-                            </div>
-                            <div class="info-duration mr-auto">
-                                <span class="info-text">150 MIN</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-tickets d-flex">
-                        <div class="tickets-wr">
-                            <p class="home-link">Pret: 40-100 lei</p>
-                            <a href="#" class="ticket-buy-link">cumpara bitele</a>
-                        </div>
-                        <div class="tickets-total">
-                            <p class="total-text d-flex">
-                                <span class="home-age">SALA MARE</span>
-                                <span class="home-age-num">12+</span>
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                <div class="cart-ticket d-flex">
-                    <div class="circle circle-bottom"></div>
-                    <div class="circle circle-top"></div>
-                    <div class="col-date premiere d-flex">
-                        <p class="premiere-text">
-                            Premiere
-                        </p>
-                        <div class="heading-date">
-                            <p class="m-age">12+</p>
-                            <p class="day">Duminica</p>
-                            <h4 class="num-day">26</h4>
-                            <p class="month">Iulie</p>
-                        </div>
-                    </div>
-                    <div class="col-content d-flex">
-                        <div class="heading-title">
-                            <p class="title-author">William Shakespeare</p>
-                            <p class="title-group">un spectacol de Sandu GRECU</p>
-                            <a href="#" class="title-name">Happy End</a>
-                        </div>
-                        <div class="ticket-info">
-                            <div class="info-time">
-                                <span class="info-text">23:30</span>
-                            </div>
-                            <div class="info-duration mr-auto">
-                                <span class="info-text">150 MIN</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-tickets d-flex">
-                        <div class="tickets-wr">
-                            <p class="home-link">Pret: 40-100 lei</p>
-                            <a href="#" class="ticket-buy-link">cumpara bitele</a>
-                        </div>
-                        <div class="tickets-total">
-                            <p class="total-text d-flex">
-                                <span class="home-age">SALA MARE</span>
-                                <span class="home-age-num">12+</span>
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                <div class="cart-ticket d-flex">
-                    <div class="circle circle-bottom"></div>
-                    <div class="circle circle-top"></div>
-                    <div class="col-date d-flex">
-                        <p class="premiere-text">
-                            Premiere
-                        </p>
-                        <div class="heading-date">
-                            <p class="m-age">12+</p>
-                            <p class="day">Duminica</p>
-                            <h4 class="num-day">26</h4>
-                            <p class="month">Iulie</p>
-                        </div>
-                    </div>
-                    <div class="col-content d-flex">
-                        <div class="heading-title">
-                            <p class="title-author">William Shakespeare</p>
-                            <p class="title-group">un spectacol de Sandu GRECU</p>
-                            <a href="#" class="title-name">ÎțI vreau soțul..</a>
-                        </div>
-                        <div class="ticket-info">
-                            <div class="info-time">
-                                <span class="info-text">23:30</span>
-                            </div>
-                            <div class="info-duration mr-auto">
-                                <span class="info-text">150 MIN</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-tickets d-flex">
-                        <div class="tickets-wr">
-                            <p class="home-link">Pret: 40-100 lei</p>
-                            <a href="#" class="ticket-buy-link">cumpara bitele</a>
-                        </div>
-                        <div class="tickets-total">
-                            <p class="total-text d-flex">
-                                <span class="home-age">SALA MARE</span>
-                                <span class="home-age-num">12+</span>
-                            </p>
-                        </div>
-                    </div>
-                </div>
+                @endforeach
                 <div class="d-flex mob-link">
-                    <a href="" class="main-link">Toate spectacole <span class="material-icons">navigate_next</span></a>
+                    <a href="{{--{{ route('front.spectacles.index') }}--}}" class="main-link">{{ getVar('spectacles_all') }} <span class="material-icons">navigate_next</span></a>
                 </div>
             </div>
+
             <div class="home-noutati d-flex">
                 <div class="noutati-col noutati-col-video">
                     <div class="home-heading-wr d-flex">
@@ -430,7 +226,7 @@
                                         <a href="#">
                                             <img src="{{ MediaHelper::getImageUrl($chunkItem) }}" alt="">
                                         </a>
-                                        <a class="img-name">{{ columnTrans($chunkItem, 'title') }}</a>
+                                        <a class="img-name">{{ $chunkItem->title }}</a>
                                         <p class="img-date">{{ $chunkItem->date->format('d.m.Y') }}</p>
                                     </div>
                                 @else
@@ -438,7 +234,7 @@
                                         <a href="#">
                                             <img src="{{ MediaHelper::getImageUrl($chunkItem) }}" alt="">
                                         </a>
-                                        <a class="img-name">{{ columnTrans($chunkItem, 'title') }}</a>
+                                        <a class="img-name">{{ $chunkItem->title }}</a>
                                         <p class="img-date">{{ $chunkItem->date->format('d.m.Y') }}</p>
                                     </div>
                                 @endif
@@ -452,7 +248,7 @@
                                         <a href="#">
                                             <img src="{{ MediaHelper::getImageUrl($chunkItem) }}" alt="">
                                         </a>
-                                        <a class="img-name">{{ columnTrans($chunkItem, 'title') }}</a>
+                                        <a class="img-name">{{ $chunkItem->title }}</a>
                                         <p class="img-date">{{ $chunkItem->date->format('d.m.Y') }}</p>
                                     </div>
                                 @else
@@ -460,7 +256,7 @@
                                         <a href="#">
                                             <img src="{{ MediaHelper::getImageUrl($chunkItem) }}" alt="">
                                         </a>
-                                        <a class="img-name">{{ columnTrans($chunkItem, 'title') }}</a>
+                                        <a class="img-name">{{ $chunkItem->title }}</a>
                                         <p class="img-date">{{ $chunkItem->date->format('d.m.Y') }}</p>
                                     </div>
                                 @endif
@@ -481,11 +277,11 @@
                         </div>
                         <div class="l-wr d-flex">
                             <p class="citate-text">
-                                {{ columnTrans($quote, 'description') }}
+                                {{ $quote->description }}
                             </p>
                             <div class="citate-person">
                                 <img src="{{ $quote->image ? $quote->image->getFullUrl() : '' }}" alt="">
-                                <p class="person-name">{{ columnTrans($quote, 'name') }}</p>
+                                <p class="person-name">{{ $quote->name }}</p>
                             </div>
                         </div>
                     </div>
@@ -495,10 +291,10 @@
                 <h2 class="form-heading">{{ getVar('home_in_assembly') }}</h2>
                 @foreach($assemblies as $assembly)
                     <div class="montare-row d-flex">
-                        <a class="montare-name">{{ columnTrans($assembly, 'name') }}</a>
+                        <a class="montare-name">{{ $assembly->name }}</a>
                         <p class="montare-people">
-                            <span class="montare-author">{{ columnTrans($assembly, 'title') }}</span>
-                            <span class="montare-group">{{ strip_tags(columnTrans($assembly, 'description')) }}</span>
+                            <span class="montare-author">{{ $assembly->title }}</span>
+                            <span class="montare-group">{{ strip_tags($assembly->description) }}</span>
                         </p>
                     </div>
                 @endforeach

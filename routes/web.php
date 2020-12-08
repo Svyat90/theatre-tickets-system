@@ -4,14 +4,14 @@ use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Auth;
 use App\Http\Controllers\Admin\HomeController;
 use App\Http\Controllers\Admin\ChangePasswordController;
-use App\Http\Controllers\Admin\CategoryController;
 use App\Http\Controllers\Admin\TranslationController;
-use App\Http\Controllers\Admin\SpectacleController;
 use App\Http\Controllers\Admin\PageController;
 use App\Http\Controllers\Admin\Blog\ArticleCategoryController;
 use App\Http\Controllers\Admin\Blog\ArticleController;
 use App\Http\Controllers\Admin\Workers\WorkerCategoryController;
 use App\Http\Controllers\Admin\Workers\WorkerController;
+use \App\Http\Controllers\Admin\Spectacles\SpectacleController;
+use \App\Http\Controllers\Admin\Spectacles\CategoryController;
 
 /*
 |--------------------------------------------------------------------------
@@ -37,10 +37,14 @@ Route::get('home', 'Front\HomeController@index')->name('front.home');
 Route::prefix('admin')->as('admin.')->middleware('auth')->group(function () {
     Route::get('home', [HomeController::class, 'index'])->name('home');
 
+    // SpectacleCategories
+    Route::delete('categories/multi-destroy', [CategoryController::class, 'massDestroy'])->name('categories.multi_destroy');
+    Route::resource('categories', 'Admin\Spectacles\CategoryController');
+
     // Spectacles
     Route::delete('spectacles/multi-destroy', [SpectacleController::class, 'massDestroy'])->name('spectacles.multi_destroy');
     Route::post('spectacles/media', [SpectacleController::class, 'storeMedia'])->name('spectacles.store_media');
-    Route::resource('spectacles', 'Admin\SpectacleController');
+    Route::resource('spectacles', 'Admin\Spectacles\SpectacleController');
 
     // Pages
     Route::delete('pages/multi-destroy', [PageController::class, 'massDestroy'])->name('pages.multi_destroy');
@@ -64,10 +68,6 @@ Route::prefix('admin')->as('admin.')->middleware('auth')->group(function () {
     // WorkerCategories
     Route::delete('worker_categories/multi-destroy', [WorkerCategoryController::class, 'massDestroy'])->name('worker_categories.multi_destroy');
     Route::resource('worker_categories', 'Admin\Workers\WorkerCategoryController');
-
-    // Categories
-    Route::delete('categories/multi-destroy', [CategoryController::class, 'massDestroy'])->name('categories.multi_destroy');
-    Route::resource('categories', 'Admin\CategoryController');
 
     // Vars
     Route::resource('vars', 'Admin\VarController')->except('create', 'store', 'destroy');

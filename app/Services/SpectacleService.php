@@ -47,11 +47,12 @@ class SpectacleService
             ->editColumn('min_age', fn ($row) => $row->min_age)
             ->editColumn('duration', fn ($row) => $row->duration)
             ->editColumn('active', fn ($row) => LabelHelper::boolLabel($row->active))
+            ->editColumn('is_premiera', fn ($row) => LabelHelper::boolLabel($row->is_premiera))
             ->editColumn('start_at', fn ($row) => $row->start_at)
             ->editColumn('created_at', fn ($row) => $row->created_at)
             ->addColumn('image', fn ($row) => ImageHelper::thumbImage($row->image_grid))
             ->addColumn('actions', fn ($row) => DatatablesHelper::renderActionsRow($row, 'spectacles'))
-            ->rawColumns(['actions', 'placeholder', 'active', 'image'])
+            ->rawColumns(['actions', 'placeholder', 'active', 'is_premiera', 'image'])
             ->make(true);
     }
 

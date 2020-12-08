@@ -39,8 +39,13 @@ class Spectacle extends BaseModel
      */
     protected $fillable = [
         'name', 'author', 'producer', 'description', 'slug',
-        'min_age', 'duration', 'active', 'start_at'
+        'min_age', 'duration', 'active', 'start_at', 'is_premiera'
     ];
+
+    /**
+     * @var string[]
+     */
+    protected $dates = ['start_at'];
 
     /**
      * @var string[]

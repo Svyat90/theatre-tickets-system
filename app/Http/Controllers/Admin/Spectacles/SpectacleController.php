@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Controllers\Admin;
+namespace App\Http\Controllers\Admin\Spectacles;
 
 use App\Http\Controllers\AdminController;
 use App\Models\Spectacle;

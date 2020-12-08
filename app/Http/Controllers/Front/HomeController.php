@@ -5,6 +5,10 @@ namespace App\Http\Controllers\Front;
 use Illuminate\Http\RedirectResponse;
 use App\Http\Controllers\Controller;
 use App\Services\PageService;
+use \Illuminate\Contracts\View\View;
+use \Illuminate\Contracts\View\Factory;
+use \Illuminate\Contracts\Foundation\Application;
+use App\Repositories\SpectacleRepository;
 
 class HomeController extends Controller
 {
@@ -24,13 +28,19 @@ class HomeController extends Controller
         $this->service = $service;
     }
 
-    public function index()
+    /**
+     * @param SpectacleRepository $spectacleRepository
+     *
+     * @return Application|Factory|View
+     */
+    public function index(SpectacleRepository $spectacleRepository)
     {
         return view('front.home', [
             'sliders' => $this->service->repository->getSliderList(),
             'quotes' => $this->service->repository->getQuotesList(),
             'assemblies' => $this->service->repository->getAssemblyList(),
-            'gallery' => $this->service->repository->getGalleryList()
+            'gallery' => $this->service->repository->getGalleryList(),
+            'spectacles' => $spectacleRepository->getListForHome()
         ]);
     }
 

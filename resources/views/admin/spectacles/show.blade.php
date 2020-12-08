@@ -21,7 +21,7 @@
                     </tr>
 
                     @foreach($spectacle->getFillable() as $field)
-                        @if($field === 'active')
+                        @if($field === 'active' || $field === 'is_premiera')
                             <tr>
                                 <th>
                                     {{ __("cruds.spectacles.fields.{$field}") }}

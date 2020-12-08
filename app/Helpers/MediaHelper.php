@@ -10,13 +10,14 @@ class MediaHelper
 {
 
     /**
-     * @param Model $model
+     * @param Model  $model
+     * @param string $field
      *
      * @return string
      */
-    public static function getImageUrl(Model $model)
+    public static function getImageUrl(Model $model, string $field = 'image')
     {
-        return $model->image ? $model->image->getFullUrl() : '';
+        return $model->$field ? $model->$field->getFullUrl() : '';
     }
 
     /**

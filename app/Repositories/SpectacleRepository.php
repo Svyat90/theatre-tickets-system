@@ -13,6 +13,17 @@ class SpectacleRepository extends Model
     /**
      * @return Collection
      */
+    public function getListForHome() : Collection
+    {
+        return Spectacle::query()
+            ->latest()
+            ->limit(6)
+            ->get();
+    }
+
+    /**
+     * @return Collection
+     */
     public function getListForSelect() : Collection
     {
         return Spectacle::query()

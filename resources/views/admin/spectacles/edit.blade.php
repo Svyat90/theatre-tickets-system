@@ -93,10 +93,20 @@
                         <label class="required"
                                for="{{ $name = 'active' }}">{{ __("cruds.spectacles.fields.$name") }}</label>
                         <select name="{{ $name }}" id="{{ $name }}" class="form-control">
-                            <option value="0" {{ old($name, $spectacle->active) == false ? 'selected' : '' }}>false
-                            </option>
-                            <option value="1" {{ old($name, $spectacle->active) == true ? 'selected' : '' }}>true
-                            </option>
+                            <option value="0" {{ old($name, $spectacle->$name) == "0" ? 'selected' : '' }}>{{ __('global.no') }}</option>
+                            <option value="1" {{ old($name, $spectacle->$name) == "1" ? 'selected' : '' }}>{{ __('global.yes') }}</option>
+                        </select>
+                        @if($errors->has($name))
+                            <span class="text-danger">{{ $errors->first($name) }}</span>
+                        @endif
+                        <span class="help-block">{{ __("cruds.spectacles.fields.{$name}_helper") }}</span>
+                    </div>
+
+                    <div class="form-group col-md-12 col-sm-12 col-xs-12">
+                        <label class="required" for="{{ $name = 'is_premiera' }}">{{ __("cruds.spectacles.fields.$name") }}</label>
+                        <select name="{{ $name }}" id="{{ $name }}" class="form-control">
+                            <option value="0" {{ old($name, $spectacle->$name) == "0" ? 'selected' : '' }}>{{ __('global.no') }}</option>
+                            <option value="1" {{ old($name, $spectacle->$name) == "1" ? 'selected' : '' }}>{{ __('global.yes') }}</option>
                         </select>
                         @if($errors->has($name))
                             <span class="text-danger">{{ $errors->first($name) }}</span>

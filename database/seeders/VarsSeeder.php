@@ -42,6 +42,31 @@ class VarsSeeder extends Seeder
             'ro' => 'În zilele de 26 iunie, ora 23.30 pe TVR INTERNATIONAL și 27 iunie, ora 12.30 pe TVR MOLDOVA va fi difuzat spectacolul CIULEANDRA de Liviu Rebreanu, un spectacol de Sandu Grecu.În zilele de 26 iunie, ora 23.30 pe TVR INTERNATIONAL și 27 iunie, ora 12.30 pe TVR MOLDOVA va fi difuzat spectacolul CIULEANDRA de Liviu Rebreanu, un spectacol de Sandu Grecu.',
             'en' => 'În zilele de 26 iunie, ora 23.30 pe TVR INTERNATIONAL și 27 iunie, ora 12.30 pe TVR MOLDOVA va fi difuzat spectacolul CIULEANDRA de Liviu Rebreanu, un spectacol de Sandu Grecu.În zilele de 26 iunie, ora 23.30 pe TVR INTERNATIONAL și 27 iunie, ora 12.30 pe TVR MOLDOVA va fi difuzat spectacolul CIULEANDRA de Liviu Rebreanu, un spectacol de Sandu Grecu.'
         ],
+        'spectacles_all' => [
+            'ru' => 'Все спектакли',
+            'ro' => 'Toate spectacole',
+            'en' => 'All spectacles'
+        ],
+        'spectacles_repertoire' => [
+            'ru' => 'Репертуар',
+            'ro' => 'Repertoriu',
+            'en' => 'Repertoire'
+        ],
+        'spectacles_premiera' => [
+            'ru' => 'Premiere',
+            'ro' => 'Premiere',
+            'en' => 'Premiere'
+        ],
+        'spectacles_buy_tickets' => [
+            'ru' => 'Купить билеты',
+            'ro' => 'cumpara bilete',
+            'en' => 'Buy tickets'
+        ],
+        'spectacles_min' => [
+            'ru' => 'МИН',
+            'ro' => 'MIN',
+            'en' => 'MIN'
+        ],
 //        'spectacles' => [
 //            'ru' => 'Спектакли',
 //            'ro' => 'Спектакли',

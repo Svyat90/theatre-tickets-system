@@ -80,6 +80,8 @@ return [
             'start_at_helper'       => '',
             'active'              => 'Active',
             'active_helper'       => '',
+            'is_premiera'              => 'Is Premiera',
+            'is_premiera_helper'       => '',
             'image_grid'              => 'Image (Grid)',
             'image_grid_helper'       => '',
             'image_detail'              => 'Image (Detail)',

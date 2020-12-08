@@ -48,6 +48,9 @@
                         {{ __('cruds.spectacles.fields.active') }}
                     </th>
                     <th>
+                        {{ __('cruds.spectacles.fields.is_premiera') }}
+                    </th>
+                    <th>
                         {{ __('cruds.spectacles.fields.start_at') }}
                     </th>
                     <th>
@@ -116,6 +119,7 @@
                     {data: 'min_age', name: 'min_age'},
                     {data: 'duration', name: 'duration'},
                     {data: 'active', name: 'active'},
+                    {data: 'is_premiera', name: 'is_premiera'},
                     {data: 'start_at', name: 'start_at'},
                     {data: 'created_at', name: 'created_at'},
                     {data: 'actions', name: '{{ __('global.actions') }}'}
