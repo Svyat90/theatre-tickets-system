@@ -47,6 +47,11 @@ class VarsSeeder extends Seeder
             'ro' => 'Toate spectacole',
             'en' => 'All spectacles'
         ],
+        'spectacles_select' => [
+            'ru' => 'Выберите спектакль',
+            'ro' => 'Alege spectacol',
+            'en' => 'Select spectacle'
+        ],
         'spectacles_repertoire' => [
             'ru' => 'Репертуар',
             'ro' => 'Repertoriu',

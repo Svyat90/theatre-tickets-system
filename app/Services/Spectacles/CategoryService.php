@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Services;
+namespace App\Services\Spectacles;
 
 use App\Helpers\DatatablesHelper;
 use App\Helpers\LabelHelper;

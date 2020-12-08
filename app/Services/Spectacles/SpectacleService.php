@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Services;
+namespace App\Services\Spectacles;
 
 use App\Helpers\DatatablesHelper;
 use App\Helpers\LabelHelper;
@@ -11,13 +11,15 @@ use App\Repositories\SpectacleRepository;
 use Yajra\DataTables\Facades\DataTables;
 use App\Helpers\MediaHelper;
 use App\Helpers\ImageHelper;
+use App\Repositories\CategoryRepository;
+use \Illuminate\Support\Collection;
 
 class SpectacleService
 {
     /**
      * @var SpectacleRepository
      */
-    private SpectacleRepository $repository;
+    public SpectacleRepository $repository;
 
     /**
      * DictionaryService constructor.
@@ -54,6 +56,20 @@ class SpectacleService
             ->addColumn('actions', fn ($row) => DatatablesHelper::renderActionsRow($row, 'spectacles'))
             ->rawColumns(['actions', 'placeholder', 'active', 'is_premiera', 'image'])
             ->make(true);
+    }
+
+    /**
+     * @param int|null $categoryId
+     *
+     * @return Collection
+     */
+    public function getCategoryList(? int $categoryId)
+    {
+        if ($categoryId) {
+            return app(CategoryRepository::class)->getSpectacles($categoryId);
+        }
+
+        return $this->repository->getCollectionToIndex();
     }
 
     /**

@@ -5,7 +5,6 @@ namespace App\Http\Controllers\Admin\Spectacles;
 use App\Http\Controllers\AdminController;
 use App\Models\Spectacle;
 use App\Repositories\SpectacleRepository;
-use App\Services\SpectacleService;
 use Illuminate\Contracts\View\View;
 use Illuminate\Http\Request;
 use Symfony\Component\HttpFoundation\Response;
@@ -17,6 +16,7 @@ use App\Http\Requests\Spectacles\StoreSpectacleRequest;
 use App\Http\Requests\Spectacles\UpdateSpectacleRequest;
 use App\Http\Requests\Spectacles\MassDestroySpectacleRequest;
 use App\Repositories\CategoryRepository;
+use App\Services\Spectacles\SpectacleService;
 
 class SpectacleController extends AdminController
 {

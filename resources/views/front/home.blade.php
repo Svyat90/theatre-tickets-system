@@ -1,7 +1,7 @@
 @extends('layouts.front')
 
 @section('styles')
-
+    <link rel="stylesheet" href="{{ asset('front/css/home.css') }}">
 @endsection
 
 @section('content')
@@ -69,7 +69,7 @@
         <div class="main-content">
             <div class="home-heading-wr d-flex">
                 <h2 class="form-heading">{{ getVar('spectacles_repertoire') }}</h2>
-                <a class="main-link d-flex">{{ getVar('spectacles_all') }} <span class="material-icons">navigate_next</span></a>
+                <a class="main-link d-flex" href="{{ route('spectacles.index') }}">{{ getVar('spectacles_all') }} <span class="material-icons">navigate_next</span></a>
             </div>
             <div class="cart-tickets d-flex">
                 @foreach($spectacles as $spectacle)
@@ -94,7 +94,7 @@
                             <div class="heading-title">
                                 <p class="title-author">{{ $spectacle->author }}</p>
                                 <p class="title-group">{{ $spectacle->producer }}</p>
-                                <a href="#" class="title-name">{{ $spectacle->name }}</a>
+                                <a href="{{ route('spectacles.show', $spectacle->id) }}" class="title-name">{{ $spectacle->name }}</a>
                             </div>
                             <div class="ticket-info">
                                 <div class="info-time">
@@ -111,7 +111,7 @@
                         <div class="col-tickets d-flex">
                             <div class="tickets-wr">
                                 <p class="home-link">Pret: 40-100 lei</p>
-                                <a href="#" class="ticket-buy-link">{{ getVar('spectacles_buy_tickets') }}</a>
+                                <a href="{{ route('spectacles.show', $spectacle->id) }}" class="ticket-buy-link">{{ getVar('spectacles_buy_tickets') }}</a>
                             </div>
                             <div class="tickets-total">
                                 <p class="total-text d-flex">
@@ -123,7 +123,7 @@
                     </div>
                 @endforeach
                 <div class="d-flex mob-link">
-                    <a href="{{--{{ route('front.spectacles.index') }}--}}" class="main-link">{{ getVar('spectacles_all') }} <span class="material-icons">navigate_next</span></a>
+                    <a href="{{ route('spectacles.index') }}" class="main-link">{{ getVar('spectacles_all') }} <span class="material-icons">navigate_next</span></a>
                 </div>
             </div>
 
@@ -452,7 +452,9 @@
 
 @section('scripts')
     @parent
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/5.4.5/js/swiper.min.js"></script>
+    <script src="{{ asset('front/js/home-swiper.js') }}"></script>
+    <script src="{{ asset('front/js/video.js') }}"></script>
     <script src="https://api-maps.yandex.ru/2.0/?load=package.full&lang=ru-RU"></script>
     <script>
         ymaps.ready(init);

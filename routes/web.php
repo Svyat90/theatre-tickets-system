@@ -2,7 +2,8 @@
 
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Auth;
-use App\Http\Controllers\Admin\HomeController;
+use App\Http\Controllers\Front\HomeController;
+use App\Http\Controllers\Admin\HomeController as AdminHomeController;
 use App\Http\Controllers\Admin\ChangePasswordController;
 use App\Http\Controllers\Admin\TranslationController;
 use App\Http\Controllers\Admin\PageController;
@@ -10,7 +11,7 @@ use App\Http\Controllers\Admin\Blog\ArticleCategoryController;
 use App\Http\Controllers\Admin\Blog\ArticleController;
 use App\Http\Controllers\Admin\Workers\WorkerCategoryController;
 use App\Http\Controllers\Admin\Workers\WorkerController;
-use \App\Http\Controllers\Admin\Spectacles\SpectacleController;
+use \App\Http\Controllers\Admin\Spectacles\SpectacleController as AdminSpectacleController;
 use \App\Http\Controllers\Admin\Spectacles\CategoryController;
 
 /*
@@ -30,20 +31,23 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/', 'Front\HomeController@redirectToHome');
-Route::get('home', 'Front\HomeController@index')->name('front.home');
+Route::namespace('Front')->group(function () {
+    Route::get('/', [HomeController::class, 'redirectToHome']);
+    Route::get('home', [HomeController::class, 'index'])->name('front.home');
+    Route::resource('spectacles', 'SpectacleController')->only('index', 'show');
+});
 
 // Admin
 Route::prefix('admin')->as('admin.')->middleware('auth')->group(function () {
-    Route::get('home', [HomeController::class, 'index'])->name('home');
+    Route::get('home', [AdminHomeController::class, 'index'])->name('home');
 
     // SpectacleCategories
     Route::delete('categories/multi-destroy', [CategoryController::class, 'massDestroy'])->name('categories.multi_destroy');
     Route::resource('categories', 'Admin\Spectacles\CategoryController');
 
     // Spectacles
-    Route::delete('spectacles/multi-destroy', [SpectacleController::class, 'massDestroy'])->name('spectacles.multi_destroy');
-    Route::post('spectacles/media', [SpectacleController::class, 'storeMedia'])->name('spectacles.store_media');
+    Route::delete('spectacles/multi-destroy', [AdminSpectacleController::class, 'massDestroy'])->name('spectacles.multi_destroy');
+    Route::post('spectacles/media', [AdminSpectacleController::class, 'storeMedia'])->name('spectacles.store_media');
     Route::resource('spectacles', 'Admin\Spectacles\SpectacleController');
 
     // Pages

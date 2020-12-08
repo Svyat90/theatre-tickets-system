@@ -31,6 +31,19 @@ class CategoryRepository extends Model
     }
 
     /**
+     * @param int $categoryId
+     *
+     * @return Collection
+     */
+    public function getSpectacles(int $categoryId) : Collection
+    {
+        return Category::query()
+            ->find($categoryId)
+            ->first()
+            ->spectacles;
+    }
+
+    /**
      * @param array $data
      *
      * @return Category
