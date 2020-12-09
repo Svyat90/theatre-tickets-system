@@ -13,8 +13,6 @@ use App\Models\BaseModel;
  * @property string $slug
  * @property string $video_url
  * @property boolean $active
- * @property boolean $on_header
- * @property boolean $on_footer
  * @property array $name
  * @property array $title
  * @property array $description
@@ -42,7 +40,7 @@ class Article extends BaseModel
      */
     protected $fillable = [
         'name', 'title', 'content', 'video_url', 'slug',
-       /* 'on_header', 'on_footer',*/ 'active', 'date', 'on_home'
+        'active', 'date', 'on_home'
     ];
 
     /**

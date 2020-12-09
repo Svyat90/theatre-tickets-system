@@ -38,7 +38,7 @@ class CategoryService
         return Datatables::of($collection)
             ->addColumn('placeholder', '&nbsp;')
             ->editColumn('id', fn ($row) => $row->id)
-            ->editColumn('name', fn ($row) => columnTrans($row, 'name'))
+            ->editColumn('name', fn ($row) => $row->name)
             ->editColumn('slug', fn ($row) => $row->slug)
             ->editColumn('active', fn ($row) => LabelHelper::boolLabel($row->active))
             ->editColumn('created_at', fn ($row) => $row->created_at)

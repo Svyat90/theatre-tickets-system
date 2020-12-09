@@ -69,8 +69,6 @@ class ArticleSeeder extends Seeder
         while ($i < 5) {
             $this->article['article_category_id'] = rand($min, $max);
             $this->article['active'] = true;
-            $this->article['on_header'] = true;
-            $this->article['on_footer'] = true;
             $this->article['on_home'] = true;
             $this->article['date'] = now()->addWeeks(rand(1, 5))->toDateString();
             $page = $service->createArticle(new StoreArticleRequest($this->article));

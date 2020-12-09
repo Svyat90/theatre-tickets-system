@@ -18,7 +18,7 @@ class CategoryRepository extends Model
             ->get()
             ->groupBy('id', true)
             ->map(function (Collection $items) {
-                return columnTrans($items->shift(), 'name');
+                return $items->shift()->name;
             });
     }
 

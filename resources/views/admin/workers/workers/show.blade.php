@@ -23,7 +23,7 @@
                         <th>{{ trans("global.worker_category") }} ({{ app()->getLocale() }}) </th>
                         <td>
                             @if($worker->category)
-                                <a href="{{ route('admin.worker_categories.show', $worker->category->id) }}">{{ columnTrans($worker->category, 'name') }}</a>
+                                <a href="{{ route('admin.worker_categories.show', $worker->category->id) }}">{{ $worker->category->name }}</a>
                             @endif
                         </td>
                     </tr>

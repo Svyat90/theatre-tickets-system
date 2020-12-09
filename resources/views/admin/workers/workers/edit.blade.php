@@ -43,7 +43,7 @@
                                                        type="text"
                                                        name="{{ $name }}"
                                                        id="{{ $name }}"
-                                                       value="{{ $oldLocale[$language->locale] ?? columnTrans($worker, $field, $language->locale) }}" />
+                                                       value="{{ $oldLocale[$language->locale] ?? $worker->getTranslation($field, $language->locale) }}" />
                                                 @if($errors->has($name))
                                                     <span class="text-danger">{{ $errors->first($name) }}</span>
                                                 @endif

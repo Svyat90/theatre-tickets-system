@@ -65,13 +65,13 @@
                                 {{ $spectacle->id }}
                             </td>
                             <td>
-                                {{ columnTrans($spectacle, 'name') }}
+                                {{ $spectacle->name }}
                             </td>
                             <td>
-                                {{ columnTrans($spectacle, 'author') }}
+                                {{ $spectacle->author }}
                             </td>
                             <td>
-                                {{ columnTrans($spectacle, 'producer') }}
+                                {{ $spectacle->producer }}
                             </td>
                             <td>
                                 {{ $spectacle->slug }}

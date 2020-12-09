@@ -27,7 +27,7 @@
         </div>
         <div class="main-content">
             <h2 class="form-heading">
-                {{ getVar('spectacles_select') }}
+                {{ $vars['spectacles_select'] }}
             </h2>
             <div class="sl-tabs-wr">
                 <p class="tabs swiper-wrapper">
@@ -47,7 +47,7 @@
                         <div class="col-date premiere d-flex">
                             <p class="premiere-text">
                                 @if($spectacle->is_premiera)
-                                    {{ getVar('spectacles_premiera') }}
+                                    {{ $vars['spectacles_premiera'] }}
                                 @endif
                             </p>
                             <div class="heading-date">
@@ -69,7 +69,7 @@
                                     <span class="info-text">{{  DateHelper::time($spectacle, 'start_at') }}</span>
                                 </div>
                                 <div class="info-duration mr-auto">
-                                    <span class="info-text">{{  $spectacle->duration  }} {{ getVar('spectacles_min') }}</span>
+                                    <span class="info-text">{{  $spectacle->duration  }} {{ $vars['spectacles_min'] }}</span>
                                 </div>
                                 <div class="info-age">
                                     <span class="info-sala">SALA MARE</span>
@@ -79,7 +79,7 @@
                         <div class="col-tickets d-flex">
                             <div class="tickets-wr">
                                 <p class="home-link">Pret: 40-100 lei</p>
-                                <a href="{{ route('spectacles.show', $spectacle->id) }}" class="ticket-buy-link">{{ getVar('spectacles_buy_tickets') }}</a>
+                                <a href="{{ route('spectacles.show', $spectacle->id) }}" class="ticket-buy-link">{{ $vars['spectacles_buy_tickets'] }}</a>
                             </div>
                             <div class="tickets-total">
                                 <p class="total-text d-flex">

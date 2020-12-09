@@ -10,8 +10,6 @@ use Illuminate\Foundation\Http\FormRequest;
  * @property int $article_category_id
  * @property string $video_url
  * @property boolean $active
- * @property boolean $on_header
- * @property boolean $on_footer
  * @property boolean $on_home
  * @property array $name
  * @property array $title
@@ -39,8 +37,6 @@ class UpdateArticleRequest extends FormRequest
             'article_category_id' => 'sometimes|nullable|int|exists:article_categories,id',
             'video_url' => 'sometimes|nullable|string|max:256',
             'active' => 'required|bool',
-            'on_header' => 'required|bool',
-            'on_footer' => 'required|bool',
             'on_home' => 'required|bool',
             'name' => 'sometimes|array',
             'name.*' => 'string|nullable|max:128',

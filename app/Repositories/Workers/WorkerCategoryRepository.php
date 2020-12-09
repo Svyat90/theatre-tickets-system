@@ -24,7 +24,7 @@ class WorkerCategoryRepository extends Model
             })
             ->groupBy('id', true)
             ->map(function (Collection $items) {
-                return columnTrans($items->shift(), 'name');
+                return $items->shift()->name;
             });
     }
 

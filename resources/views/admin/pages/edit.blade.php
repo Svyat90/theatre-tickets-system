@@ -42,7 +42,7 @@
                                                             {{ __("cruds.pages.fields.$field") }}
                                                         </label>
                                                         <textarea class="form-control ckeditor {{ $errors->has($name) ? 'is-invalid' : '' }}"
-                                                                  name="{{ $name }}" id="{{ $name }}">{!! $oldLocale[$language->locale] ?? columnTrans($page, $field, $language->locale) !!}</textarea>
+                                                                  name="{{ $name }}" id="{{ $name }}">{!! $oldLocale[$language->locale] ?? $page->getTranslation($field, $language->locale) !!}</textarea>
                                                         @if($errors->has($name))
                                                             <span class="text-danger">{{ $errors->first($name) }}</span>
                                                         @endif
@@ -56,7 +56,7 @@
                                                            type="text"
                                                            name="{{ $name }}"
                                                            id="{{ $name }}"
-                                                           value="{{ $oldLocale[$language->locale] ?? columnTrans($page, $field, $language->locale) }}" />
+                                                           value="{{ $oldLocale[$language->locale] ?? $page->getTranslation($field, $language->locale) }}" />
                                                     @if($errors->has($name))
                                                         <span class="text-danger">{{ $errors->first($name) }}</span>
                                                     @endif

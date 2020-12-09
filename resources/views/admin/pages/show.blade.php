@@ -23,7 +23,7 @@
                         <th>{{ trans("global.parent") }} ({{ app()->getLocale() }}) </th>
                         <td>
                             @if($page->parent)
-                                <a href="{{ route('admin.pages.show', $page->parent->id) }}">{{ columnTrans($page->parent, 'name') }}</a>
+                                <a href="{{ route('admin.pages.show', $page->parent->id) }}">{{ $page->parent->name }}</a>
                             @endif
                         </td>
                     </tr>

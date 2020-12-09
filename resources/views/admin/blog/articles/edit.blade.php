@@ -42,7 +42,7 @@
                                                             {{ __("cruds.articles.fields.$field") }}
                                                         </label>
                                                         <textarea class="form-control ckeditor {{ $errors->has($name) ? 'is-invalid' : '' }}"
-                                                                  name="{{ $name }}" id="{{ $name }}">{!! $oldLocale[$language->locale] ?? columnTrans($article, $field, $language->locale) !!}</textarea>
+                                                                  name="{{ $name }}" id="{{ $name }}">{!! $oldLocale[$language->locale] ?? $article->getTranslation($field, $language->locale) !!}</textarea>
                                                         @if($errors->has($name))
                                                             <span class="text-danger">{{ $errors->first($name) }}</span>
                                                         @endif
@@ -56,7 +56,7 @@
                                                            type="text"
                                                            name="{{ $name }}"
                                                            id="{{ $name }}"
-                                                           value="{{ $oldLocale[$language->locale] ?? columnTrans($article, $field, $language->locale) }}" />
+                                                           value="{{ $oldLocale[$language->locale] ?? $article->getTranslation($field, $language->locale) }}" />
                                                     @if($errors->has($name))
                                                         <span class="text-danger">{{ $errors->first($name) }}</span>
                                                     @endif
@@ -105,30 +105,6 @@
                             <span class="text-danger">{{ $errors->first($name) }}</span>
                         @endif
                     </div>
-
-{{--                    <div class="form-group col-md-4 col-sm-4 col-xs-4">--}}
-{{--                        <label class="required" for="{{ $name = 'on_header' }}">{{ __("cruds.articles.fields.$name") }}</label>--}}
-{{--                        <select name="{{ $name }}" id="{{ $name }}" class="form-control" required>--}}
-{{--                            <option value="0" {{ old($name, $article->$name) == "0" ? 'selected' : '' }}>{{ __('global.no') }}</option>--}}
-{{--                            <option value="1" {{ old($name, $article->$name) == "1" ? 'selected' : '' }}>{{ __('global.yes') }}</option>--}}
-{{--                        </select>--}}
-{{--                        @if($errors->has($name))--}}
-{{--                            <span class="text-danger">{{ $errors->first($name) }}</span>--}}
-{{--                        @endif--}}
-{{--                        <span class="help-block">{{ __("cruds.articles.fields.{$name}_helper") }}</span>--}}
-{{--                    </div>--}}
-
-{{--                    <div class="form-group col-md-4 col-sm-4 col-xs-4">--}}
-{{--                        <label class="required" for="{{ $name = 'on_footer' }}">{{ __("cruds.articles.fields.$name") }}</label>--}}
-{{--                        <select name="{{ $name }}" id="{{ $name }}" class="form-control">--}}
-{{--                            <option value="0" {{ old($name, $article->$name) == "0" ? 'selected' : '' }}>{{ __('global.no') }}</option>--}}
-{{--                            <option value="1" {{ old($name, $article->$name) == "1" ? 'selected' : '' }}>{{ __('global.yes') }}</option>--}}
-{{--                        </select>--}}
-{{--                        @if($errors->has($name))--}}
-{{--                            <span class="text-danger">{{ $errors->first($name) }}</span>--}}
-{{--                        @endif--}}
-{{--                        <span class="help-block">{{ __("cruds.articles.fields.{$name}_helper") }}</span>--}}
-{{--                    </div>--}}
 
                     <div class="form-group col-md-4 col-sm-4 col-xs-4">
                         <label class="required" for="{{ $name = 'on_home' }}">{{ __("cruds.articles.fields.$name") }}</label>

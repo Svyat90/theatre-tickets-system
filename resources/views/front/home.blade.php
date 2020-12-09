@@ -27,7 +27,7 @@
                                                 <p class="spec-desc">{{ $slider->description }}</p>
                                                 <button class="bt home-btn">
                                                     <a href="{{ $slider->url }}" class="home-link">
-                                                        {{ getVar('home_add_to_cart') }}
+                                                        {{ $vars['home_add_to_cart'] }}
                                                     </a>
                                                 </button>
                                             </div>
@@ -69,8 +69,8 @@
         </div>
         <div class="main-content">
             <div class="home-heading-wr d-flex">
-                <h2 class="form-heading">{{ getVar('spectacles_repertoire') }}</h2>
-                <a class="main-link d-flex" href="{{ route('spectacles.index') }}">{{ getVar('spectacles_all') }} <span class="material-icons">navigate_next</span></a>
+                <h2 class="form-heading">{{ $vars['spectacles_repertoire'] }}</h2>
+                <a class="main-link d-flex" href="{{ route('spectacles.index') }}">{{ $vars['spectacles_all'] }} <span class="material-icons">navigate_next</span></a>
             </div>
             <div class="cart-tickets d-flex">
                 @foreach($spectacles as $spectacle)
@@ -80,7 +80,7 @@
                         <div class="col-date premiere d-flex">
                             <p class="premiere-text">
                                 @if($spectacle->is_premiera)
-                                {{ getVar('spectacles_premiera') }}
+                                {{ $vars['spectacles_premiera'] }}
                                 @endif
                             </p>
                             <div class="heading-date">
@@ -102,7 +102,7 @@
                                     <span class="info-text">{{  DateHelper::time($spectacle, 'start_at') }}</span>
                                 </div>
                                 <div class="info-duration mr-auto">
-                                    <span class="info-text">{{  $spectacle->duration  }} {{ getVar('spectacles_min') }}</span>
+                                    <span class="info-text">{{  $spectacle->duration  }} {{ $vars['spectacles_min'] }}</span>
                                 </div>
                                 <div class="info-age">
                                     <span class="info-sala">SALA MARE</span>
@@ -112,7 +112,7 @@
                         <div class="col-tickets d-flex">
                             <div class="tickets-wr">
                                 <p class="home-link">Pret: 40-100 lei</p>
-                                <a href="{{ route('spectacles.show', $spectacle->id) }}" class="ticket-buy-link">{{ getVar('spectacles_buy_tickets') }}</a>
+                                <a href="{{ route('spectacles.show', $spectacle->id) }}" class="ticket-buy-link">{{ $vars['spectacles_buy_tickets'] }}</a>
                             </div>
                             <div class="tickets-total">
                                 <p class="total-text d-flex">
@@ -124,7 +124,7 @@
                     </div>
                 @endforeach
                 <div class="d-flex mob-link">
-                    <a href="{{ route('spectacles.index') }}" class="main-link">{{ getVar('spectacles_all') }} <span class="material-icons">navigate_next</span></a>
+                    <a href="{{ route('spectacles.index') }}" class="main-link">{{ $vars['spectacles_all'] }} <span class="material-icons">navigate_next</span></a>
                 </div>
             </div>
 
@@ -188,11 +188,11 @@
                     @if($chunkKey === 0)
                         <div class="home-gallery-col col-l">
                             <div class="home-heading-wr d-flex">
-                                <h2 class="form-heading">{{ getVar('home_gallery_title') }}</h2>
-                                <a class="main-link d-flex">{{ getVar('home_all_photos') }}<span class="material-icons">navigate_next</span></a>
+                                <h2 class="form-heading">{{ $vars['home_gallery_title'] }}</h2>
+                                <a class="main-link d-flex">{{ $vars['home_all_photos'] }}<span class="material-icons">navigate_next</span></a>
                             </div>
                             <p class="gallery-text">
-                                {{ getVar('home_gallery_text') }}
+                                {{ $vars['home_gallery_text'] }}
                             </p>
                             @foreach ($chunkItems as $chunkItem)
                                 @if($loop->index === 0)
@@ -242,7 +242,7 @@
             <div class="home-citate">
                 <div class="citate-bg-wr"></div>
                 <h2 class="form-heading">
-                    {{ getVar('home_famous_quotes') }}
+                    {{ $vars['home_famous_quotes'] }}
                 </h2>
                 @foreach($quotes as $quote)
                     <div class="citate-wr brt">
@@ -262,7 +262,7 @@
                 @endforeach
             </div>
             <div class="home-montare">
-                <h2 class="form-heading">{{ getVar('home_in_assembly') }}</h2>
+                <h2 class="form-heading">{{ $vars['home_in_assembly'] }}</h2>
                 @foreach($assemblies as $assembly)
                     <div class="montare-row d-flex">
                         <a class="montare-name">{{ $assembly->name }}</a>

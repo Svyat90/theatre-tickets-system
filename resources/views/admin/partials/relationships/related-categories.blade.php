@@ -44,7 +44,7 @@
                                 {{ $category->id }}
                             </td>
                             <td>
-                                {{ columnTrans($category, 'name') }}
+                                {{ $category->name }}
                             </td>
                             <td>
                                 {{ $category->created_at }}
