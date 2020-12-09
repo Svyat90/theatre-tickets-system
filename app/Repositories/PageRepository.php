@@ -32,6 +32,33 @@ class PageRepository extends Model
     /**
      * @return Collection
      */
+    public function getHeaderPages() : Collection
+    {
+        return Page::query()
+            ->with('children')
+            ->active()
+            ->where('on_header', true)
+            ->orderBy('order')
+            ->get();
+    }
+
+    /**
+     * @return Collection
+     */
+    public function getFooterPages() : Collection
+    {
+        return Page::query()
+            ->active()
+            ->where('on_footer', true)
+            ->orderBy('order')
+            ->limit(9)
+            ->get()
+            ->chunk(3);
+    }
+
+    /**
+     * @return Collection
+     */
     public function getSliderList() : Collection
     {
         return Page::query()

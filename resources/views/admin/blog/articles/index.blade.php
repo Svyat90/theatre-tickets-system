@@ -32,12 +32,12 @@
                     <th>
                         {{ __('cruds.articles.fields.title') }} ({{ app()->getLocale() }})
                     </th>
-                    <th>
-                        {{ __('cruds.articles.fields.on_header') }}
-                    </th>
-                    <th>
-                        {{ __('cruds.articles.fields.on_footer') }}
-                    </th>
+{{--                    <th>--}}
+{{--                        {{ __('cruds.articles.fields.on_header') }}--}}
+{{--                    </th>--}}
+{{--                    <th>--}}
+{{--                        {{ __('cruds.articles.fields.on_footer') }}--}}
+{{--                    </th>--}}
                     <th>
                         {{ __('cruds.articles.fields.on_home') }}
                     </th>
@@ -108,8 +108,8 @@
                     {data: 'image', name: 'image'},
                     {data: 'name', name: 'name'},
                     {data: 'title', name: 'title'},
-                    {data: 'on_header', name: 'on_header'},
-                    {data: 'on_footer', name: 'on_footer'},
+                    // {data: 'on_header', name: 'on_header'},
+                    // {data: 'on_footer', name: 'on_footer'},
                     {data: 'on_home', name: 'on_home'},
                     {data: 'active', name: 'active'},
                     {data: 'date', name: 'date'},

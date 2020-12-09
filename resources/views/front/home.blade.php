@@ -58,10 +58,10 @@
                     </div>
                 </div>
                 <aside class="social-links">
-                    <a href="#" class="soc-link">
+                    <a href="{{ $vars['soc_link_facebook'] }}" class="soc-link">
                         <i class="fa fa-facebook-f"></i>
                     </a>
-                    <a href="#" class="soc-link">
+                    <a href="{{ $vars['soc_link_intagram'] }}" class="soc-link">
                         <i class="fa fa-instagram"></i>
                     </a>
                 </aside>

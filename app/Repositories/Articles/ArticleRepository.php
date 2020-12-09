@@ -20,6 +20,19 @@ class ArticleRepository extends Model
     }
 
     /**
+     * @return Collection
+     */
+    public function getFooterArticles() : Collection
+    {
+        return Article::query()
+            ->active()
+            ->latest()
+            ->orderBy('id', 'desc')
+            ->limit(2)
+            ->get();
+    }
+
+    /**
      * @return Model|null
      */
     public function getArticleWithVideo() : ? Article

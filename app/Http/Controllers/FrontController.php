@@ -3,10 +3,11 @@
 namespace App\Http\Controllers;
 
 use App\Traits\VarTrait;
+use App\Traits\SettingsTrait;
 
 class FrontController extends Controller
 {
-    use VarTrait;
+    use VarTrait, SettingsTrait;
 
     /**
      * Controller constructor.
@@ -14,6 +15,7 @@ class FrontController extends Controller
     public function __construct()
     {
         $this->shareVars();
+        $this->sharePages();
     }
 
 }

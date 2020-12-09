@@ -17,37 +17,43 @@
         </button>
         <div class="navbar-c">
             <ul class="navbar-nav collapse navbar-collapse" id="navbarNav">
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
-                       data-toggle="dropdown"
-                       aria-haspopup="true" aria-expanded="false">
-                        Despre teatru
-                        <svg aria-hidden="true" focusable="false" data-prefix="fal" data-icon="angle-down" role="img"
-                             xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 512"
-                             class="svg-inline--fa fa-angle-down">
-                            <path fill="currentColor"
-                                  d="M119.5 326.9L3.5 209.1c-4.7-4.7-4.7-12.3 0-17l7.1-7.1c4.7-4.7 12.3-4.7 17 0L128 287.3l100.4-102.2c4.7-4.7 12.3-4.7 17 0l7.1 7.1c4.7 4.7 4.7 12.3 0 17L136.5 327c-4.7 4.6-12.3 4.6-17-.1z"
-                                  class=""></path>
-                        </svg>
-                    </a>
-                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <a class="dropdown-item" href="#">Action</a>
-                        <a class="dropdown-item" href="#">Another action</a>
-                        <div class="dropdown-divider"></div>
-                        <a class="dropdown-item" href="#">Something else here</a>
-                    </div>
+                @foreach($headerPages as $page)
+                    @if($page->children->count()))
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                                data-toggle="dropdown"
+                                aria-haspopup="true" aria-expanded="false">
+                                {{ $page->name }}
+                                <svg aria-hidden="true" focusable="false" data-prefix="fal" data-icon="angle-down" role="img"
+                                     xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 512"
+                                     class="svg-inline--fa fa-angle-down">
+                                    <path fill="currentColor"
+                                          d="M119.5 326.9L3.5 209.1c-4.7-4.7-4.7-12.3 0-17l7.1-7.1c4.7-4.7 12.3-4.7 17 0L128 287.3l100.4-102.2c4.7-4.7 12.3-4.7 17 0l7.1 7.1c4.7 4.7 4.7 12.3 0 17L136.5 327c-4.7 4.6-12.3 4.6-17-.1z"
+                                          class=""></path>
+                                </svg>
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                @foreach($page->children as $child)
+                                    <a class="dropdown-item" href="{{ route('pages.show', $child->slug) }}">{{ $child->name }}</a>
+                                @endforeach
+                            </div>
+                        </li>
+                    @else
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{ route('pages.show', $page->slug) }}">{{ $page->name }}</a>
+                        </li>
+                    @endif
+                @endforeach
+
+
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ route('spectacles.index') }}">{{ $vars['header_spectacles'] }}</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Echipa</a>
+                    <a class="nav-link" href="{{ route('articles.index') }}">{{ $vars['header_blog'] }}</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Spectacole</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Blog</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Contacte</a>
+                    <a class="nav-link" href="{{ route('pages.contacts') }}">{{ $vars['header_contacts'] }}</a>
                 </li>
                 <li class="nav-item mob-lang">
                     <a href="#" class="nav-link active">RO</a>
@@ -55,12 +61,13 @@
                 </li>
             </ul>
             <form class="form-inline my-2 my-lg-0">
-                <input class="form-control mr-sm-2" id="header-search" type="search" placeholder="Search"
-                       aria-label="Search">
+                <input class="form-control mr-sm-2" id="header-search" type="search" placeholder="{{ $vars['search'] }}"
+                       aria-label="{{ $vars['search'] }}">
                 <button class="btn my-2 my-sm-0" id="search-button"><span class="material-icons">search</span></button>
             </form>
             <a href="#" class="nav-link nav-link-gold d">
-                COSUL MEU<span id="count">1</span>
+                {{ $vars['my_cart'] }}
+{{--                <span id="count">1</span>--}}
             </a>
             <div class="lang">
                 <a href="#" class="nav-link active">Ro</a>
@@ -69,7 +76,7 @@
         </div>
         <a href="#" class="nav-link nav-link-gold m">
             <img src="{{ asset('front/img/mobile-cart.svg') }}" alt="">
-            <span id="count">1</span>
+{{--            <span id="count">1</span>--}}
         </a>
     </nav>
 </header>

@@ -42,7 +42,7 @@ class Article extends BaseModel
      */
     protected $fillable = [
         'name', 'title', 'content', 'video_url', 'slug',
-        'on_header', 'on_footer', 'active', 'date', 'on_home'
+       /* 'on_header', 'on_footer',*/ 'active', 'date', 'on_home'
     ];
 
     /**

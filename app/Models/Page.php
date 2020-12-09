@@ -59,4 +59,14 @@ class Page extends BaseModel
         return $this->hasMany(self::class, 'parent_id', 'id');
     }
 
+    /**
+     * Get the route key for the model.
+     *
+     * @return string
+     */
+    public function getRouteKey()
+    {
+        return 'slug';
+    }
+
 }

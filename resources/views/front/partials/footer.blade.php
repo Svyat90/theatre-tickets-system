@@ -4,53 +4,56 @@
             <img src="{{ asset('front/img/header-logo.png') }}" alt="Satiricus">
         </div>
         <div class="footer-nav">
-            <ul class="footer-navlist">
-                <li class="footer-item"><a href="#">Despre noi</a></li>
-                <li class="footer-item"><a href="#">Despre compania</a></li>
-                <li class="footer-item"><a href="#">Plan salei</a></li>
-                <li class="footer-item"><a href="#">Actorii</a></li>
-            </ul>
-            <ul class="footer-navlist">
-                <li class="footer-item"><a href="#">Spectacle</a></li>
-                <li class="footer-item"><a href="#">Premiere</a></li>
-                <li class="footer-item"><a href="#">Noi</a></li>
-                <li class="footer-item"><a href="#">In montare</a></li>
-            </ul>
-            <ul class="footer-navlist">
-                <li class="footer-item"><a href="#">Rezervari bilete</a></li>
-                <li class="footer-item"><a href="#">Premiere</a></li>
-                <li class="footer-item"><a href="#">Noi</a></li>
-                <li class="footer-item"><a href="#">In montare</a></li>
-            </ul>
+            @foreach($footerPages as $chunkPages)
+                <ul class="footer-navlist" id="{{ $loop->last ? 'last' : '' }}">
+                    @if($loop->first)
+                        <li class="footer-item">
+                            <a href="{{ route('spectacles.index') }}">{{ $vars['header_spectacles'] }}</a>
+                        </li>
+                    @elseif($loop->last)
+                        <li class="footer-item">
+                            <a href="{{ route('pages.account') }}">{{ $vars['my_account'] }}</a>
+                        </li>
+                    @else
+                        <li class="footer-item">
+                            <a href="{{ route('pages.contacts') }}">{{ $vars['header_contacts'] }}</a>
+                        </li>
+                    @endif
+
+                    @foreach($chunkPages as $chunkPage)
+                        <li class="footer-item">
+                            <a href="{{ route('pages.show', $chunkPage->slug) }}">{{ $chunkPage->name }}</a>
+                        </li>
+                    @endforeach
+                </ul>
+            @endforeach
             <ul class="footer-navlist" id="last">
                 <li class="footer-item"><a href="#">Blog</a></li>
-                <a class="footer-item">
-                    <img src="{{ asset('front/img/footer-blog-img.jpg') }}" alt="Blog image">
-                    <span>Teatru tv teatru la tine acasă cu tvr moldova șI tvr international</span>
-                </a>
-                <a class="footer-item">
-                    <img src="{{ asset('front/img/footer-blog-img2.jpg') }}" alt="Blog image">
-                    <span>Teatru tv teatru la tine acasă cu tvr moldova șI tvr international</span>
-                </a>
+                @foreach($footerArticles as $footerArticle)
+                    <a class="footer-item" href="{{ route('articles.show', $footerArticle->id) }}">
+                        <img src="{{ MediaHelper::getImageUrl($footerArticle) }}" style="max-width: 40px;" alt="{{ $footerArticle->name }}">
+                        <span>{{ substr($footerArticle->title, 0, 50) . ' ...' }}</span>
+                    </a>
+                @endforeach
             </ul>
             <div class="footer-contacts">
                 <div class="social-links">
-                    <a href="#" class="soc-link">
+                    <a href="{{ $vars['soc_link_facebook'] }}" class="soc-link">
                         <i class="fa fa-facebook-f"></i>
                     </a>
-                    <a href="#" class="soc-link">
+                    <a href="{{ $vars['soc_link_intagram'] }}" class="soc-link">
                         <i class="fa fa-instagram"></i>
                     </a>
                 </div>
                 <div class="phone">
-                    <p class="phone-number"><span class="material-icons">call</span>+373 22 54 67</p>
-                    <p class="phone-time">LU-VI 09:00 - 18:00</p>
+                    <p class="phone-number"><span class="material-icons">call</span>{{ $vars['footer_call_phone'] }}</p>
+                    <p class="phone-time">{{ $vars['footer_work_schedule'] }}</p>
                 </div>
             </div>
         </div>
         <div class="footer-c">
             <p class="copy">
-                &copy; Copyright Satiricus 2020
+                &copy; Copyright Satiricus {{ date('Y') }}
             </p>
             <img src="{{ asset('front/img/footer-visa.jpg') }}" alt="Pay with VISA">
             <img src="{{ asset('front/img/footer-mastercard.png') }}" alt="Pay with MasterCard">

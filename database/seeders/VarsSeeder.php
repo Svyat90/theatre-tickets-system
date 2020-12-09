@@ -147,6 +147,56 @@ class VarsSeeder extends Seeder
             'ro' => 'satiricus@satiricus.md',
             'en' => 'satiricus@satiricus.md'
         ],
+        'my_cart' => [
+            'ru' => 'МОЯ КОРЗИНА',
+            'ro' => 'COSUL MEU',
+            'en' => 'MY CART'
+        ],
+        'my_account' => [
+            'ru' => 'Мой акаунт',
+            'ro' => 'Мой акаунт',
+            'en' => 'My account'
+        ],
+        'search' => [
+            'ru' => 'Поиск',
+            'ro' => 'Search',
+            'en' => 'Search'
+        ],
+        'soc_link_facebook' => [
+            'ru' => 'https://www.facebook.com/groups/realtyua',
+            'ro' => 'https://www.facebook.com/groups/realtyua',
+            'en' => 'https://www.facebook.com/groups/realtyua'
+        ],
+        'soc_link_intagram' => [
+            'ru' => 'https://www.instagram.com/formatica',
+            'ro' => 'https://www.instagram.com/formatica',
+            'en' => 'https://www.instagram.com/formatica'
+        ],
+        'header_spectacles' => [
+            'ru' => 'Спектакли',
+            'ro' => 'Спектакли',
+            'en' => 'Spectacles'
+        ],
+        'header_contacts' => [
+            'ru' => 'Контакты',
+            'ro' => 'Контакты',
+            'en' => 'Contacts'
+        ],
+        'header_blog' => [
+            'ru' => 'Блог',
+            'ro' => 'Блог',
+            'en' => 'Blog'
+        ],
+        'footer_call_phone' => [
+            'ru' => '+373 22 54 67',
+            'ro' => '+373 22 54 67',
+            'en' => '+373 22 54 67'
+        ],
+        'footer_work_schedule' => [
+            'ru' => 'LU-VI 09:00 - 18:00',
+            'ro' => 'LU-VI 09:00 - 18:00',
+            'en' => 'LU-VI 09:00 - 18:00'
+        ],
     ];
 
     /**
