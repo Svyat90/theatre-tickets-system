@@ -2,7 +2,6 @@
 
 namespace App\Http\Controllers\Front;
 
-use App\Http\Controllers\Controller;
 use \Illuminate\Contracts\View\View;
 use \Illuminate\Contracts\View\Factory;
 use \Illuminate\Contracts\Foundation\Application;
@@ -11,8 +10,9 @@ use App\Repositories\CategoryRepository;
 use App\Http\Requests\Front\Spectacles\IndexSpectacleRequest;
 use App\Services\Spectacles\SpectacleService;
 use App\Helpers\CollectionHelper;
+use App\Http\Controllers\FrontController;
 
-class SpectacleController extends Controller
+class SpectacleController extends FrontController
 {
 
     /**
@@ -25,7 +25,7 @@ class SpectacleController extends Controller
     public function index(IndexSpectacleRequest $request, SpectacleService $service, CategoryRepository $categoryRepository)
     {
         $categories = $categoryRepository->getCollectionToIndex();
-        $spectacles = CollectionHelper::paginate($service->getCategoryList($request->category_id), 1)
+        $spectacles = CollectionHelper::paginate($service->getCategoryList($request->category_id), $this->pageLimit)
             ->appends([
                 'category_id' => $request->category_id
             ]);;

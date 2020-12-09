@@ -12,7 +12,6 @@
         href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap"
         rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/5.4.5/css/swiper.min.css">
     <link rel="stylesheet" href="{{ asset('front/css/header.css') }}">
     <link rel="stylesheet" href="{{ asset('front/css/footer.css') }}">
     <link rel="stylesheet" href="{{ asset('front/css/layout.css') }}">

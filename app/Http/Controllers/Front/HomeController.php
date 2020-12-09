@@ -10,6 +10,7 @@ use \Illuminate\Contracts\Foundation\Application;
 use App\Repositories\SpectacleRepository;
 use App\Repositories\Articles\ArticleRepository;
 use App\Http\Controllers\FrontController;
+use App\Repositories\Workers\WorkerRepository;
 
 class HomeController extends FrontController
 {
@@ -33,11 +34,15 @@ class HomeController extends FrontController
     /**
      * @param SpectacleRepository $spectacleRepository
      * @param ArticleRepository   $articleRepository
+     * @param WorkerRepository    $workerRepository
      *
      * @return Application|Factory|View
      */
-    public function index(SpectacleRepository $spectacleRepository, ArticleRepository $articleRepository)
-    {
+    public function index(
+        SpectacleRepository $spectacleRepository,
+        ArticleRepository $articleRepository,
+        WorkerRepository $workerRepository
+    ) {
         return view('front.home', [
             'sliders' => $this->service->repository->getSliderList(),
             'quotes' => $this->service->repository->getQuotesList(),
@@ -45,7 +50,8 @@ class HomeController extends FrontController
             'gallery' => $this->service->repository->getGalleryList(),
             'spectacles' => $spectacleRepository->getListForHome(),
             'articleVideo' => $articleVideo = $articleRepository->getArticleWithVideo(),
-            'articles' => $articleRepository->getListToHome($articleVideo->id ?? null)
+            'articles' => $articleRepository->getListToHome($articleVideo->id ?? null),
+            'workers' => $workerRepository->getListToHome(),
         ]);
     }
 

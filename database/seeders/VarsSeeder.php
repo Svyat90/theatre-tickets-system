@@ -87,16 +87,66 @@ class VarsSeeder extends Seeder
             'ro' => 'Toate noutati',
             'en' => 'All news'
         ],
-//        'spectacles' => [
-//            'ru' => 'Спектакли',
-//            'ro' => 'Спектакли',
-//            'en' => 'Spectacles'
-//        ],
-//        'contacts' => [
-//            'ru' => 'Контакты',
-//            'ro' => 'Контакты',
-//            'en' => 'Contact'
-//        ],
+        'home_team_title' => [
+            'ru' => 'Команда',
+            'ro' => 'Team',
+            'en' => 'Team'
+        ],
+        'home_all_actors' => [
+            'ru' => 'Все акторы',
+            'ro' => 'Toate actorii',
+            'en' => 'All actors'
+        ],
+        'home_team_text' => [
+            'ru' => 'Pentru realizarea unor sarcini artistice atât de dificile era nevoie de actori înzestraţi multilateral. Ei au fost cooptaţi în trupă de-a lungul anilor, nucleul ei însă a fost constituit chiar de la fondare şi a rămas mereu constant. Astăzi trupa numără peste 30 de actori, inclusiv 5 Artiști ai Poporului, 10 Artiști Emeriți şi 2 Maeştri ai Artei.',
+            'ro' => 'Pentru realizarea unor sarcini artistice atât de dificile era nevoie de actori înzestraţi multilateral. Ei au fost cooptaţi în trupă de-a lungul anilor, nucleul ei însă a fost constituit chiar de la fondare şi a rămas mereu constant. Astăzi trupa numără peste 30 de actori, inclusiv 5 Artiști ai Poporului, 10 Artiști Emeriți şi 2 Maeştri ai Artei.',
+            'en' => 'Pentru realizarea unor sarcini artistice atât de dificile era nevoie de actori înzestraţi multilateral. Ei au fost cooptaţi în trupă de-a lungul anilor, nucleul ei însă a fost constituit chiar de la fondare şi a rămas mereu constant. Astăzi trupa numără peste 30 de actori, inclusiv 5 Artiști ai Poporului, 10 Artiști Emeriți şi 2 Maeştri ai Artei.'
+        ],
+        'team_title_top' => [
+            'ru' => 'Команда',
+            'ro' => 'Team',
+            'en' => 'Team'
+        ],
+        'team_title' => [
+            'ru' => 'Команда',
+            'ro' => 'Team',
+            'en' => 'Team'
+        ],
+        'base_all' => [
+            'ru' => 'Все',
+            'ro' => 'Toate',
+            'en' => 'All'
+        ],
+        'home_map_details_text' => [
+            'ru' => 'Больше подробностей',
+            'ro' => 'entru mai multe detalii',
+            'en' => 'For more details'
+        ],
+        'home_map_details_button_link' => [
+            'ru' => 'https://www.google.com',
+            'ro' => 'https://www.google.com',
+            'en' => 'https://www.google.com'
+        ],
+        'home_map_details_button_text' => [
+            'ru' => 'купить билеты',
+            'ro' => 'cumpara bilete',
+            'en' => 'buy tickets'
+        ],
+        'home_map_address' => [
+            'ru' => 'Republica Moldova, mun. Chişinău, str. Mihai Eminescu 55',
+            'ro' => 'Republica Moldova, mun. Chişinău, str. Mihai Eminescu 55',
+            'en' => 'Republica Moldova, mun. Chişinău, str. Mihai Eminescu 55'
+        ],
+        'home_map_text_phone' => [
+            'ru' => '22-20-28-90',
+            'ro' => '22-20-28-90',
+            'en' => '22-20-28-90'
+        ],
+        'home_map_text_email' => [
+            'ru' => 'satiricus@satiricus.md',
+            'ro' => 'satiricus@satiricus.md',
+            'en' => 'satiricus@satiricus.md'
+        ],
     ];
 
     /**

@@ -1,6 +1,7 @@
 @extends('layouts.front')
 
 @section('styles')
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/5.4.5/css/swiper.min.css">
     <link rel="stylesheet" href="{{ asset('front/css/home.css') }}">
 @endsection
 
@@ -274,14 +275,14 @@
             </div>
             <div class="home-map" id="map">
                 <div class="map-message">
-                    <p class="map-text">Republica Moldova, mun. Chişinău, str. Mihai Eminescu 55</p>
-                    <p class="map-text">373 22-20-28-90</p>
-                    <p class="map-text">satiricus@satiricus.md</p>
+                    <p class="map-text">{{ $vars['home_map_address'] }}</p>
+                    <p class="map-text">{{ $vars['home_map_text_phone'] }}</p>
+                    <p class="map-text">{{ $vars['home_map_text_email'] }}</p>
                     <img class="map-geo" src="{{ asset('front/img/home-map-geo.svg') }}" alt="">
                 </div>
                 <div class="heading-text">
-                    <h1 class="heading">Pentru mai multe detalii</h1>
-                    <a href="#" class="ticket-buy-link link-red">cumpara bitele</a>
+                    <h1 class="heading">{{ $vars['home_map_details_text'] }}</h1>
+                    <a href="{{ $vars['home_map_details_button_link'] }}" class="ticket-buy-link link-red">{{ $vars['home_map_details_button_text'] }}</a>
                 </div>
             </div>
             <style type="text/css">
@@ -297,124 +298,30 @@
                     z-index: 0;
                 }
             </style>
+
             <div class="home-team">
-                <h2 class="form-heading">Team</h2>
+                <h2 class="form-heading">{{ $vars['home_team_title'] }}</h2>
                 <p class="team-pretext">
-                    Pentru realizarea unor sarcini artistice atât de dificile era nevoie de actori înzestraţi multilateral.
-                    Ei au
-                    fost cooptaţi în trupă de-a lungul anilor, nucleul ei însă a fost constituit chiar de la fondare şi a
-                    rămas
-                    mereu constant. Astăzi trupa numără peste 30 de actori, inclusiv 5 Artiști ai Poporului, 10 Artiști
-                    Emeriți şi
-                    2 Maeştri ai Artei.
+                    {{ $vars['home_team_text'] }}
                 </p>
-                <a class="main-link ml-auto">Toate actorii <span class="material-icons">navigate_next</span></a>
+                <a class="main-link ml-auto" href="{{ route('workers.index') }}">{{ $vars['home_all_actors'] }} <span class="material-icons">navigate_next</span></a>
                 <div class="sl-team-wr">
                     <div class="team-wr swiper-wrapper">
-                        <div class="team-item">
-                            <a class="item-img-wr">
-                                <img src="{{ asset('front/img/actorii-team-member.jpg') }}" alt="">
-                            </a>
-                            <div class="item-text-wr">
-                                <a class="item-text item-text-name">
-                                    Alexandru GRECU
+                        @foreach($workers as $worker)
+                            <div class="team-item">
+                                <a class="item-img-wr">
+                                    <img src="{{ MediaHelper::getImageUrl($worker) }}" alt="">
                                 </a>
-                                <p class="item-text">
-                                    Artist Emerit
-                                </p>
+                                <div class="item-text-wr">
+                                    <a class="item-text item-text-name">
+                                        {{ $worker->name }}
+                                    </a>
+                                    <p class="item-text">
+                                        {{ $worker->title }}
+                                    </p>
+                                </div>
                             </div>
-                        </div>
-                        <div class="team-item">
-                            <a class="item-img-wr">
-                                <img src="{{ asset('front/img/home-team-dir.jpg') }}" alt="">
-                            </a>
-                            <div class="item-text-wr">
-                                <a class="item-text item-text-name">
-                                    Alexandru GRECU
-                                </a>
-                                <p class="item-text">
-                                    Director artistic al Teatrului Național Satiricus Ion Luca Caragiale
-                                </p>
-                            </div>
-                        </div>
-                        <div class="team-item">
-                            <a class="item-img-wr">
-                                <img src="{{ asset('front/img/actorii-team-member.jpg') }}" alt="">
-                            </a>
-                            <div class="item-text-wr">
-                                <a class="item-text item-text-name">
-                                    Alexandru GRECU
-                                </a>
-                                <p class="item-text">
-                                    Artist Emerit
-                                </p>
-                            </div>
-                        </div>
-                        <div class="team-item">
-                            <a class="item-img-wr">
-                                <img src="{{ asset('front/img/actorii-team-member.jpg') }}" alt="">
-                            </a>
-                            <div class="item-text-wr">
-                                <a class="item-text item-text-name">
-                                    Alexandru GRECU
-                                </a>
-                                <p class="item-text">
-                                    Artist al Poporului
-                                </p>
-                            </div>
-                        </div>
-                        <div class="team-item">
-                            <a class="item-img-wr">
-                                <img src="{{ asset('front/img/actorii-team-member.jpg') }}" alt="">
-                            </a>
-                            <div class="item-text-wr">
-                                <a class="item-text item-text-name">
-                                    Alexandru GRECU
-                                </a>
-                                <p class="item-text">
-                                    Artist Emerit
-                                </p>
-                            </div>
-                        </div>
-                        <div class="team-item">
-                            <a class="item-img-wr">
-                                <img src="{{ asset('front/img/actorii-team-member.jpg') }}" alt="">
-                            </a>
-                            <div class="item-text-wr">
-                                <a class="item-text item-text-name">
-                                    Alexandru GRECU
-                                </a>
-                                <p class="item-text">
-                                    Artist Emerit
-                                </p>
-                            </div>
-                        </div>
-                        <div class="team-item">
-                            <a class="item-img-wr">
-                                <img src="{{ asset('front/img/actorii-team-member.jpg') }}" alt="">
-                            </a>
-                            <div class="item-text-wr">
-                                <a class="item-text item-text-name">
-                                    Alexandru GRECU
-                                </a>
-                                <p class="item-text">
-                                    Artist al Poporului
-                                </p>
-                            </div>
-                        </div>
-                        <div class="team-item">
-                            <a class="item-img-wr">
-                                <img src="{{ asset('front/img/actorii-team-member.jpg') }}" alt="">
-                            </a>
-                            <div class="item-text-wr">
-                                <a class="item-text item-text-name">
-                                    Alexandru GRECU
-                                </a>
-                                <p class="item-text">
-                                    Director artistic al Teatrului Național Satiricus Ion Luca Caragiale
-                                </p>
-                            </div>
-                        </div>
+                        @endforeach
                     </div>
                     <div class="t-swiper-pagination"></div>
                 </div>

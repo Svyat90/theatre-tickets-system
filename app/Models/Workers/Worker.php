@@ -35,7 +35,7 @@ class Worker extends BaseModel
      * @var string[]
      */
     protected $fillable = [
-        'name', 'title', 'on_home', 'active'
+        'name', 'title', 'on_home', 'on_top', 'active'
     ];
 
     /**

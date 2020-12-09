@@ -12,7 +12,8 @@ class Controller extends BaseController
     /**
      * @var int
      */
-    protected int $pageLimit = 24;
+    protected int $pageLimit = 1;
+//    protected int $pageLimit = 24;
 
     use AuthorizesRequests, DispatchesJobs, ValidatesRequests;
 }

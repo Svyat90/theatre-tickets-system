@@ -13,7 +13,7 @@ use Illuminate\Database\Eloquent\Relations\HasMany;
  * @property int $id
  * @property array $name
  * @property string $slug
- * @property Collection articles
+ * @property Collection $workers
  */
 class WorkerCategory extends BaseModel
 {

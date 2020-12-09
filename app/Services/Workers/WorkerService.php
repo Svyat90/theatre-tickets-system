@@ -11,6 +11,8 @@ use App\Helpers\MediaHelper;
 use App\Helpers\ImageHelper;
 use App\Repositories\Workers\WorkerRepository;
 use App\Models\Workers\Worker;
+use Illuminate\Support\Collection;
+use App\Repositories\Workers\WorkerCategoryRepository;
 
 class WorkerService
 {
@@ -43,12 +45,27 @@ class WorkerService
             ->editColumn('name', fn ($row) => columnTrans($row, 'name'))
             ->editColumn('title', fn ($row) => columnTrans($row, 'title'))
             ->editColumn('on_home', fn ($row) => LabelHelper::boolLabel($row->on_home))
+            ->editColumn('on_top', fn ($row) => LabelHelper::boolLabel($row->on_top))
             ->editColumn('active', fn ($row) => LabelHelper::boolLabel($row->active))
             ->editColumn('created_at', fn ($row) => $row->created_at)
             ->addColumn('image', fn ($row) => ImageHelper::thumbImage($row->image))
             ->addColumn('actions', fn ($row) => DatatablesHelper::renderActionsRow($row, 'workers'))
-            ->rawColumns(['actions', 'placeholder', 'on_home', 'active', 'image'])
+            ->rawColumns(['actions', 'placeholder', 'on_home', 'on_top', 'active', 'image'])
             ->make(true);
+    }
+
+    /**
+     * @param int|null $categoryId
+     *
+     * @return Collection
+     */
+    public function getList(? int $categoryId)
+    {
+        if ($categoryId) {
+            return app(WorkerCategoryRepository::class)->getWorkers($categoryId);
+        }
+
+        return $this->repository->getCollectionToIndex();
     }
 
     /**
@@ -58,7 +75,7 @@ class WorkerService
      */
     public function createWorker(StoreWorkerRequest $request) : Worker
     {
-        $worker = $this->repository->saveWorker($request->validated());
+        $worker = $this->repository->saveWorker($request->all());
 
         $this->handleMediaFiles($request, $worker);
         $this->handleCategory($worker, $request->worker_category_id);

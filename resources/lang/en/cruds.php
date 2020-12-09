@@ -190,6 +190,8 @@ return [
             'active_helper'       => '',
             'on_home'              => 'On Home',
             'on_home_helper'       => '',
+            'on_top'              => 'On Top',
+            'on_top_helper'       => '',
             'image'              => 'Image',
             'image_helper'       => '',
         ],

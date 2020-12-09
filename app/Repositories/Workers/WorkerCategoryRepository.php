@@ -37,6 +37,19 @@ class WorkerCategoryRepository extends Model
     }
 
     /**
+     * @param int $categoryId
+     *
+     * @return Collection
+     */
+    public function getWorkers(int $categoryId) : Collection
+    {
+        return WorkerCategory::query()
+            ->find($categoryId)
+            ->first()
+            ->workers;
+    }
+
+    /**
      * @param array $data
      *
      * @return WorkerCategory

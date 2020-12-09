@@ -29,7 +29,7 @@
                     </tr>
 
                     @foreach($worker->getFillable() as $field)
-                        @if($field === 'active' || $field === 'on_home')
+                        @if($field === 'active' || $field === 'on_home' || $field === 'on_top')
                             <tr>
                                 <th>
                                     {{ __("cruds.workers.fields.{$field}") }}

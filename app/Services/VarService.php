@@ -32,15 +32,17 @@ class VarService
     public function getDatatablesData()
     {
         $collection = $this->repository->getCollectionToIndex();
+        $key = localeColumn('key');
 
         return Datatables::of($collection)
             ->addColumn('placeholder', '&nbsp;')
             ->editColumn('id', fn ($row) => $row->id)
+            ->editColumn($key, fn ($row) => $row->$key)
             ->editColumn('val_ru', fn ($row) => $row->val_ru)
             ->editColumn('val_ro', fn ($row) => $row->val_ro)
             ->editColumn('val_en', fn ($row) => $row->val_en)
             ->editColumn('created_at', fn ($row) => $row->created_at)
-            ->addColumn('actions', fn ($row) => DatatablesHelper::renderActionsRow($row, 'vars'))
+            ->addColumn('actions', fn ($row) => DatatablesHelper::renderActionsRow($row, 'vars', false))
             ->rawColumns(['actions', 'placeholder'])
             ->make(true);
     }

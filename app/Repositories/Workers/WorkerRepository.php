@@ -19,6 +19,31 @@ class WorkerRepository extends Model
     }
 
     /**
+     * @return Model|null
+     */
+    public function getTopWorker() : ? Worker
+    {
+        return Worker::query()
+            ->active()
+            ->latest()
+            ->where('on_top', true)
+            ->first();
+    }
+
+    /**
+     * @return Collection
+     */
+    public function getListToHome() : Collection
+    {
+        return Worker::query()
+            ->active()
+            ->latest()
+            ->where('on_home', true)
+            ->limit(8)
+            ->get();
+    }
+
+    /**
      * @param array $data
      *
      * @return Worker

@@ -36,6 +36,9 @@
                         {{ __('cruds.workers.fields.on_home') }}
                     </th>
                     <th>
+                        {{ __('cruds.workers.fields.on_top') }}
+                    </th>
+                    <th>
                         {{ __('cruds.workers.fields.active') }}
                     </th>
                     <th>
@@ -100,6 +103,7 @@
                     {data: 'name', name: 'name'},
                     {data: 'title', name: 'title'},
                     {data: 'on_home', name: 'on_home'},
+                    {data: 'on_top', name: 'on_top'},
                     {data: 'active', name: 'active'},
                     {data: 'created_at', name: 'created_at'},
                     {data: 'actions', name: '{{ __('global.actions') }}'}

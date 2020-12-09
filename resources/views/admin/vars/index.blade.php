@@ -16,6 +16,9 @@
                         {{ __('cruds.base.fields.id') }}
                     </th>
                     <th>
+                        {{ __("cruds.vars.fields.key_" . app()->getLocale()) }}
+                    </th>
+                    <th>
                         {{ __('cruds.vars.fields.val_ru') }}
                     </th>
                     <th>
@@ -41,6 +44,7 @@
     @parent
     <script>
         $(function () {
+            let key = '{{ localeColumn('key') }}';
             let dtOverrideGlobals = {
                 buttons: null,
                 processing: true,
@@ -51,6 +55,7 @@
                 columns: [
                     {data: 'placeholder', name: 'placeholder'},
                     {data: 'id', name: 'id'},
+                    {data: key, name: key},
                     {data: 'val_ru', name: 'val_ru'},
                     {data: 'val_ro', name: 'val_ro'},
                     {data: 'val_en', name: 'val_en'},

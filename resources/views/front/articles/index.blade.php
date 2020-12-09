@@ -39,7 +39,7 @@
                 Noutati
             </h2>
             <p class="tabs">
-                <a href="{{ route('articles.index') }}" class="blog-link {{ ! request()->input('category_id', null) ? 'active' : '' }}">Toate</a>
+                <a href="{{ route('articles.index') }}" class="blog-link {{ ! request()->input('category_id', null) ? 'active' : '' }}">{{ $vars['base_all'] }}</a>
                 @foreach($categories as $category)
                     <a href="{{ route('articles.index', ['category_id' => $category->id]) }}"
                        class="blog-link {{ request()->input('category_id', null) == $category->id ? 'active' : '' }}" >
@@ -81,111 +81,11 @@
                                 {{ $article->name }}
                             </h5>
                             <p class="card-text">{{ $articleVideo->date ? $articleVideo->date->format('d. m. Y') : '' }}
-                                <a href="{{ route('articles.show', $article->id) }}" class="card-link">{{ $article->category ? $article->category->name : ''}}</a>
+                                <a href="{{ route('articles.index', ['category_id' => $category->id]) }}" class="card-link">{{ $article->category ? $article->category->name : ''}}</a>
                             </p>
                         </div>
                     </div>
                 @endforeach
-
-{{--                <div class="card cards-card">--}}
-{{--                    <img class="card-img-top" src="./img/blog-cards-1.jpg" alt="Card image cap">--}}
-{{--                    <div class="card-body">--}}
-{{--                        <h5 class="card-title">--}}
-{{--                            Teatru tv teatru la tine acasă cu tvr moldova șI tvr international--}}
-{{--                        </h5>--}}
-{{--                        <p class="card-text">22.07.2020--}}
-{{--                            <a href="#" class="card-link">Eveniment</a>--}}
-{{--                        </p>--}}
-{{--                    </div>--}}
-{{--                </div>--}}
-{{--                <div class="card cards-card">--}}
-{{--                    <img class="card-img-top" src="./img/blog-cards-1.jpg" alt="Card image cap">--}}
-{{--                    <div class="card-body">--}}
-{{--                        <h5 class="card-title">--}}
-{{--                            Teatru tv teatru la tine acasă cu tvr moldova șI tvr international--}}
-{{--                        </h5>--}}
-{{--                        <p class="card-text">22.07.2020--}}
-{{--                            <a href="#" class="card-link">Eveniment</a>--}}
-{{--                        </p>--}}
-{{--                    </div>--}}
-{{--                </div>--}}
-{{--                <div class="card cards-card">--}}
-{{--                    <img class="card-img-top" src="./img/blog-cards-1.jpg" alt="Card image cap">--}}
-{{--                    <div class="card-body">--}}
-{{--                        <h5 class="card-title">--}}
-{{--                            Teatru tv teatru la tine acasă cu tvr moldova șI tvr international--}}
-{{--                        </h5>--}}
-{{--                        <p class="card-text">22.07.2020--}}
-{{--                            <a href="#" class="card-link">Eveniment</a>--}}
-{{--                        </p>--}}
-{{--                    </div>--}}
-{{--                </div>--}}
-{{--                <div class="card cards-card">--}}
-{{--                    <img class="card-img-top" src="./img/blog-cards-1.jpg" alt="Card image cap">--}}
-{{--                    <div class="card-body">--}}
-{{--                        <h5 class="card-title">--}}
-{{--                            Teatru tv teatru la tine acasă cu tvr moldova șI tvr international--}}
-{{--                        </h5>--}}
-{{--                        <p class="card-text">22.07.2020--}}
-{{--                            <a href="#" class="card-link">Eveniment</a>--}}
-{{--                        </p>--}}
-{{--                    </div>--}}
-{{--                </div>--}}
-{{--                <div class="card cards-card">--}}
-{{--                    <img class="card-img-top" src="./img/blog-cards-1.jpg" alt="Card image cap">--}}
-{{--                    <div class="card-body">--}}
-{{--                        <h5 class="card-title">--}}
-{{--                            Teatru tv teatru la tine acasă cu tvr moldova șI tvr international--}}
-{{--                        </h5>--}}
-{{--                        <p class="card-text">22.07.2020--}}
-{{--                            <a href="#" class="card-link">Eveniment</a>--}}
-{{--                        </p>--}}
-{{--                    </div>--}}
-{{--                </div>--}}
-{{--                <div class="card cards-card">--}}
-{{--                    <img class="card-img-top" src="./img/blog-cards-1.jpg" alt="Card image cap">--}}
-{{--                    <div class="card-body">--}}
-{{--                        <h5 class="card-title">--}}
-{{--                            Teatru tv teatru la tine acasă cu tvr moldova șI tvr international--}}
-{{--                        </h5>--}}
-{{--                        <p class="card-text">22.07.2020--}}
-{{--                            <a href="#" class="card-link">Eveniment</a>--}}
-{{--                        </p>--}}
-{{--                    </div>--}}
-{{--                </div>--}}
-{{--                <div class="card cards-card">--}}
-{{--                    <img class="card-img-top" src="./img/blog-cards-1.jpg" alt="Card image cap">--}}
-{{--                    <div class="card-body">--}}
-{{--                        <h5 class="card-title">--}}
-{{--                            Teatru tv teatru la tine acasă cu tvr moldova șI tvr international--}}
-{{--                        </h5>--}}
-{{--                        <p class="card-text">22.07.2020--}}
-{{--                            <a href="#" class="card-link">Eveniment</a>--}}
-{{--                        </p>--}}
-{{--                    </div>--}}
-{{--                </div>--}}
-{{--                <div class="card cards-card">--}}
-{{--                    <img class="card-img-top" src="./img/blog-cards-1.jpg" alt="Card image cap">--}}
-{{--                    <div class="card-body">--}}
-{{--                        <h5 class="card-title">--}}
-{{--                            Teatru tv teatru la tine acasă cu tvr moldova șI tvr international--}}
-{{--                        </h5>--}}
-{{--                        <p class="card-text">22.07.2020--}}
-{{--                            <a href="#" class="card-link">Eveniment</a>--}}
-{{--                        </p>--}}
-{{--                    </div>--}}
-{{--                </div>--}}
-{{--                <div class="card cards-card">--}}
-{{--                    <img class="card-img-top" src="./img/blog-cards-1.jpg" alt="Card image cap">--}}
-{{--                    <div class="card-body">--}}
-{{--                        <h5 class="card-title">--}}
-{{--                            Teatru tv teatru la tine acasă cu tvr moldova șI tvr international--}}
-{{--                        </h5>--}}
-{{--                        <p class="card-text">22.07.2020--}}
-{{--                            <a href="#" class="card-link">Eveniment</a>--}}
-{{--                        </p>--}}
-{{--                    </div>--}}
-{{--                </div>--}}
 
                 {{ $articles->links('front.partials.paginator') }}
 

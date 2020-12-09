@@ -11,13 +11,17 @@ class DatatablesHelper
 {
 
     /**
-     * @param Model $row
+     * @param Model  $row
      * @param string $entityName
-     * @return Application|Factory|View
+     * @param bool   $withDelete
+     *
+     * @return Application|Factory|\Illuminate\Contracts\View\View
      */
-    public static function renderActionsRow(Model $row, string $entityName)
+    public static function renderActionsRow(Model $row, string $entityName, bool $withDelete = true)
     {
-        return view('admin.partials.datatables-actions', compact(
+        $view = $withDelete ? 'datatables-actions-show-read-del' : 'datatables-actions-show-read';
+
+        return view("admin.partials.$view", compact(
             'entityName',
             'row'
         ));
