@@ -56,8 +56,9 @@
                     <a class="nav-link" href="{{ route('pages.contacts') }}">{{ $vars['header_contacts'] }}</a>
                 </li>
                 <li class="nav-item mob-lang">
-                    <a href="#" class="nav-link active">RO</a>
-                    <a href="#" class="nav-link">ENG</a>
+                    <a href="{{ route('set_locate', 'ro') }}" class="nav-link {{ app()->getLocale() === 'ro' ? 'active' : '' }}">RO</a>
+                    <a href="{{ route('set_locate', 'en') }}" class="nav-link {{ app()->getLocale() === 'en' ? 'active' : '' }}">EN</a>
+                    <a href="{{ route('set_locate', 'ru') }}" class="nav-link {{ app()->getLocale() === 'ru' ? 'active' : '' }}">RU</a>
                 </li>
             </ul>
             <form class="form-inline my-2 my-lg-0">
@@ -70,8 +71,9 @@
 {{--                <span id="count">1</span>--}}
             </a>
             <div class="lang">
-                <a href="#" class="nav-link active">Ro</a>
-                <a href="#" class="nav-link">Eng</a>
+                <a href="{{ route('set_locate', 'ro') }}" class="nav-link {{ app()->getLocale() === 'ro' ? 'active' : '' }}">RO</a>
+                <a href="{{ route('set_locate', 'en') }}" class="nav-link {{ app()->getLocale() === 'en' ? 'active' : '' }}">EN</a>
+                <a href="{{ route('set_locate', 'ru') }}" class="nav-link {{ app()->getLocale() === 'ru' ? 'active' : '' }}">RU</a>
             </div>
         </div>
         <a href="#" class="nav-link nav-link-gold m">

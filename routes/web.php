@@ -14,6 +14,7 @@ use App\Http\Controllers\Admin\Workers\WorkerController;
 use \App\Http\Controllers\Admin\Spectacles\SpectacleController as AdminSpectacleController;
 use \App\Http\Controllers\Admin\Spectacles\CategoryController;
 use \App\Http\Controllers\Front\PageController;
+use \App\Http\Middleware\LocaleMiddleware;
 
 /*
 |--------------------------------------------------------------------------
@@ -27,12 +28,9 @@ use \App\Http\Controllers\Front\PageController;
 */
 
 Auth::routes(['register' => false]);
+Route::get('set-locale/{lang}', 'Front\LocaleController@setLocale')->name('set_locate');
 
-Route::get('/', function () {
-    return view('welcome');
-});
-
-Route::namespace('Front')->group(function () {
+Route::prefix(LocaleMiddleware::getLocale())->namespace('Front')->group(function () {
     Route::get('/', [HomeController::class, 'redirectToHome']);
     Route::get('home', [HomeController::class, 'index'])->name('front.home');
     Route::get('pages/{page:slug}', [PageController::class, 'show'])->name('pages.show');
