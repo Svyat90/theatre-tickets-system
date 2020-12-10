@@ -15,6 +15,7 @@ use \App\Http\Controllers\Admin\Spectacles\SpectacleController as AdminSpectacle
 use \App\Http\Controllers\Admin\Spectacles\CategoryController;
 use \App\Http\Controllers\Front\PageController;
 use \App\Http\Middleware\LocaleMiddleware;
+use \App\Http\Controllers\Front\EmailController;
 
 /*
 |--------------------------------------------------------------------------
@@ -40,6 +41,7 @@ Route::prefix(LocaleMiddleware::getLocale())->namespace('Front')->group(function
     Route::resource('spectacles', 'SpectacleController')->only('index', 'show');
     Route::resource('articles', 'ArticleController')->only('index', 'show');
     Route::resource('workers', 'WorkerController')->only('index');
+    Route::post('emails/contact', [EmailController::class, 'sendContactForm'])->name('emails.contact');
 });
 
 // Admin

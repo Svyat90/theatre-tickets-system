@@ -47,13 +47,13 @@
 
 
                 <li class="nav-item">
-                    <a class="nav-link" href="{{ route('spectacles.index') }}">{{ $vars['header_spectacles'] }}</a>
+                    <a class="nav-link" href="{{ route('spectacles.index') }}">{{ $vars['menu_spectacles'] }}</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="{{ route('articles.index') }}">{{ $vars['header_blog'] }}</a>
+                    <a class="nav-link" href="{{ route('articles.index') }}">{{ $vars['menu_blog'] }}</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="{{ route('pages.contacts') }}">{{ $vars['header_contacts'] }}</a>
+                    <a class="nav-link" href="{{ route('pages.contacts') }}">{{ $vars['menu_contacts'] }}</a>
                 </li>
                 <li class="nav-item mob-lang">
                     <a href="{{ route('set_locate', 'ro') }}" class="nav-link {{ app()->getLocale() === 'ro' ? 'active' : '' }}">RO</a>

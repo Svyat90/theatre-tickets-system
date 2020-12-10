@@ -8,7 +8,7 @@
                 <ul class="footer-navlist" id="{{ $loop->last ? 'last' : '' }}">
                     @if($loop->first)
                         <li class="footer-item">
-                            <a href="{{ route('spectacles.index') }}">{{ $vars['header_spectacles'] }}</a>
+                            <a href="{{ route('spectacles.index') }}">{{ $vars['menu_spectacles'] }}</a>
                         </li>
                     @elseif($loop->last)
                         <li class="footer-item">
@@ -16,7 +16,7 @@
                         </li>
                     @else
                         <li class="footer-item">
-                            <a href="{{ route('pages.contacts') }}">{{ $vars['header_contacts'] }}</a>
+                            <a href="{{ route('pages.contacts') }}">{{ $vars['menu_contacts'] }}</a>
                         </li>
                     @endif
 

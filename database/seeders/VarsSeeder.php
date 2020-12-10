@@ -132,17 +132,17 @@ class VarsSeeder extends Seeder
             'ro' => 'cumpara bilete',
             'en' => 'buy tickets'
         ],
-        'home_map_address' => [
+        'map_address' => [
             'ru' => 'Republica Moldova, mun. Chişinău, str. Mihai Eminescu 55',
             'ro' => 'Republica Moldova, mun. Chişinău, str. Mihai Eminescu 55',
             'en' => 'Republica Moldova, mun. Chişinău, str. Mihai Eminescu 55'
         ],
-        'home_map_text_phone' => [
+        'map_text_phone' => [
             'ru' => '22-20-28-90',
             'ro' => '22-20-28-90',
             'en' => '22-20-28-90'
         ],
-        'home_map_text_email' => [
+        'map_text_email' => [
             'ru' => 'satiricus@satiricus.md',
             'ro' => 'satiricus@satiricus.md',
             'en' => 'satiricus@satiricus.md'
@@ -172,17 +172,17 @@ class VarsSeeder extends Seeder
             'ro' => 'https://www.instagram.com/formatica',
             'en' => 'https://www.instagram.com/formatica'
         ],
-        'header_spectacles' => [
+        'menu_spectacles' => [
             'ru' => 'Спектакли',
             'ro' => 'Спектакли',
             'en' => 'Spectacles'
         ],
-        'header_contacts' => [
+        'menu_contacts' => [
             'ru' => 'Контакты',
             'ro' => 'Контакты',
             'en' => 'Contacts'
         ],
-        'header_blog' => [
+        'menu_blog' => [
             'ru' => 'Блог',
             'ro' => 'Блог',
             'en' => 'Blog'
@@ -196,6 +196,111 @@ class VarsSeeder extends Seeder
             'ru' => 'LU-VI 09:00 - 18:00',
             'ro' => 'LU-VI 09:00 - 18:00',
             'en' => 'LU-VI 09:00 - 18:00'
+        ],
+        'contact_title_top' => [
+            'ru' => 'Контакты',
+            'ro' => 'Contacte',
+            'en' => 'Contacts'
+        ],
+        'contact_title' => [
+            'ru' => 'Контакты',
+            'ro' => 'Contacte',
+            'en' => 'Contacts'
+        ],
+        'contact_write_to_us_title' => [
+            'ru' => 'Напишите нам',
+            'ro' => 'Scrie la noi',
+            'en' => 'Write to us'
+        ],
+        'contact_ticket_office_text' => [
+            'ru' => 'Тел.: Билетная касса',
+            'ro' => 'Tel.: Casa de bilete:',
+            'en' => 'Tel.: Ticket office:'
+        ],
+        'contact_ticket_office_phones' => [
+            'ru' => '+373 22-20-28-90 / 069416078',
+            'ro' => '+373 22-20-28-90 / 069416078',
+            'en' => '+373 22-20-28-90 / 069416078'
+        ],
+        'contact_show_organizer_text' => [
+            'ru' => 'Тел.: Организатор выставки:',
+            'ro' => 'Tel.: Organizator spectacole:',
+            'en' => 'Tel.: Show organizer:'
+        ],
+        'contact_show_organizer_phones' => [
+            'ru' => '+373 22-20-28-94 / 069368274 / 061171906 / 079748302 / 068808571',
+            'ro' => '+373 22-20-28-94 / 069368274 / 061171906 / 079748302 / 068808571',
+            'en' => '+373 22-20-28-94 / 069368274 / 061171906 / 079748302 / 068808571'
+        ],
+        'contact_accounting_text' => [
+            'ru' => 'Тел.: Бухгалтерия',
+            'ro' => 'Tel.: Contabilitate',
+            'en' => 'Tel.: Accounting'
+        ],
+        'contact_accounting_content' => [
+            'ru' => '+373 22-20-28-93, satiricus@inbox.ru',
+            'ro' => '+373 22-20-28-93, satiricus@inbox.ru',
+            'en' => '+373 22-20-28-93, satiricus@inbox.ru'
+        ],
+        'contact_fax' => [
+            'ru' => '+373 22-20-28-93, satiricus@inbox.ru',
+            'ro' => '+373 22-20-28-93, satiricus@inbox.ru',
+            'en' => '+373 22-20-28-93, satiricus@inbox.ru'
+        ],
+        'contact_email_text' => [
+            'ru' => 'E-mail:',
+            'ro' => 'E-mail:',
+            'en' => 'E-mail:'
+        ],
+        'contact_email_content' => [
+            'ru' => 'satiricus@satiricus.md / satiricus@inbox.ru',
+            'ro' => 'satiricus@satiricus.md / satiricus@inbox.ru',
+            'en' => 'satiricus@satiricus.md / satiricus@inbox.ru',
+        ],
+        'contact_form_name' => [
+            'ru' => 'Название',
+            'ro' => 'Nume',
+            'en' => 'Name',
+        ],
+        'contact_form_fist_name' => [
+            'ru' => 'Имя',
+            'ro' => 'Nume',
+            'en' => 'First name',
+        ],
+        'contact_form_phone' => [
+            'ru' => 'Телефон',
+            'ro' => 'Telefon',
+            'en' => 'Phone',
+        ],
+        'contact_form_email' => [
+            'ru' => 'E-mail',
+            'ro' => 'E-mail',
+            'en' => 'E-mail'
+        ],
+        'contact_form_message' => [
+            'ru' => 'Сообщение',
+            'ro' => 'Message',
+            'en' => 'Message'
+        ],
+        'contact_form_send' => [
+            'ru' => 'Отправить',
+            'ro' => 'Trimite',
+            'en' => 'Send'
+        ],
+        'contact_email' => [
+            'ru' => 'matrix.yurinets.sv@gmal.com',
+            'ro' => 'matrix.yurinets.sv@gmal.com',
+            'en' => 'matrix.yurinets.sv@gmal.com'
+        ],
+        'contact_success_sent' => [
+            'ru' => 'Сообщение успешно отправлено.',
+            'ro' => 'Mesaj trimis cu succes.',
+            'en' => 'Message sent successfully.'
+        ],
+        'contact_success_error' => [
+            'ru' => 'Что-то пошло не так. Попробуйте позже.',
+            'ro' => 'Ceva n-a mers bine. Încercați mai târziu.',
+            'en' => 'Something went wrong. Try again later.'
         ],
     ];
 

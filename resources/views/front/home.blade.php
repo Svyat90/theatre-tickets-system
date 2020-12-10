@@ -275,9 +275,9 @@
             </div>
             <div class="home-map" id="map">
                 <div class="map-message">
-                    <p class="map-text">{{ $vars['home_map_address'] }}</p>
-                    <p class="map-text">{{ $vars['home_map_text_phone'] }}</p>
-                    <p class="map-text">{{ $vars['home_map_text_email'] }}</p>
+                    <p class="map-text">{{ $vars['map_address'] }}</p>
+                    <p class="map-text">{{ $vars['map_text_phone'] }}</p>
+                    <p class="map-text">{{ $vars['map_text_email'] }}</p>
                     <img class="map-geo" src="{{ asset('front/img/home-map-geo.svg') }}" alt="">
                 </div>
                 <div class="heading-text">
