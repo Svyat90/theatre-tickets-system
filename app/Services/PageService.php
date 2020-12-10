@@ -17,6 +17,7 @@ class PageService
 {
     use FilterConstantsTrait;
 
+    public const TYPE_PAGE = 'page';
     public const TYPE_SLIDER = 'slider';
     public const TYPE_GALLERY = 'gallery';
     public const TYPE_QUOTE = 'quote';

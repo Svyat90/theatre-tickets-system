@@ -8,7 +8,7 @@
                 <ul class="footer-navlist" id="{{ $loop->last ? 'last' : '' }}">
                     @if($loop->first)
                         <li class="footer-item">
-                            <a href="{{ route('spectacles.index') }}">{{ $vars['menu_spectacles'] }}</a>
+                            <a href="{{ route('workers.index') }}">{{ $vars['menu_workers'] }}</a>
                         </li>
                     @elseif($loop->last)
                         <li class="footer-item">
@@ -31,7 +31,7 @@
                 <li class="footer-item"><a href="#">Blog</a></li>
                 @foreach($footerArticles as $footerArticle)
                     <a class="footer-item" href="{{ route('articles.show', $footerArticle->id) }}">
-                        <img src="{{ MediaHelper::getImageUrl($footerArticle) }}" style="max-width: 40px;" alt="{{ $footerArticle->name }}">
+                        <img src="{{ MediaHelper::getImageUrl($footerArticle, 'image', true) }}" style="max-width: 40px;" alt="{{ $footerArticle->name }}">
                         <span>{{ substr($footerArticle->title, 0, 50) . ' ...' }}</span>
                     </a>
                 @endforeach

@@ -8,6 +8,7 @@ use Spatie\MediaLibrary\MediaCollections\Models\Media;
 use Spatie\MediaLibrary\InteractsWithMedia;
 use Spatie\MediaLibrary\HasMedia;
 use Spatie\Image\Exceptions\InvalidManipulation;
+use Spatie\Image\Manipulations;
 
 /**
  * Class BaseModel
@@ -53,9 +54,8 @@ abstract class BaseModel extends Model implements HasMedia
     public function registerMediaConversions(Media $media = null) : void
     {
         $this->addMediaConversion('thumb')
-            ->width(50)
-            ->width(50)
-            ->sharpen(10);
+            ->fit(Manipulations::FIT_CROP, 65, 65)
+            ->sharpen(80);
     }
 
     /**

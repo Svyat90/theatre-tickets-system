@@ -34,7 +34,7 @@ class Page extends BaseModel
      * @var string[]
      */
     protected $fillable = [
-        'name', 'title', 'description', 'content', 'url',
+        'name', 'title', 'description', 'content', 'url', 'slug',
         'order', 'on_header', 'on_footer', 'active', 'date', 'type'
     ];
 

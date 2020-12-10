@@ -56,7 +56,7 @@ class UpdatePageRequest extends FormRequest
             'content.*' => 'string|nullable',
             'date' => 'sometimes|nullable|string',
             'image' => 'sometimes|string',
-            'type' => 'sometimes|nullable|' . Rule::in($pageService->getTypes())
+            'type' => 'required|' . Rule::in($pageService->getTypes())
         ];
     }
 

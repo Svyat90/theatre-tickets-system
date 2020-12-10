@@ -45,7 +45,6 @@ class ArticleCategoryRepository extends Model
     {
         return ArticleCategory::query()
             ->find($categoryId)
-            ->first()
             ->articles;
      }
 

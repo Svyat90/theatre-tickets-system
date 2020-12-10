@@ -45,7 +45,6 @@ class WorkerCategoryRepository extends Model
     {
         return WorkerCategory::query()
             ->find($categoryId)
-            ->first()
             ->workers;
     }
 

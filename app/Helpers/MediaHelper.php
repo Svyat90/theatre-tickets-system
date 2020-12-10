@@ -12,12 +12,21 @@ class MediaHelper
     /**
      * @param Model  $model
      * @param string $field
+     * @param bool   $thumb
      *
      * @return string
      */
-    public static function getImageUrl(Model $model, string $field = 'image')
+    public static function getImageUrl(Model $model, string $field = 'image', bool $thumb = false)
     {
-        return $model->$field ? $model->$field->getFullUrl() : '';
+        if (! $model->$field) {
+            return "";
+        }
+
+        if ($thumb) {
+            return $model->$field->thumb;
+        }
+
+        return $model->$field->getFullUrl();
     }
 
     /**

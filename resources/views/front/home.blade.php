@@ -168,7 +168,7 @@
 
                         <div class="text-note d-flex {{ $class }}">
                             <div class="note-img">
-                                <img src="{{ MediaHelper::getImageUrl($article) }}" alt="">
+                                <img src="{{ MediaHelper::getImageUrl($article, 'image', true) }}" alt="" style="max-width: 65px;">
                             </div>
                             <div class="note-desc">
                                 <a class="note-title" href="{{ route('articles.show', $article->id) }}">
@@ -265,7 +265,7 @@
                 <h2 class="form-heading">{{ $vars['home_in_assembly'] }}</h2>
                 @foreach($assemblies as $assembly)
                     <div class="montare-row d-flex">
-                        <a class="montare-name">{{ $assembly->name }}</a>
+                        <a class="montare-name" href="{{ $assembly->url ?? '' }}">{{ $assembly->name }}</a>
                         <p class="montare-people">
                             <span class="montare-author">{{ $assembly->title }}</span>
                             <span class="montare-group">{{ strip_tags($assembly->description) }}</span>

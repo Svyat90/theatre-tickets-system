@@ -14,7 +14,7 @@ class AddTypeFieldInPagesTable extends Migration
     public function up()
     {
         Schema::table('pages', function (Blueprint $table) {
-            $table->enum('type', ['slider', 'gallery', 'quote', 'assembly'])->nullable();
+            $table->enum('type', ['slider', 'gallery', 'quote', 'assembly', 'page'])->nullable();
         });
     }
 

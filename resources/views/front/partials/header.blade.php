@@ -45,7 +45,9 @@
                     @endif
                 @endforeach
 
-
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ route('workers.index') }}">{{ $vars['menu_workers'] }}</a>
+                </li>
                 <li class="nav-item">
                     <a class="nav-link" href="{{ route('spectacles.index') }}">{{ $vars['menu_spectacles'] }}</a>
                 </li>

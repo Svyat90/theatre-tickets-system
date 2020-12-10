@@ -116,7 +116,6 @@
                         <select class="form-control {{ $errors->has($name) ? 'is-invalid' : '' }}"
                                 name="{{ $name }}"
                                 id="{{ $name }}" >
-                            <option>{{ trans('global.pleaseSelect') }}</option>
                             @foreach($types as $id => $type)
                                 <option value="{{ $type }}" {{ $id == old($name, 0) ? 'selected' : '' }}>{{ $type }}</option>
                             @endforeach

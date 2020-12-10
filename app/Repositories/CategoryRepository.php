@@ -39,7 +39,6 @@ class CategoryRepository extends Model
     {
         return Category::query()
             ->find($categoryId)
-            ->first()
             ->spectacles;
     }
 

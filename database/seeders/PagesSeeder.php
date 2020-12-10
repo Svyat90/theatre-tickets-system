@@ -70,6 +70,23 @@ class PagesSeeder extends Seeder
                 'en' => 'un spectacol de Sandu GRECU',
             ]
         ],
+        'page' => [
+            'name' => [
+                'ru' => 'Test Page',
+                'ro' => 'Test Page',
+                'en' => 'Test Page',
+            ],
+            'title' => [
+                'ru' => 'Test Page Tiel',
+                'ro' => 'Test Page Tiel',
+                'en' => 'Test Page Tiel',
+            ],
+            'content' => [
+                'ru' => 'Test Page Content',
+                'ro' => 'Test Page Content',
+                'en' => 'Test Page Content',
+            ]
+        ],
     ];
 
     /**
@@ -93,6 +110,26 @@ class PagesSeeder extends Seeder
         $this->seedQuotes();
         $this->seedAssemblies();
         $this->seedGallery();
+        $this->seedPages();
+    }
+
+    private function seedPages()
+    {
+        $insertData = $this->pages['page'];
+        $service = app(PageService::class);
+
+        $i = 0;
+        while ($i < 8) {
+            $insertData['active'] = true;
+            $insertData['on_header'] = $i % 3 === 0 ? true : false;
+            $insertData['on_footer'] = true;
+            $page = $service->createPage(new StorePageRequest($insertData));
+            $i++;
+
+            $page
+                ->addMediaFromUrl(asset("front/img/blog-detail-img-2.jpg"))
+                ->toMediaCollection('image');
+        }
     }
 
     private function seedGallery()

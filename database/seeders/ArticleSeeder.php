@@ -44,7 +44,7 @@ class ArticleSeeder extends Seeder
             'name' => [
                 'ru' => 'События',
                 'ro' => 'События',
-                'en' => 'Eevents',
+                'en' => 'Events',
             ],
             'active' => true
         ]);
@@ -67,6 +67,10 @@ class ArticleSeeder extends Seeder
 
         $i = 0;
         while ($i < 5) {
+            if ($i == 0) {
+                $this->article['video_url'] = 'https://www.youtube.com/embed/G4cJ4wviwS8';
+            }
+
             $this->article['article_category_id'] = rand($min, $max);
             $this->article['active'] = true;
             $this->article['on_home'] = true;
@@ -75,7 +79,7 @@ class ArticleSeeder extends Seeder
             $i++;
 
             $page
-                ->addMediaFromUrl(asset("front/img/home-note1.jpg"))
+                ->addMediaFromUrl(asset("front/img/blog-detail-img-2.jpg"))
                 ->toMediaCollection('image');
         }
     }

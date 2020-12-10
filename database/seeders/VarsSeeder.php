@@ -172,6 +172,11 @@ class VarsSeeder extends Seeder
             'ro' => 'https://www.instagram.com/formatica',
             'en' => 'https://www.instagram.com/formatica'
         ],
+        'menu_workers' => [
+            'ru' => 'Команда',
+            'ro' => 'Echipa',
+            'en' => 'Team'
+        ],
         'menu_spectacles' => [
             'ru' => 'Спектакли',
             'ro' => 'Спектакли',
@@ -301,6 +306,36 @@ class VarsSeeder extends Seeder
             'ru' => 'Что-то пошло не так. Попробуйте позже.',
             'ro' => 'Ceva n-a mers bine. Încercați mai târziu.',
             'en' => 'Something went wrong. Try again later.'
+        ],
+        'blog_read_more' => [
+            'ru' => 'Читать больше',
+            'ro' => 'Citeste mai mult',
+            'en' => 'READ MORE'
+        ],
+        'blog_title_top' => [
+            'ru' => 'Festivalul national de teatru, ediţia a 23-a',
+            'ro' => 'Festivalul national de teatru, ediţia a 23-a',
+            'en' => 'Festivalul national de teatru, ediţia a 23-a'
+        ],
+        'blog_title' => [
+            'ru' => 'Новости',
+            'ro' => 'Noutati',
+            'en' => 'News'
+        ],
+        'blog_top_text_1' => [
+            'ru' => 'Duminica',
+            'ro' => 'Duminica',
+            'en' => 'Duminica'
+        ],
+        'blog_top_text_2' => [
+            'ru' => '26',
+            'ro' => '26',
+            'en' => '26'
+        ],
+        'blog_top_text_3' => [
+            'ru' => 'IULIE',
+            'ro' => 'IULIE',
+            'en' => 'IULIE'
         ],
     ];
 
