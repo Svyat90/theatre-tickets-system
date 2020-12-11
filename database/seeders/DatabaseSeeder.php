@@ -18,7 +18,8 @@ class DatabaseSeeder extends Seeder
             VarsSeeder::class,
             PagesSeeder::class,
             ArticleSeeder::class,
-            WorkerSeeder::class
+            WorkerSeeder::class,
+            AboutSeeder::class
         ]);
     }
 }
