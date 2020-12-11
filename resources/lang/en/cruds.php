@@ -88,6 +88,8 @@ return [
             'image_detail_helper'       => '',
             'image_gallery'              => 'Images (Gallery)',
             'image_gallery_helper'       => '',
+            'schema_id'              => 'Schema ID',
+            'schema_id_helper'       => '',
         ],
     ],
     'languages'                     => [

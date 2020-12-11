@@ -41,6 +41,9 @@ class SpectacleService
 
         return Datatables::of($collection)
             ->addColumn('placeholder', '&nbsp;')
+            ->addColumn('schema', function ($row) {
+                return '<a href="' . route('admin.spectacles.places', $row->id) . '">Places</a>';
+            })
             ->editColumn('id', fn ($row) => $row->id)
             ->editColumn('name', fn ($row) => $row->name)
             ->editColumn('author', fn ($row) => $row->author)
@@ -54,7 +57,7 @@ class SpectacleService
             ->editColumn('created_at', fn ($row) => $row->created_at)
             ->addColumn('image', fn ($row) => ImageHelper::thumbImage($row->image_grid))
             ->addColumn('actions', fn ($row) => DatatablesHelper::renderActionsRow($row, 'spectacles'))
-            ->rawColumns(['actions', 'placeholder', 'active', 'is_premiera', 'image'])
+            ->rawColumns(['actions', 'placeholder', 'active', 'is_premiera', 'image', 'schema'])
             ->make(true);
     }
 
@@ -94,7 +97,7 @@ class SpectacleService
      *
      * @return Spectacle
      */
-    public function updateDictionary(UpdateSpectacleRequest $request, Spectacle $spectacle) : Spectacle
+    public function updateSpectacle(UpdateSpectacleRequest $request, Spectacle $spectacle) : Spectacle
     {
         $this->handleMediaFiles($request, $spectacle);
         $this->handleRelationships($spectacle, $request);

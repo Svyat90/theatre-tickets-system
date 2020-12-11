@@ -42,52 +42,52 @@ class SchemaSeeder extends Seeder
             $cols = $price = 0;
             switch (true) {
                 case $rowIndex === 1:
-                    $colorId = $colors['Yellow'];
-                    $cols = 19;
+                    $colorId = $colors['purple'];
+                    $cols = 20;
                     $price = 60;
                     break;
                 case $rowIndex === 2:
-                    $colorId = $colors['Green'];
-                    $cols = 19;
+                    $colorId = $colors['yellow'];
+                    $cols = 20;
                     $price = 80;
                     break;
                 case $rowIndex === 3:
-                    $colorId = $colors['Green'];
-                    $cols = 17;
+                    $colorId = $colors['yellow'];
+                    $cols = 18;
                     $price = 80;
                     break;
                 case $rowIndex === 4:
-                    $colorId = $colors['Red'];
-                    $cols = 17;
+                    $colorId = $colors['red'];
+                    $cols = 18;
                     $price = 100;
                     break;
                 case $rowIndex === 5:
-                    $colorId = $colors['Red'];
+                    $colorId = $colors['red'];
                     $cols = 15;
                     $price = 100;
                     break;
                 case $rowIndex === 6 || $rowIndex === 7:
-                    $colorId = $colors['Green'];
+                    $colorId = $colors['yellow'];
                     $cols = 13;
                     $price = 80;
                     break;
                 case $rowIndex === 8:
-                    $colorId = $colors['Green'];
+                    $colorId = $colors['yellow'];
                     $cols = 15;
                     $price = 80;
                     break;
                 case $rowIndex === 9 || $rowIndex === 10:
-                    $colorId = $colors['Yellow'];
+                    $colorId = $colors['purple'];
                     $cols = 17;
                     $price = 60;
                     break;
                 case $rowIndex === 11 || $rowIndex === 12:
-                    $colorId = $colors['BlueDark'];
+                    $colorId = $colors['blue'];
                     $cols = 17;
                     $price = 50;
                     break;
                 case $rowIndex === 13:
-                    $colorId = $colors['BlueDark'];
+                    $colorId = $colors['blue'];
                     $cols = 15;
                     $price = 50;
                     break;
@@ -112,7 +112,7 @@ class SchemaSeeder extends Seeder
         for ($rowIndex = 1; $rowIndex <= 2; $rowIndex++) {
             $row = $schema->rows()->create([
                 'index' => $rowIndex,
-                'color_id' => $colors['Red'],
+                'color_id' => $colors['red'],
                 'price' => 100,
                 'on_loggia' => true,
                 'on_left' => true,
@@ -130,7 +130,7 @@ class SchemaSeeder extends Seeder
         for ($rowIndex = 1; $rowIndex <= 2; $rowIndex++) {
             $row = $schema->rows()->create([
                 'index' => $rowIndex,
-                'color_id' => $colors['Red'],
+                'color_id' => $colors['red'],
                 'price' => 100,
                 'on_loggia' => true,
                 'on_right' => true,
@@ -156,12 +156,12 @@ class SchemaSeeder extends Seeder
             $cols = $price = 0;
             switch (true) {
                 case $rowIndex === 1 || $rowIndex === 2:
-                    $colorId = $colors['Blue'];
+                    $colorId = $colors['green'];
                     $cols = 19;
                     $price = 40;
                     break;
                 case $rowIndex === 3:
-                    $colorId = $colors['Blue'];
+                    $colorId = $colors['green'];
                     $cols = 18;
                     $price = 40;
                     break;
@@ -187,7 +187,7 @@ class SchemaSeeder extends Seeder
 
         $row = $schema->rows()->create([
             'index' => 1,
-            'color_id' => $colors['Red'],
+            'color_id' => $colors['red'],
             'price' => 100,
             'on_loggia' => true,
             'on_balcony' => true,

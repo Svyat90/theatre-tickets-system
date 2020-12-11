@@ -62,7 +62,7 @@ class SchemaController extends AdminController
      */
     public function schema(Schema $schema)
     {
-        return view('admin.schemas.choose-places', compact('schema'));
+        return view('admin.schemas.raw-places', compact('schema'));
     }
 
     /**

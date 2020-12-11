@@ -24,6 +24,9 @@
                         {{ __('cruds.base.fields.id') }}
                     </th>
                     <th>
+                        {{ __('global.schema') }}
+                    </th>
+                    <th>
                         {{ __('cruds.base.fields.image') }}
                     </th>
                     <th>
@@ -111,6 +114,7 @@
                 columns: [
                     {data: 'placeholder', name: 'placeholder'},
                     {data: 'id', name: 'id'},
+                    {data: 'schema', name: 'schema'},
                     {data: 'image', name: 'image'},
                     {data: 'name', name: 'name'},
                     {data: 'author', name: 'author'},

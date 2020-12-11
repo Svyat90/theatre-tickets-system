@@ -63,6 +63,7 @@ class SpectacleRepository extends Model
     public function saveSpectacle(array $data) : Spectacle
     {
         $spectacle = new Spectacle($data);
+        $spectacle->schema_id = $data['schema_id'];
         $spectacle->slug = SlugHelper::generate('spectacle');
         $spectacle->save();
 

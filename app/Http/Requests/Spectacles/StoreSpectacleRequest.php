@@ -20,6 +20,7 @@ use Illuminate\Foundation\Http\FormRequest;
  * @property string $image_detail
  * @property array $image_gallery
  * @property array $category_ids
+ * @property int $schema_id
  */
 class StoreSpectacleRequest extends FormRequest
 {
@@ -56,7 +57,8 @@ class StoreSpectacleRequest extends FormRequest
             'image_gallery' => 'required|array',
             'image_gallery.*' => 'required|string',
             'category_ids'   => 'sometimes|array',
-            'category_ids.*' => 'integer|exists:categories,id'
+            'category_ids.*' => 'integer|exists:categories,id',
+            'schema_id' => 'required|exists:schemas,id'
         ];
     }
 

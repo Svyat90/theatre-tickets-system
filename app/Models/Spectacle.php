@@ -8,6 +8,7 @@ use Spatie\MediaLibrary\MediaCollections\Models\Media;
 use Illuminate\Database\Eloquent\Relations\BelongsToMany;
 use Illuminate\Support\Collection;
 use Spatie\MediaLibrary\MediaCollections\MediaCollection;
+use Illuminate\Database\Eloquent\Relations\BelongsTo;
 
 /**
  * Class Spectacle
@@ -24,6 +25,7 @@ use Spatie\MediaLibrary\MediaCollections\MediaCollection;
  * @property Media $image_grid
  * @property Media $image_detail
  * @property MediaCollection $image_gallery
+ * @property int $schema_id
  */
 class Spectacle extends BaseModel
 {
@@ -38,7 +40,7 @@ class Spectacle extends BaseModel
      * @var string[]
      */
     protected $fillable = [
-        'name', 'author', 'producer', 'description', 'slug',
+        'name', 'author', 'producer', 'description', 'slug', 'schema_id',
         'min_age', 'duration', 'active', 'start_at', 'is_premiera'
     ];
 
@@ -60,6 +62,14 @@ class Spectacle extends BaseModel
     public function categories()
     {
         return $this->belongsToMany(Category::class, 'spectacle_category', 'spectacle_id', 'category_id');
+    }
+
+    /**
+     * @return BelongsTo
+     */
+    public function schema()
+    {
+        return $this->belongsTo(Schema::class);
     }
 
     /**

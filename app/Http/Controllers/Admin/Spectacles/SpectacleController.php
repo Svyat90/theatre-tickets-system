@@ -17,9 +17,11 @@ use App\Http\Requests\Spectacles\UpdateSpectacleRequest;
 use App\Http\Requests\Spectacles\MassDestroySpectacleRequest;
 use App\Repositories\CategoryRepository;
 use App\Services\Spectacles\SpectacleService;
+use App\Models\Schema;
 
 class SpectacleController extends AdminController
 {
+
     use MediaUploadingTrait;
 
     /**
@@ -69,8 +71,9 @@ class SpectacleController extends AdminController
     public function create(Spectacle $spectacle, CategoryRepository $categoryRepository) : View
     {
         $categories = $categoryRepository->getListForSelect();
+        $schemas = Schema::query()->pluck('name', 'id');
 
-        return view('admin.spectacles.create', compact('spectacle', 'categories'));
+        return view('admin.spectacles.create', compact('spectacle', 'categories', 'schemas'));
     }
 
     /**
@@ -92,7 +95,7 @@ class SpectacleController extends AdminController
      */
     public function show(Spectacle $spectacle)
     {
-        $spectacle->load('categories');
+        $spectacle->load('categories', 'schema');
 
         return view('admin.spectacles.show', compact('spectacle'));
     }
@@ -107,8 +110,9 @@ class SpectacleController extends AdminController
     {
         $categories = $categoryRepository->getListForSelect();
         $categoryIds = $this->repository->getRelatedCategoryIds($spectacle);
+        $schemas = Schema::query()->pluck('name', 'id');
 
-        return view('admin.spectacles.edit', compact('spectacle', 'categories', 'categoryIds'));
+        return view('admin.spectacles.edit', compact('spectacle', 'categories', 'categoryIds', 'schemas'));
     }
 
     /**
@@ -119,7 +123,7 @@ class SpectacleController extends AdminController
      */
     public function update(UpdateSpectacleRequest $request, Spectacle $spectacle)
     {
-        $spectacle = $this->service->updateDictionary($request, $spectacle);
+        $spectacle = $this->service->updateSpectacle($request, $spectacle);
 
         return redirect()->route('admin.spectacles.show', $spectacle->id);
     }
@@ -147,6 +151,20 @@ class SpectacleController extends AdminController
         $this->repository->deleteIds($request->ids);
 
         return response()->noContent();
+    }
+
+    /**
+     * @param Request $request
+     * @param         $spectacleId
+     *
+     * @return Application|Factory|View
+     */
+    public function places(Request $request, $spectacleId)
+    {
+        $spectacle = Spectacle::query()->find($spectacleId);
+        $spectacle->load('schema');
+
+        return view('admin.schemas.places', compact('spectacle'));
     }
 
 }

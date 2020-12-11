@@ -25,7 +25,7 @@
                     </a>
                 </li>
 
-                <li class="nav-item has-treeview {{ request()->is('admin/spectacles*') || request()->is("admin/categories*") ? 'menu-open' : '' }}">
+                <li class="nav-item has-treeview {{ request()->is('admin/spectacles*') || request()->is("admin/categories*")  || request()->is("admin/schema*") ? 'menu-open' : '' }}">
                     <a class="nav-link nav-dropdown-toggle" href="#">
                         <i class="fa-fw nav-icon fas fa-file-alt"></i>
                         <p>
@@ -34,6 +34,15 @@
                         </p>
                     </a>
                     <ul class="nav nav-treeview">
+                        <li class="nav-item">
+                            <a href="{{ route("admin.schemas.index") }}" class="nav-link {{ request()->is("admin/schemas") || request()->is("admin/schemas/*") ? 'active' : '' }}" >
+                                <i class="fa-fw nav-icon fas fa-book">
+                                </i>
+                                <p>
+                                    {{ trans('global.schemas') }}
+                                </p>
+                            </a>
+                        </li>
                         <li class="nav-item">
                             <a href="{{ route("admin.categories.index") }}" class="nav-link {{ request()->is("admin/categories") || request()->is("admin/categories/*") ? 'active' : '' }}" >
                                 <i class="fa-fw nav-icon fas fa-book">
@@ -49,15 +58,6 @@
                                 </i>
                                 <p>
                                     {{ trans('global.list') }}
-                                </p>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="{{ route("admin.schemas.index") }}" class="nav-link {{ request()->is("admin/schemas") || request()->is("admin/schemas/*") ? 'active' : '' }}" >
-                                <i class="fa-fw nav-icon fas fa-book">
-                                </i>
-                                <p>
-                                    {{ trans('global.schemas') }}
                                 </p>
                             </a>
                         </li>

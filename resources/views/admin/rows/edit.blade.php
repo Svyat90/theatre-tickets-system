@@ -24,13 +24,11 @@
                         <span class="help-block">{{ __("cruds.rows.fields.{$name}_helper") }}</span>
                     </div>
 
-
                     <div class="form-group col-md-6 col-sm-6 col-xs-6">
                         <label class="" for="{{ $name = 'color_id' }}">{{ __('global.color') }}</label>
                         <select class="form-control {{ $errors->has($name) ? 'is-invalid' : '' }}"
                                 name="{{ $name }}"
                                 id="{{ $name }}" >
-                            <option value="0">{{ __('global.pleaseSelect') }}</option>
                             @foreach($colors as $id => $color)
                                 <option value="{{ $id }}" {{ $id == old($name, $row->color->id) ? 'selected' : '' }}>{{ $color }}</option>
                             @endforeach

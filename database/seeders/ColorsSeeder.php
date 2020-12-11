@@ -15,12 +15,12 @@ class ColorsSeeder extends Seeder
     public function run()
     {
         $insertData = [
-            ['name' => 'Red', 'color' => '#FF0000'],
-            ['name' => 'Blue', 'color' => '#0000FF'],
-            ['name' => 'Green', 'color' => '#008000'],
-            ['name' => 'Yellow', 'color' => '#FFFF00'],
-            ['name' => 'Purple', 'color' => '#800080'],
-            ['name' => 'BlueDark', 'color' => '#0000A0'],
+            ['name' => 'red', 'color' => '#FF646A'],
+            ['name' => 'blue', 'color' => '#75B3E2'],
+            ['name' => 'green', 'color' => '#97C992'],
+            ['name' => 'yellow', 'color' => '#C6A564'],
+            ['name' => 'purple', 'color' => '#D066A1'],
+            ['name' => 'busy', 'color' => '#ededed'],
         ];
 
         foreach ($insertData as $item) {

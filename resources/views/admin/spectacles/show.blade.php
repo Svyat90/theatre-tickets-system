@@ -19,6 +19,12 @@
                         <th>{{ __("cruds.base.fields.id") }}</th>
                         <td>{{ $spectacle->id }}</td>
                     </tr>
+                    <tr>
+                        <th>{{ __("global.schema") }}</th>
+                        <td>
+                            <a href="{{ route('admin.schemas.show', $spectacle->schema->id) }}">{{ $spectacle->schema->name }}</a>
+                        </td>
+                    </tr>
 
                     @foreach($spectacle->getFillable() as $field)
                         @if($field === 'active' || $field === 'is_premiera')

@@ -135,6 +135,20 @@
                     </div>
 
                     <div class="form-group col-md-12 col-sm-12 col-xs-12">
+                        <label class="" for="{{ $name = 'schema_id' }}">{{ __('global.schema') }}</label>
+                        <select class="form-control {{ $errors->has($name) ? 'is-invalid' : '' }}"
+                                name="{{ $name }}"
+                                id="{{ $name }}" >
+                            @foreach($schemas as $id => $schema)
+                                <option value="{{ $id }}" {{ $id == old($name, $spectacle->schema->id) ? 'selected' : '' }}>{{ $schema }}</option>
+                            @endforeach
+                        </select>
+                        @if($errors->has($name))
+                            <span class="text-danger">{{ $errors->first($name) }}</span>
+                        @endif
+                    </div>
+
+                    <div class="form-group col-md-12 col-sm-12 col-xs-12">
                         <label class="required" for="{{ $name = 'image_grid' }}">{{ __("cruds.spectacles.fields.$name") }}</label>
                         <div class="needsclick dropzone {{ $errors->has('file') ? 'is-invalid' : '' }}" id="{{ $name }}">
                         </div>

@@ -64,6 +64,7 @@ Route::prefix('admin')->as('admin.')->middleware('auth')->group(function () {
     Route::delete('spectacles/multi-destroy', [AdminSpectacleController::class, 'massDestroy'])->name('spectacles.multi_destroy');
     Route::post('spectacles/media', [AdminSpectacleController::class, 'storeMedia'])->name('spectacles.store_media');
     Route::resource('spectacles', 'Admin\Spectacles\SpectacleController');
+    Route::get('spectacle/{spectacle}', [AdminSpectacleController::class, 'places'])->name('spectacles.places');
 
     // Pages
     Route::delete('pages/multi-destroy', [AdminPageController::class, 'massDestroy'])->name('pages.multi_destroy');
