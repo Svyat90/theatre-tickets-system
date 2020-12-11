@@ -12,11 +12,11 @@
                         </li>
                     @elseif($loop->last)
                         <li class="footer-item">
-                            <a href="{{ route('pages.account') }}">{{ $vars['my_account'] }}</a>
+                            <a href="{{ route('pages.contacts') }}">{{ $vars['menu_contacts'] }}</a>
                         </li>
                     @else
                         <li class="footer-item">
-                            <a href="{{ route('pages.contacts') }}">{{ $vars['menu_contacts'] }}</a>
+                            <a href="{{ route('pages.about') }}">{{ $vars['menu_about'] }}</a>
                         </li>
                     @endif
 

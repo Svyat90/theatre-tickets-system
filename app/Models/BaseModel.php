@@ -53,9 +53,7 @@ abstract class BaseModel extends Model implements HasMedia
      */
     public function registerMediaConversions(Media $media = null) : void
     {
-        $this->addMediaConversion('thumb')
-            ->fit(Manipulations::FIT_CROP, 65, 65)
-            ->sharpen(80);
+        $this->addMediaConversion('thumb')->fit(Manipulations::FIT_CROP, 65, 65);
     }
 
     /**

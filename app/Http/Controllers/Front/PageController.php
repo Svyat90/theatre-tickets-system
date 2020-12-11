@@ -7,9 +7,9 @@ use \Illuminate\Contracts\View\View;
 use \Illuminate\Contracts\View\Factory;
 use \Illuminate\Contracts\Foundation\Application;
 use App\Http\Controllers\FrontController;
-use App\Http\Requests\Front\Pages\ShowPageRequest;
 use App\Models\Page;
 use Illuminate\Http\Request;
+use App\Models\About;
 
 class PageController extends FrontController
 {
@@ -48,6 +48,18 @@ class PageController extends FrontController
     public function contacts(Request $request)
     {
         return view('front.pages.contacts');
+    }
+
+    /**
+     * @param Request $request
+     *
+     * @return Application|Factory|View
+     */
+    public function about(Request $request)
+    {
+        $about = About::query()->first();
+
+        return view('front.pages.about', compact('about'));
     }
 
     public function cart(Request $request) {}

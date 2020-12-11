@@ -16,6 +16,7 @@ use \App\Http\Controllers\Admin\Spectacles\CategoryController;
 use \App\Http\Controllers\Front\PageController;
 use \App\Http\Middleware\LocaleMiddleware;
 use \App\Http\Controllers\Front\EmailController;
+use \App\Http\Controllers\Admin\AboutController;
 
 /*
 |--------------------------------------------------------------------------
@@ -38,6 +39,7 @@ Route::prefix(LocaleMiddleware::getLocale())->namespace('Front')->group(function
     Route::get('page/contacts', [PageController::class, 'contacts'])->name('pages.contacts');
     Route::get('page/cart', [PageController::class, 'cart'])->name('pages.cart');
     Route::get('page/account', [PageController::class, 'account'])->name('pages.account');
+    Route::get('page/about', [PageController::class, 'about'])->name('pages.about');
     Route::resource('spectacles', 'SpectacleController')->only('index', 'show');
     Route::resource('articles', 'ArticleController')->only('index', 'show');
     Route::resource('workers', 'WorkerController')->only('index');
@@ -90,4 +92,8 @@ Route::prefix('admin')->as('admin.')->middleware('auth')->group(function () {
     // Change password
     Route::get('password', [ChangePasswordController::class, 'edit'])->name('password.edit');
     Route::post('password', [ChangePasswordController::class, 'update'])->name('password.update');
+
+    Route::get('about/edit', [AboutController::class, 'edit'])->name('about.edit');
+    Route::put('about/update', [AboutController::class, 'update'])->name('about.update');
+    Route::post('about/media', [ArticleController::class, 'storeMedia'])->name('about.store_media');
 });

@@ -192,6 +192,11 @@ class VarsSeeder extends Seeder
             'ro' => 'Блог',
             'en' => 'Blog'
         ],
+        'menu_about' => [
+            'ru' => 'О нас',
+            'ro' => 'About',
+            'en' => 'About'
+        ],
         'footer_call_phone' => [
             'ru' => '+373 22 54 67',
             'ro' => '+373 22 54 67',
@@ -336,6 +341,26 @@ class VarsSeeder extends Seeder
             'ru' => 'IULIE',
             'ro' => 'IULIE',
             'en' => 'IULIE'
+        ],
+        'about_spectacles_title' => [
+            'ru' => 'În 30 ani de activitate Teatrul Național Satiricus Ion Luca <br> Caragiale a realizat următoarele spectacole de referinţă:',
+            'ro' => 'În 30 ani de activitate Teatrul Național Satiricus Ion Luca <br> Caragiale a realizat următoarele spectacole de referinţă:',
+            'en' => 'În 30 ani de activitate Teatrul Național Satiricus Ion Luca <br> Caragiale a realizat următoarele spectacole de referinţă:'
+        ],
+        'about_history_title' => [
+            'ru' => 'Teatrul participă la mai multe festivaluri şi concursuri, obţinând <br> următoarle trofee:',
+            'ro' => 'Teatrul participă la mai multe festivaluri şi concursuri, obţinând <br> următoarle trofee:',
+            'en' => 'Teatrul participă la mai multe festivaluri şi concursuri, obţinând <br> următoarle trofee:'
+        ],
+        'about_tours_title' => [
+            'ru' => 'Trupa realizează un şir de turnee importante peste hotare, inclusiv',
+            'ro' => 'Trupa realizează un şir de turnee importante peste hotare, inclusiv',
+            'en' => 'Trupa realizează un şir de turnee importante peste hotare, inclusiv'
+        ],
+        'about_gallery_title' => [
+            'ru' => 'Galerie',
+            'ro' => 'Galerie',
+            'en' => 'Galerie'
         ],
     ];
 

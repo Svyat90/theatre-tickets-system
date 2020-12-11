@@ -135,6 +135,36 @@
                     </ul>
                 </li>
 
+                <li class="nav-item has-treeview {{ request()->is('admin/about/edit') ? 'menu-open' : '' }}">
+                    <a class="nav-link nav-dropdown-toggle" href="#">
+                        <i class="fa-fw nav-icon fas fa-file-alt"></i>
+                        <p>
+                            {{ trans('global.settings') }}
+                            <i class="right fa fa-fw fa-angle-left nav-icon"></i>
+                        </p>
+                    </a>
+                    <ul class="nav nav-treeview">
+                        <li class="nav-item">
+                            <a href="{{ route("admin.about.edit") }}" class="nav-link {{ request()->is("admin/about/edit") ? 'active' : '' }}" >
+                                <i class="fa-fw nav-icon fas fa-book">
+                                </i>
+                                <p>
+                                    {{ trans('cruds.about.title') }}
+                                </p>
+                            </a>
+                        </li>
+{{--                        <li class="nav-item">--}}
+{{--                            <a href="{{ route("admin.workers.index") }}" class="nav-link {{ request()->is("admin/workers") || request()->is("admin/workers/*") ? 'active' : '' }}" >--}}
+{{--                                <i class="fa-fw nav-icon fas fa-book">--}}
+{{--                                </i>--}}
+{{--                                <p>--}}
+{{--                                    {{ trans('cruds.workers.title') }}--}}
+{{--                                </p>--}}
+{{--                            </a>--}}
+{{--                        </li>--}}
+                    </ul>
+                </li>
+
                 <li class="nav-item">
                     <a href="{{ route("admin.vars.index") }}" class="nav-link {{ request()->is("admin/vars") || request()->is("admin/vars/*") ? 'active' : '' }}" >
                         <i class="fa-fw nav-icon fas fa-book">
