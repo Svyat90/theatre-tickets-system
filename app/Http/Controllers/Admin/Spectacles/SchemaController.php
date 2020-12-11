@@ -31,7 +31,13 @@ class SchemaController extends AdminController
                 ->editColumn('name', fn ($row) => $row->name)
                 ->editColumn('active', fn ($row) => LabelHelper::boolLabel($row->active))
                 ->editColumn('created_at', fn ($row) => $row->created_at)
-                ->addColumn('actions', fn ($row) => DatatablesHelper::renderActionsRow($row, 'schemas', false))
+                ->addColumn('actions', function ($row) {
+                    $entityName = 'schemas';
+                    return view("admin.partials.datatables-actions-show-read-schema", compact(
+                        'entityName',
+                        'row'
+                    ));
+                })
                 ->rawColumns(['actions', 'placeholder', 'active'])
                 ->make(true);
         }
@@ -47,6 +53,16 @@ class SchemaController extends AdminController
     public function show(Schema $schema)
     {
         return view('admin.schemas.show', compact('schema'));
+    }
+
+    /**
+     * @param Schema $schema
+     *
+     * @return Application|Factory|View
+     */
+    public function schema(Schema $schema)
+    {
+        return view('admin.schemas.choose-places', compact('schema'));
     }
 
     /**

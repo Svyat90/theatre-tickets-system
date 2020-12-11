@@ -65,4 +65,6 @@ return [
     "team" => "Team",
     "type" => "Type",
     "schemas" => "Schemas",
+    "schema" => "Schema",
+    "color" => "Color",
 ];

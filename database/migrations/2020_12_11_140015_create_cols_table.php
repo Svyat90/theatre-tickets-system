@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateSchemasTable extends Migration
+class CreateColsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,10 +13,16 @@ class CreateSchemasTable extends Migration
      */
     public function up()
     {
-        Schema::create('schemas', function (Blueprint $table) {
+        Schema::create('cols', function (Blueprint $table) {
             $table->id();
-            $table->text('name');
-            $table->boolean('active')->default(false);
+
+            $table->unsignedBigInteger('row_id');
+            $table->foreign('row_id')
+                ->references('id')->on('rows')
+                ->onUpdate('cascade')->onDelete('cascade');
+
+            $table->unsignedBigInteger('index');
+
             $table->timestamps();
         });
     }
@@ -28,6 +34,6 @@ class CreateSchemasTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('schemas');
+        Schema::dropIfExists('cols');
     }
 }

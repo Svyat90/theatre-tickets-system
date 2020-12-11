@@ -43,6 +43,9 @@
 
                 </tbody>
             </table>
+
+            @include('admin.rows.list', ['rows' => $schema->rows])
+
             <div class="form-group">
                 <a class="btn btn-default" href="{{ route('admin.schemas.index') }}">
                     {{ trans('global.back_to_list') }}

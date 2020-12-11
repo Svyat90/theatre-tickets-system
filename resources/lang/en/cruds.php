@@ -238,4 +238,32 @@ return [
             'active_helper'       => '',
         ],
     ],
+    'rows'                     => [
+        'title'          => 'Rows',
+        'title_singular' => 'Row',
+        'fields'         => [
+            'index'              => 'Index',
+            'index_helper'       => '',
+            'color'              => 'Color',
+            'color_helper'       => '',
+            'price'              => 'Price',
+            'price_helper'       => '',
+            'on_loggia'              => 'On Loggia',
+            'on_loggia_helper'       => '',
+            'on_balcony'              => 'On Balcony',
+            'on_balcony_helper'       => '',
+            'on_left'              => 'On Left',
+            'on_left_helper'       => '',
+            'on_right'              => 'On Right',
+            'on_right_helper'       => '',
+        ],
+    ],
+    'cols'                     => [
+        'title'          => 'Cols',
+        'title_singular' => 'Col',
+        'fields'         => [
+            'index'              => 'Index',
+            'index_helper'       => '',
+        ],
+    ],
 ];

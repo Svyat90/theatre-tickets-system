@@ -16,4 +16,14 @@ class LabelHelper
         return '<span class="badge badge-' . ($val ? 'success' : 'danger') . '">' . $str . '</span>';
     }
 
+    /**
+     * @param $color
+     * @return string
+     */
+    public static function colorLabel($color) : string
+    {
+        return "<span style='background-color: $color; padding-left: 15px; padding-right: 15px;' >&nbsp;</span>";
+    }
+
+
 }

@@ -17,6 +17,7 @@ use \App\Http\Controllers\Front\PageController;
 use \App\Http\Middleware\LocaleMiddleware;
 use \App\Http\Controllers\Front\EmailController;
 use \App\Http\Controllers\Admin\AboutController;
+use \App\Http\Controllers\Admin\Spectacles\SchemaController;
 
 /*
 |--------------------------------------------------------------------------
@@ -56,6 +57,8 @@ Route::prefix('admin')->as('admin.')->middleware('auth')->group(function () {
 
     // Schemas
     Route::resource('schemas', 'Admin\Spectacles\SchemaController')->only('index', 'show', 'edit', 'update');
+    Route::get('schema/{schema}', [SchemaController::class, 'schema'])->name('schemas.schema');
+    Route::resource('rows', 'Admin\Spectacles\RowController')->only('index', 'show', 'edit', 'update');
 
     // Spectacles
     Route::delete('spectacles/multi-destroy', [AdminSpectacleController::class, 'massDestroy'])->name('spectacles.multi_destroy');

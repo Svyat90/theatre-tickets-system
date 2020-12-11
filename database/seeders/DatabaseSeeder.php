@@ -20,6 +20,7 @@ class DatabaseSeeder extends Seeder
             ArticleSeeder::class,
             WorkerSeeder::class,
             AboutSeeder::class,
+            ColorsSeeder::class,
             SchemaSeeder::class
         ]);
     }

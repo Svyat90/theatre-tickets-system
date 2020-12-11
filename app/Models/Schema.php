@@ -4,6 +4,7 @@ namespace App\Models;
 
 class Schema extends BaseModel
 {
+
     /**
      * @var string
      */
@@ -18,5 +19,13 @@ class Schema extends BaseModel
      * @var string[]
      */
     protected $fillable = ['name', 'active'];
+
+    /**
+     * @return \Illuminate\Database\Eloquent\Relations\HasMany
+     */
+    public function rows()
+    {
+        return $this->hasMany(Row::class);
+    }
 
 }
