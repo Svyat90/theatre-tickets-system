@@ -52,6 +52,15 @@
                                 </p>
                             </a>
                         </li>
+                        <li class="nav-item">
+                            <a href="{{ route("admin.schemas.index") }}" class="nav-link {{ request()->is("admin/schemas") || request()->is("admin/schemas/*") ? 'active' : '' }}" >
+                                <i class="fa-fw nav-icon fas fa-book">
+                                </i>
+                                <p>
+                                    {{ trans('global.schemas') }}
+                                </p>
+                            </a>
+                        </li>
                     </ul>
                 </li>
 

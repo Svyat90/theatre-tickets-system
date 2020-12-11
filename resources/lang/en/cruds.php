@@ -227,5 +227,15 @@ return [
             'image_gallery'              => 'Images (Gallery)',
             'image_gallery_helper'       => '',
         ],
-    ]
+    ],
+    'schemas'                     => [
+        'title'          => 'Schemas',
+        'title_singular' => 'Schema',
+        'fields'         => [
+            'name'              => 'Name',
+            'name_helper'       => '',
+            'active'              => 'Active',
+            'active_helper'       => '',
+        ],
+    ],
 ];

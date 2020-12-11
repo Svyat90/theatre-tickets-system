@@ -54,6 +54,9 @@ Route::prefix('admin')->as('admin.')->middleware('auth')->group(function () {
     Route::delete('categories/multi-destroy', [CategoryController::class, 'massDestroy'])->name('categories.multi_destroy');
     Route::resource('categories', 'Admin\Spectacles\CategoryController');
 
+    // Schemas
+    Route::resource('schemas', 'Admin\Spectacles\SchemaController')->only('index', 'show', 'edit', 'update');
+
     // Spectacles
     Route::delete('spectacles/multi-destroy', [AdminSpectacleController::class, 'massDestroy'])->name('spectacles.multi_destroy');
     Route::post('spectacles/media', [AdminSpectacleController::class, 'storeMedia'])->name('spectacles.store_media');
@@ -93,6 +96,7 @@ Route::prefix('admin')->as('admin.')->middleware('auth')->group(function () {
     Route::get('password', [ChangePasswordController::class, 'edit'])->name('password.edit');
     Route::post('password', [ChangePasswordController::class, 'update'])->name('password.update');
 
+    // About
     Route::get('about/edit', [AboutController::class, 'edit'])->name('about.edit');
     Route::put('about/update', [AboutController::class, 'update'])->name('about.update');
     Route::post('about/media', [ArticleController::class, 'storeMedia'])->name('about.store_media');
