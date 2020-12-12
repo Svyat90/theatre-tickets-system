@@ -16,7 +16,7 @@
                             {{ trans('cruds.base.fields.id') }}
                         </th>
                         <th>
-                            {{ trans('cruds.rows.fields.index') }}
+                            {{ trans('cruds.rows.fields.row') }}
                         </th>
                         <th>
                             {{ trans('cruds.rows.fields.color') }}
@@ -51,13 +51,13 @@
                                 {{ $row->id }}
                             </td>
                             <td>
-                                {{ $row->index }}
+                                {{ $row->row }}
                             </td>
                             <td align="center">
                                 {!! \App\Helpers\LabelHelper::colorLabel($row->color->color) !!}
                             </td>
                             <td>
-                                {{ $row->price }}
+{{--                                {{ $row->price }}--}} 0
                             </td>
                             <td>
                                 {!! \App\Helpers\LabelHelper::boolLabel($row->on_loggia) !!}

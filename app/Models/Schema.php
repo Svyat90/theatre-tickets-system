@@ -2,6 +2,9 @@
 
 namespace App\Models;
 
+use Illuminate\Database\Eloquent\Relations\BelongsToMany;
+use \Illuminate\Database\Eloquent\Relations\HasMany;
+
 class Schema extends BaseModel
 {
 
@@ -21,11 +24,22 @@ class Schema extends BaseModel
     protected $fillable = ['name', 'active'];
 
     /**
-     * @return \Illuminate\Database\Eloquent\Relations\HasMany
+     * @return HasMany
      */
     public function rows()
     {
         return $this->hasMany(Row::class);
+    }
+
+    /**
+     * @return BelongsToMany
+     */
+    public function colors()
+    {
+        return $this
+            ->belongsToMany(Color::class, 'color_schema', 'schema_id', 'color_id')
+            ->withPivot('price')
+            ->as('data');
     }
 
 }

@@ -26,9 +26,8 @@ class CreateRowsTable extends Migration
                 ->references('id')->on('colors')
                 ->onUpdate('cascade')->onDelete('cascade');
 
-            $table->unsignedBigInteger('index');
+            $table->unsignedBigInteger('row');
 
-            $table->double('price');
             $table->boolean('on_loggia')->default(false);
             $table->boolean('on_balcony')->default(false);
             $table->boolean('on_left')->default(false);

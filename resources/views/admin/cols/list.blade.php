@@ -16,7 +16,14 @@
                             {{ trans('cruds.base.fields.id') }}
                         </th>
                         <th>
-                            {{ trans('cruds.cols.fields.index') }}
+                            {{ trans('cruds.cols.fields.seat') }}
+                        </th>
+
+                        <th>
+                            {{ trans('cruds.cols.fields.on_left') }}
+                        </th>
+                        <th>
+                            {{ trans('cruds.cols.fields.on_right') }}
                         </th>
                     </tr>
                     </thead>
@@ -30,7 +37,13 @@
                                 {{ $col->id }}
                             </td>
                             <td>
-                                {{ $col->index }}
+                                {{ $col->seat }}
+                            </td>
+                            <td>
+                                {!! \App\Helpers\LabelHelper::boolLabel($col->on_left) !!}
+                            </td>
+                            <td>
+                                {!! \App\Helpers\LabelHelper::boolLabel($col->on_right) !!}
                             </td>
                         </tr>
                     @endforeach

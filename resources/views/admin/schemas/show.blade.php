@@ -3,7 +3,7 @@
 
 <div class="card">
     <div class="card-header">
-        {{ trans('global.show') }} {{ trans('cruds.schemas.title') }}
+        {{ trans('global.show') }} {{ trans('cruds.schemas.title_singular') }} "{{ $schema->name }}"
     </div>
 
     <div class="card-body">

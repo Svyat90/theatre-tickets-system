@@ -11,7 +11,7 @@ class Row extends Model
      * @var string[]
      */
     protected $fillable = [
-        'index', 'color_id', 'price', 'on_loggia',
+        'row', 'color_id', 'on_loggia',
         'on_balcony', 'on_left', 'on_right'
     ];
 

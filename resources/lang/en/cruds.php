@@ -244,8 +244,8 @@ return [
         'title'          => 'Rows',
         'title_singular' => 'Row',
         'fields'         => [
-            'index'              => 'Index',
-            'index_helper'       => '',
+            'row'              => 'Row',
+            'row_helper'       => '',
             'color'              => 'Color',
             'color_helper'       => '',
             'price'              => 'Price',
@@ -261,11 +261,15 @@ return [
         ],
     ],
     'cols'                     => [
-        'title'          => 'Cols',
-        'title_singular' => 'Col',
+        'title'          => 'Seats',
+        'title_singular' => 'Seat',
         'fields'         => [
-            'index'              => 'Index',
-            'index_helper'       => '',
+            'seat'              => 'Seat',
+            'seat_helper'       => '',
+            'on_left'              => 'On Left',
+            'on_left_helper'       => '',
+            'on_right'              => 'On Right',
+            'on_right_helper'       => '',
         ],
     ],
 ];

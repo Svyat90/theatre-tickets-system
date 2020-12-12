@@ -8,6 +8,12 @@ use App\Models\Color;
 
 class SchemaSeeder extends Seeder
 {
+    /** @var Schema  */
+    private Schema $schema;
+
+    /** @var array  */
+    private array $colors;
+
     /**
      * Run the database seeds.
      *
@@ -24,84 +30,121 @@ class SchemaSeeder extends Seeder
             ],
             'active' => true
         ]);
+        $this->schema = $schema;
 
-        $colors = Color::query()->pluck('id', 'name')->toArray();
+        $this->colors = Color::query()->pluck('id', 'name')->toArray();
 
-        $this->seedHall($schema, $colors);
-        $this->seedBalcony($schema, $colors);
+        $this->attachColors();
+
+        $this->seedHall();
+        $this->seedBalcony();
     }
 
-    /**
-     * @param Schema $schema
-     * @param array  $colors
-     */
-    private function seedHall(Schema $schema, array $colors) : void
+    private function attachColors() : void
+    {
+        $colorPrices = [
+            'green' => 40,
+            'blue' => 50,
+            'purple' => 60,
+            'yellow' => 80,
+            'red' => 100,
+        ];
+
+        Color::query()->each(function (Color $color) use ($colorPrices) {
+            if ($color->name === 'busy') {
+                return;
+            }
+
+            $this->schema->colors()->attach([
+                $color->id => ['price' => $colorPrices[$color->name]]
+            ]);
+        });
+    }
+
+    private function seedHall() : void
     {
         $rowIndex = 1;
         while ($rowIndex <= 13) {
-            $cols = $price = 0;
+            $cols = $colorId = 0;
             switch (true) {
                 case $rowIndex === 1:
-                    $colorId = $colors['purple'];
+                    $colorId = $this->colors['purple'];
                     $cols = 20;
-                    $price = 60;
                     break;
                 case $rowIndex === 2:
-                    $colorId = $colors['yellow'];
+                    $colorId = $this->colors['yellow'];
                     $cols = 20;
-                    $price = 80;
                     break;
                 case $rowIndex === 3:
-                    $colorId = $colors['yellow'];
+                    $colorId = $this->colors['yellow'];
                     $cols = 18;
-                    $price = 80;
                     break;
                 case $rowIndex === 4:
-                    $colorId = $colors['red'];
+                    $colorId = $this->colors['red'];
                     $cols = 18;
-                    $price = 100;
                     break;
                 case $rowIndex === 5:
-                    $colorId = $colors['red'];
+                    $colorId = $this->colors['red'];
                     $cols = 15;
-                    $price = 100;
                     break;
                 case $rowIndex === 6 || $rowIndex === 7:
-                    $colorId = $colors['yellow'];
+                    $colorId = $this->colors['yellow'];
                     $cols = 13;
-                    $price = 80;
                     break;
                 case $rowIndex === 8:
-                    $colorId = $colors['yellow'];
+                    $colorId = $this->colors['yellow'];
                     $cols = 15;
-                    $price = 80;
                     break;
                 case $rowIndex === 9 || $rowIndex === 10:
-                    $colorId = $colors['purple'];
+                    $colorId = $this->colors['purple'];
                     $cols = 17;
-                    $price = 60;
                     break;
                 case $rowIndex === 11 || $rowIndex === 12:
-                    $colorId = $colors['blue'];
+                    $colorId = $this->colors['blue'];
                     $cols = 17;
-                    $price = 50;
                     break;
                 case $rowIndex === 13:
-                    $colorId = $colors['blue'];
+                    $colorId = $this->colors['blue'];
                     $cols = 15;
-                    $price = 50;
                     break;
             }
 
-            $row = $schema->rows()->create([
-                'index' => $rowIndex,
-                'color_id' => $colorId,
-                'price' => $price
+            $row = $this->schema->rows()->create([
+                'row' => $rowIndex,
+                'color_id' => $colorId
             ]);
 
             $colIndex = 1;
             while ($colIndex <= $cols) {
-                $row->cols()->create(['index' => $colIndex]);
+                switch (true) {
+                    case (($rowIndex === 1 && $colIndex <= 10)
+                        || ($rowIndex === 2 && $colIndex <= 10)
+                        || ($rowIndex === 3 && $colIndex <= 6)
+                        || ($rowIndex === 4 && $colIndex <= 9)
+                        || ($rowIndex === 5 && $colIndex <= 8)
+                        || ($rowIndex === 6 && $colIndex <= 7)
+                        || ($rowIndex === 7 && $colIndex <= 7)
+                        || ($rowIndex === 8 && $colIndex <= 8)
+                        || ($rowIndex === 9 && $colIndex <= 9)
+                        || ($rowIndex === 10 && $colIndex <= 9)
+                        || ($rowIndex === 11 && $colIndex <= 9)
+                        || ($rowIndex === 12 && $colIndex <= 9)
+                        || ($rowIndex === 13 && $colIndex <= 8)
+                    ) :
+                        $onLeft = true;
+                        $onRight = false;
+                        break;
+                    default:
+                        $onLeft = false;
+                        $onRight = true;
+                        break;
+                }
+
+                $row->cols()->create([
+                    'seat' => $colIndex,
+                    'on_left' => $onLeft,
+                    'on_right' => $onRight,
+                ]);
                 $colIndex++;
             }
 
@@ -110,17 +153,16 @@ class SchemaSeeder extends Seeder
 
         // Left Loggia
         for ($rowIndex = 1; $rowIndex <= 2; $rowIndex++) {
-            $row = $schema->rows()->create([
-                'index' => $rowIndex,
-                'color_id' => $colors['red'],
-                'price' => 100,
+            $row = $this->schema->rows()->create([
+                'row' => $rowIndex,
+                'color_id' => $this->colors['red'],
                 'on_loggia' => true,
                 'on_left' => true,
             ]);
 
             for ($colIndex = 1; $colIndex <= 4; $colIndex++) {
                 $row->cols()->create([
-                    'index' => $colIndex
+                    'seat' => $colIndex
                 ]);
                 $colIndex++;
             }
@@ -128,56 +170,61 @@ class SchemaSeeder extends Seeder
 
         // Right Loggia
         for ($rowIndex = 1; $rowIndex <= 2; $rowIndex++) {
-            $row = $schema->rows()->create([
-                'index' => $rowIndex,
-                'color_id' => $colors['red'],
-                'price' => 100,
+            $row = $this->schema->rows()->create([
+                'row' => $rowIndex,
+                'color_id' => $this->colors['red'],
                 'on_loggia' => true,
                 'on_right' => true,
             ]);
 
             for ($colIndex = 1; $colIndex <= 4; $colIndex++) {
                 $row->cols()->create([
-                    'index' => $colIndex
+                    'seat' => $colIndex
                 ]);
                 $colIndex++;
             }
         }
     }
 
-    /**
-     * @param Schema $schema
-     * @param array  $colors
-     */
-    private function seedBalcony(Schema $schema, array $colors) : void
+    private function seedBalcony() : void
     {
         $rowIndex = 1;
         while ($rowIndex <= 3) {
-            $cols = $price = 0;
+            $cols = $colorId = 0;
             switch (true) {
                 case $rowIndex === 1 || $rowIndex === 2:
-                    $colorId = $colors['green'];
+                    $colorId = $this->colors['green'];
                     $cols = 19;
-                    $price = 40;
                     break;
                 case $rowIndex === 3:
-                    $colorId = $colors['green'];
+                    $colorId = $this->colors['green'];
                     $cols = 18;
-                    $price = 40;
                     break;
             }
 
-            $row = $schema->rows()->create([
-                'index' => $rowIndex,
+            $row = $this->schema->rows()->create([
+                'row' => $rowIndex,
                 'color_id' => $colorId,
-                'price' => $price,
                 'on_balcony' => true,
             ]);
 
             $colIndex = 1;
-            while($colIndex <= $cols) {
+            while ($colIndex <= $cols) {
+                switch (true) {
+                    case $colIndex <= 10:
+                        $onLeft = true;
+                        $onRight = false;
+                        break;
+                    default:
+                        $onLeft = false;
+                        $onRight = true;
+                        break;
+                }
+
                 $row->cols()->create([
-                    'index' => $colIndex
+                    'seat' => $colIndex,
+                    'on_left' => $onLeft,
+                    'on_right' => $onRight,
                 ]);
                 $colIndex++;
             }
@@ -185,19 +232,15 @@ class SchemaSeeder extends Seeder
             $rowIndex++;
         }
 
-        $row = $schema->rows()->create([
-            'index' => 1,
-            'color_id' => $colors['red'],
-            'price' => 100,
-            'on_loggia' => true,
-            'on_balcony' => true,
+        // loggia
+        $row = $this->schema->rows()->create([
+            'row' => 1,
+            'color_id' => $this->colors['red'],
         ]);
 
         $colIndex = 1;
         while($colIndex <= 3) {
-            $row->cols()->create([
-                'index' => $colIndex
-            ]);
+            $row->cols()->create(['seat' => $colIndex]);
             $colIndex++;
         }
     }

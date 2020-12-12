@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateColsTable extends Migration
+class CreateTicketsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,19 +13,21 @@ class CreateColsTable extends Migration
      */
     public function up()
     {
-        Schema::create('cols', function (Blueprint $table) {
+        Schema::create('tickets', function (Blueprint $table) {
             $table->id();
 
-            $table->unsignedBigInteger('row_id');
+            $table->unsignedBigInteger('row_id')->after('id');
             $table->foreign('row_id')
                 ->references('id')->on('rows')
                 ->onUpdate('cascade')->onDelete('cascade');
 
-            $table->unsignedBigInteger('seat');
+            $table->unsignedBigInteger('col_id')->after('id');
+            $table->foreign('col_id')
+                ->references('id')->on('cols')
+                ->onUpdate('cascade')->onDelete('cascade');
 
-            $table->boolean('on_left')->default(false);
-            $table->boolean('on_right')->default(false);
-
+            $table->double('price');
+            $table->enum('status', ['reserved', 'paid', 'open'])->default('open');
             $table->timestamps();
         });
     }
@@ -37,6 +39,6 @@ class CreateColsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('cols');
+        Schema::dropIfExists('tickets');
     }
 }

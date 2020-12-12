@@ -10,7 +10,9 @@ class Col extends Model
     /**
      * @var string[]
      */
-    protected $fillable = ['index'];
+    protected $fillable = [
+        'seat', 'on_left', 'on_right'
+    ];
 
     /**
      * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
