@@ -236,6 +236,8 @@ class SchemaSeeder extends Seeder
         $row = $this->schema->rows()->create([
             'row' => 1,
             'color_id' => $this->colors['red'],
+            'on_loggia' => true,
+            'on_balcony' => true,
         ]);
 
         $colIndex = 1;

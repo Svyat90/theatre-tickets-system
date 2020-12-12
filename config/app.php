@@ -174,6 +174,7 @@ return [
         // App\Providers\BroadcastServiceProvider::class,
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
+        Darryldecode\Cart\CartServiceProvider::class,
 
     ],
 
@@ -228,6 +229,7 @@ return [
         'View' => Illuminate\Support\Facades\View::class,
         'MediaHelper' => App\Helpers\MediaHelper::class,
         'DateHelper' => App\Helpers\DateHelper::class,
+        'Cart' => Darryldecode\Cart\Facades\CartFacade::class
     ],
 
 ];

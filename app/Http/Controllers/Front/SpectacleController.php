@@ -11,6 +11,7 @@ use App\Http\Requests\Front\Spectacles\IndexSpectacleRequest;
 use App\Services\Spectacles\SpectacleService;
 use App\Helpers\CollectionHelper;
 use App\Http\Controllers\FrontController;
+use App\Services\SchemaService;
 
 class SpectacleController extends FrontController
 {
@@ -34,13 +35,17 @@ class SpectacleController extends FrontController
     }
 
     /**
-     * @param Spectacle $spectacle
+     * @param Spectacle     $spectacle
+     * @param SchemaService $schemaService
      *
      * @return Application|Factory|View
      */
-    public function show(Spectacle $spectacle)
+    public function show(Spectacle $spectacle, SchemaService $schemaService)
     {
-        return view('front.spectacles.show', compact('spectacle'));
+        $schema = $spectacle->schema;
+        $rows = $schemaService->generateRowsData($schema);
+
+        return view('front.spectacles.show', compact('spectacle', 'rows'));
     }
 
 }

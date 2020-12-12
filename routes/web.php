@@ -18,6 +18,7 @@ use \App\Http\Middleware\LocaleMiddleware;
 use \App\Http\Controllers\Front\EmailController;
 use \App\Http\Controllers\Admin\AboutController;
 use \App\Http\Controllers\Admin\Spectacles\SchemaController;
+use \App\Http\Controllers\Front\CartController;
 
 /*
 |--------------------------------------------------------------------------
@@ -44,7 +45,12 @@ Route::prefix(LocaleMiddleware::getLocale())->namespace('Front')->group(function
     Route::resource('spectacles', 'SpectacleController')->only('index', 'show');
     Route::resource('articles', 'ArticleController')->only('index', 'show');
     Route::resource('workers', 'WorkerController')->only('index');
+
     Route::post('emails/contact', [EmailController::class, 'sendContactForm'])->name('emails.contact');
+
+    // Cart
+    Route::get('cart', [CartController::class, 'show'])->name('cart.show');
+    Route::post('cart/add', [CartController::class, 'add'])->name('cart.add');
 });
 
 // Admin
