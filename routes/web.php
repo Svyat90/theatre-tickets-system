@@ -59,6 +59,8 @@ Route::prefix('admin')->as('admin.')->middleware('auth')->group(function () {
     Route::resource('schemas', 'Admin\Spectacles\SchemaController')->only('index', 'show', 'edit', 'update');
     Route::get('schema/{schema}', [SchemaController::class, 'schema'])->name('schemas.schema');
     Route::resource('rows', 'Admin\Spectacles\RowController')->only('index', 'show', 'edit', 'update');
+    Route::get('schemas-price/{id}', [SchemaController::class, 'editPrice'])->name('schemas.prices.edit');
+    Route::put('schemas-price/{id}', [SchemaController::class, 'updatePrice'])->name('schemas.prices.update');
 
     // Spectacles
     Route::delete('spectacles/multi-destroy', [AdminSpectacleController::class, 'massDestroy'])->name('spectacles.multi_destroy');

@@ -246,10 +246,6 @@ return [
         'fields'         => [
             'row'              => 'Row',
             'row_helper'       => '',
-            'color'              => 'Color',
-            'color_helper'       => '',
-            'price'              => 'Price',
-            'price_helper'       => '',
             'on_loggia'              => 'On Loggia',
             'on_loggia_helper'       => '',
             'on_balcony'              => 'On Balcony',
@@ -270,6 +266,18 @@ return [
             'on_left_helper'       => '',
             'on_right'              => 'On Right',
             'on_right_helper'       => '',
+        ],
+    ],
+    'colors'                     => [
+        'title'          => 'Colors',
+        'title_singular' => 'Color',
+        'fields'         => [
+            'name'              => 'Name',
+            'name_helper'       => '',
+            'color'              => 'Color',
+            'color_helper'       => '',
+            'price'              => 'Price',
+            'price_helper'       => '',
         ],
     ],
 ];

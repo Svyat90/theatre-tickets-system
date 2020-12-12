@@ -18,181 +18,181 @@
                             <div class="swiper-slide">
                                 <div class="seats-row d-flex">
                                     <div class="seats-left pt1 ">
-                                        <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="green ml1"
+                                        <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="green active  ml1"
                                              xmlns="http://www.w3.org/2000/svg">
                                             <path
                                                 d="M2.39362 3.54634C2.62144 1.80354 4.10646 0.5 5.8641 0.5H14.1359C15.8935 0.5 17.3786 1.80354 17.6064 3.54634L19.4304 17.5H0.569613L2.39362 3.54634Z"
                                                 stroke="#97C992"/>
                                         </svg>
-                                        <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="green"
+                                        <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="green active "
                                              xmlns="http://www.w3.org/2000/svg">
                                             <path
                                                 d="M2.39362 3.54634C2.62144 1.80354 4.10646 0.5 5.8641 0.5H14.1359C15.8935 0.5 17.3786 1.80354 17.6064 3.54634L19.4304 17.5H0.569613L2.39362 3.54634Z"
                                                 stroke="#97C992"/>
                                         </svg>
-                                        <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="green"
+                                        <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="green active "
                                              xmlns="http://www.w3.org/2000/svg">
                                             <path
                                                 d="M2.39362 3.54634C2.62144 1.80354 4.10646 0.5 5.8641 0.5H14.1359C15.8935 0.5 17.3786 1.80354 17.6064 3.54634L19.4304 17.5H0.569613L2.39362 3.54634Z"
                                                 stroke="#97C992"/>
                                         </svg>
-                                        <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="green"
+                                        <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="green active "
                                              xmlns="http://www.w3.org/2000/svg">
                                             <path
                                                 d="M2.39362 3.54634C2.62144 1.80354 4.10646 0.5 5.8641 0.5H14.1359C15.8935 0.5 17.3786 1.80354 17.6064 3.54634L19.4304 17.5H0.569613L2.39362 3.54634Z"
                                                 stroke="#97C992"/>
                                         </svg>
-                                        <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="green"
+                                        <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="green active "
                                              xmlns="http://www.w3.org/2000/svg">
                                             <path
                                                 d="M2.39362 3.54634C2.62144 1.80354 4.10646 0.5 5.8641 0.5H14.1359C15.8935 0.5 17.3786 1.80354 17.6064 3.54634L19.4304 17.5H0.569613L2.39362 3.54634Z"
                                                 stroke="#97C992"/>
                                         </svg>
-                                        <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="green"
+                                        <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="green active "
                                              xmlns="http://www.w3.org/2000/svg">
                                             <path
                                                 d="M2.39362 3.54634C2.62144 1.80354 4.10646 0.5 5.8641 0.5H14.1359C15.8935 0.5 17.3786 1.80354 17.6064 3.54634L19.4304 17.5H0.569613L2.39362 3.54634Z"
                                                 stroke="#97C992"/>
                                         </svg>
-                                        <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="green"
+                                        <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="green active "
                                              xmlns="http://www.w3.org/2000/svg">
                                             <path
                                                 d="M2.39362 3.54634C2.62144 1.80354 4.10646 0.5 5.8641 0.5H14.1359C15.8935 0.5 17.3786 1.80354 17.6064 3.54634L19.4304 17.5H0.569613L2.39362 3.54634Z"
                                                 stroke="#97C992"/>
                                         </svg>
-                                        <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="green"
+                                        <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="green active "
                                              xmlns="http://www.w3.org/2000/svg">
                                             <path
                                                 d="M2.39362 3.54634C2.62144 1.80354 4.10646 0.5 5.8641 0.5H14.1359C15.8935 0.5 17.3786 1.80354 17.6064 3.54634L19.4304 17.5H0.569613L2.39362 3.54634Z"
                                                 stroke="#97C992"/>
                                         </svg>
-                                        <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="green"
+                                        <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="green active "
                                              xmlns="http://www.w3.org/2000/svg">
                                             <path
                                                 d="M2.39362 3.54634C2.62144 1.80354 4.10646 0.5 5.8641 0.5H14.1359C15.8935 0.5 17.3786 1.80354 17.6064 3.54634L19.4304 17.5H0.569613L2.39362 3.54634Z"
                                                 stroke="#97C992"/>
                                         </svg>
-                                        <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="green"
+                                        <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="green active "
                                              xmlns="http://www.w3.org/2000/svg">
                                             <path
                                                 d="M2.39362 3.54634C2.62144 1.80354 4.10646 0.5 5.8641 0.5H14.1359C15.8935 0.5 17.3786 1.80354 17.6064 3.54634L19.4304 17.5H0.569613L2.39362 3.54634Z"
                                                 stroke="#97C992"/>
                                         </svg>
-                                        <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="green"
+                                        <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="green active "
                                              xmlns="http://www.w3.org/2000/svg">
                                             <path
                                                 d="M2.39362 3.54634C2.62144 1.80354 4.10646 0.5 5.8641 0.5H14.1359C15.8935 0.5 17.3786 1.80354 17.6064 3.54634L19.4304 17.5H0.569613L2.39362 3.54634Z"
                                                 stroke="#97C992"/>
                                         </svg>
-                                        <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="green"
+                                        <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="green active "
                                              xmlns="http://www.w3.org/2000/svg">
                                             <path
                                                 d="M2.39362 3.54634C2.62144 1.80354 4.10646 0.5 5.8641 0.5H14.1359C15.8935 0.5 17.3786 1.80354 17.6064 3.54634L19.4304 17.5H0.569613L2.39362 3.54634Z"
                                                 stroke="#97C992"/>
                                         </svg>
-                                        <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="green"
+                                        <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="green active "
                                              xmlns="http://www.w3.org/2000/svg">
                                             <path
                                                 d="M2.39362 3.54634C2.62144 1.80354 4.10646 0.5 5.8641 0.5H14.1359C15.8935 0.5 17.3786 1.80354 17.6064 3.54634L19.4304 17.5H0.569613L2.39362 3.54634Z"
                                                 stroke="#97C992"/>
                                         </svg>
-                                        <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="green"
+                                        <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="green active "
                                              xmlns="http://www.w3.org/2000/svg">
                                             <path
                                                 d="M2.39362 3.54634C2.62144 1.80354 4.10646 0.5 5.8641 0.5H14.1359C15.8935 0.5 17.3786 1.80354 17.6064 3.54634L19.4304 17.5H0.569613L2.39362 3.54634Z"
                                                 stroke="#97C992"/>
                                         </svg>
-                                        <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="green"
+                                        <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="green active "
                                              xmlns="http://www.w3.org/2000/svg">
                                             <path
                                                 d="M2.39362 3.54634C2.62144 1.80354 4.10646 0.5 5.8641 0.5H14.1359C15.8935 0.5 17.3786 1.80354 17.6064 3.54634L19.4304 17.5H0.569613L2.39362 3.54634Z"
                                                 stroke="#97C992"/>
                                         </svg>
-                                        <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="green"
+                                        <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="green active "
                                              xmlns="http://www.w3.org/2000/svg">
                                             <path
                                                 d="M2.39362 3.54634C2.62144 1.80354 4.10646 0.5 5.8641 0.5H14.1359C15.8935 0.5 17.3786 1.80354 17.6064 3.54634L19.4304 17.5H0.569613L2.39362 3.54634Z"
                                                 stroke="#97C992"/>
                                         </svg>
-                                        <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="green"
+                                        <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="green active "
                                              xmlns="http://www.w3.org/2000/svg">
                                             <path
                                                 d="M2.39362 3.54634C2.62144 1.80354 4.10646 0.5 5.8641 0.5H14.1359C15.8935 0.5 17.3786 1.80354 17.6064 3.54634L19.4304 17.5H0.569613L2.39362 3.54634Z"
                                                 stroke="#97C992"/>
                                         </svg>
-                                        <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="green"
+                                        <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="green active "
                                              xmlns="http://www.w3.org/2000/svg">
                                             <path
                                                 d="M2.39362 3.54634C2.62144 1.80354 4.10646 0.5 5.8641 0.5H14.1359C15.8935 0.5 17.3786 1.80354 17.6064 3.54634L19.4304 17.5H0.569613L2.39362 3.54634Z"
                                                 stroke="#97C992"/>
                                         </svg>
-                                        <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="green"
+                                        <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="green active "
                                              xmlns="http://www.w3.org/2000/svg">
                                             <path
                                                 d="M2.39362 3.54634C2.62144 1.80354 4.10646 0.5 5.8641 0.5H14.1359C15.8935 0.5 17.3786 1.80354 17.6064 3.54634L19.4304 17.5H0.569613L2.39362 3.54634Z"
                                                 stroke="#97C992"/>
                                         </svg>
-                                        <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="green mr1"
+                                        <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="green active  mr1"
                                              xmlns="http://www.w3.org/2000/svg">
                                             <path
                                                 d="M2.39362 3.54634C2.62144 1.80354 4.10646 0.5 5.8641 0.5H14.1359C15.8935 0.5 17.3786 1.80354 17.6064 3.54634L19.4304 17.5H0.569613L2.39362 3.54634Z"
                                                 stroke="#97C992"/>
                                         </svg>
-                                        <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="green"
+                                        <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="green active "
                                              xmlns="http://www.w3.org/2000/svg">
                                             <path
                                                 d="M2.39362 3.54634C2.62144 1.80354 4.10646 0.5 5.8641 0.5H14.1359C15.8935 0.5 17.3786 1.80354 17.6064 3.54634L19.4304 17.5H0.569613L2.39362 3.54634Z"
                                                 stroke="#97C992"/>
                                         </svg>
-                                        <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="green"
+                                        <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="green active "
                                              xmlns="http://www.w3.org/2000/svg">
                                             <path
                                                 d="M2.39362 3.54634C2.62144 1.80354 4.10646 0.5 5.8641 0.5H14.1359C15.8935 0.5 17.3786 1.80354 17.6064 3.54634L19.4304 17.5H0.569613L2.39362 3.54634Z"
                                                 stroke="#97C992"/>
                                         </svg>
-                                        <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="green"
+                                        <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="green active "
                                              xmlns="http://www.w3.org/2000/svg">
                                             <path
                                                 d="M2.39362 3.54634C2.62144 1.80354 4.10646 0.5 5.8641 0.5H14.1359C15.8935 0.5 17.3786 1.80354 17.6064 3.54634L19.4304 17.5H0.569613L2.39362 3.54634Z"
                                                 stroke="#97C992"/>
                                         </svg>
-                                        <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="green"
+                                        <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="green active "
                                              xmlns="http://www.w3.org/2000/svg">
                                             <path
                                                 d="M2.39362 3.54634C2.62144 1.80354 4.10646 0.5 5.8641 0.5H14.1359C15.8935 0.5 17.3786 1.80354 17.6064 3.54634L19.4304 17.5H0.569613L2.39362 3.54634Z"
                                                 stroke="#97C992"/>
                                         </svg>
-                                        <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="green"
+                                        <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="green active "
                                              xmlns="http://www.w3.org/2000/svg">
                                             <path
                                                 d="M2.39362 3.54634C2.62144 1.80354 4.10646 0.5 5.8641 0.5H14.1359C15.8935 0.5 17.3786 1.80354 17.6064 3.54634L19.4304 17.5H0.569613L2.39362 3.54634Z"
                                                 stroke="#97C992"/>
                                         </svg>
-                                        <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="green"
+                                        <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="green active "
                                              xmlns="http://www.w3.org/2000/svg">
                                             <path
                                                 d="M2.39362 3.54634C2.62144 1.80354 4.10646 0.5 5.8641 0.5H14.1359C15.8935 0.5 17.3786 1.80354 17.6064 3.54634L19.4304 17.5H0.569613L2.39362 3.54634Z"
                                                 stroke="#97C992"/>
                                         </svg>
-                                        <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="green"
+                                        <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="green active "
                                              xmlns="http://www.w3.org/2000/svg">
                                             <path
                                                 d="M2.39362 3.54634C2.62144 1.80354 4.10646 0.5 5.8641 0.5H14.1359C15.8935 0.5 17.3786 1.80354 17.6064 3.54634L19.4304 17.5H0.569613L2.39362 3.54634Z"
                                                 stroke="#97C992"/>
                                         </svg>
-                                        <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="green"
+                                        <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="green active "
                                              xmlns="http://www.w3.org/2000/svg">
                                             <path
                                                 d="M2.39362 3.54634C2.62144 1.80354 4.10646 0.5 5.8641 0.5H14.1359C15.8935 0.5 17.3786 1.80354 17.6064 3.54634L19.4304 17.5H0.569613L2.39362 3.54634Z"
                                                 stroke="#97C992"/>
                                         </svg>
-                                        <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="green"
+                                        <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="green active "
                                              xmlns="http://www.w3.org/2000/svg">
                                             <path
                                                 d="M2.39362 3.54634C2.62144 1.80354 4.10646 0.5 5.8641 0.5H14.1359C15.8935 0.5 17.3786 1.80354 17.6064 3.54634L19.4304 17.5H0.569613L2.39362 3.54634Z"
                                                 stroke="#97C992"/>
                                         </svg>
-                                        <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="green"
+                                        <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="green active "
                                              xmlns="http://www.w3.org/2000/svg">
                                             <path
                                                 d="M2.39362 3.54634C2.62144 1.80354 4.10646 0.5 5.8641 0.5H14.1359C15.8935 0.5 17.3786 1.80354 17.6064 3.54634L19.4304 17.5H0.569613L2.39362 3.54634Z"
@@ -206,157 +206,157 @@
                                         <span class="seat-num">1</span>
                                     </div>
                                     <div class="seats-right pt1 ml1 pr1">
-                                        <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="green"
+                                        <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="green active "
                                              xmlns="http://www.w3.org/2000/svg">
                                             <path
                                                 d="M2.39362 3.54634C2.62144 1.80354 4.10646 0.5 5.8641 0.5H14.1359C15.8935 0.5 17.3786 1.80354 17.6064 3.54634L19.4304 17.5H0.569613L2.39362 3.54634Z"
                                                 stroke="#97C992"/>
                                         </svg>
-                                        <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="green"
+                                        <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="green active "
                                              xmlns="http://www.w3.org/2000/svg">
                                             <path
                                                 d="M2.39362 3.54634C2.62144 1.80354 4.10646 0.5 5.8641 0.5H14.1359C15.8935 0.5 17.3786 1.80354 17.6064 3.54634L19.4304 17.5H0.569613L2.39362 3.54634Z"
                                                 stroke="#97C992"/>
                                         </svg>
-                                        <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="green mr1"
+                                        <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="green active  mr1"
                                              xmlns="http://www.w3.org/2000/svg">
                                             <path
                                                 d="M2.39362 3.54634C2.62144 1.80354 4.10646 0.5 5.8641 0.5H14.1359C15.8935 0.5 17.3786 1.80354 17.6064 3.54634L19.4304 17.5H0.569613L2.39362 3.54634Z"
                                                 stroke="#97C992"/>
                                         </svg>
-                                        <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="green"
+                                        <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="green active "
                                              xmlns="http://www.w3.org/2000/svg">
                                             <path
                                                 d="M2.39362 3.54634C2.62144 1.80354 4.10646 0.5 5.8641 0.5H14.1359C15.8935 0.5 17.3786 1.80354 17.6064 3.54634L19.4304 17.5H0.569613L2.39362 3.54634Z"
                                                 stroke="#97C992"/>
                                         </svg>
-                                        <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="green"
+                                        <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="green active "
                                              xmlns="http://www.w3.org/2000/svg">
                                             <path
                                                 d="M2.39362 3.54634C2.62144 1.80354 4.10646 0.5 5.8641 0.5H14.1359C15.8935 0.5 17.3786 1.80354 17.6064 3.54634L19.4304 17.5H0.569613L2.39362 3.54634Z"
                                                 stroke="#97C992"/>
                                         </svg>
-                                        <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="green"
+                                        <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="green active "
                                              xmlns="http://www.w3.org/2000/svg">
                                             <path
                                                 d="M2.39362 3.54634C2.62144 1.80354 4.10646 0.5 5.8641 0.5H14.1359C15.8935 0.5 17.3786 1.80354 17.6064 3.54634L19.4304 17.5H0.569613L2.39362 3.54634Z"
                                                 stroke="#97C992"/>
                                         </svg>
-                                        <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="green"
+                                        <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="green active "
                                              xmlns="http://www.w3.org/2000/svg">
                                             <path
                                                 d="M2.39362 3.54634C2.62144 1.80354 4.10646 0.5 5.8641 0.5H14.1359C15.8935 0.5 17.3786 1.80354 17.6064 3.54634L19.4304 17.5H0.569613L2.39362 3.54634Z"
                                                 stroke="#97C992"/>
                                         </svg>
-                                        <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="green"
+                                        <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="green active "
                                              xmlns="http://www.w3.org/2000/svg">
                                             <path
                                                 d="M2.39362 3.54634C2.62144 1.80354 4.10646 0.5 5.8641 0.5H14.1359C15.8935 0.5 17.3786 1.80354 17.6064 3.54634L19.4304 17.5H0.569613L2.39362 3.54634Z"
                                                 stroke="#97C992"/>
                                         </svg>
-                                        <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="green"
+                                        <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="green active "
                                              xmlns="http://www.w3.org/2000/svg">
                                             <path
                                                 d="M2.39362 3.54634C2.62144 1.80354 4.10646 0.5 5.8641 0.5H14.1359C15.8935 0.5 17.3786 1.80354 17.6064 3.54634L19.4304 17.5H0.569613L2.39362 3.54634Z"
                                                 stroke="#97C992"/>
                                         </svg>
-                                        <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="green"
+                                        <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="green active "
                                              xmlns="http://www.w3.org/2000/svg">
                                             <path
                                                 d="M2.39362 3.54634C2.62144 1.80354 4.10646 0.5 5.8641 0.5H14.1359C15.8935 0.5 17.3786 1.80354 17.6064 3.54634L19.4304 17.5H0.569613L2.39362 3.54634Z"
                                                 stroke="#97C992"/>
                                         </svg>
-                                        <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="green"
+                                        <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="green active "
                                              xmlns="http://www.w3.org/2000/svg">
                                             <path
                                                 d="M2.39362 3.54634C2.62144 1.80354 4.10646 0.5 5.8641 0.5H14.1359C15.8935 0.5 17.3786 1.80354 17.6064 3.54634L19.4304 17.5H0.569613L2.39362 3.54634Z"
                                                 stroke="#97C992"/>
                                         </svg>
-                                        <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="green"
+                                        <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="green active "
                                              xmlns="http://www.w3.org/2000/svg">
                                             <path
                                                 d="M2.39362 3.54634C2.62144 1.80354 4.10646 0.5 5.8641 0.5H14.1359C15.8935 0.5 17.3786 1.80354 17.6064 3.54634L19.4304 17.5H0.569613L2.39362 3.54634Z"
                                                 stroke="#97C992"/>
                                         </svg>
-                                        <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="green"
+                                        <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="green active "
                                              xmlns="http://www.w3.org/2000/svg">
                                             <path
                                                 d="M2.39362 3.54634C2.62144 1.80354 4.10646 0.5 5.8641 0.5H14.1359C15.8935 0.5 17.3786 1.80354 17.6064 3.54634L19.4304 17.5H0.569613L2.39362 3.54634Z"
                                                 stroke="#97C992"/>
                                         </svg>
-                                        <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="green"
+                                        <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="green active "
                                              xmlns="http://www.w3.org/2000/svg">
                                             <path
                                                 d="M2.39362 3.54634C2.62144 1.80354 4.10646 0.5 5.8641 0.5H14.1359C15.8935 0.5 17.3786 1.80354 17.6064 3.54634L19.4304 17.5H0.569613L2.39362 3.54634Z"
                                                 stroke="#97C992"/>
                                         </svg>
-                                        <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="green"
+                                        <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="green active "
                                              xmlns="http://www.w3.org/2000/svg">
                                             <path
                                                 d="M2.39362 3.54634C2.62144 1.80354 4.10646 0.5 5.8641 0.5H14.1359C15.8935 0.5 17.3786 1.80354 17.6064 3.54634L19.4304 17.5H0.569613L2.39362 3.54634Z"
                                                 stroke="#97C992"/>
                                         </svg>
-                                        <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="green"
+                                        <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="green active "
                                              xmlns="http://www.w3.org/2000/svg">
                                             <path
                                                 d="M2.39362 3.54634C2.62144 1.80354 4.10646 0.5 5.8641 0.5H14.1359C15.8935 0.5 17.3786 1.80354 17.6064 3.54634L19.4304 17.5H0.569613L2.39362 3.54634Z"
                                                 stroke="#97C992"/>
                                         </svg>
-                                        <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="green"
+                                        <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="green active "
                                              xmlns="http://www.w3.org/2000/svg">
                                             <path
                                                 d="M2.39362 3.54634C2.62144 1.80354 4.10646 0.5 5.8641 0.5H14.1359C15.8935 0.5 17.3786 1.80354 17.6064 3.54634L19.4304 17.5H0.569613L2.39362 3.54634Z"
                                                 stroke="#97C992"/>
                                         </svg>
-                                        <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="green"
+                                        <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="green active "
                                              xmlns="http://www.w3.org/2000/svg">
                                             <path
                                                 d="M2.39362 3.54634C2.62144 1.80354 4.10646 0.5 5.8641 0.5H14.1359C15.8935 0.5 17.3786 1.80354 17.6064 3.54634L19.4304 17.5H0.569613L2.39362 3.54634Z"
                                                 stroke="#97C992"/>
                                         </svg>
-                                        <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="green"
+                                        <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="green active "
                                              xmlns="http://www.w3.org/2000/svg">
                                             <path
                                                 d="M2.39362 3.54634C2.62144 1.80354 4.10646 0.5 5.8641 0.5H14.1359C15.8935 0.5 17.3786 1.80354 17.6064 3.54634L19.4304 17.5H0.569613L2.39362 3.54634Z"
                                                 stroke="#97C992"/>
                                         </svg>
-                                        <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="green"
+                                        <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="green active "
                                              xmlns="http://www.w3.org/2000/svg">
                                             <path
                                                 d="M2.39362 3.54634C2.62144 1.80354 4.10646 0.5 5.8641 0.5H14.1359C15.8935 0.5 17.3786 1.80354 17.6064 3.54634L19.4304 17.5H0.569613L2.39362 3.54634Z"
                                                 stroke="#97C992"/>
                                         </svg>
-                                        <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="green"
+                                        <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="green active "
                                              xmlns="http://www.w3.org/2000/svg">
                                             <path
                                                 d="M2.39362 3.54634C2.62144 1.80354 4.10646 0.5 5.8641 0.5H14.1359C15.8935 0.5 17.3786 1.80354 17.6064 3.54634L19.4304 17.5H0.569613L2.39362 3.54634Z"
                                                 stroke="#97C992"/>
                                         </svg>
-                                        <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="green"
+                                        <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="green active "
                                              xmlns="http://www.w3.org/2000/svg">
                                             <path
                                                 d="M2.39362 3.54634C2.62144 1.80354 4.10646 0.5 5.8641 0.5H14.1359C15.8935 0.5 17.3786 1.80354 17.6064 3.54634L19.4304 17.5H0.569613L2.39362 3.54634Z"
                                                 stroke="#97C992"/>
                                         </svg>
-                                        <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="green"
+                                        <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="green active "
                                              xmlns="http://www.w3.org/2000/svg">
                                             <path
                                                 d="M2.39362 3.54634C2.62144 1.80354 4.10646 0.5 5.8641 0.5H14.1359C15.8935 0.5 17.3786 1.80354 17.6064 3.54634L19.4304 17.5H0.569613L2.39362 3.54634Z"
                                                 stroke="#97C992"/>
                                         </svg>
-                                        <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="green"
+                                        <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="green active "
                                              xmlns="http://www.w3.org/2000/svg">
                                             <path
                                                 d="M2.39362 3.54634C2.62144 1.80354 4.10646 0.5 5.8641 0.5H14.1359C15.8935 0.5 17.3786 1.80354 17.6064 3.54634L19.4304 17.5H0.569613L2.39362 3.54634Z"
                                                 stroke="#97C992"/>
                                         </svg>
-                                        <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="green"
+                                        <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="green active "
                                              xmlns="http://www.w3.org/2000/svg">
                                             <path
                                                 d="M2.39362 3.54634C2.62144 1.80354 4.10646 0.5 5.8641 0.5H14.1359C15.8935 0.5 17.3786 1.80354 17.6064 3.54634L19.4304 17.5H0.569613L2.39362 3.54634Z"
                                                 stroke="#97C992"/>
                                         </svg>
-                                        <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="green"
+                                        <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="green active "
                                              xmlns="http://www.w3.org/2000/svg">
                                             <path
                                                 d="M2.39362 3.54634C2.62144 1.80354 4.10646 0.5 5.8641 0.5H14.1359C15.8935 0.5 17.3786 1.80354 17.6064 3.54634L19.4304 17.5H0.569613L2.39362 3.54634Z"
@@ -368,19 +368,19 @@
                                     <div class="seats-center-wr">
                                         <span class="seat-num">Loja balcon</span>
                                         <div class="seats-center">
-                                            <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="red"
+                                            <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="red active "
                                                  xmlns="http://www.w3.org/2000/svg">
                                                 <path
                                                     d="M2.39362 3.54634C2.62144 1.80354 4.10646 0.5 5.8641 0.5H14.1359C15.8935 0.5 17.3786 1.80354 17.6064 3.54634L19.4304 17.5H0.569613L2.39362 3.54634Z"
                                                     stroke="#97C992"/>
                                             </svg>
-                                            <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="red"
+                                            <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="red active "
                                                  xmlns="http://www.w3.org/2000/svg">
                                                 <path
                                                     d="M2.39362 3.54634C2.62144 1.80354 4.10646 0.5 5.8641 0.5H14.1359C15.8935 0.5 17.3786 1.80354 17.6064 3.54634L19.4304 17.5H0.569613L2.39362 3.54634Z"
                                                     stroke="#97C992"/>
                                             </svg>
-                                            <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="red"
+                                            <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="red active "
                                                  xmlns="http://www.w3.org/2000/svg">
                                                 <path
                                                     d="M2.39362 3.54634C2.62144 1.80354 4.10646 0.5 5.8641 0.5H14.1359C15.8935 0.5 17.3786 1.80354 17.6064 3.54634L19.4304 17.5H0.569613L2.39362 3.54634Z"
@@ -391,266 +391,266 @@
                                 </div>
                                 <div class="seats-row d-flex">
                                     <div class="seats-left pl1 pr1">
-                                        <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="blue ml1"
+                                        <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="blue active  ml1"
                                              xmlns="http://www.w3.org/2000/svg">
                                             <path
                                                 d="M2.39362 3.54634C2.62144 1.80354 4.10646 0.5 5.8641 0.5H14.1359C15.8935 0.5 17.3786 1.80354 17.6064 3.54634L19.4304 17.5H0.569613L2.39362 3.54634Z"
                                                 stroke="#97C992"/>
                                         </svg>
-                                        <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="blue"
+                                        <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="blue active "
                                              xmlns="http://www.w3.org/2000/svg">
                                             <path
                                                 d="M2.39362 3.54634C2.62144 1.80354 4.10646 0.5 5.8641 0.5H14.1359C15.8935 0.5 17.3786 1.80354 17.6064 3.54634L19.4304 17.5H0.569613L2.39362 3.54634Z"
                                                 stroke="#97C992"/>
                                         </svg>
-                                        <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="blue"
+                                        <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="blue active "
                                              xmlns="http://www.w3.org/2000/svg">
                                             <path
                                                 d="M2.39362 3.54634C2.62144 1.80354 4.10646 0.5 5.8641 0.5H14.1359C15.8935 0.5 17.3786 1.80354 17.6064 3.54634L19.4304 17.5H0.569613L2.39362 3.54634Z"
                                                 stroke="#97C992"/>
                                         </svg>
-                                        <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="blue"
+                                        <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="blue active "
                                              xmlns="http://www.w3.org/2000/svg">
                                             <path
                                                 d="M2.39362 3.54634C2.62144 1.80354 4.10646 0.5 5.8641 0.5H14.1359C15.8935 0.5 17.3786 1.80354 17.6064 3.54634L19.4304 17.5H0.569613L2.39362 3.54634Z"
                                                 stroke="#97C992"/>
                                         </svg>
-                                        <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="blue"
+                                        <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="blue active "
                                              xmlns="http://www.w3.org/2000/svg">
                                             <path
                                                 d="M2.39362 3.54634C2.62144 1.80354 4.10646 0.5 5.8641 0.5H14.1359C15.8935 0.5 17.3786 1.80354 17.6064 3.54634L19.4304 17.5H0.569613L2.39362 3.54634Z"
                                                 stroke="#97C992"/>
                                         </svg>
-                                        <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="blue"
+                                        <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="blue active "
                                              xmlns="http://www.w3.org/2000/svg">
                                             <path
                                                 d="M2.39362 3.54634C2.62144 1.80354 4.10646 0.5 5.8641 0.5H14.1359C15.8935 0.5 17.3786 1.80354 17.6064 3.54634L19.4304 17.5H0.569613L2.39362 3.54634Z"
                                                 stroke="#97C992"/>
                                         </svg>
-                                        <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="blue"
+                                        <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="blue active "
                                              xmlns="http://www.w3.org/2000/svg">
                                             <path
                                                 d="M2.39362 3.54634C2.62144 1.80354 4.10646 0.5 5.8641 0.5H14.1359C15.8935 0.5 17.3786 1.80354 17.6064 3.54634L19.4304 17.5H0.569613L2.39362 3.54634Z"
                                                 stroke="#97C992"/>
                                         </svg>
-                                        <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="blue"
+                                        <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="blue active "
                                              xmlns="http://www.w3.org/2000/svg">
                                             <path
                                                 d="M2.39362 3.54634C2.62144 1.80354 4.10646 0.5 5.8641 0.5H14.1359C15.8935 0.5 17.3786 1.80354 17.6064 3.54634L19.4304 17.5H0.569613L2.39362 3.54634Z"
                                                 stroke="#97C992"/>
                                         </svg>
-                                        <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="blue"
+                                        <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="blue active "
                                              xmlns="http://www.w3.org/2000/svg">
                                             <path
                                                 d="M2.39362 3.54634C2.62144 1.80354 4.10646 0.5 5.8641 0.5H14.1359C15.8935 0.5 17.3786 1.80354 17.6064 3.54634L19.4304 17.5H0.569613L2.39362 3.54634Z"
                                                 stroke="#97C992"/>
                                         </svg>
-                                        <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="blue"
+                                        <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="blue active "
                                              xmlns="http://www.w3.org/2000/svg">
                                             <path
                                                 d="M2.39362 3.54634C2.62144 1.80354 4.10646 0.5 5.8641 0.5H14.1359C15.8935 0.5 17.3786 1.80354 17.6064 3.54634L19.4304 17.5H0.569613L2.39362 3.54634Z"
                                                 stroke="#97C992"/>
                                         </svg>
-                                        <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="blue"
+                                        <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="blue active "
                                              xmlns="http://www.w3.org/2000/svg">
                                             <path
                                                 d="M2.39362 3.54634C2.62144 1.80354 4.10646 0.5 5.8641 0.5H14.1359C15.8935 0.5 17.3786 1.80354 17.6064 3.54634L19.4304 17.5H0.569613L2.39362 3.54634Z"
                                                 stroke="#97C992"/>
                                         </svg>
-                                        <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="blue"
+                                        <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="blue active "
                                              xmlns="http://www.w3.org/2000/svg">
                                             <path
                                                 d="M2.39362 3.54634C2.62144 1.80354 4.10646 0.5 5.8641 0.5H14.1359C15.8935 0.5 17.3786 1.80354 17.6064 3.54634L19.4304 17.5H0.569613L2.39362 3.54634Z"
                                                 stroke="#97C992"/>
                                         </svg>
-                                        <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="blue"
+                                        <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="blue active "
                                              xmlns="http://www.w3.org/2000/svg">
                                             <path
                                                 d="M2.39362 3.54634C2.62144 1.80354 4.10646 0.5 5.8641 0.5H14.1359C15.8935 0.5 17.3786 1.80354 17.6064 3.54634L19.4304 17.5H0.569613L2.39362 3.54634Z"
                                                 stroke="#97C992"/>
                                         </svg>
-                                        <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="blue"
+                                        <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="blue active "
                                              xmlns="http://www.w3.org/2000/svg">
                                             <path
                                                 d="M2.39362 3.54634C2.62144 1.80354 4.10646 0.5 5.8641 0.5H14.1359C15.8935 0.5 17.3786 1.80354 17.6064 3.54634L19.4304 17.5H0.569613L2.39362 3.54634Z"
                                                 stroke="#97C992"/>
                                         </svg>
-                                        <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="blue"
+                                        <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="blue active "
                                              xmlns="http://www.w3.org/2000/svg">
                                             <path
                                                 d="M2.39362 3.54634C2.62144 1.80354 4.10646 0.5 5.8641 0.5H14.1359C15.8935 0.5 17.3786 1.80354 17.6064 3.54634L19.4304 17.5H0.569613L2.39362 3.54634Z"
                                                 stroke="#97C992"/>
                                         </svg>
-                                        <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="blue"
+                                        <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="blue active "
                                              xmlns="http://www.w3.org/2000/svg">
                                             <path
                                                 d="M2.39362 3.54634C2.62144 1.80354 4.10646 0.5 5.8641 0.5H14.1359C15.8935 0.5 17.3786 1.80354 17.6064 3.54634L19.4304 17.5H0.569613L2.39362 3.54634Z"
                                                 stroke="#97C992"/>
                                         </svg>
-                                        <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="blue"
+                                        <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="blue active "
                                              xmlns="http://www.w3.org/2000/svg">
                                             <path
                                                 d="M2.39362 3.54634C2.62144 1.80354 4.10646 0.5 5.8641 0.5H14.1359C15.8935 0.5 17.3786 1.80354 17.6064 3.54634L19.4304 17.5H0.569613L2.39362 3.54634Z"
                                                 stroke="#97C992"/>
                                         </svg>
-                                        <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="blue"
+                                        <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="blue active "
                                              xmlns="http://www.w3.org/2000/svg">
                                             <path
                                                 d="M2.39362 3.54634C2.62144 1.80354 4.10646 0.5 5.8641 0.5H14.1359C15.8935 0.5 17.3786 1.80354 17.6064 3.54634L19.4304 17.5H0.569613L2.39362 3.54634Z"
                                                 stroke="#97C992"/>
                                         </svg>
-                                        <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="blue busy"
+                                        <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="blue active "
                                              xmlns="http://www.w3.org/2000/svg">
                                             <path
                                                 d="M2.39362 3.54634C2.62144 1.80354 4.10646 0.5 5.8641 0.5H14.1359C15.8935 0.5 17.3786 1.80354 17.6064 3.54634L19.4304 17.5H0.569613L2.39362 3.54634Z"
                                                 stroke="#97C992"/>
                                         </svg>
-                                        <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="blue"
+                                        <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="blue active "
                                              xmlns="http://www.w3.org/2000/svg">
                                             <path
                                                 d="M2.39362 3.54634C2.62144 1.80354 4.10646 0.5 5.8641 0.5H14.1359C15.8935 0.5 17.3786 1.80354 17.6064 3.54634L19.4304 17.5H0.569613L2.39362 3.54634Z"
                                                 stroke="#97C992"/>
                                         </svg>
-                                        <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="blue"
+                                        <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="blue active "
                                              xmlns="http://www.w3.org/2000/svg">
                                             <path
                                                 d="M2.39362 3.54634C2.62144 1.80354 4.10646 0.5 5.8641 0.5H14.1359C15.8935 0.5 17.3786 1.80354 17.6064 3.54634L19.4304 17.5H0.569613L2.39362 3.54634Z"
                                                 stroke="#97C992"/>
                                         </svg>
-                                        <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="blue"
+                                        <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="blue active "
                                              xmlns="http://www.w3.org/2000/svg">
                                             <path
                                                 d="M2.39362 3.54634C2.62144 1.80354 4.10646 0.5 5.8641 0.5H14.1359C15.8935 0.5 17.3786 1.80354 17.6064 3.54634L19.4304 17.5H0.569613L2.39362 3.54634Z"
                                                 stroke="#97C992"/>
                                         </svg>
-                                        <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="blue busy"
+                                        <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="blue active "
                                              xmlns="http://www.w3.org/2000/svg">
                                             <path
                                                 d="M2.39362 3.54634C2.62144 1.80354 4.10646 0.5 5.8641 0.5H14.1359C15.8935 0.5 17.3786 1.80354 17.6064 3.54634L19.4304 17.5H0.569613L2.39362 3.54634Z"
                                                 stroke="#97C992"/>
                                         </svg>
-                                        <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="blue busy"
+                                        <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="blue active "
                                              xmlns="http://www.w3.org/2000/svg">
                                             <path
                                                 d="M2.39362 3.54634C2.62144 1.80354 4.10646 0.5 5.8641 0.5H14.1359C15.8935 0.5 17.3786 1.80354 17.6064 3.54634L19.4304 17.5H0.569613L2.39362 3.54634Z"
                                                 stroke="#97C992"/>
                                         </svg>
-                                        <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="blue"
+                                        <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="blue active "
                                              xmlns="http://www.w3.org/2000/svg">
                                             <path
                                                 d="M2.39362 3.54634C2.62144 1.80354 4.10646 0.5 5.8641 0.5H14.1359C15.8935 0.5 17.3786 1.80354 17.6064 3.54634L19.4304 17.5H0.569613L2.39362 3.54634Z"
                                                 stroke="#97C992"/>
                                         </svg>
-                                        <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="blue"
+                                        <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="blue active "
                                              xmlns="http://www.w3.org/2000/svg">
                                             <path
                                                 d="M2.39362 3.54634C2.62144 1.80354 4.10646 0.5 5.8641 0.5H14.1359C15.8935 0.5 17.3786 1.80354 17.6064 3.54634L19.4304 17.5H0.569613L2.39362 3.54634Z"
                                                 stroke="#97C992"/>
                                         </svg>
                                         <!-- purple seats -->
-                                        <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="purple"
+                                        <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="purple active "
                                              xmlns="http://www.w3.org/2000/svg">
                                             <path
                                                 d="M2.39362 3.54634C2.62144 1.80354 4.10646 0.5 5.8641 0.5H14.1359C15.8935 0.5 17.3786 1.80354 17.6064 3.54634L19.4304 17.5H0.569613L2.39362 3.54634Z"
                                                 stroke="#97C992"/>
                                         </svg>
-                                        <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="purple"
+                                        <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="purple active "
                                              xmlns="http://www.w3.org/2000/svg">
                                             <path
                                                 d="M2.39362 3.54634C2.62144 1.80354 4.10646 0.5 5.8641 0.5H14.1359C15.8935 0.5 17.3786 1.80354 17.6064 3.54634L19.4304 17.5H0.569613L2.39362 3.54634Z"
                                                 stroke="#97C992"/>
                                         </svg>
-                                        <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="purple"
+                                        <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="purple active "
                                              xmlns="http://www.w3.org/2000/svg">
                                             <path
                                                 d="M2.39362 3.54634C2.62144 1.80354 4.10646 0.5 5.8641 0.5H14.1359C15.8935 0.5 17.3786 1.80354 17.6064 3.54634L19.4304 17.5H0.569613L2.39362 3.54634Z"
                                                 stroke="#97C992"/>
                                         </svg>
-                                        <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="purple"
+                                        <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="purple active "
                                              xmlns="http://www.w3.org/2000/svg">
                                             <path
                                                 d="M2.39362 3.54634C2.62144 1.80354 4.10646 0.5 5.8641 0.5H14.1359C15.8935 0.5 17.3786 1.80354 17.6064 3.54634L19.4304 17.5H0.569613L2.39362 3.54634Z"
                                                 stroke="#97C992"/>
                                         </svg>
-                                        <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="purple"
+                                        <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="purple active "
                                              xmlns="http://www.w3.org/2000/svg">
                                             <path
                                                 d="M2.39362 3.54634C2.62144 1.80354 4.10646 0.5 5.8641 0.5H14.1359C15.8935 0.5 17.3786 1.80354 17.6064 3.54634L19.4304 17.5H0.569613L2.39362 3.54634Z"
                                                 stroke="#97C992"/>
                                         </svg>
-                                        <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="purple"
+                                        <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="purple active "
                                              xmlns="http://www.w3.org/2000/svg">
                                             <path
                                                 d="M2.39362 3.54634C2.62144 1.80354 4.10646 0.5 5.8641 0.5H14.1359C15.8935 0.5 17.3786 1.80354 17.6064 3.54634L19.4304 17.5H0.569613L2.39362 3.54634Z"
                                                 stroke="#97C992"/>
                                         </svg>
-                                        <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="purple"
+                                        <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="purple active "
                                              xmlns="http://www.w3.org/2000/svg">
                                             <path
                                                 d="M2.39362 3.54634C2.62144 1.80354 4.10646 0.5 5.8641 0.5H14.1359C15.8935 0.5 17.3786 1.80354 17.6064 3.54634L19.4304 17.5H0.569613L2.39362 3.54634Z"
                                                 stroke="#97C992"/>
                                         </svg>
-                                        <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="purple"
+                                        <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="purple active "
                                              xmlns="http://www.w3.org/2000/svg">
                                             <path
                                                 d="M2.39362 3.54634C2.62144 1.80354 4.10646 0.5 5.8641 0.5H14.1359C15.8935 0.5 17.3786 1.80354 17.6064 3.54634L19.4304 17.5H0.569613L2.39362 3.54634Z"
                                                 stroke="#97C992"/>
                                         </svg>
-                                        <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="purple"
+                                        <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="purple active "
                                              xmlns="http://www.w3.org/2000/svg">
                                             <path
                                                 d="M2.39362 3.54634C2.62144 1.80354 4.10646 0.5 5.8641 0.5H14.1359C15.8935 0.5 17.3786 1.80354 17.6064 3.54634L19.4304 17.5H0.569613L2.39362 3.54634Z"
                                                 stroke="#97C992"/>
                                         </svg>
-                                        <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="purple"
+                                        <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="purple active "
                                              xmlns="http://www.w3.org/2000/svg">
                                             <path
                                                 d="M2.39362 3.54634C2.62144 1.80354 4.10646 0.5 5.8641 0.5H14.1359C15.8935 0.5 17.3786 1.80354 17.6064 3.54634L19.4304 17.5H0.569613L2.39362 3.54634Z"
                                                 stroke="#97C992"/>
                                         </svg>
-                                        <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="purple"
+                                        <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="purple active "
                                              xmlns="http://www.w3.org/2000/svg">
                                             <path
                                                 d="M2.39362 3.54634C2.62144 1.80354 4.10646 0.5 5.8641 0.5H14.1359C15.8935 0.5 17.3786 1.80354 17.6064 3.54634L19.4304 17.5H0.569613L2.39362 3.54634Z"
                                                 stroke="#97C992"/>
                                         </svg>
-                                        <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="purple"
+                                        <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="purple active "
                                              xmlns="http://www.w3.org/2000/svg">
                                             <path
                                                 d="M2.39362 3.54634C2.62144 1.80354 4.10646 0.5 5.8641 0.5H14.1359C15.8935 0.5 17.3786 1.80354 17.6064 3.54634L19.4304 17.5H0.569613L2.39362 3.54634Z"
                                                 stroke="#97C992"/>
                                         </svg>
-                                        <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="purple"
+                                        <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="purple active "
                                              xmlns="http://www.w3.org/2000/svg">
                                             <path
                                                 d="M2.39362 3.54634C2.62144 1.80354 4.10646 0.5 5.8641 0.5H14.1359C15.8935 0.5 17.3786 1.80354 17.6064 3.54634L19.4304 17.5H0.569613L2.39362 3.54634Z"
                                                 stroke="#97C992"/>
                                         </svg>
-                                        <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="purple"
+                                        <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="purple active "
                                              xmlns="http://www.w3.org/2000/svg">
                                             <path
                                                 d="M2.39362 3.54634C2.62144 1.80354 4.10646 0.5 5.8641 0.5H14.1359C15.8935 0.5 17.3786 1.80354 17.6064 3.54634L19.4304 17.5H0.569613L2.39362 3.54634Z"
                                                 stroke="#97C992"/>
                                         </svg>
-                                        <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="purple"
+                                        <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="purple active "
                                              xmlns="http://www.w3.org/2000/svg">
                                             <path
                                                 d="M2.39362 3.54634C2.62144 1.80354 4.10646 0.5 5.8641 0.5H14.1359C15.8935 0.5 17.3786 1.80354 17.6064 3.54634L19.4304 17.5H0.569613L2.39362 3.54634Z"
                                                 stroke="#97C992"/>
                                         </svg>
-                                        <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="purple"
+                                        <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="purple active "
                                              xmlns="http://www.w3.org/2000/svg">
                                             <path
                                                 d="M2.39362 3.54634C2.62144 1.80354 4.10646 0.5 5.8641 0.5H14.1359C15.8935 0.5 17.3786 1.80354 17.6064 3.54634L19.4304 17.5H0.569613L2.39362 3.54634Z"
                                                 stroke="#97C992"/>
                                         </svg>
-                                        <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="purple"
+                                        <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="purple active "
                                              xmlns="http://www.w3.org/2000/svg">
                                             <path
                                                 d="M2.39362 3.54634C2.62144 1.80354 4.10646 0.5 5.8641 0.5H14.1359C15.8935 0.5 17.3786 1.80354 17.6064 3.54634L19.4304 17.5H0.569613L2.39362 3.54634Z"
                                                 stroke="#97C992"/>
                                         </svg>
-                                        <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="purple"
+                                        <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="purple active "
                                              xmlns="http://www.w3.org/2000/svg">
                                             <path
                                                 d="M2.39362 3.54634C2.62144 1.80354 4.10646 0.5 5.8641 0.5H14.1359C15.8935 0.5 17.3786 1.80354 17.6064 3.54634L19.4304 17.5H0.569613L2.39362 3.54634Z"
@@ -665,235 +665,235 @@
                                         <span class="seat-num">9</span>
                                     </div>
                                     <div class="seats-right pl1 pr1 mr1">
-                                        <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="blue"
+                                        <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="blue active "
                                              xmlns="http://www.w3.org/2000/svg">
                                             <path
                                                 d="M2.39362 3.54634C2.62144 1.80354 4.10646 0.5 5.8641 0.5H14.1359C15.8935 0.5 17.3786 1.80354 17.6064 3.54634L19.4304 17.5H0.569613L2.39362 3.54634Z"
                                                 stroke="#97C992"/>
                                         </svg>
-                                        <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="blue"
+                                        <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="blue active "
                                              xmlns="http://www.w3.org/2000/svg">
                                             <path
                                                 d="M2.39362 3.54634C2.62144 1.80354 4.10646 0.5 5.8641 0.5H14.1359C15.8935 0.5 17.3786 1.80354 17.6064 3.54634L19.4304 17.5H0.569613L2.39362 3.54634Z"
                                                 stroke="#97C992"/>
                                         </svg>
-                                        <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="blue"
+                                        <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="blue active "
                                              xmlns="http://www.w3.org/2000/svg">
                                             <path
                                                 d="M2.39362 3.54634C2.62144 1.80354 4.10646 0.5 5.8641 0.5H14.1359C15.8935 0.5 17.3786 1.80354 17.6064 3.54634L19.4304 17.5H0.569613L2.39362 3.54634Z"
                                                 stroke="#97C992"/>
                                         </svg>
-                                        <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="blue"
+                                        <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="blue active "
                                              xmlns="http://www.w3.org/2000/svg">
                                             <path
                                                 d="M2.39362 3.54634C2.62144 1.80354 4.10646 0.5 5.8641 0.5H14.1359C15.8935 0.5 17.3786 1.80354 17.6064 3.54634L19.4304 17.5H0.569613L2.39362 3.54634Z"
                                                 stroke="#97C992"/>
                                         </svg>
-                                        <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="blue"
+                                        <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="blue active "
                                              xmlns="http://www.w3.org/2000/svg">
                                             <path
                                                 d="M2.39362 3.54634C2.62144 1.80354 4.10646 0.5 5.8641 0.5H14.1359C15.8935 0.5 17.3786 1.80354 17.6064 3.54634L19.4304 17.5H0.569613L2.39362 3.54634Z"
                                                 stroke="#97C992"/>
                                         </svg>
-                                        <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="blue"
+                                        <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="blue active "
                                              xmlns="http://www.w3.org/2000/svg">
                                             <path
                                                 d="M2.39362 3.54634C2.62144 1.80354 4.10646 0.5 5.8641 0.5H14.1359C15.8935 0.5 17.3786 1.80354 17.6064 3.54634L19.4304 17.5H0.569613L2.39362 3.54634Z"
                                                 stroke="#97C992"/>
                                         </svg>
-                                        <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="blue mr1"
+                                        <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="blue active  mr1"
                                              xmlns="http://www.w3.org/2000/svg">
                                             <path
                                                 d="M2.39362 3.54634C2.62144 1.80354 4.10646 0.5 5.8641 0.5H14.1359C15.8935 0.5 17.3786 1.80354 17.6064 3.54634L19.4304 17.5H0.569613L2.39362 3.54634Z"
                                                 stroke="#97C992"/>
                                         </svg>
-                                        <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="blue"
+                                        <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="blue active "
                                              xmlns="http://www.w3.org/2000/svg">
                                             <path
                                                 d="M2.39362 3.54634C2.62144 1.80354 4.10646 0.5 5.8641 0.5H14.1359C15.8935 0.5 17.3786 1.80354 17.6064 3.54634L19.4304 17.5H0.569613L2.39362 3.54634Z"
                                                 stroke="#97C992"/>
                                         </svg>
-                                        <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="blue"
+                                        <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="blue active "
                                              xmlns="http://www.w3.org/2000/svg">
                                             <path
                                                 d="M2.39362 3.54634C2.62144 1.80354 4.10646 0.5 5.8641 0.5H14.1359C15.8935 0.5 17.3786 1.80354 17.6064 3.54634L19.4304 17.5H0.569613L2.39362 3.54634Z"
                                                 stroke="#97C992"/>
                                         </svg>
-                                        <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="blue"
+                                        <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="blue active "
                                              xmlns="http://www.w3.org/2000/svg">
                                             <path
                                                 d="M2.39362 3.54634C2.62144 1.80354 4.10646 0.5 5.8641 0.5H14.1359C15.8935 0.5 17.3786 1.80354 17.6064 3.54634L19.4304 17.5H0.569613L2.39362 3.54634Z"
                                                 stroke="#97C992"/>
                                         </svg>
-                                        <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="blue"
+                                        <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="blue active "
                                              xmlns="http://www.w3.org/2000/svg">
                                             <path
                                                 d="M2.39362 3.54634C2.62144 1.80354 4.10646 0.5 5.8641 0.5H14.1359C15.8935 0.5 17.3786 1.80354 17.6064 3.54634L19.4304 17.5H0.569613L2.39362 3.54634Z"
                                                 stroke="#97C992"/>
                                         </svg>
-                                        <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="blue"
+                                        <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="blue active "
                                              xmlns="http://www.w3.org/2000/svg">
                                             <path
                                                 d="M2.39362 3.54634C2.62144 1.80354 4.10646 0.5 5.8641 0.5H14.1359C15.8935 0.5 17.3786 1.80354 17.6064 3.54634L19.4304 17.5H0.569613L2.39362 3.54634Z"
                                                 stroke="#97C992"/>
                                         </svg>
-                                        <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="blue"
+                                        <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="blue active "
                                              xmlns="http://www.w3.org/2000/svg">
                                             <path
                                                 d="M2.39362 3.54634C2.62144 1.80354 4.10646 0.5 5.8641 0.5H14.1359C15.8935 0.5 17.3786 1.80354 17.6064 3.54634L19.4304 17.5H0.569613L2.39362 3.54634Z"
                                                 stroke="#97C992"/>
                                         </svg>
-                                        <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="blue"
+                                        <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="blue active "
                                              xmlns="http://www.w3.org/2000/svg">
                                             <path
                                                 d="M2.39362 3.54634C2.62144 1.80354 4.10646 0.5 5.8641 0.5H14.1359C15.8935 0.5 17.3786 1.80354 17.6064 3.54634L19.4304 17.5H0.569613L2.39362 3.54634Z"
                                                 stroke="#97C992"/>
                                         </svg>
-                                        <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="blue"
+                                        <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="blue active "
                                              xmlns="http://www.w3.org/2000/svg">
                                             <path
                                                 d="M2.39362 3.54634C2.62144 1.80354 4.10646 0.5 5.8641 0.5H14.1359C15.8935 0.5 17.3786 1.80354 17.6064 3.54634L19.4304 17.5H0.569613L2.39362 3.54634Z"
                                                 stroke="#97C992"/>
                                         </svg>
-                                        <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="blue"
+                                        <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="blue active "
                                              xmlns="http://www.w3.org/2000/svg">
                                             <path
                                                 d="M2.39362 3.54634C2.62144 1.80354 4.10646 0.5 5.8641 0.5H14.1359C15.8935 0.5 17.3786 1.80354 17.6064 3.54634L19.4304 17.5H0.569613L2.39362 3.54634Z"
                                                 stroke="#97C992"/>
                                         </svg>
-                                        <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="blue"
+                                        <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="blue active "
                                              xmlns="http://www.w3.org/2000/svg">
                                             <path
                                                 d="M2.39362 3.54634C2.62144 1.80354 4.10646 0.5 5.8641 0.5H14.1359C15.8935 0.5 17.3786 1.80354 17.6064 3.54634L19.4304 17.5H0.569613L2.39362 3.54634Z"
                                                 stroke="#97C992"/>
                                         </svg>
-                                        <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="blue"
+                                        <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="blue active "
                                              xmlns="http://www.w3.org/2000/svg">
                                             <path
                                                 d="M2.39362 3.54634C2.62144 1.80354 4.10646 0.5 5.8641 0.5H14.1359C15.8935 0.5 17.3786 1.80354 17.6064 3.54634L19.4304 17.5H0.569613L2.39362 3.54634Z"
                                                 stroke="#97C992"/>
                                         </svg>
-                                        <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="blue"
+                                        <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="blue active "
                                              xmlns="http://www.w3.org/2000/svg">
                                             <path
                                                 d="M2.39362 3.54634C2.62144 1.80354 4.10646 0.5 5.8641 0.5H14.1359C15.8935 0.5 17.3786 1.80354 17.6064 3.54634L19.4304 17.5H0.569613L2.39362 3.54634Z"
                                                 stroke="#97C992"/>
                                         </svg>
-                                        <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="blue"
+                                        <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="blue active "
                                              xmlns="http://www.w3.org/2000/svg">
                                             <path
                                                 d="M2.39362 3.54634C2.62144 1.80354 4.10646 0.5 5.8641 0.5H14.1359C15.8935 0.5 17.3786 1.80354 17.6064 3.54634L19.4304 17.5H0.569613L2.39362 3.54634Z"
                                                 stroke="#97C992"/>
                                         </svg>
-                                        <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="blue"
+                                        <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="blue active "
                                              xmlns="http://www.w3.org/2000/svg">
                                             <path
                                                 d="M2.39362 3.54634C2.62144 1.80354 4.10646 0.5 5.8641 0.5H14.1359C15.8935 0.5 17.3786 1.80354 17.6064 3.54634L19.4304 17.5H0.569613L2.39362 3.54634Z"
                                                 stroke="#97C992"/>
                                         </svg>
-                                        <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="blue"
+                                        <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="blue active "
                                              xmlns="http://www.w3.org/2000/svg">
                                             <path
                                                 d="M2.39362 3.54634C2.62144 1.80354 4.10646 0.5 5.8641 0.5H14.1359C15.8935 0.5 17.3786 1.80354 17.6064 3.54634L19.4304 17.5H0.569613L2.39362 3.54634Z"
                                                 stroke="#97C992"/>
                                         </svg>
-                                        <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="blue"
+                                        <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="blue active "
                                              xmlns="http://www.w3.org/2000/svg">
                                             <path
                                                 d="M2.39362 3.54634C2.62144 1.80354 4.10646 0.5 5.8641 0.5H14.1359C15.8935 0.5 17.3786 1.80354 17.6064 3.54634L19.4304 17.5H0.569613L2.39362 3.54634Z"
                                                 stroke="#97C992"/>
                                         </svg>
-                                        <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="purple"
+                                        <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="purple active "
                                              xmlns="http://www.w3.org/2000/svg">
                                             <path
                                                 d="M2.39362 3.54634C2.62144 1.80354 4.10646 0.5 5.8641 0.5H14.1359C15.8935 0.5 17.3786 1.80354 17.6064 3.54634L19.4304 17.5H0.569613L2.39362 3.54634Z"
                                                 stroke="#97C992"/>
                                         </svg>
-                                        <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="purple"
+                                        <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="purple active "
                                              xmlns="http://www.w3.org/2000/svg">
                                             <path
                                                 d="M2.39362 3.54634C2.62144 1.80354 4.10646 0.5 5.8641 0.5H14.1359C15.8935 0.5 17.3786 1.80354 17.6064 3.54634L19.4304 17.5H0.569613L2.39362 3.54634Z"
                                                 stroke="#97C992"/>
                                         </svg>
-                                        <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="purple"
+                                        <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="purple active "
                                              xmlns="http://www.w3.org/2000/svg">
                                             <path
                                                 d="M2.39362 3.54634C2.62144 1.80354 4.10646 0.5 5.8641 0.5H14.1359C15.8935 0.5 17.3786 1.80354 17.6064 3.54634L19.4304 17.5H0.569613L2.39362 3.54634Z"
                                                 stroke="#97C992"/>
                                         </svg>
-                                        <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="purple"
+                                        <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="purple active "
                                              xmlns="http://www.w3.org/2000/svg">
                                             <path
                                                 d="M2.39362 3.54634C2.62144 1.80354 4.10646 0.5 5.8641 0.5H14.1359C15.8935 0.5 17.3786 1.80354 17.6064 3.54634L19.4304 17.5H0.569613L2.39362 3.54634Z"
                                                 stroke="#97C992"/>
                                         </svg>
-                                        <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="purple"
+                                        <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="purple active "
                                              xmlns="http://www.w3.org/2000/svg">
                                             <path
                                                 d="M2.39362 3.54634C2.62144 1.80354 4.10646 0.5 5.8641 0.5H14.1359C15.8935 0.5 17.3786 1.80354 17.6064 3.54634L19.4304 17.5H0.569613L2.39362 3.54634Z"
                                                 stroke="#97C992"/>
                                         </svg>
-                                        <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="purple"
+                                        <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="purple active "
                                              xmlns="http://www.w3.org/2000/svg">
                                             <path
                                                 d="M2.39362 3.54634C2.62144 1.80354 4.10646 0.5 5.8641 0.5H14.1359C15.8935 0.5 17.3786 1.80354 17.6064 3.54634L19.4304 17.5H0.569613L2.39362 3.54634Z"
                                                 stroke="#97C992"/>
                                         </svg>
-                                        <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="purple"
+                                        <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="purple active "
                                              xmlns="http://www.w3.org/2000/svg">
                                             <path
                                                 d="M2.39362 3.54634C2.62144 1.80354 4.10646 0.5 5.8641 0.5H14.1359C15.8935 0.5 17.3786 1.80354 17.6064 3.54634L19.4304 17.5H0.569613L2.39362 3.54634Z"
                                                 stroke="#97C992"/>
                                         </svg>
-                                        <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="purple"
+                                        <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="purple active "
                                              xmlns="http://www.w3.org/2000/svg">
                                             <path
                                                 d="M2.39362 3.54634C2.62144 1.80354 4.10646 0.5 5.8641 0.5H14.1359C15.8935 0.5 17.3786 1.80354 17.6064 3.54634L19.4304 17.5H0.569613L2.39362 3.54634Z"
                                                 stroke="#97C992"/>
                                         </svg>
-                                        <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="purple"
+                                        <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="purple active "
                                              xmlns="http://www.w3.org/2000/svg">
                                             <path
                                                 d="M2.39362 3.54634C2.62144 1.80354 4.10646 0.5 5.8641 0.5H14.1359C15.8935 0.5 17.3786 1.80354 17.6064 3.54634L19.4304 17.5H0.569613L2.39362 3.54634Z"
                                                 stroke="#97C992"/>
                                         </svg>
-                                        <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="purple"
+                                        <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="purple active "
                                              xmlns="http://www.w3.org/2000/svg">
                                             <path
                                                 d="M2.39362 3.54634C2.62144 1.80354 4.10646 0.5 5.8641 0.5H14.1359C15.8935 0.5 17.3786 1.80354 17.6064 3.54634L19.4304 17.5H0.569613L2.39362 3.54634Z"
                                                 stroke="#97C992"/>
                                         </svg>
-                                        <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="purple"
+                                        <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="purple active "
                                              xmlns="http://www.w3.org/2000/svg">
                                             <path
                                                 d="M2.39362 3.54634C2.62144 1.80354 4.10646 0.5 5.8641 0.5H14.1359C15.8935 0.5 17.3786 1.80354 17.6064 3.54634L19.4304 17.5H0.569613L2.39362 3.54634Z"
                                                 stroke="#97C992"/>
                                         </svg>
-                                        <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="purple"
+                                        <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="purple active "
                                              xmlns="http://www.w3.org/2000/svg">
                                             <path
                                                 d="M2.39362 3.54634C2.62144 1.80354 4.10646 0.5 5.8641 0.5H14.1359C15.8935 0.5 17.3786 1.80354 17.6064 3.54634L19.4304 17.5H0.569613L2.39362 3.54634Z"
                                                 stroke="#97C992"/>
                                         </svg>
-                                        <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="purple busy"
+                                        <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="purple active "
                                              xmlns="http://www.w3.org/2000/svg">
                                             <path
                                                 d="M2.39362 3.54634C2.62144 1.80354 4.10646 0.5 5.8641 0.5H14.1359C15.8935 0.5 17.3786 1.80354 17.6064 3.54634L19.4304 17.5H0.569613L2.39362 3.54634Z"
                                                 stroke="#97C992"/>
                                         </svg>
-                                        <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="purple busy"
+                                        <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="purple active "
                                              xmlns="http://www.w3.org/2000/svg">
                                             <path
                                                 d="M2.39362 3.54634C2.62144 1.80354 4.10646 0.5 5.8641 0.5H14.1359C15.8935 0.5 17.3786 1.80354 17.6064 3.54634L19.4304 17.5H0.569613L2.39362 3.54634Z"
                                                 stroke="#97C992"/>
                                         </svg>
-                                        <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="purple busy"
+                                        <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="purple active "
                                              xmlns="http://www.w3.org/2000/svg">
                                             <path
                                                 d="M2.39362 3.54634C2.62144 1.80354 4.10646 0.5 5.8641 0.5H14.1359C15.8935 0.5 17.3786 1.80354 17.6064 3.54634L19.4304 17.5H0.569613L2.39362 3.54634Z"
                                                 stroke="#97C992"/>
                                         </svg>
-                                        <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="purple busy"
+                                        <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="purple active "
                                              xmlns="http://www.w3.org/2000/svg">
                                             <path
                                                 d="M2.39362 3.54634C2.62144 1.80354 4.10646 0.5 5.8641 0.5H14.1359C15.8935 0.5 17.3786 1.80354 17.6064 3.54634L19.4304 17.5H0.569613L2.39362 3.54634Z"
@@ -903,175 +903,175 @@
                                 </div>
                                 <div class="seats-row d-flex mb50">
                                     <div class="seats-left pl2 pr1">
-                                        <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="yellow"
+                                        <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="yellow active "
                                              xmlns="http://www.w3.org/2000/svg">
                                             <path
                                                 d="M2.39362 3.54634C2.62144 1.80354 4.10646 0.5 5.8641 0.5H14.1359C15.8935 0.5 17.3786 1.80354 17.6064 3.54634L19.4304 17.5H0.569613L2.39362 3.54634Z"
                                                 stroke="#97C992"/>
                                         </svg>
-                                        <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="yellow"
+                                        <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="yellow active "
                                              xmlns="http://www.w3.org/2000/svg">
                                             <path
                                                 d="M2.39362 3.54634C2.62144 1.80354 4.10646 0.5 5.8641 0.5H14.1359C15.8935 0.5 17.3786 1.80354 17.6064 3.54634L19.4304 17.5H0.569613L2.39362 3.54634Z"
                                                 stroke="#97C992"/>
                                         </svg>
-                                        <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="yellow"
+                                        <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="yellow active "
                                              xmlns="http://www.w3.org/2000/svg">
                                             <path
                                                 d="M2.39362 3.54634C2.62144 1.80354 4.10646 0.5 5.8641 0.5H14.1359C15.8935 0.5 17.3786 1.80354 17.6064 3.54634L19.4304 17.5H0.569613L2.39362 3.54634Z"
                                                 stroke="#97C992"/>
                                         </svg>
-                                        <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="yellow"
+                                        <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="yellow active "
                                              xmlns="http://www.w3.org/2000/svg">
                                             <path
                                                 d="M2.39362 3.54634C2.62144 1.80354 4.10646 0.5 5.8641 0.5H14.1359C15.8935 0.5 17.3786 1.80354 17.6064 3.54634L19.4304 17.5H0.569613L2.39362 3.54634Z"
                                                 stroke="#97C992"/>
                                         </svg>
-                                        <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="yellow"
+                                        <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="yellow active "
                                              xmlns="http://www.w3.org/2000/svg">
                                             <path
                                                 d="M2.39362 3.54634C2.62144 1.80354 4.10646 0.5 5.8641 0.5H14.1359C15.8935 0.5 17.3786 1.80354 17.6064 3.54634L19.4304 17.5H0.569613L2.39362 3.54634Z"
                                                 stroke="#97C992"/>
                                         </svg>
-                                        <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="yellow"
+                                        <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="yellow active "
                                              xmlns="http://www.w3.org/2000/svg">
                                             <path
                                                 d="M2.39362 3.54634C2.62144 1.80354 4.10646 0.5 5.8641 0.5H14.1359C15.8935 0.5 17.3786 1.80354 17.6064 3.54634L19.4304 17.5H0.569613L2.39362 3.54634Z"
                                                 stroke="#97C992"/>
                                         </svg>
-                                        <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="yellow"
+                                        <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="yellow active "
                                              xmlns="http://www.w3.org/2000/svg">
                                             <path
                                                 d="M2.39362 3.54634C2.62144 1.80354 4.10646 0.5 5.8641 0.5H14.1359C15.8935 0.5 17.3786 1.80354 17.6064 3.54634L19.4304 17.5H0.569613L2.39362 3.54634Z"
                                                 stroke="#97C992"/>
                                         </svg>
-                                        <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="yellow"
+                                        <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="yellow active "
                                              xmlns="http://www.w3.org/2000/svg">
                                             <path
                                                 d="M2.39362 3.54634C2.62144 1.80354 4.10646 0.5 5.8641 0.5H14.1359C15.8935 0.5 17.3786 1.80354 17.6064 3.54634L19.4304 17.5H0.569613L2.39362 3.54634Z"
                                                 stroke="#97C992"/>
                                         </svg>
-                                        <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="yellow ml1"
+                                        <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="yellow active  ml1"
                                              xmlns="http://www.w3.org/2000/svg">
                                             <path
                                                 d="M2.39362 3.54634C2.62144 1.80354 4.10646 0.5 5.8641 0.5H14.1359C15.8935 0.5 17.3786 1.80354 17.6064 3.54634L19.4304 17.5H0.569613L2.39362 3.54634Z"
                                                 stroke="#97C992"/>
                                         </svg>
-                                        <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="yellow"
+                                        <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="yellow active "
                                              xmlns="http://www.w3.org/2000/svg">
                                             <path
                                                 d="M2.39362 3.54634C2.62144 1.80354 4.10646 0.5 5.8641 0.5H14.1359C15.8935 0.5 17.3786 1.80354 17.6064 3.54634L19.4304 17.5H0.569613L2.39362 3.54634Z"
                                                 stroke="#97C992"/>
                                         </svg>
-                                        <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="yellow"
+                                        <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="yellow active "
                                              xmlns="http://www.w3.org/2000/svg">
                                             <path
                                                 d="M2.39362 3.54634C2.62144 1.80354 4.10646 0.5 5.8641 0.5H14.1359C15.8935 0.5 17.3786 1.80354 17.6064 3.54634L19.4304 17.5H0.569613L2.39362 3.54634Z"
                                                 stroke="#97C992"/>
                                         </svg>
-                                        <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="yellow"
+                                        <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="yellow active "
                                              xmlns="http://www.w3.org/2000/svg">
                                             <path
                                                 d="M2.39362 3.54634C2.62144 1.80354 4.10646 0.5 5.8641 0.5H14.1359C15.8935 0.5 17.3786 1.80354 17.6064 3.54634L19.4304 17.5H0.569613L2.39362 3.54634Z"
                                                 stroke="#97C992"/>
                                         </svg>
-                                        <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="yellow"
+                                        <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="yellow active "
                                              xmlns="http://www.w3.org/2000/svg">
                                             <path
                                                 d="M2.39362 3.54634C2.62144 1.80354 4.10646 0.5 5.8641 0.5H14.1359C15.8935 0.5 17.3786 1.80354 17.6064 3.54634L19.4304 17.5H0.569613L2.39362 3.54634Z"
                                                 stroke="#97C992"/>
                                         </svg>
-                                        <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="yellow"
+                                        <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="yellow active "
                                              xmlns="http://www.w3.org/2000/svg">
                                             <path
                                                 d="M2.39362 3.54634C2.62144 1.80354 4.10646 0.5 5.8641 0.5H14.1359C15.8935 0.5 17.3786 1.80354 17.6064 3.54634L19.4304 17.5H0.569613L2.39362 3.54634Z"
                                                 stroke="#97C992"/>
                                         </svg>
-                                        <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="yellow"
+                                        <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="yellow active "
                                              xmlns="http://www.w3.org/2000/svg">
                                             <path
                                                 d="M2.39362 3.54634C2.62144 1.80354 4.10646 0.5 5.8641 0.5H14.1359C15.8935 0.5 17.3786 1.80354 17.6064 3.54634L19.4304 17.5H0.569613L2.39362 3.54634Z"
                                                 stroke="#97C992"/>
                                         </svg>
-                                        <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="yellow ml1"
+                                        <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="yellow active  ml1"
                                              xmlns="http://www.w3.org/2000/svg">
                                             <path
                                                 d="M2.39362 3.54634C2.62144 1.80354 4.10646 0.5 5.8641 0.5H14.1359C15.8935 0.5 17.3786 1.80354 17.6064 3.54634L19.4304 17.5H0.569613L2.39362 3.54634Z"
                                                 stroke="#97C992"/>
                                         </svg>
-                                        <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="yellow"
+                                        <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="yellow active "
                                              xmlns="http://www.w3.org/2000/svg">
                                             <path
                                                 d="M2.39362 3.54634C2.62144 1.80354 4.10646 0.5 5.8641 0.5H14.1359C15.8935 0.5 17.3786 1.80354 17.6064 3.54634L19.4304 17.5H0.569613L2.39362 3.54634Z"
                                                 stroke="#97C992"/>
                                         </svg>
-                                        <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="yellow"
+                                        <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="yellow active "
                                              xmlns="http://www.w3.org/2000/svg">
                                             <path
                                                 d="M2.39362 3.54634C2.62144 1.80354 4.10646 0.5 5.8641 0.5H14.1359C15.8935 0.5 17.3786 1.80354 17.6064 3.54634L19.4304 17.5H0.569613L2.39362 3.54634Z"
                                                 stroke="#97C992"/>
                                         </svg>
-                                        <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="yellow"
+                                        <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="yellow active "
                                              xmlns="http://www.w3.org/2000/svg">
                                             <path
                                                 d="M2.39362 3.54634C2.62144 1.80354 4.10646 0.5 5.8641 0.5H14.1359C15.8935 0.5 17.3786 1.80354 17.6064 3.54634L19.4304 17.5H0.569613L2.39362 3.54634Z"
                                                 stroke="#97C992"/>
                                         </svg>
-                                        <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="yellow"
+                                        <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="yellow active "
                                              xmlns="http://www.w3.org/2000/svg">
                                             <path
                                                 d="M2.39362 3.54634C2.62144 1.80354 4.10646 0.5 5.8641 0.5H14.1359C15.8935 0.5 17.3786 1.80354 17.6064 3.54634L19.4304 17.5H0.569613L2.39362 3.54634Z"
                                                 stroke="#97C992"/>
                                         </svg>
-                                        <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="yellow"
+                                        <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="yellow active "
                                              xmlns="http://www.w3.org/2000/svg">
                                             <path
                                                 d="M2.39362 3.54634C2.62144 1.80354 4.10646 0.5 5.8641 0.5H14.1359C15.8935 0.5 17.3786 1.80354 17.6064 3.54634L19.4304 17.5H0.569613L2.39362 3.54634Z"
                                                 stroke="#97C992"/>
                                         </svg>
-                                        <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="yellow"
+                                        <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="yellow active "
                                              xmlns="http://www.w3.org/2000/svg">
                                             <path
                                                 d="M2.39362 3.54634C2.62144 1.80354 4.10646 0.5 5.8641 0.5H14.1359C15.8935 0.5 17.3786 1.80354 17.6064 3.54634L19.4304 17.5H0.569613L2.39362 3.54634Z"
                                                 stroke="#97C992"/>
                                         </svg>
-                                        <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="red ml1"
+                                        <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="red active  ml1"
                                              xmlns="http://www.w3.org/2000/svg">
                                             <path
                                                 d="M2.39362 3.54634C2.62144 1.80354 4.10646 0.5 5.8641 0.5H14.1359C15.8935 0.5 17.3786 1.80354 17.6064 3.54634L19.4304 17.5H0.569613L2.39362 3.54634Z"
                                                 stroke="#97C992"/>
                                         </svg>
-                                        <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="red"
+                                        <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="red active "
                                              xmlns="http://www.w3.org/2000/svg">
                                             <path
                                                 d="M2.39362 3.54634C2.62144 1.80354 4.10646 0.5 5.8641 0.5H14.1359C15.8935 0.5 17.3786 1.80354 17.6064 3.54634L19.4304 17.5H0.569613L2.39362 3.54634Z"
                                                 stroke="#97C992"/>
                                         </svg>
-                                        <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="red"
+                                        <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="red active "
                                              xmlns="http://www.w3.org/2000/svg">
                                             <path
                                                 d="M2.39362 3.54634C2.62144 1.80354 4.10646 0.5 5.8641 0.5H14.1359C15.8935 0.5 17.3786 1.80354 17.6064 3.54634L19.4304 17.5H0.569613L2.39362 3.54634Z"
                                                 stroke="#97C992"/>
                                         </svg>
-                                        <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="red"
+                                        <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="red active "
                                              xmlns="http://www.w3.org/2000/svg">
                                             <path
                                                 d="M2.39362 3.54634C2.62144 1.80354 4.10646 0.5 5.8641 0.5H14.1359C15.8935 0.5 17.3786 1.80354 17.6064 3.54634L19.4304 17.5H0.569613L2.39362 3.54634Z"
                                                 stroke="#97C992"/>
                                         </svg>
-                                        <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="red"
+                                        <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="red active "
                                              xmlns="http://www.w3.org/2000/svg">
                                             <path
                                                 d="M2.39362 3.54634C2.62144 1.80354 4.10646 0.5 5.8641 0.5H14.1359C15.8935 0.5 17.3786 1.80354 17.6064 3.54634L19.4304 17.5H0.569613L2.39362 3.54634Z"
                                                 stroke="#97C992"/>
                                         </svg>
-                                        <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="red"
+                                        <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="red active "
                                              xmlns="http://www.w3.org/2000/svg">
                                             <path
                                                 d="M2.39362 3.54634C2.62144 1.80354 4.10646 0.5 5.8641 0.5H14.1359C15.8935 0.5 17.3786 1.80354 17.6064 3.54634L19.4304 17.5H0.569613L2.39362 3.54634Z"
                                                 stroke="#97C992"/>
                                         </svg>
-                                        <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="red"
+                                        <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="red active "
                                              xmlns="http://www.w3.org/2000/svg">
                                             <path
                                                 d="M2.39362 3.54634C2.62144 1.80354 4.10646 0.5 5.8641 0.5H14.1359C15.8935 0.5 17.3786 1.80354 17.6064 3.54634L19.4304 17.5H0.569613L2.39362 3.54634Z"
@@ -1085,151 +1085,151 @@
                                         <span class="seat-num">5</span>
                                     </div>
                                     <div class="seats-right pl1 pr1 mr1">
-                                        <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="yellow"
+                                        <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="yellow active "
                                              xmlns="http://www.w3.org/2000/svg">
                                             <path
                                                 d="M2.39362 3.54634C2.62144 1.80354 4.10646 0.5 5.8641 0.5H14.1359C15.8935 0.5 17.3786 1.80354 17.6064 3.54634L19.4304 17.5H0.569613L2.39362 3.54634Z"
                                                 stroke="#97C992"/>
                                         </svg>
-                                        <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="yellow"
+                                        <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="yellow active "
                                              xmlns="http://www.w3.org/2000/svg">
                                             <path
                                                 d="M2.39362 3.54634C2.62144 1.80354 4.10646 0.5 5.8641 0.5H14.1359C15.8935 0.5 17.3786 1.80354 17.6064 3.54634L19.4304 17.5H0.569613L2.39362 3.54634Z"
                                                 stroke="#97C992"/>
                                         </svg>
-                                        <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="yellow"
+                                        <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="yellow active "
                                              xmlns="http://www.w3.org/2000/svg">
                                             <path
                                                 d="M2.39362 3.54634C2.62144 1.80354 4.10646 0.5 5.8641 0.5H14.1359C15.8935 0.5 17.3786 1.80354 17.6064 3.54634L19.4304 17.5H0.569613L2.39362 3.54634Z"
                                                 stroke="#97C992"/>
                                         </svg>
-                                        <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="yellow"
+                                        <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="yellow active "
                                              xmlns="http://www.w3.org/2000/svg">
                                             <path
                                                 d="M2.39362 3.54634C2.62144 1.80354 4.10646 0.5 5.8641 0.5H14.1359C15.8935 0.5 17.3786 1.80354 17.6064 3.54634L19.4304 17.5H0.569613L2.39362 3.54634Z"
                                                 stroke="#97C992"/>
                                         </svg>
-                                        <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="yellow"
+                                        <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="yellow active "
                                              xmlns="http://www.w3.org/2000/svg">
                                             <path
                                                 d="M2.39362 3.54634C2.62144 1.80354 4.10646 0.5 5.8641 0.5H14.1359C15.8935 0.5 17.3786 1.80354 17.6064 3.54634L19.4304 17.5H0.569613L2.39362 3.54634Z"
                                                 stroke="#97C992"/>
                                         </svg>
-                                        <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="yellow"
+                                        <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="yellow active "
                                              xmlns="http://www.w3.org/2000/svg">
                                             <path
                                                 d="M2.39362 3.54634C2.62144 1.80354 4.10646 0.5 5.8641 0.5H14.1359C15.8935 0.5 17.3786 1.80354 17.6064 3.54634L19.4304 17.5H0.569613L2.39362 3.54634Z"
                                                 stroke="#97C992"/>
                                         </svg>
-                                        <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="yellow mr1"
+                                        <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="yellow active  mr1"
                                              xmlns="http://www.w3.org/2000/svg">
                                             <path
                                                 d="M2.39362 3.54634C2.62144 1.80354 4.10646 0.5 5.8641 0.5H14.1359C15.8935 0.5 17.3786 1.80354 17.6064 3.54634L19.4304 17.5H0.569613L2.39362 3.54634Z"
                                                 stroke="#97C992"/>
                                         </svg>
-                                        <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="yellow"
+                                        <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="yellow active "
                                              xmlns="http://www.w3.org/2000/svg">
                                             <path
                                                 d="M2.39362 3.54634C2.62144 1.80354 4.10646 0.5 5.8641 0.5H14.1359C15.8935 0.5 17.3786 1.80354 17.6064 3.54634L19.4304 17.5H0.569613L2.39362 3.54634Z"
                                                 stroke="#97C992"/>
                                         </svg>
-                                        <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="yellow"
+                                        <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="yellow active "
                                              xmlns="http://www.w3.org/2000/svg">
                                             <path
                                                 d="M2.39362 3.54634C2.62144 1.80354 4.10646 0.5 5.8641 0.5H14.1359C15.8935 0.5 17.3786 1.80354 17.6064 3.54634L19.4304 17.5H0.569613L2.39362 3.54634Z"
                                                 stroke="#97C992"/>
                                         </svg>
-                                        <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="yellow"
+                                        <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="yellow active "
                                              xmlns="http://www.w3.org/2000/svg">
                                             <path
                                                 d="M2.39362 3.54634C2.62144 1.80354 4.10646 0.5 5.8641 0.5H14.1359C15.8935 0.5 17.3786 1.80354 17.6064 3.54634L19.4304 17.5H0.569613L2.39362 3.54634Z"
                                                 stroke="#97C992"/>
                                         </svg>
-                                        <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="yellow"
+                                        <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="yellow active "
                                              xmlns="http://www.w3.org/2000/svg">
                                             <path
                                                 d="M2.39362 3.54634C2.62144 1.80354 4.10646 0.5 5.8641 0.5H14.1359C15.8935 0.5 17.3786 1.80354 17.6064 3.54634L19.4304 17.5H0.569613L2.39362 3.54634Z"
                                                 stroke="#97C992"/>
                                         </svg>
-                                        <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="yellow"
+                                        <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="yellow active "
                                              xmlns="http://www.w3.org/2000/svg">
                                             <path
                                                 d="M2.39362 3.54634C2.62144 1.80354 4.10646 0.5 5.8641 0.5H14.1359C15.8935 0.5 17.3786 1.80354 17.6064 3.54634L19.4304 17.5H0.569613L2.39362 3.54634Z"
                                                 stroke="#97C992"/>
                                         </svg>
-                                        <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="yellow mr2"
+                                        <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="yellow active  mr2"
                                              xmlns="http://www.w3.org/2000/svg">
                                             <path
                                                 d="M2.39362 3.54634C2.62144 1.80354 4.10646 0.5 5.8641 0.5H14.1359C15.8935 0.5 17.3786 1.80354 17.6064 3.54634L19.4304 17.5H0.569613L2.39362 3.54634Z"
                                                 stroke="#97C992"/>
                                         </svg>
-                                        <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="yellow"
+                                        <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="yellow active "
                                              xmlns="http://www.w3.org/2000/svg">
                                             <path
                                                 d="M2.39362 3.54634C2.62144 1.80354 4.10646 0.5 5.8641 0.5H14.1359C15.8935 0.5 17.3786 1.80354 17.6064 3.54634L19.4304 17.5H0.569613L2.39362 3.54634Z"
                                                 stroke="#97C992"/>
                                         </svg>
-                                        <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="yellow"
+                                        <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="yellow active "
                                              xmlns="http://www.w3.org/2000/svg">
                                             <path
                                                 d="M2.39362 3.54634C2.62144 1.80354 4.10646 0.5 5.8641 0.5H14.1359C15.8935 0.5 17.3786 1.80354 17.6064 3.54634L19.4304 17.5H0.569613L2.39362 3.54634Z"
                                                 stroke="#97C992"/>
                                         </svg>
-                                        <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="yellow"
+                                        <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="yellow active "
                                              xmlns="http://www.w3.org/2000/svg">
                                             <path
                                                 d="M2.39362 3.54634C2.62144 1.80354 4.10646 0.5 5.8641 0.5H14.1359C15.8935 0.5 17.3786 1.80354 17.6064 3.54634L19.4304 17.5H0.569613L2.39362 3.54634Z"
                                                 stroke="#97C992"/>
                                         </svg>
-                                        <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="yellow"
+                                        <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="yellow active "
                                              xmlns="http://www.w3.org/2000/svg">
                                             <path
                                                 d="M2.39362 3.54634C2.62144 1.80354 4.10646 0.5 5.8641 0.5H14.1359C15.8935 0.5 17.3786 1.80354 17.6064 3.54634L19.4304 17.5H0.569613L2.39362 3.54634Z"
                                                 stroke="#97C992"/>
                                         </svg>
-                                        <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="yellow"
+                                        <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="yellow active "
                                              xmlns="http://www.w3.org/2000/svg">
                                             <path
                                                 d="M2.39362 3.54634C2.62144 1.80354 4.10646 0.5 5.8641 0.5H14.1359C15.8935 0.5 17.3786 1.80354 17.6064 3.54634L19.4304 17.5H0.569613L2.39362 3.54634Z"
                                                 stroke="#97C992"/>
                                         </svg>
-                                        <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="yellow mr2"
+                                        <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="yellow active  mr2"
                                              xmlns="http://www.w3.org/2000/svg">
                                             <path
                                                 d="M2.39362 3.54634C2.62144 1.80354 4.10646 0.5 5.8641 0.5H14.1359C15.8935 0.5 17.3786 1.80354 17.6064 3.54634L19.4304 17.5H0.569613L2.39362 3.54634Z"
                                                 stroke="#97C992"/>
                                         </svg>
-                                        <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="red"
+                                        <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="red active "
                                              xmlns="http://www.w3.org/2000/svg">
                                             <path
                                                 d="M2.39362 3.54634C2.62144 1.80354 4.10646 0.5 5.8641 0.5H14.1359C15.8935 0.5 17.3786 1.80354 17.6064 3.54634L19.4304 17.5H0.569613L2.39362 3.54634Z"
                                                 stroke="#97C992"/>
                                         </svg>
-                                        <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="red"
+                                        <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="red active "
                                              xmlns="http://www.w3.org/2000/svg">
                                             <path
                                                 d="M2.39362 3.54634C2.62144 1.80354 4.10646 0.5 5.8641 0.5H14.1359C15.8935 0.5 17.3786 1.80354 17.6064 3.54634L19.4304 17.5H0.569613L2.39362 3.54634Z"
                                                 stroke="#97C992"/>
                                         </svg>
-                                        <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="red"
+                                        <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="red active "
                                              xmlns="http://www.w3.org/2000/svg">
                                             <path
                                                 d="M2.39362 3.54634C2.62144 1.80354 4.10646 0.5 5.8641 0.5H14.1359C15.8935 0.5 17.3786 1.80354 17.6064 3.54634L19.4304 17.5H0.569613L2.39362 3.54634Z"
                                                 stroke="#97C992"/>
                                         </svg>
-                                        <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="red"
+                                        <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="red active "
                                              xmlns="http://www.w3.org/2000/svg">
                                             <path
                                                 d="M2.39362 3.54634C2.62144 1.80354 4.10646 0.5 5.8641 0.5H14.1359C15.8935 0.5 17.3786 1.80354 17.6064 3.54634L19.4304 17.5H0.569613L2.39362 3.54634Z"
                                                 stroke="#97C992"/>
                                         </svg>
-                                        <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="red"
+                                        <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="red active "
                                              xmlns="http://www.w3.org/2000/svg">
                                             <path
                                                 d="M2.39362 3.54634C2.62144 1.80354 4.10646 0.5 5.8641 0.5H14.1359C15.8935 0.5 17.3786 1.80354 17.6064 3.54634L19.4304 17.5H0.569613L2.39362 3.54634Z"
                                                 stroke="#97C992"/>
                                         </svg>
-                                        <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="red"
+                                        <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="red active "
                                              xmlns="http://www.w3.org/2000/svg">
                                             <path
                                                 d="M2.39362 3.54634C2.62144 1.80354 4.10646 0.5 5.8641 0.5H14.1359C15.8935 0.5 17.3786 1.80354 17.6064 3.54634L19.4304 17.5H0.569613L2.39362 3.54634Z"
@@ -1239,226 +1239,226 @@
                                 </div>
                                 <div class="seats-row d-flex mb25">
                                     <div class="seats-left pl1">
-                                        <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="red ml1"
+                                        <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="red active  ml1"
                                              xmlns="http://www.w3.org/2000/svg">
                                             <path
                                                 d="M2.39362 3.54634C2.62144 1.80354 4.10646 0.5 5.8641 0.5H14.1359C15.8935 0.5 17.3786 1.80354 17.6064 3.54634L19.4304 17.5H0.569613L2.39362 3.54634Z"
                                                 stroke="#97C992"/>
                                         </svg>
-                                        <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="red"
+                                        <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="red active "
                                              xmlns="http://www.w3.org/2000/svg">
                                             <path
                                                 d="M2.39362 3.54634C2.62144 1.80354 4.10646 0.5 5.8641 0.5H14.1359C15.8935 0.5 17.3786 1.80354 17.6064 3.54634L19.4304 17.5H0.569613L2.39362 3.54634Z"
                                                 stroke="#97C992"/>
                                         </svg>
-                                        <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="red"
+                                        <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="red active "
                                              xmlns="http://www.w3.org/2000/svg">
                                             <path
                                                 d="M2.39362 3.54634C2.62144 1.80354 4.10646 0.5 5.8641 0.5H14.1359C15.8935 0.5 17.3786 1.80354 17.6064 3.54634L19.4304 17.5H0.569613L2.39362 3.54634Z"
                                                 stroke="#97C992"/>
                                         </svg>
-                                        <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="red"
+                                        <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="red active "
                                              xmlns="http://www.w3.org/2000/svg">
                                             <path
                                                 d="M2.39362 3.54634C2.62144 1.80354 4.10646 0.5 5.8641 0.5H14.1359C15.8935 0.5 17.3786 1.80354 17.6064 3.54634L19.4304 17.5H0.569613L2.39362 3.54634Z"
                                                 stroke="#97C992"/>
                                         </svg>
-                                        <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="red"
+                                        <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="red active "
                                              xmlns="http://www.w3.org/2000/svg">
                                             <path
                                                 d="M2.39362 3.54634C2.62144 1.80354 4.10646 0.5 5.8641 0.5H14.1359C15.8935 0.5 17.3786 1.80354 17.6064 3.54634L19.4304 17.5H0.569613L2.39362 3.54634Z"
                                                 stroke="#97C992"/>
                                         </svg>
-                                        <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="red"
+                                        <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="red active "
                                              xmlns="http://www.w3.org/2000/svg">
                                             <path
                                                 d="M2.39362 3.54634C2.62144 1.80354 4.10646 0.5 5.8641 0.5H14.1359C15.8935 0.5 17.3786 1.80354 17.6064 3.54634L19.4304 17.5H0.569613L2.39362 3.54634Z"
                                                 stroke="#97C992"/>
                                         </svg>
-                                        <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="red"
+                                        <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="red active "
                                              xmlns="http://www.w3.org/2000/svg">
                                             <path
                                                 d="M2.39362 3.54634C2.62144 1.80354 4.10646 0.5 5.8641 0.5H14.1359C15.8935 0.5 17.3786 1.80354 17.6064 3.54634L19.4304 17.5H0.569613L2.39362 3.54634Z"
                                                 stroke="#97C992"/>
                                         </svg>
-                                        <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="red"
+                                        <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="red active "
                                              xmlns="http://www.w3.org/2000/svg">
                                             <path
                                                 d="M2.39362 3.54634C2.62144 1.80354 4.10646 0.5 5.8641 0.5H14.1359C15.8935 0.5 17.3786 1.80354 17.6064 3.54634L19.4304 17.5H0.569613L2.39362 3.54634Z"
                                                 stroke="#97C992"/>
                                         </svg>
-                                        <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="red"
+                                        <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="red active "
                                              xmlns="http://www.w3.org/2000/svg">
                                             <path
                                                 d="M2.39362 3.54634C2.62144 1.80354 4.10646 0.5 5.8641 0.5H14.1359C15.8935 0.5 17.3786 1.80354 17.6064 3.54634L19.4304 17.5H0.569613L2.39362 3.54634Z"
                                                 stroke="#97C992"/>
                                         </svg>
                                         <!-- yellow -->
-                                        <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="yellow ml1"
+                                        <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="yellow active  ml1"
                                              xmlns="http://www.w3.org/2000/svg">
                                             <path
                                                 d="M2.39362 3.54634C2.62144 1.80354 4.10646 0.5 5.8641 0.5H14.1359C15.8935 0.5 17.3786 1.80354 17.6064 3.54634L19.4304 17.5H0.569613L2.39362 3.54634Z"
                                                 stroke="#97C992"/>
                                         </svg>
-                                        <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="yellow"
+                                        <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="yellow active "
                                              xmlns="http://www.w3.org/2000/svg">
                                             <path
                                                 d="M2.39362 3.54634C2.62144 1.80354 4.10646 0.5 5.8641 0.5H14.1359C15.8935 0.5 17.3786 1.80354 17.6064 3.54634L19.4304 17.5H0.569613L2.39362 3.54634Z"
                                                 stroke="#97C992"/>
                                         </svg>
-                                        <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="yellow busy"
+                                        <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="yellow active "
                                              xmlns="http://www.w3.org/2000/svg">
                                             <path
                                                 d="M2.39362 3.54634C2.62144 1.80354 4.10646 0.5 5.8641 0.5H14.1359C15.8935 0.5 17.3786 1.80354 17.6064 3.54634L19.4304 17.5H0.569613L2.39362 3.54634Z"
                                                 stroke="#97C992"/>
                                         </svg>
-                                        <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="yellow"
+                                        <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="yellow active "
                                              xmlns="http://www.w3.org/2000/svg">
                                             <path
                                                 d="M2.39362 3.54634C2.62144 1.80354 4.10646 0.5 5.8641 0.5H14.1359C15.8935 0.5 17.3786 1.80354 17.6064 3.54634L19.4304 17.5H0.569613L2.39362 3.54634Z"
                                                 stroke="#97C992"/>
                                         </svg>
-                                        <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="yellow"
+                                        <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="yellow active "
                                              xmlns="http://www.w3.org/2000/svg">
                                             <path
                                                 d="M2.39362 3.54634C2.62144 1.80354 4.10646 0.5 5.8641 0.5H14.1359C15.8935 0.5 17.3786 1.80354 17.6064 3.54634L19.4304 17.5H0.569613L2.39362 3.54634Z"
                                                 stroke="#97C992"/>
                                         </svg>
-                                        <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="yellow"
+                                        <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="yellow active "
                                              xmlns="http://www.w3.org/2000/svg">
                                             <path
                                                 d="M2.39362 3.54634C2.62144 1.80354 4.10646 0.5 5.8641 0.5H14.1359C15.8935 0.5 17.3786 1.80354 17.6064 3.54634L19.4304 17.5H0.569613L2.39362 3.54634Z"
                                                 stroke="#97C992"/>
                                         </svg>
-                                        <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="yellow busy"
+                                        <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="yellow active "
                                              xmlns="http://www.w3.org/2000/svg">
                                             <path
                                                 d="M2.39362 3.54634C2.62144 1.80354 4.10646 0.5 5.8641 0.5H14.1359C15.8935 0.5 17.3786 1.80354 17.6064 3.54634L19.4304 17.5H0.569613L2.39362 3.54634Z"
                                                 stroke="#97C992"/>
                                         </svg>
-                                        <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="yellow busy"
+                                        <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="yellow active "
                                              xmlns="http://www.w3.org/2000/svg">
                                             <path
                                                 d="M2.39362 3.54634C2.62144 1.80354 4.10646 0.5 5.8641 0.5H14.1359C15.8935 0.5 17.3786 1.80354 17.6064 3.54634L19.4304 17.5H0.569613L2.39362 3.54634Z"
                                                 stroke="#97C992"/>
                                         </svg>
-                                        <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="yellow"
-                                             xmlns="http://www.w3.org/2000/svg">
-                                            <path
-                                                d="M2.39362 3.54634C2.62144 1.80354 4.10646 0.5 5.8641 0.5H14.1359C15.8935 0.5 17.3786 1.80354 17.6064 3.54634L19.4304 17.5H0.569613L2.39362 3.54634Z"
-                                                stroke="#97C992"/>
-                                        </svg>
-                                        <!-- divider -->
-                                        <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="yellow ml1"
-                                             xmlns="http://www.w3.org/2000/svg">
-                                            <path
-                                                d="M2.39362 3.54634C2.62144 1.80354 4.10646 0.5 5.8641 0.5H14.1359C15.8935 0.5 17.3786 1.80354 17.6064 3.54634L19.4304 17.5H0.569613L2.39362 3.54634Z"
-                                                stroke="#97C992"/>
-                                        </svg>
-                                        <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="yellow"
-                                             xmlns="http://www.w3.org/2000/svg">
-                                            <path
-                                                d="M2.39362 3.54634C2.62144 1.80354 4.10646 0.5 5.8641 0.5H14.1359C15.8935 0.5 17.3786 1.80354 17.6064 3.54634L19.4304 17.5H0.569613L2.39362 3.54634Z"
-                                                stroke="#97C992"/>
-                                        </svg>
-                                        <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="yellow"
-                                             xmlns="http://www.w3.org/2000/svg">
-                                            <path
-                                                d="M2.39362 3.54634C2.62144 1.80354 4.10646 0.5 5.8641 0.5H14.1359C15.8935 0.5 17.3786 1.80354 17.6064 3.54634L19.4304 17.5H0.569613L2.39362 3.54634Z"
-                                                stroke="#97C992"/>
-                                        </svg>
-                                        <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="yellow"
-                                             xmlns="http://www.w3.org/2000/svg">
-                                            <path
-                                                d="M2.39362 3.54634C2.62144 1.80354 4.10646 0.5 5.8641 0.5H14.1359C15.8935 0.5 17.3786 1.80354 17.6064 3.54634L19.4304 17.5H0.569613L2.39362 3.54634Z"
-                                                stroke="#97C992"/>
-                                        </svg>
-                                        <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="yellow"
-                                             xmlns="http://www.w3.org/2000/svg">
-                                            <path
-                                                d="M2.39362 3.54634C2.62144 1.80354 4.10646 0.5 5.8641 0.5H14.1359C15.8935 0.5 17.3786 1.80354 17.6064 3.54634L19.4304 17.5H0.569613L2.39362 3.54634Z"
-                                                stroke="#97C992"/>
-                                        </svg>
-                                        <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="yellow"
-                                             xmlns="http://www.w3.org/2000/svg">
-                                            <path
-                                                d="M2.39362 3.54634C2.62144 1.80354 4.10646 0.5 5.8641 0.5H14.1359C15.8935 0.5 17.3786 1.80354 17.6064 3.54634L19.4304 17.5H0.569613L2.39362 3.54634Z"
-                                                stroke="#97C992"/>
-                                        </svg>
-                                        <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="yellow"
-                                             xmlns="http://www.w3.org/2000/svg">
-                                            <path
-                                                d="M2.39362 3.54634C2.62144 1.80354 4.10646 0.5 5.8641 0.5H14.1359C15.8935 0.5 17.3786 1.80354 17.6064 3.54634L19.4304 17.5H0.569613L2.39362 3.54634Z"
-                                                stroke="#97C992"/>
-                                        </svg>
-                                        <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="yellow"
-                                             xmlns="http://www.w3.org/2000/svg">
-                                            <path
-                                                d="M2.39362 3.54634C2.62144 1.80354 4.10646 0.5 5.8641 0.5H14.1359C15.8935 0.5 17.3786 1.80354 17.6064 3.54634L19.4304 17.5H0.569613L2.39362 3.54634Z"
-                                                stroke="#97C992"/>
-                                        </svg>
-                                        <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="yellow"
+                                        <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="yellow active "
                                              xmlns="http://www.w3.org/2000/svg">
                                             <path
                                                 d="M2.39362 3.54634C2.62144 1.80354 4.10646 0.5 5.8641 0.5H14.1359C15.8935 0.5 17.3786 1.80354 17.6064 3.54634L19.4304 17.5H0.569613L2.39362 3.54634Z"
                                                 stroke="#97C992"/>
                                         </svg>
                                         <!-- divider -->
-                                        <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="purple"
+                                        <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="yellow active  ml1"
                                              xmlns="http://www.w3.org/2000/svg">
                                             <path
                                                 d="M2.39362 3.54634C2.62144 1.80354 4.10646 0.5 5.8641 0.5H14.1359C15.8935 0.5 17.3786 1.80354 17.6064 3.54634L19.4304 17.5H0.569613L2.39362 3.54634Z"
                                                 stroke="#97C992"/>
                                         </svg>
-                                        <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="purple"
+                                        <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="yellow active "
                                              xmlns="http://www.w3.org/2000/svg">
                                             <path
                                                 d="M2.39362 3.54634C2.62144 1.80354 4.10646 0.5 5.8641 0.5H14.1359C15.8935 0.5 17.3786 1.80354 17.6064 3.54634L19.4304 17.5H0.569613L2.39362 3.54634Z"
                                                 stroke="#97C992"/>
                                         </svg>
-                                        <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="purple"
+                                        <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="yellow active "
                                              xmlns="http://www.w3.org/2000/svg">
                                             <path
                                                 d="M2.39362 3.54634C2.62144 1.80354 4.10646 0.5 5.8641 0.5H14.1359C15.8935 0.5 17.3786 1.80354 17.6064 3.54634L19.4304 17.5H0.569613L2.39362 3.54634Z"
                                                 stroke="#97C992"/>
                                         </svg>
-                                        <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="purple"
+                                        <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="yellow active "
                                              xmlns="http://www.w3.org/2000/svg">
                                             <path
                                                 d="M2.39362 3.54634C2.62144 1.80354 4.10646 0.5 5.8641 0.5H14.1359C15.8935 0.5 17.3786 1.80354 17.6064 3.54634L19.4304 17.5H0.569613L2.39362 3.54634Z"
                                                 stroke="#97C992"/>
                                         </svg>
-                                        <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="purple"
+                                        <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="yellow active "
                                              xmlns="http://www.w3.org/2000/svg">
                                             <path
                                                 d="M2.39362 3.54634C2.62144 1.80354 4.10646 0.5 5.8641 0.5H14.1359C15.8935 0.5 17.3786 1.80354 17.6064 3.54634L19.4304 17.5H0.569613L2.39362 3.54634Z"
                                                 stroke="#97C992"/>
                                         </svg>
-                                        <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="purple"
+                                        <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="yellow active "
                                              xmlns="http://www.w3.org/2000/svg">
                                             <path
                                                 d="M2.39362 3.54634C2.62144 1.80354 4.10646 0.5 5.8641 0.5H14.1359C15.8935 0.5 17.3786 1.80354 17.6064 3.54634L19.4304 17.5H0.569613L2.39362 3.54634Z"
                                                 stroke="#97C992"/>
                                         </svg>
-                                        <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="purple"
+                                        <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="yellow active "
                                              xmlns="http://www.w3.org/2000/svg">
                                             <path
                                                 d="M2.39362 3.54634C2.62144 1.80354 4.10646 0.5 5.8641 0.5H14.1359C15.8935 0.5 17.3786 1.80354 17.6064 3.54634L19.4304 17.5H0.569613L2.39362 3.54634Z"
                                                 stroke="#97C992"/>
                                         </svg>
-                                        <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="purple"
+                                        <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="yellow active "
                                              xmlns="http://www.w3.org/2000/svg">
                                             <path
                                                 d="M2.39362 3.54634C2.62144 1.80354 4.10646 0.5 5.8641 0.5H14.1359C15.8935 0.5 17.3786 1.80354 17.6064 3.54634L19.4304 17.5H0.569613L2.39362 3.54634Z"
                                                 stroke="#97C992"/>
                                         </svg>
-                                        <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="purple"
+                                        <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="yellow active "
                                              xmlns="http://www.w3.org/2000/svg">
                                             <path
                                                 d="M2.39362 3.54634C2.62144 1.80354 4.10646 0.5 5.8641 0.5H14.1359C15.8935 0.5 17.3786 1.80354 17.6064 3.54634L19.4304 17.5H0.569613L2.39362 3.54634Z"
                                                 stroke="#97C992"/>
                                         </svg>
-                                        <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="purple"
+                                        <!-- divider -->
+                                        <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="purple active "
+                                             xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M2.39362 3.54634C2.62144 1.80354 4.10646 0.5 5.8641 0.5H14.1359C15.8935 0.5 17.3786 1.80354 17.6064 3.54634L19.4304 17.5H0.569613L2.39362 3.54634Z"
+                                                stroke="#97C992"/>
+                                        </svg>
+                                        <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="purple active "
+                                             xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M2.39362 3.54634C2.62144 1.80354 4.10646 0.5 5.8641 0.5H14.1359C15.8935 0.5 17.3786 1.80354 17.6064 3.54634L19.4304 17.5H0.569613L2.39362 3.54634Z"
+                                                stroke="#97C992"/>
+                                        </svg>
+                                        <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="purple active "
+                                             xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M2.39362 3.54634C2.62144 1.80354 4.10646 0.5 5.8641 0.5H14.1359C15.8935 0.5 17.3786 1.80354 17.6064 3.54634L19.4304 17.5H0.569613L2.39362 3.54634Z"
+                                                stroke="#97C992"/>
+                                        </svg>
+                                        <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="purple active "
+                                             xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M2.39362 3.54634C2.62144 1.80354 4.10646 0.5 5.8641 0.5H14.1359C15.8935 0.5 17.3786 1.80354 17.6064 3.54634L19.4304 17.5H0.569613L2.39362 3.54634Z"
+                                                stroke="#97C992"/>
+                                        </svg>
+                                        <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="purple active "
+                                             xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M2.39362 3.54634C2.62144 1.80354 4.10646 0.5 5.8641 0.5H14.1359C15.8935 0.5 17.3786 1.80354 17.6064 3.54634L19.4304 17.5H0.569613L2.39362 3.54634Z"
+                                                stroke="#97C992"/>
+                                        </svg>
+                                        <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="purple active "
+                                             xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M2.39362 3.54634C2.62144 1.80354 4.10646 0.5 5.8641 0.5H14.1359C15.8935 0.5 17.3786 1.80354 17.6064 3.54634L19.4304 17.5H0.569613L2.39362 3.54634Z"
+                                                stroke="#97C992"/>
+                                        </svg>
+                                        <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="purple active "
+                                             xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M2.39362 3.54634C2.62144 1.80354 4.10646 0.5 5.8641 0.5H14.1359C15.8935 0.5 17.3786 1.80354 17.6064 3.54634L19.4304 17.5H0.569613L2.39362 3.54634Z"
+                                                stroke="#97C992"/>
+                                        </svg>
+                                        <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="purple active "
+                                             xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M2.39362 3.54634C2.62144 1.80354 4.10646 0.5 5.8641 0.5H14.1359C15.8935 0.5 17.3786 1.80354 17.6064 3.54634L19.4304 17.5H0.569613L2.39362 3.54634Z"
+                                                stroke="#97C992"/>
+                                        </svg>
+                                        <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="purple active "
+                                             xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M2.39362 3.54634C2.62144 1.80354 4.10646 0.5 5.8641 0.5H14.1359C15.8935 0.5 17.3786 1.80354 17.6064 3.54634L19.4304 17.5H0.569613L2.39362 3.54634Z"
+                                                stroke="#97C992"/>
+                                        </svg>
+                                        <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="purple active "
                                              xmlns="http://www.w3.org/2000/svg">
                                             <path
                                                 d="M2.39362 3.54634C2.62144 1.80354 4.10646 0.5 5.8641 0.5H14.1359C15.8935 0.5 17.3786 1.80354 17.6064 3.54634L19.4304 17.5H0.569613L2.39362 3.54634Z"
@@ -1472,226 +1472,226 @@
                                         <span class="seat-num">1</span>
                                     </div>
                                     <div class="seats-right mr1">
-                                        <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="red"
+                                        <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="red active "
                                              xmlns="http://www.w3.org/2000/svg">
                                             <path
                                                 d="M2.39362 3.54634C2.62144 1.80354 4.10646 0.5 5.8641 0.5H14.1359C15.8935 0.5 17.3786 1.80354 17.6064 3.54634L19.4304 17.5H0.569613L2.39362 3.54634Z"
                                                 stroke="#97C992"/>
                                         </svg>
-                                        <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="red"
+                                        <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="red active "
                                              xmlns="http://www.w3.org/2000/svg">
                                             <path
                                                 d="M2.39362 3.54634C2.62144 1.80354 4.10646 0.5 5.8641 0.5H14.1359C15.8935 0.5 17.3786 1.80354 17.6064 3.54634L19.4304 17.5H0.569613L2.39362 3.54634Z"
                                                 stroke="#97C992"/>
                                         </svg>
-                                        <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="red"
+                                        <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="red active "
                                              xmlns="http://www.w3.org/2000/svg">
                                             <path
                                                 d="M2.39362 3.54634C2.62144 1.80354 4.10646 0.5 5.8641 0.5H14.1359C15.8935 0.5 17.3786 1.80354 17.6064 3.54634L19.4304 17.5H0.569613L2.39362 3.54634Z"
                                                 stroke="#97C992"/>
                                         </svg>
-                                        <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="red"
+                                        <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="red active "
                                              xmlns="http://www.w3.org/2000/svg">
                                             <path
                                                 d="M2.39362 3.54634C2.62144 1.80354 4.10646 0.5 5.8641 0.5H14.1359C15.8935 0.5 17.3786 1.80354 17.6064 3.54634L19.4304 17.5H0.569613L2.39362 3.54634Z"
                                                 stroke="#97C992"/>
                                         </svg>
-                                        <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="red"
+                                        <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="red active "
                                              xmlns="http://www.w3.org/2000/svg">
                                             <path
                                                 d="M2.39362 3.54634C2.62144 1.80354 4.10646 0.5 5.8641 0.5H14.1359C15.8935 0.5 17.3786 1.80354 17.6064 3.54634L19.4304 17.5H0.569613L2.39362 3.54634Z"
                                                 stroke="#97C992"/>
                                         </svg>
-                                        <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="red"
+                                        <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="red active "
                                              xmlns="http://www.w3.org/2000/svg">
                                             <path
                                                 d="M2.39362 3.54634C2.62144 1.80354 4.10646 0.5 5.8641 0.5H14.1359C15.8935 0.5 17.3786 1.80354 17.6064 3.54634L19.4304 17.5H0.569613L2.39362 3.54634Z"
                                                 stroke="#97C992"/>
                                         </svg>
-                                        <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="red"
+                                        <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="red active "
                                              xmlns="http://www.w3.org/2000/svg">
                                             <path
                                                 d="M2.39362 3.54634C2.62144 1.80354 4.10646 0.5 5.8641 0.5H14.1359C15.8935 0.5 17.3786 1.80354 17.6064 3.54634L19.4304 17.5H0.569613L2.39362 3.54634Z"
                                                 stroke="#97C992"/>
                                         </svg>
-                                        <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="red"
+                                        <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="red active "
                                              xmlns="http://www.w3.org/2000/svg">
                                             <path
                                                 d="M2.39362 3.54634C2.62144 1.80354 4.10646 0.5 5.8641 0.5H14.1359C15.8935 0.5 17.3786 1.80354 17.6064 3.54634L19.4304 17.5H0.569613L2.39362 3.54634Z"
                                                 stroke="#97C992"/>
                                         </svg>
-                                        <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="red mr1"
+                                        <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="red active  mr1"
                                              xmlns="http://www.w3.org/2000/svg">
                                             <path
                                                 d="M2.39362 3.54634C2.62144 1.80354 4.10646 0.5 5.8641 0.5H14.1359C15.8935 0.5 17.3786 1.80354 17.6064 3.54634L19.4304 17.5H0.569613L2.39362 3.54634Z"
                                                 stroke="#97C992"/>
                                         </svg>
                                         <!-- yellow -->
-                                        <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="yellow"
+                                        <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="yellow active "
                                              xmlns="http://www.w3.org/2000/svg">
                                             <path
                                                 d="M2.39362 3.54634C2.62144 1.80354 4.10646 0.5 5.8641 0.5H14.1359C15.8935 0.5 17.3786 1.80354 17.6064 3.54634L19.4304 17.5H0.569613L2.39362 3.54634Z"
                                                 stroke="#97C992"/>
                                         </svg>
-                                        <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="yellow"
+                                        <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="yellow active "
                                              xmlns="http://www.w3.org/2000/svg">
                                             <path
                                                 d="M2.39362 3.54634C2.62144 1.80354 4.10646 0.5 5.8641 0.5H14.1359C15.8935 0.5 17.3786 1.80354 17.6064 3.54634L19.4304 17.5H0.569613L2.39362 3.54634Z"
                                                 stroke="#97C992"/>
                                         </svg>
-                                        <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="yellow busy"
+                                        <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="yellow active "
                                              xmlns="http://www.w3.org/2000/svg">
                                             <path
                                                 d="M2.39362 3.54634C2.62144 1.80354 4.10646 0.5 5.8641 0.5H14.1359C15.8935 0.5 17.3786 1.80354 17.6064 3.54634L19.4304 17.5H0.569613L2.39362 3.54634Z"
                                                 stroke="#97C992"/>
                                         </svg>
-                                        <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="yellow"
+                                        <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="yellow active "
                                              xmlns="http://www.w3.org/2000/svg">
                                             <path
                                                 d="M2.39362 3.54634C2.62144 1.80354 4.10646 0.5 5.8641 0.5H14.1359C15.8935 0.5 17.3786 1.80354 17.6064 3.54634L19.4304 17.5H0.569613L2.39362 3.54634Z"
                                                 stroke="#97C992"/>
                                         </svg>
-                                        <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="yellow"
+                                        <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="yellow active "
                                              xmlns="http://www.w3.org/2000/svg">
                                             <path
                                                 d="M2.39362 3.54634C2.62144 1.80354 4.10646 0.5 5.8641 0.5H14.1359C15.8935 0.5 17.3786 1.80354 17.6064 3.54634L19.4304 17.5H0.569613L2.39362 3.54634Z"
                                                 stroke="#97C992"/>
                                         </svg>
-                                        <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="yellow"
+                                        <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="yellow active "
                                              xmlns="http://www.w3.org/2000/svg">
                                             <path
                                                 d="M2.39362 3.54634C2.62144 1.80354 4.10646 0.5 5.8641 0.5H14.1359C15.8935 0.5 17.3786 1.80354 17.6064 3.54634L19.4304 17.5H0.569613L2.39362 3.54634Z"
                                                 stroke="#97C992"/>
                                         </svg>
-                                        <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="yellow busy"
+                                        <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="yellow active "
                                              xmlns="http://www.w3.org/2000/svg">
                                             <path
                                                 d="M2.39362 3.54634C2.62144 1.80354 4.10646 0.5 5.8641 0.5H14.1359C15.8935 0.5 17.3786 1.80354 17.6064 3.54634L19.4304 17.5H0.569613L2.39362 3.54634Z"
                                                 stroke="#97C992"/>
                                         </svg>
-                                        <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="yellow busy"
+                                        <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="yellow active "
                                              xmlns="http://www.w3.org/2000/svg">
                                             <path
                                                 d="M2.39362 3.54634C2.62144 1.80354 4.10646 0.5 5.8641 0.5H14.1359C15.8935 0.5 17.3786 1.80354 17.6064 3.54634L19.4304 17.5H0.569613L2.39362 3.54634Z"
                                                 stroke="#97C992"/>
                                         </svg>
-                                        <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="yellow mr1"
-                                             xmlns="http://www.w3.org/2000/svg">
-                                            <path
-                                                d="M2.39362 3.54634C2.62144 1.80354 4.10646 0.5 5.8641 0.5H14.1359C15.8935 0.5 17.3786 1.80354 17.6064 3.54634L19.4304 17.5H0.569613L2.39362 3.54634Z"
-                                                stroke="#97C992"/>
-                                        </svg>
-                                        <!-- divider -->
-                                        <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="yellow"
-                                             xmlns="http://www.w3.org/2000/svg">
-                                            <path
-                                                d="M2.39362 3.54634C2.62144 1.80354 4.10646 0.5 5.8641 0.5H14.1359C15.8935 0.5 17.3786 1.80354 17.6064 3.54634L19.4304 17.5H0.569613L2.39362 3.54634Z"
-                                                stroke="#97C992"/>
-                                        </svg>
-                                        <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="yellow"
-                                             xmlns="http://www.w3.org/2000/svg">
-                                            <path
-                                                d="M2.39362 3.54634C2.62144 1.80354 4.10646 0.5 5.8641 0.5H14.1359C15.8935 0.5 17.3786 1.80354 17.6064 3.54634L19.4304 17.5H0.569613L2.39362 3.54634Z"
-                                                stroke="#97C992"/>
-                                        </svg>
-                                        <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="yellow"
-                                             xmlns="http://www.w3.org/2000/svg">
-                                            <path
-                                                d="M2.39362 3.54634C2.62144 1.80354 4.10646 0.5 5.8641 0.5H14.1359C15.8935 0.5 17.3786 1.80354 17.6064 3.54634L19.4304 17.5H0.569613L2.39362 3.54634Z"
-                                                stroke="#97C992"/>
-                                        </svg>
-                                        <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="yellow"
-                                             xmlns="http://www.w3.org/2000/svg">
-                                            <path
-                                                d="M2.39362 3.54634C2.62144 1.80354 4.10646 0.5 5.8641 0.5H14.1359C15.8935 0.5 17.3786 1.80354 17.6064 3.54634L19.4304 17.5H0.569613L2.39362 3.54634Z"
-                                                stroke="#97C992"/>
-                                        </svg>
-                                        <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="yellow"
-                                             xmlns="http://www.w3.org/2000/svg">
-                                            <path
-                                                d="M2.39362 3.54634C2.62144 1.80354 4.10646 0.5 5.8641 0.5H14.1359C15.8935 0.5 17.3786 1.80354 17.6064 3.54634L19.4304 17.5H0.569613L2.39362 3.54634Z"
-                                                stroke="#97C992"/>
-                                        </svg>
-                                        <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="yellow"
-                                             xmlns="http://www.w3.org/2000/svg">
-                                            <path
-                                                d="M2.39362 3.54634C2.62144 1.80354 4.10646 0.5 5.8641 0.5H14.1359C15.8935 0.5 17.3786 1.80354 17.6064 3.54634L19.4304 17.5H0.569613L2.39362 3.54634Z"
-                                                stroke="#97C992"/>
-                                        </svg>
-                                        <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="yellow"
-                                             xmlns="http://www.w3.org/2000/svg">
-                                            <path
-                                                d="M2.39362 3.54634C2.62144 1.80354 4.10646 0.5 5.8641 0.5H14.1359C15.8935 0.5 17.3786 1.80354 17.6064 3.54634L19.4304 17.5H0.569613L2.39362 3.54634Z"
-                                                stroke="#97C992"/>
-                                        </svg>
-                                        <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="yellow"
-                                             xmlns="http://www.w3.org/2000/svg">
-                                            <path
-                                                d="M2.39362 3.54634C2.62144 1.80354 4.10646 0.5 5.8641 0.5H14.1359C15.8935 0.5 17.3786 1.80354 17.6064 3.54634L19.4304 17.5H0.569613L2.39362 3.54634Z"
-                                                stroke="#97C992"/>
-                                        </svg>
-                                        <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="yellow mr1"
+                                        <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="yellow active  mr1"
                                              xmlns="http://www.w3.org/2000/svg">
                                             <path
                                                 d="M2.39362 3.54634C2.62144 1.80354 4.10646 0.5 5.8641 0.5H14.1359C15.8935 0.5 17.3786 1.80354 17.6064 3.54634L19.4304 17.5H0.569613L2.39362 3.54634Z"
                                                 stroke="#97C992"/>
                                         </svg>
                                         <!-- divider -->
-                                        <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="purple"
+                                        <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="yellow active "
                                              xmlns="http://www.w3.org/2000/svg">
                                             <path
                                                 d="M2.39362 3.54634C2.62144 1.80354 4.10646 0.5 5.8641 0.5H14.1359C15.8935 0.5 17.3786 1.80354 17.6064 3.54634L19.4304 17.5H0.569613L2.39362 3.54634Z"
                                                 stroke="#97C992"/>
                                         </svg>
-                                        <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="purple"
+                                        <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="yellow active "
                                              xmlns="http://www.w3.org/2000/svg">
                                             <path
                                                 d="M2.39362 3.54634C2.62144 1.80354 4.10646 0.5 5.8641 0.5H14.1359C15.8935 0.5 17.3786 1.80354 17.6064 3.54634L19.4304 17.5H0.569613L2.39362 3.54634Z"
                                                 stroke="#97C992"/>
                                         </svg>
-                                        <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="purple"
+                                        <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="yellow active "
                                              xmlns="http://www.w3.org/2000/svg">
                                             <path
                                                 d="M2.39362 3.54634C2.62144 1.80354 4.10646 0.5 5.8641 0.5H14.1359C15.8935 0.5 17.3786 1.80354 17.6064 3.54634L19.4304 17.5H0.569613L2.39362 3.54634Z"
                                                 stroke="#97C992"/>
                                         </svg>
-                                        <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="purple"
+                                        <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="yellow active "
                                              xmlns="http://www.w3.org/2000/svg">
                                             <path
                                                 d="M2.39362 3.54634C2.62144 1.80354 4.10646 0.5 5.8641 0.5H14.1359C15.8935 0.5 17.3786 1.80354 17.6064 3.54634L19.4304 17.5H0.569613L2.39362 3.54634Z"
                                                 stroke="#97C992"/>
                                         </svg>
-                                        <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="purple"
+                                        <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="yellow active "
                                              xmlns="http://www.w3.org/2000/svg">
                                             <path
                                                 d="M2.39362 3.54634C2.62144 1.80354 4.10646 0.5 5.8641 0.5H14.1359C15.8935 0.5 17.3786 1.80354 17.6064 3.54634L19.4304 17.5H0.569613L2.39362 3.54634Z"
                                                 stroke="#97C992"/>
                                         </svg>
-                                        <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="purple"
+                                        <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="yellow active "
                                              xmlns="http://www.w3.org/2000/svg">
                                             <path
                                                 d="M2.39362 3.54634C2.62144 1.80354 4.10646 0.5 5.8641 0.5H14.1359C15.8935 0.5 17.3786 1.80354 17.6064 3.54634L19.4304 17.5H0.569613L2.39362 3.54634Z"
                                                 stroke="#97C992"/>
                                         </svg>
-                                        <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="purple"
+                                        <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="yellow active "
                                              xmlns="http://www.w3.org/2000/svg">
                                             <path
                                                 d="M2.39362 3.54634C2.62144 1.80354 4.10646 0.5 5.8641 0.5H14.1359C15.8935 0.5 17.3786 1.80354 17.6064 3.54634L19.4304 17.5H0.569613L2.39362 3.54634Z"
                                                 stroke="#97C992"/>
                                         </svg>
-                                        <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="purple"
+                                        <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="yellow active "
                                              xmlns="http://www.w3.org/2000/svg">
                                             <path
                                                 d="M2.39362 3.54634C2.62144 1.80354 4.10646 0.5 5.8641 0.5H14.1359C15.8935 0.5 17.3786 1.80354 17.6064 3.54634L19.4304 17.5H0.569613L2.39362 3.54634Z"
                                                 stroke="#97C992"/>
                                         </svg>
-                                        <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="purple"
+                                        <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="yellow active  mr1"
                                              xmlns="http://www.w3.org/2000/svg">
                                             <path
                                                 d="M2.39362 3.54634C2.62144 1.80354 4.10646 0.5 5.8641 0.5H14.1359C15.8935 0.5 17.3786 1.80354 17.6064 3.54634L19.4304 17.5H0.569613L2.39362 3.54634Z"
                                                 stroke="#97C992"/>
                                         </svg>
-                                        <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="purple"
+                                        <!-- divider -->
+                                        <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="purple active "
+                                             xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M2.39362 3.54634C2.62144 1.80354 4.10646 0.5 5.8641 0.5H14.1359C15.8935 0.5 17.3786 1.80354 17.6064 3.54634L19.4304 17.5H0.569613L2.39362 3.54634Z"
+                                                stroke="#97C992"/>
+                                        </svg>
+                                        <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="purple active "
+                                             xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M2.39362 3.54634C2.62144 1.80354 4.10646 0.5 5.8641 0.5H14.1359C15.8935 0.5 17.3786 1.80354 17.6064 3.54634L19.4304 17.5H0.569613L2.39362 3.54634Z"
+                                                stroke="#97C992"/>
+                                        </svg>
+                                        <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="purple active "
+                                             xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M2.39362 3.54634C2.62144 1.80354 4.10646 0.5 5.8641 0.5H14.1359C15.8935 0.5 17.3786 1.80354 17.6064 3.54634L19.4304 17.5H0.569613L2.39362 3.54634Z"
+                                                stroke="#97C992"/>
+                                        </svg>
+                                        <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="purple active "
+                                             xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M2.39362 3.54634C2.62144 1.80354 4.10646 0.5 5.8641 0.5H14.1359C15.8935 0.5 17.3786 1.80354 17.6064 3.54634L19.4304 17.5H0.569613L2.39362 3.54634Z"
+                                                stroke="#97C992"/>
+                                        </svg>
+                                        <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="purple active "
+                                             xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M2.39362 3.54634C2.62144 1.80354 4.10646 0.5 5.8641 0.5H14.1359C15.8935 0.5 17.3786 1.80354 17.6064 3.54634L19.4304 17.5H0.569613L2.39362 3.54634Z"
+                                                stroke="#97C992"/>
+                                        </svg>
+                                        <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="purple active "
+                                             xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M2.39362 3.54634C2.62144 1.80354 4.10646 0.5 5.8641 0.5H14.1359C15.8935 0.5 17.3786 1.80354 17.6064 3.54634L19.4304 17.5H0.569613L2.39362 3.54634Z"
+                                                stroke="#97C992"/>
+                                        </svg>
+                                        <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="purple active "
+                                             xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M2.39362 3.54634C2.62144 1.80354 4.10646 0.5 5.8641 0.5H14.1359C15.8935 0.5 17.3786 1.80354 17.6064 3.54634L19.4304 17.5H0.569613L2.39362 3.54634Z"
+                                                stroke="#97C992"/>
+                                        </svg>
+                                        <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="purple active "
+                                             xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M2.39362 3.54634C2.62144 1.80354 4.10646 0.5 5.8641 0.5H14.1359C15.8935 0.5 17.3786 1.80354 17.6064 3.54634L19.4304 17.5H0.569613L2.39362 3.54634Z"
+                                                stroke="#97C992"/>
+                                        </svg>
+                                        <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="purple active "
+                                             xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M2.39362 3.54634C2.62144 1.80354 4.10646 0.5 5.8641 0.5H14.1359C15.8935 0.5 17.3786 1.80354 17.6064 3.54634L19.4304 17.5H0.569613L2.39362 3.54634Z"
+                                                stroke="#97C992"/>
+                                        </svg>
+                                        <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="purple active "
                                              xmlns="http://www.w3.org/2000/svg">
                                             <path
                                                 d="M2.39362 3.54634C2.62144 1.80354 4.10646 0.5 5.8641 0.5H14.1359C15.8935 0.5 17.3786 1.80354 17.6064 3.54634L19.4304 17.5H0.569613L2.39362 3.54634Z"
@@ -1707,31 +1707,31 @@
                                             <span class="seat-num">Dreapta</span>
                                         </div>
                                         <div class="parter-col">
-                                            <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="red"
+                                            <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="red active "
                                                  xmlns="http://www.w3.org/2000/svg">
                                                 <path
                                                     d="M2.39362 3.54634C2.62144 1.80354 4.10646 0.5 5.8641 0.5H14.1359C15.8935 0.5 17.3786 1.80354 17.6064 3.54634L19.4304 17.5H0.569613L2.39362 3.54634Z"
                                                     stroke="#97C992"/>
                                             </svg>
-                                            <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="red"
+                                            <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="red active "
                                                  xmlns="http://www.w3.org/2000/svg">
                                                 <path
                                                     d="M2.39362 3.54634C2.62144 1.80354 4.10646 0.5 5.8641 0.5H14.1359C15.8935 0.5 17.3786 1.80354 17.6064 3.54634L19.4304 17.5H0.569613L2.39362 3.54634Z"
                                                     stroke="#97C992"/>
                                             </svg>
-                                            <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="red"
+                                            <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="red active "
                                                  xmlns="http://www.w3.org/2000/svg">
                                                 <path
                                                     d="M2.39362 3.54634C2.62144 1.80354 4.10646 0.5 5.8641 0.5H14.1359C15.8935 0.5 17.3786 1.80354 17.6064 3.54634L19.4304 17.5H0.569613L2.39362 3.54634Z"
                                                     stroke="#97C992"/>
                                             </svg>
-                                            <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="red"
+                                            <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="red active "
                                                  xmlns="http://www.w3.org/2000/svg">
                                                 <path
                                                     d="M2.39362 3.54634C2.62144 1.80354 4.10646 0.5 5.8641 0.5H14.1359C15.8935 0.5 17.3786 1.80354 17.6064 3.54634L19.4304 17.5H0.569613L2.39362 3.54634Z"
                                                     stroke="#97C992"/>
                                             </svg>
-                                            <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="red"
+                                            <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="red active "
                                                  xmlns="http://www.w3.org/2000/svg">
                                                 <path
                                                     d="M2.39362 3.54634C2.62144 1.80354 4.10646 0.5 5.8641 0.5H14.1359C15.8935 0.5 17.3786 1.80354 17.6064 3.54634L19.4304 17.5H0.569613L2.39362 3.54634Z"
@@ -1746,31 +1746,31 @@
                                             <span class="seat-num">Dreapta</span>
                                         </div>
                                         <div class="parter-col">
-                                            <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="red"
+                                            <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="red active "
                                                  xmlns="http://www.w3.org/2000/svg">
                                                 <path
                                                     d="M2.39362 3.54634C2.62144 1.80354 4.10646 0.5 5.8641 0.5H14.1359C15.8935 0.5 17.3786 1.80354 17.6064 3.54634L19.4304 17.5H0.569613L2.39362 3.54634Z"
                                                     stroke="#97C992"/>
                                             </svg>
-                                            <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="red"
+                                            <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="red active "
                                                  xmlns="http://www.w3.org/2000/svg">
                                                 <path
                                                     d="M2.39362 3.54634C2.62144 1.80354 4.10646 0.5 5.8641 0.5H14.1359C15.8935 0.5 17.3786 1.80354 17.6064 3.54634L19.4304 17.5H0.569613L2.39362 3.54634Z"
                                                     stroke="#97C992"/>
                                             </svg>
-                                            <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="red"
+                                            <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="red active "
                                                  xmlns="http://www.w3.org/2000/svg">
                                                 <path
                                                     d="M2.39362 3.54634C2.62144 1.80354 4.10646 0.5 5.8641 0.5H14.1359C15.8935 0.5 17.3786 1.80354 17.6064 3.54634L19.4304 17.5H0.569613L2.39362 3.54634Z"
                                                     stroke="#97C992"/>
                                             </svg>
-                                            <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="red"
+                                            <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="red active "
                                                  xmlns="http://www.w3.org/2000/svg">
                                                 <path
                                                     d="M2.39362 3.54634C2.62144 1.80354 4.10646 0.5 5.8641 0.5H14.1359C15.8935 0.5 17.3786 1.80354 17.6064 3.54634L19.4304 17.5H0.569613L2.39362 3.54634Z"
                                                     stroke="#97C992"/>
                                             </svg>
-                                            <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="yellow"
+                                            <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="yellow active "
                                                  xmlns="http://www.w3.org/2000/svg">
                                                 <path
                                                     d="M2.39362 3.54634C2.62144 1.80354 4.10646 0.5 5.8641 0.5H14.1359C15.8935 0.5 17.3786 1.80354 17.6064 3.54634L19.4304 17.5H0.569613L2.39362 3.54634Z"
@@ -1787,31 +1787,31 @@
                                             <span class="seat-num">Stanga</span>
                                         </div>
                                         <div class="parter-col">
-                                            <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="red"
+                                            <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="red active "
                                                  xmlns="http://www.w3.org/2000/svg">
                                                 <path
                                                     d="M2.39362 3.54634C2.62144 1.80354 4.10646 0.5 5.8641 0.5H14.1359C15.8935 0.5 17.3786 1.80354 17.6064 3.54634L19.4304 17.5H0.569613L2.39362 3.54634Z"
                                                     stroke="#97C992"/>
                                             </svg>
-                                            <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="red"
+                                            <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="red active "
                                                  xmlns="http://www.w3.org/2000/svg">
                                                 <path
                                                     d="M2.39362 3.54634C2.62144 1.80354 4.10646 0.5 5.8641 0.5H14.1359C15.8935 0.5 17.3786 1.80354 17.6064 3.54634L19.4304 17.5H0.569613L2.39362 3.54634Z"
                                                     stroke="#97C992"/>
                                             </svg>
-                                            <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="red"
+                                            <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="red active "
                                                  xmlns="http://www.w3.org/2000/svg">
                                                 <path
                                                     d="M2.39362 3.54634C2.62144 1.80354 4.10646 0.5 5.8641 0.5H14.1359C15.8935 0.5 17.3786 1.80354 17.6064 3.54634L19.4304 17.5H0.569613L2.39362 3.54634Z"
                                                     stroke="#97C992"/>
                                             </svg>
-                                            <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="red"
+                                            <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="red active "
                                                  xmlns="http://www.w3.org/2000/svg">
                                                 <path
                                                     d="M2.39362 3.54634C2.62144 1.80354 4.10646 0.5 5.8641 0.5H14.1359C15.8935 0.5 17.3786 1.80354 17.6064 3.54634L19.4304 17.5H0.569613L2.39362 3.54634Z"
                                                     stroke="#97C992"/>
                                             </svg>
-                                            <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="red"
+                                            <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="red active "
                                                  xmlns="http://www.w3.org/2000/svg">
                                                 <path
                                                     d="M2.39362 3.54634C2.62144 1.80354 4.10646 0.5 5.8641 0.5H14.1359C15.8935 0.5 17.3786 1.80354 17.6064 3.54634L19.4304 17.5H0.569613L2.39362 3.54634Z"
@@ -1826,31 +1826,31 @@
                                             <span class="seat-num">Stanga</span>
                                         </div>
                                         <div class="parter-col">
-                                            <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="red"
+                                            <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="red active "
                                                  xmlns="http://www.w3.org/2000/svg">
                                                 <path
                                                     d="M2.39362 3.54634C2.62144 1.80354 4.10646 0.5 5.8641 0.5H14.1359C15.8935 0.5 17.3786 1.80354 17.6064 3.54634L19.4304 17.5H0.569613L2.39362 3.54634Z"
                                                     stroke="#97C992"/>
                                             </svg>
-                                            <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="red"
+                                            <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="red active "
                                                  xmlns="http://www.w3.org/2000/svg">
                                                 <path
                                                     d="M2.39362 3.54634C2.62144 1.80354 4.10646 0.5 5.8641 0.5H14.1359C15.8935 0.5 17.3786 1.80354 17.6064 3.54634L19.4304 17.5H0.569613L2.39362 3.54634Z"
                                                     stroke="#97C992"/>
                                             </svg>
-                                            <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="red"
+                                            <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="red active "
                                                  xmlns="http://www.w3.org/2000/svg">
                                                 <path
                                                     d="M2.39362 3.54634C2.62144 1.80354 4.10646 0.5 5.8641 0.5H14.1359C15.8935 0.5 17.3786 1.80354 17.6064 3.54634L19.4304 17.5H0.569613L2.39362 3.54634Z"
                                                     stroke="#97C992"/>
                                             </svg>
-                                            <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="red"
+                                            <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="red active "
                                                  xmlns="http://www.w3.org/2000/svg">
                                                 <path
                                                     d="M2.39362 3.54634C2.62144 1.80354 4.10646 0.5 5.8641 0.5H14.1359C15.8935 0.5 17.3786 1.80354 17.6064 3.54634L19.4304 17.5H0.569613L2.39362 3.54634Z"
                                                     stroke="#97C992"/>
                                             </svg>
-                                            <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="yellow"
+                                            <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="yellow active "
                                                  xmlns="http://www.w3.org/2000/svg">
                                                 <path
                                                     d="M2.39362 3.54634C2.62144 1.80354 4.10646 0.5 5.8641 0.5H14.1359C15.8935 0.5 17.3786 1.80354 17.6064 3.54634L19.4304 17.5H0.569613L2.39362 3.54634Z"
@@ -1861,19 +1861,20 @@
                                 </div>
                             </div>
                             <div class="seats-buy-btn d-660">
-                                <a href="#" class="btn-buy">scenă</a>
+                                <a href="#" class="btn-buy">{{ __('global.scene') }}</a>
                             </div>
                         </div>
                         <div class="seats-buy-btn m-660">
-                            <a href="#" class="btn-buy">scenă</a>
+                            <a href="#" class="btn-buy">{{ __('global.scene') }}</a>
                         </div>
                         <div class="seats-pricing d-flex">
-                            <span class="green">40 lei</span>
-                            <span class="blue">50 lei</span>
-                            <span class="purple">60 lei</span>
-                            <span class="yellow">80 lei</span>
-                            <span class="red">100 lei</span>
-                            <span class="busy">Ocupat</span>
+                            @foreach($schema->colors as $color)
+                                @if ($color->name === 'busy')
+                                    @continue
+                                @endif
+                                <span class="{{ $color->name }}">{{ $color->data->price }} lei</span>
+                            @endforeach
+                            <span class="busy">{{ __('global.busy') }}</span>
                         </div>
                     </div>
                 </div>

@@ -14,6 +14,8 @@ class CreateSchemaColorsTable extends Migration
     public function up()
     {
         Schema::create('color_schema', function (Blueprint $table) {
+            $table->id();
+
             $table->unsignedBigInteger('color_id');
             $table->foreign('color_id')
                 ->references('id')->on('colors')

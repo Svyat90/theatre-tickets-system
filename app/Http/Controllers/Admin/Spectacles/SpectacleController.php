@@ -162,6 +162,7 @@ class SpectacleController extends AdminController
     public function places(Request $request, $spectacleId)
     {
         $spectacle = Spectacle::query()->find($spectacleId);
+
         $spectacle->load('schema');
 
         return view('admin.schemas.places', compact('spectacle'));

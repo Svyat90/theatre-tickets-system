@@ -1861,19 +1861,21 @@
                                 </div>
                             </div>
                             <div class="seats-buy-btn d-660">
-                                <a href="#" class="btn-buy">scenă</a>
+                                <a href="#" class="btn-buy">{{ __('global.scene') }}</a>
                             </div>
                         </div>
                         <div class="seats-buy-btn m-660">
-                            <a href="#" class="btn-buy">scenă</a>
+                            <a href="#" class="btn-buy">{{ __('global.scene') }}</a>
                         </div>
                         <div class="seats-pricing d-flex">
-                            <span class="green">40 lei</span>
-                            <span class="blue">50 lei</span>
-                            <span class="purple">60 lei</span>
-                            <span class="yellow">80 lei</span>
-                            <span class="red">100 lei</span>
-                            <span class="busy">Ocupat</span>
+                            @foreach($spectacle->schema->colors as $color)
+                                @if ($color->name === 'busy')
+                                    @continue
+                                @endif
+                                <span class="{{ $color->name }}">{{ $color->data->price }} lei</span>
+                            @endforeach
+                            <span class="busy">{{ __('global.busy') }}</span>
+                        </div>
                         </div>
                     </div>
                 </div>

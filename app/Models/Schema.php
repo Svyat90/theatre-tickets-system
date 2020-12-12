@@ -38,7 +38,7 @@ class Schema extends BaseModel
     {
         return $this
             ->belongsToMany(Color::class, 'color_schema', 'schema_id', 'color_id')
-            ->withPivot('price')
+            ->withPivot('id', 'price')
             ->as('data');
     }
 

@@ -9,9 +9,9 @@ use Illuminate\Contracts\View\Factory;
 use Illuminate\Contracts\Foundation\Application;
 use Yajra\DataTables\Facades\DataTables;
 use App\Helpers\LabelHelper;
-use App\Helpers\DatatablesHelper;
 use App\Models\Schema;
 use Illuminate\Http\RedirectResponse;
+use App\Models\ColorSchema;
 
 class SchemaController extends AdminController
 {
@@ -52,6 +52,8 @@ class SchemaController extends AdminController
      */
     public function show(Schema $schema)
     {
+        $schema->load('colors');
+
         return view('admin.schemas.show', compact('schema'));
     }
 
@@ -62,6 +64,8 @@ class SchemaController extends AdminController
      */
     public function schema(Schema $schema)
     {
+        $schema->load('colors');
+
         return view('admin.schemas.raw-places', compact('schema'));
     }
 
@@ -86,6 +90,35 @@ class SchemaController extends AdminController
         $schema->update($request->all());
 
         return redirect()->route('admin.schemas.show', $schema->id);
+    }
+
+    /**
+     * @param Request $request
+     * @param         $pivotColorSchemaId
+     *
+     * @return Application|Factory|View
+     */
+    public function editPrice(Request $request, $pivotColorSchemaId)
+    {
+        $colorPivot = ColorSchema::query()->findOrFail($pivotColorSchemaId);
+        $schemaId = $request->schema_id;
+
+        return view('admin.schemas.edit-price', compact('colorPivot', 'schemaId'));
+    }
+
+    /**
+     * @param Request $request
+     * @param         $pivotColorSchemaId
+     *
+     * @return RedirectResponse
+     */
+    public function updatePrice(Request $request, $pivotColorSchemaId)
+    {
+        $colorPivot = ColorSchema::query()->findOrFail($pivotColorSchemaId);
+        $colorPivot->price = $request->price;
+        $colorPivot->save();
+
+        return redirect()->route('admin.schemas.show', $request->schema_id);
     }
 
 }

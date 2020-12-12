@@ -67,4 +67,7 @@ return [
     "schemas" => "Schemas",
     "schema" => "Schema",
     "color" => "Color",
+    "prices" => "Prices",
+    "scene" => "Scene",
+    "busy" => "busy",
 ];
