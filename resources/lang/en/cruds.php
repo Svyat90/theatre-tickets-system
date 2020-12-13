@@ -254,6 +254,10 @@ return [
             'on_left_helper'       => '',
             'on_right'              => 'On Right',
             'on_right_helper'       => '',
+            'color'              => 'Color',
+            'color_helper'       => '',
+            'price'              => 'Price',
+            'price_helper'       => '',
         ],
     ],
     'cols'                     => [

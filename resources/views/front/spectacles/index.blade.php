@@ -72,7 +72,7 @@
                                     <span class="info-text">{{  $spectacle->duration  }} {{ $vars['spectacles_min'] }}</span>
                                 </div>
                                 <div class="info-age">
-                                    <span class="info-sala">SALA MARE</span>
+                                    <span class="info-sala">{{ $spectacle->schema->name }}</span>
                                 </div>
                             </div>
                         </div>
@@ -83,7 +83,7 @@
                             </div>
                             <div class="tickets-total">
                                 <p class="total-text d-flex">
-                                    <span class="home-age">SALA MARE</span>
+                                    <span class="home-age">{{ $spectacle->schema->name }}</span>
                                     <span class="home-age-num">{{ $spectacle->min_age }}+</span>
                                 </p>
                             </div>

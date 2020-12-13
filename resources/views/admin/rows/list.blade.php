@@ -56,7 +56,7 @@
                             {!! \App\Helpers\LabelHelper::colorLabel($row->color->color) !!}
                         </td>
                         <td>
-{{--                                {{ $row->price }}--}} 0
+                            {{ $row->schema->colors->where('id', $row->color->id)->first()->data->price }}
                         </td>
                         <td>
                             {!! \App\Helpers\LabelHelper::boolLabel($row->on_loggia) !!}

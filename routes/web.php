@@ -50,7 +50,12 @@ Route::prefix(LocaleMiddleware::getLocale())->namespace('Front')->group(function
 
     // Cart
     Route::get('cart', [CartController::class, 'show'])->name('cart.show');
+    Route::get('cart/buy', [CartController::class, 'buy'])->name('cart.buy');
+    Route::get('cart/success', [CartController::class, 'success'])->name('cart.success');
+    Route::post('cart/order', [CartController::class, 'order'])->name('cart.order');
     Route::post('cart/toggle', [CartController::class, 'toggle'])->name('cart.toggle');
+    Route::get('cart/delete/{uid}', [CartController::class, 'delete'])->name('cart.delete');
+    Route::get('cart/delete-all', [CartController::class, 'deleteAll'])->name('cart.delete_all');
 });
 
 // Admin

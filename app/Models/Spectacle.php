@@ -7,6 +7,7 @@ use Illuminate\Database\Eloquent\Relations\BelongsToMany;
 use Illuminate\Support\Collection;
 use Spatie\MediaLibrary\MediaCollections\MediaCollection;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
+use Illuminate\Database\Eloquent\Relations\HasMany;
 
 /**
  * Class Spectacle
@@ -68,6 +69,14 @@ class Spectacle extends BaseModel
     public function schema()
     {
         return $this->belongsTo(Schema::class);
+    }
+
+    /**
+     * @return HasMany
+     */
+    public function tickets()
+    {
+        return $this->hasMany(Ticket::class);
     }
 
     /**

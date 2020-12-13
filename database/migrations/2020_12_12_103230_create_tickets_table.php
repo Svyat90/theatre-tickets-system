@@ -16,6 +16,11 @@ class CreateTicketsTable extends Migration
         Schema::create('tickets', function (Blueprint $table) {
             $table->id();
 
+            $table->unsignedBigInteger('spectacle_id')->after('id');
+            $table->foreign('spectacle_id')
+                ->references('id')->on('spectacles')
+                ->onUpdate('cascade')->onDelete('cascade');
+
             $table->unsignedBigInteger('row_id')->after('id');
             $table->foreign('row_id')
                 ->references('id')->on('rows')
@@ -26,6 +31,10 @@ class CreateTicketsTable extends Migration
                 ->references('id')->on('cols')
                 ->onUpdate('cascade')->onDelete('cascade');
 
+            $table->unique(['spectacle_id', 'row_id', 'col_id']);
+
+            $table->integer('place');
+            $table->integer('row');
             $table->double('price');
             $table->enum('status', ['reserved', 'paid', 'open'])->default('open');
             $table->timestamps();

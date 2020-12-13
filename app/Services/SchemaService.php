@@ -5,6 +5,7 @@ namespace App\Services;
 use App\Models\Row;
 use App\Models\Col;
 use App\Models\Schema;
+use App\Models\Spectacle;
 
 class SchemaService
 {
@@ -25,19 +26,31 @@ class SchemaService
     private array $cartColIds = [];
 
     /**
-     * @param Schema $schema
+     * @var array
+     */
+    private array $reservedColIds = [];
+
+    /**
+     * @param Schema    $schema
+     * @param Spectacle $spectacle
      *
      * @return array
      */
-    public function generateRowsData(Schema $schema) : array
+    public function generateRowsData(Schema $schema, Spectacle $spectacle) : array
     {
         $this->schema = $schema;
 
+        $this->fillBusyIds($spectacle);
         $this->fillCartIds();
         $this->fillBalcony();
         $this->fillRows();
 
         return $this->data;
+    }
+
+    private function fillBusyIds(Spectacle $spectacle) : void
+    {
+        $this->reservedColIds = $spectacle->tickets->pluck('col_id')->toArray();
     }
 
     private function fillCartIds() : void
@@ -49,22 +62,6 @@ class SchemaService
         }
     }
 
-    /**
-     * @param array $colData
-     *
-     * @return array
-     */
-    private function setColActiveCart(array $colData) : array
-    {
-        if (in_array($colData['id'], $this->cartColIds)) {
-            $colData['active'] = true;
-        } else {
-            $colData['active'] = false;
-        }
-
-        return $colData;
-    }
-
     private function fillBalcony() : void
     {
         // rows
@@ -72,11 +69,13 @@ class SchemaService
             return $row->on_balcony && ! $row->on_loggia;
         })->each(function (Row $row) {
             collect($row->cols)->each(function (Col $col) use ($row) {
-                $colData = $this->setColActiveCart($col->toArray());
+                $colData = $this->setClass($col->toArray());
+                $colData['row'] = $row->row;
+                $this->data['balcony']['items'][$row->id]['color'] = $row->color->name;
                 if ($col->on_left) {
-                    $this->data['balcony']['items']['on_left'][] = $colData;
+                    $this->data['balcony']['items'][$row->id]['on_left'][] = $colData;
                 } else {
-                    $this->data['balcony']['items']['on_right'][] = $colData;
+                    $this->data['balcony']['items'][$row->id]['on_right'][] = $colData;
                 }
             });
         });
@@ -85,8 +84,11 @@ class SchemaService
         $this->schema->rows->filter(function (Row $row) {
             return $row->on_loggia && $row->on_balcony;
         })->each(function (Row $row) {
-            $this->data['balcony']['loggia'] = $row->cols->map(function (Col $col) {
-                return $this->setColActiveCart($col->toArray());
+            $this->data['balcony']['loggia']['color'] = $row->color->name;
+            $this->data['balcony']['loggia']['data'] = $row->cols->map(function (Col $col) use ($row) {
+                $colData = $col->toArray();
+                $colData['row'] = $row->row;
+                return $this->setClass($colData);
             })->toArray();
         });
     }
@@ -98,7 +100,8 @@ class SchemaService
             return ! $row->on_balcony && ! $row->on_loggia;
         })->each(function (Row $row) {
             collect($row->cols)->each(function (Col $col) use ($row) {
-                $colData = $this->setColActiveCart($col->toArray());
+                $colData = $this->setClass($col->toArray());
+                $colData['row'] = $row->row;
                 $this->data['rows']['items'][$row->id]['color'] = $row->color->name;
                 if ($col->on_left) {
                     $this->data['rows']['items'][$row->id]['data']['on_left'][] = $colData;
@@ -114,15 +117,38 @@ class SchemaService
         })->map(function (Row $row) {
             $this->data['rows']['loggia'][$row->id]['color'] = $row->color->name;
             if ($row->on_left) {
-                $this->data['rows']['loggia'][$row->id]['data']['on_left'] = $row->cols->map(function (Col $col) {
-                    return $this->setColActiveCart($col->toArray());
+                $this->data['rows']['loggia'][$row->id]['data']['on_left'] = $row->cols->map(function (Col $col) use ($row) {
+                    $colData = $col->toArray();
+                    $colData['row'] = $row->row;
+                    return $this->setClass($colData);
                 })->toArray();
             } else {
-                $this->data['rows']['loggia'][$row->id]['data']['on_right'] = $row->cols->map(function (Col $col) {
-                    return $this->setColActiveCart($col->toArray());
+                $this->data['rows']['loggia'][$row->id]['data']['on_right'] = $row->cols->map(function (Col $col) use ($row) {
+                    $colData = $col->toArray();
+                    $colData['row'] = $row->row;
+                    return $this->setClass($colData);
                 })->toArray();
             }
         });
     }
 
+    /**
+     * @param array $colData
+     *
+     * @return array
+     */
+    private function setClass(array $colData) : array
+    {
+        $colData['class'] = "";
+        if (in_array($colData['id'], $this->cartColIds)) {
+            $colData['class'] = 'active';
+
+        } elseif (in_array($colData['id'], $this->reservedColIds)) {
+            $colData['class'] = 'busy';
+        }
+
+        $colData['active'] = false;
+
+        return $colData;
+    }
 }

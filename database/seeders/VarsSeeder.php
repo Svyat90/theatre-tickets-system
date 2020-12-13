@@ -67,6 +67,11 @@ class VarsSeeder extends Seeder
             'ro' => 'cumpara bilete',
             'en' => 'Buy tickets'
         ],
+        'spectacles_reserve_tickets' => [
+            'ru' => 'Бронировать',
+            'ro' => 'Cumpara bilete',
+            'en' => 'Reserve tickets'
+        ],
         'spectacles_min' => [
             'ru' => 'МИН',
             'ro' => 'MIN',
@@ -272,10 +277,15 @@ class VarsSeeder extends Seeder
             'ro' => 'Nume',
             'en' => 'Name',
         ],
-        'contact_form_fist_name' => [
+        'contact_form_first_name' => [
             'ru' => 'Имя',
             'ro' => 'Nume',
             'en' => 'First name',
+        ],
+        'contact_form_last_name' => [
+            'ru' => 'Фамилия',
+            'ro' => 'Numele de familie',
+            'en' => 'Last name',
         ],
         'contact_form_phone' => [
             'ru' => 'Телефон',
@@ -401,6 +411,71 @@ class VarsSeeder extends Seeder
             'ru' => 'лей',
             'ro' => 'lei',
             'en' => 'lei'
+        ],
+        'spectacle_row' => [
+            'ru' => 'ряд',
+            'ro' => 'rândul',
+            'en' => 'row'
+        ],
+        'spectacle_place' => [
+            'ru' => 'место',
+            'ro' => 'locul',
+            'en' => 'place'
+        ],
+        'spectacle_total' => [
+            'ru' => 'Вместе',
+            'ro' => 'Total',
+            'en' => 'Total'
+        ],
+        'cart_buy_fill_details' => [
+            'ru' => 'Заполните ваши данные',
+            'ro' => 'Completați detaliile dvs',
+            'en' => 'Fill in your details'
+        ],
+        'cart_buy_accept' => [
+            'ru' => 'Принимаю',
+            'ro' => 'Accept',
+            'en' => 'Accepts'
+        ],
+        'cart_buy_terms_and_cond' => [
+            'ru' => 'правила и условия',
+            'ro' => 'Termeni si conditiile',
+            'en' => 'the Terms and Conditions'
+        ],
+        'cart_buy_terms_link' => [
+            'ru' => 'https://www.google.com',
+            'ro' => 'https://www.google.com',
+            'en' => 'https://www.google.coms'
+        ],
+        'cart_back' => [
+            'ru' => 'Назад',
+            'ro' => 'Înapoi',
+            'en' => 'Back'
+        ],
+        'cart_empty' => [
+            'ru' => 'Корзина пустая',
+            'ro' => 'Cart empty',
+            'en' => 'Cart empty'
+        ],
+        'success_title' => [
+            'ru' => 'Multumesc pentru cumparaturile facute',
+            'ro' => 'Multumesc pentru cumparaturile facute',
+            'en' => 'Multumesc pentru cumparaturile facutes'
+        ],
+        'success_desc' => [
+            'ru' => '<b>Biletele au fost trimise la căsuța poștală indicată</b><br> Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.',
+            'ro' => '<b>Biletele au fost trimise la căsuța poștală indicată</b><br> Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.',
+            'en' => '<b>Biletele au fost trimise la căsuța poștală indicată</b><br> Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.'
+        ],
+        'success_download_tickets' => [
+            'ru' => 'Скачать билеты',
+            'ro' => 'Descarca bilet',
+            'en' => 'Download tickets'
+        ],
+        'email_reserved_tickets_for' => [
+            'ru' => 'Зарезервированные билеты для',
+            'ro' => 'Reserved tickets for',
+            'en' => 'Reserved tickets for'
         ],
     ];
 

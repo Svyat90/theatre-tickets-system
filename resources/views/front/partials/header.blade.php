@@ -68,9 +68,11 @@
                        aria-label="{{ $vars['search'] }}">
                 <button class="btn my-2 my-sm-0" id="search-button"><span class="material-icons">search</span></button>
             </form>
-            <a href="#" class="nav-link nav-link-gold d">
+            <a href="{{ route('cart.show') }}" class="nav-link nav-link-gold d">
                 {{ $vars['my_cart'] }}
-{{--                <span id="count">1</span>--}}
+                @if(\Cart::getTotalQuantity() > 0)
+                    <span id="count">{{ \Cart::getTotalQuantity() }}</span>
+                @endif
             </a>
             <div class="lang">
                 <a href="{{ route('set_locate', 'ro') }}" class="nav-link {{ app()->getLocale() === 'ro' ? 'active' : '' }}">RO</a>
@@ -80,7 +82,9 @@
         </div>
         <a href="#" class="nav-link nav-link-gold m">
             <img src="{{ asset('front/img/mobile-cart.svg') }}" alt="">
-{{--            <span id="count">1</span>--}}
+            @if(\Cart::getTotalQuantity() > 0)
+                <span id="count">{{ \Cart::getTotalQuantity() }}</span>
+            @endif
         </a>
     </nav>
 </header>

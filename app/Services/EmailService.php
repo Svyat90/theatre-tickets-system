@@ -47,6 +47,26 @@ class EmailService
         $this->checkFailures();
     }
 
+    /**
+     * @param array  $mailData
+     * @param string $name
+     * @param string $emailTo
+     */
+    public function sendTicketsToUser(array $mailData, string $name, string $emailTo) : void
+    {
+        $data = [
+            'data' => $mailData
+        ];
+
+        Mail::send('mails.tickets', $data, function ($message) use ($name, $emailTo) {
+            $message
+                ->to($emailTo)
+                ->subject(config('app.name') . ' - ' . __('email_reserved_tickets_for') . ' - ' . $name);
+        });
+
+        $this->checkFailures();
+    }
+
     private function checkFailures() : void
     {
         $failures = Mail::failures();
