@@ -42,13 +42,20 @@
                     Alege un loc
                 </h2>
 
-                @include('front.schemas.schema-' . $spectacle->schema->id, ['spectacle' => $spectacle]])
+                @include('front.schemas.schema-' . $spectacle->schema->id, ['spectacle' => $spectacle])
 
                 <div class="seats-total-wr d-flex">
-                    <p class="total-price"> 3 bilete pentru 40: <span class="total-num">120 lei</span></p>
+                    <p class="total-price">
+                        <span id="totals">
+                            @foreach($cartTotals as $price => $qty)
+                                <span>{{ $qty }} {{ $vars['spectacle_map_tickets_for'] }} {{ $price }}, </span>
+                            @endforeach
+                        </span>
+                        <span class="total-num" id="total-base">{{ $total }} {{ $vars['spectacle_map_lei'] }}</span>
+                    </p>
                     <button class="bt home-btn">
-                        <a href="/" class="home-link">
-                            Bilete
+                        <a href="{{ route('cart.show') }}" class="home-link">
+                            {{ $vars['spectacles_buy_tickets'] }}
                         </a>
                     </button>
                 </div>

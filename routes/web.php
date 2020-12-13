@@ -50,7 +50,7 @@ Route::prefix(LocaleMiddleware::getLocale())->namespace('Front')->group(function
 
     // Cart
     Route::get('cart', [CartController::class, 'show'])->name('cart.show');
-    Route::post('cart/add', [CartController::class, 'add'])->name('cart.add');
+    Route::post('cart/toggle', [CartController::class, 'toggle'])->name('cart.toggle');
 });
 
 // Admin

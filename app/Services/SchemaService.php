@@ -20,6 +20,11 @@ class SchemaService
     private array $data;
 
     /**
+     * @var array
+     */
+    private array $cartColIds = [];
+
+    /**
      * @param Schema $schema
      *
      * @return array
@@ -28,10 +33,36 @@ class SchemaService
     {
         $this->schema = $schema;
 
+        $this->fillCartIds();
         $this->fillBalcony();
         $this->fillRows();
 
         return $this->data;
+    }
+
+    private function fillCartIds() : void
+    {
+        foreach (\Cart::getContent()->toArray() as $key => $value){
+            if (! in_array($key, $this->cartColIds)) {
+                $this->cartColIds[] = $key;
+            }
+        }
+    }
+
+    /**
+     * @param array $colData
+     *
+     * @return array
+     */
+    private function setColActiveCart(array $colData) : array
+    {
+        if (in_array($colData['id'], $this->cartColIds)) {
+            $colData['active'] = true;
+        } else {
+            $colData['active'] = false;
+        }
+
+        return $colData;
     }
 
     private function fillBalcony() : void
@@ -41,10 +72,11 @@ class SchemaService
             return $row->on_balcony && ! $row->on_loggia;
         })->each(function (Row $row) {
             collect($row->cols)->each(function (Col $col) use ($row) {
+                $colData = $this->setColActiveCart($col->toArray());
                 if ($col->on_left) {
-                    $this->data['balcony']['items']['on_left'][] = $col->toArray();
+                    $this->data['balcony']['items']['on_left'][] = $colData;
                 } else {
-                    $this->data['balcony']['items']['on_right'][] = $col->toArray();
+                    $this->data['balcony']['items']['on_right'][] = $colData;
                 }
             });
         });
@@ -53,7 +85,9 @@ class SchemaService
         $this->schema->rows->filter(function (Row $row) {
             return $row->on_loggia && $row->on_balcony;
         })->each(function (Row $row) {
-            $this->data['balcony']['loggia'] = $row->cols->toArray();
+            $this->data['balcony']['loggia'] = $row->cols->map(function (Col $col) {
+                return $this->setColActiveCart($col->toArray());
+            })->toArray();
         });
     }
 
@@ -64,10 +98,12 @@ class SchemaService
             return ! $row->on_balcony && ! $row->on_loggia;
         })->each(function (Row $row) {
             collect($row->cols)->each(function (Col $col) use ($row) {
+                $colData = $this->setColActiveCart($col->toArray());
+                $this->data['rows']['items'][$row->id]['color'] = $row->color->name;
                 if ($col->on_left) {
-                    $this->data['rows']['items'][$row->id]['on_left'][] = $col->toArray();
+                    $this->data['rows']['items'][$row->id]['data']['on_left'][] = $colData;
                 } else {
-                    $this->data['rows']['items'][$row->id]['on_right'][] = $col->toArray();
+                    $this->data['rows']['items'][$row->id]['data']['on_right'][] = $colData;
                 }
             });
         });
@@ -76,10 +112,15 @@ class SchemaService
         $this->schema->rows->filter(function (Row $row) {
             return $row->on_loggia && ! $row->on_balcony;
         })->map(function (Row $row) {
+            $this->data['rows']['loggia'][$row->id]['color'] = $row->color->name;
             if ($row->on_left) {
-                $this->data['rows']['loggia']['on_left'][] = $row->cols->toArray();
+                $this->data['rows']['loggia'][$row->id]['data']['on_left'] = $row->cols->map(function (Col $col) {
+                    return $this->setColActiveCart($col->toArray());
+                })->toArray();
             } else {
-                $this->data['rows']['loggia']['on_right'][] = $row->cols->toArray();
+                $this->data['rows']['loggia'][$row->id]['data']['on_right'] = $row->cols->map(function (Col $col) {
+                    return $this->setColActiveCart($col->toArray());
+                })->toArray();
             }
         });
     }

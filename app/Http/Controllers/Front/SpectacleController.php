@@ -44,8 +44,10 @@ class SpectacleController extends FrontController
     {
         $schema = $spectacle->schema;
         $rows = $schemaService->generateRowsData($schema);
+        $cartTotals = (new CartController())->getGroupTotals();
+        $total = \Cart::getTotal();
 
-        return view('front.spectacles.show', compact('spectacle', 'rows'));
+        return view('front.spectacles.show', compact('spectacle', 'rows', 'cartTotals', 'total'));
     }
 
 }

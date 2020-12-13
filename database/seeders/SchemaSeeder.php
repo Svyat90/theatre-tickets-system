@@ -119,7 +119,7 @@ class SchemaSeeder extends Seeder
                 switch (true) {
                     case (($rowIndex === 1 && $colIndex <= 10)
                         || ($rowIndex === 2 && $colIndex <= 10)
-                        || ($rowIndex === 3 && $colIndex <= 6)
+                        || ($rowIndex === 3 && $colIndex <= 9)
                         || ($rowIndex === 4 && $colIndex <= 9)
                         || ($rowIndex === 5 && $colIndex <= 8)
                         || ($rowIndex === 6 && $colIndex <= 7)
@@ -164,7 +164,6 @@ class SchemaSeeder extends Seeder
                 $row->cols()->create([
                     'seat' => $colIndex
                 ]);
-                $colIndex++;
             }
         }
 
@@ -181,7 +180,6 @@ class SchemaSeeder extends Seeder
                 $row->cols()->create([
                     'seat' => $colIndex
                 ]);
-                $colIndex++;
             }
         }
     }

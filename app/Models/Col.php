@@ -22,4 +22,11 @@ class Col extends Model
         return $this->belongsTo(Row::class);
     }
 
+    /**
+     * @var string[]
+     */
+    protected $hidden = [
+        'created_at', 'updated_at', 'on_left', 'on_right'
+    ];
+
 }

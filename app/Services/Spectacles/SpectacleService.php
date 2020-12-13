@@ -82,7 +82,7 @@ class SpectacleService
      */
     public function createSpectacle(StoreSpectacleRequest $request) : Spectacle
     {
-        $inputData = $request->validated();
+        $inputData = $request->all();
         $spectacle = $this->repository->saveSpectacle($inputData);
 
         $this->handleMediaFiles($request, $spectacle);

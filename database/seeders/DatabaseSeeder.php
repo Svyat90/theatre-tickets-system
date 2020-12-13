@@ -21,7 +21,8 @@ class DatabaseSeeder extends Seeder
             WorkerSeeder::class,
             AboutSeeder::class,
             ColorsSeeder::class,
-            SchemaSeeder::class
+            SchemaSeeder::class,
+            SpectacleSeeder::class
         ]);
     }
 }

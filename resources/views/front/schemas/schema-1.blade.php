@@ -6,20 +6,21 @@
                     @foreach($rows['balcony']['items']['on_left'] as $col)
                         @php
                             $class = '';
-                            if ($loop->index === 0) {
+                            if ($loop->iteration === 1) {
                                 $class = 'ml1';
-                            } elseif ($loop->last) {
+                            } elseif ($loop->iteration > 10 &&  $loop->iteration % 10 === 0) {
                                 $class = 'mr1';
                             }
                         @endphp
                         <svg
+                            data-uid="{{ $col['active'] ? $col['id'] : '' }}"
                             data-col-id="{{ $col['id'] }}"
                             data-row-id="{{ $col['row_id'] }}"
                             width="20"
                             height="18"
                             viewBox="0 0 20 18"
                             fill="none"
-                            class="seats green {{ $class }}"
+                            class="seats green {{ $class }} {{ $col['active'] ? 'active' : '' }}"
                             xmlns="http://www.w3.org/2000/svg">
                             <path
                                 d="M2.39362 3.54634C2.62144 1.80354 4.10646 0.5 5.8641 0.5H14.1359C15.8935 0.5 17.3786 1.80354 17.6064 3.54634L19.4304 17.5H0.569613L2.39362 3.54634Z"
@@ -28,462 +29,147 @@
                     @endforeach
                 </div>
                 <div class="seats-num mr1 ml1">
-                    <span class="seat-num">Balcon</span>
+                    <span class="seat-num">{{ $vars['spectacle_map_balcon'] }}</span>
                     <span class="seat-num">3</span>
                     <span class="seat-num">2</span>
                     <span class="seat-num">1</span>
                 </div>
                 <div class="seats-right pt1 ml1 pr1">
-                    <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="green"
-                         xmlns="http://www.w3.org/2000/svg">
-                        <path
-                            d="M2.39362 3.54634C2.62144 1.80354 4.10646 0.5 5.8641 0.5H14.1359C15.8935 0.5 17.3786 1.80354 17.6064 3.54634L19.4304 17.5H0.569613L2.39362 3.54634Z"
-                            stroke="#97C992"/>
-                    </svg>
-                    <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="green"
-                         xmlns="http://www.w3.org/2000/svg">
-                        <path
-                            d="M2.39362 3.54634C2.62144 1.80354 4.10646 0.5 5.8641 0.5H14.1359C15.8935 0.5 17.3786 1.80354 17.6064 3.54634L19.4304 17.5H0.569613L2.39362 3.54634Z"
-                            stroke="#97C992"/>
-                    </svg>
-                    <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="green mr1"
-                         xmlns="http://www.w3.org/2000/svg">
-                        <path
-                            d="M2.39362 3.54634C2.62144 1.80354 4.10646 0.5 5.8641 0.5H14.1359C15.8935 0.5 17.3786 1.80354 17.6064 3.54634L19.4304 17.5H0.569613L2.39362 3.54634Z"
-                            stroke="#97C992"/>
-                    </svg>
-                    <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="green"
-                         xmlns="http://www.w3.org/2000/svg">
-                        <path
-                            d="M2.39362 3.54634C2.62144 1.80354 4.10646 0.5 5.8641 0.5H14.1359C15.8935 0.5 17.3786 1.80354 17.6064 3.54634L19.4304 17.5H0.569613L2.39362 3.54634Z"
-                            stroke="#97C992"/>
-                    </svg>
-                    <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="green"
-                         xmlns="http://www.w3.org/2000/svg">
-                        <path
-                            d="M2.39362 3.54634C2.62144 1.80354 4.10646 0.5 5.8641 0.5H14.1359C15.8935 0.5 17.3786 1.80354 17.6064 3.54634L19.4304 17.5H0.569613L2.39362 3.54634Z"
-                            stroke="#97C992"/>
-                    </svg>
-                    <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="green"
-                         xmlns="http://www.w3.org/2000/svg">
-                        <path
-                            d="M2.39362 3.54634C2.62144 1.80354 4.10646 0.5 5.8641 0.5H14.1359C15.8935 0.5 17.3786 1.80354 17.6064 3.54634L19.4304 17.5H0.569613L2.39362 3.54634Z"
-                            stroke="#97C992"/>
-                    </svg>
-                    <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="green"
-                         xmlns="http://www.w3.org/2000/svg">
-                        <path
-                            d="M2.39362 3.54634C2.62144 1.80354 4.10646 0.5 5.8641 0.5H14.1359C15.8935 0.5 17.3786 1.80354 17.6064 3.54634L19.4304 17.5H0.569613L2.39362 3.54634Z"
-                            stroke="#97C992"/>
-                    </svg>
-                    <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="green"
-                         xmlns="http://www.w3.org/2000/svg">
-                        <path
-                            d="M2.39362 3.54634C2.62144 1.80354 4.10646 0.5 5.8641 0.5H14.1359C15.8935 0.5 17.3786 1.80354 17.6064 3.54634L19.4304 17.5H0.569613L2.39362 3.54634Z"
-                            stroke="#97C992"/>
-                    </svg>
-                    <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="green"
-                         xmlns="http://www.w3.org/2000/svg">
-                        <path
-                            d="M2.39362 3.54634C2.62144 1.80354 4.10646 0.5 5.8641 0.5H14.1359C15.8935 0.5 17.3786 1.80354 17.6064 3.54634L19.4304 17.5H0.569613L2.39362 3.54634Z"
-                            stroke="#97C992"/>
-                    </svg>
-                    <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="green"
-                         xmlns="http://www.w3.org/2000/svg">
-                        <path
-                            d="M2.39362 3.54634C2.62144 1.80354 4.10646 0.5 5.8641 0.5H14.1359C15.8935 0.5 17.3786 1.80354 17.6064 3.54634L19.4304 17.5H0.569613L2.39362 3.54634Z"
-                            stroke="#97C992"/>
-                    </svg>
-                    <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="green"
-                         xmlns="http://www.w3.org/2000/svg">
-                        <path
-                            d="M2.39362 3.54634C2.62144 1.80354 4.10646 0.5 5.8641 0.5H14.1359C15.8935 0.5 17.3786 1.80354 17.6064 3.54634L19.4304 17.5H0.569613L2.39362 3.54634Z"
-                            stroke="#97C992"/>
-                    </svg>
-                    <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="green"
-                         xmlns="http://www.w3.org/2000/svg">
-                        <path
-                            d="M2.39362 3.54634C2.62144 1.80354 4.10646 0.5 5.8641 0.5H14.1359C15.8935 0.5 17.3786 1.80354 17.6064 3.54634L19.4304 17.5H0.569613L2.39362 3.54634Z"
-                            stroke="#97C992"/>
-                    </svg>
-                    <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="green"
-                         xmlns="http://www.w3.org/2000/svg">
-                        <path
-                            d="M2.39362 3.54634C2.62144 1.80354 4.10646 0.5 5.8641 0.5H14.1359C15.8935 0.5 17.3786 1.80354 17.6064 3.54634L19.4304 17.5H0.569613L2.39362 3.54634Z"
-                            stroke="#97C992"/>
-                    </svg>
-                    <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="green"
-                         xmlns="http://www.w3.org/2000/svg">
-                        <path
-                            d="M2.39362 3.54634C2.62144 1.80354 4.10646 0.5 5.8641 0.5H14.1359C15.8935 0.5 17.3786 1.80354 17.6064 3.54634L19.4304 17.5H0.569613L2.39362 3.54634Z"
-                            stroke="#97C992"/>
-                    </svg>
-                    <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="green"
-                         xmlns="http://www.w3.org/2000/svg">
-                        <path
-                            d="M2.39362 3.54634C2.62144 1.80354 4.10646 0.5 5.8641 0.5H14.1359C15.8935 0.5 17.3786 1.80354 17.6064 3.54634L19.4304 17.5H0.569613L2.39362 3.54634Z"
-                            stroke="#97C992"/>
-                    </svg>
-                    <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="green"
-                         xmlns="http://www.w3.org/2000/svg">
-                        <path
-                            d="M2.39362 3.54634C2.62144 1.80354 4.10646 0.5 5.8641 0.5H14.1359C15.8935 0.5 17.3786 1.80354 17.6064 3.54634L19.4304 17.5H0.569613L2.39362 3.54634Z"
-                            stroke="#97C992"/>
-                    </svg>
-                    <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="green"
-                         xmlns="http://www.w3.org/2000/svg">
-                        <path
-                            d="M2.39362 3.54634C2.62144 1.80354 4.10646 0.5 5.8641 0.5H14.1359C15.8935 0.5 17.3786 1.80354 17.6064 3.54634L19.4304 17.5H0.569613L2.39362 3.54634Z"
-                            stroke="#97C992"/>
-                    </svg>
-                    <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="green"
-                         xmlns="http://www.w3.org/2000/svg">
-                        <path
-                            d="M2.39362 3.54634C2.62144 1.80354 4.10646 0.5 5.8641 0.5H14.1359C15.8935 0.5 17.3786 1.80354 17.6064 3.54634L19.4304 17.5H0.569613L2.39362 3.54634Z"
-                            stroke="#97C992"/>
-                    </svg>
-                    <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="green"
-                         xmlns="http://www.w3.org/2000/svg">
-                        <path
-                            d="M2.39362 3.54634C2.62144 1.80354 4.10646 0.5 5.8641 0.5H14.1359C15.8935 0.5 17.3786 1.80354 17.6064 3.54634L19.4304 17.5H0.569613L2.39362 3.54634Z"
-                            stroke="#97C992"/>
-                    </svg>
-                    <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="green"
-                         xmlns="http://www.w3.org/2000/svg">
-                        <path
-                            d="M2.39362 3.54634C2.62144 1.80354 4.10646 0.5 5.8641 0.5H14.1359C15.8935 0.5 17.3786 1.80354 17.6064 3.54634L19.4304 17.5H0.569613L2.39362 3.54634Z"
-                            stroke="#97C992"/>
-                    </svg>
-                    <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="green"
-                         xmlns="http://www.w3.org/2000/svg">
-                        <path
-                            d="M2.39362 3.54634C2.62144 1.80354 4.10646 0.5 5.8641 0.5H14.1359C15.8935 0.5 17.3786 1.80354 17.6064 3.54634L19.4304 17.5H0.569613L2.39362 3.54634Z"
-                            stroke="#97C992"/>
-                    </svg>
-                    <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="green"
-                         xmlns="http://www.w3.org/2000/svg">
-                        <path
-                            d="M2.39362 3.54634C2.62144 1.80354 4.10646 0.5 5.8641 0.5H14.1359C15.8935 0.5 17.3786 1.80354 17.6064 3.54634L19.4304 17.5H0.569613L2.39362 3.54634Z"
-                            stroke="#97C992"/>
-                    </svg>
-                    <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="green"
-                         xmlns="http://www.w3.org/2000/svg">
-                        <path
-                            d="M2.39362 3.54634C2.62144 1.80354 4.10646 0.5 5.8641 0.5H14.1359C15.8935 0.5 17.3786 1.80354 17.6064 3.54634L19.4304 17.5H0.569613L2.39362 3.54634Z"
-                            stroke="#97C992"/>
-                    </svg>
-                    <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="green"
-                         xmlns="http://www.w3.org/2000/svg">
-                        <path
-                            d="M2.39362 3.54634C2.62144 1.80354 4.10646 0.5 5.8641 0.5H14.1359C15.8935 0.5 17.3786 1.80354 17.6064 3.54634L19.4304 17.5H0.569613L2.39362 3.54634Z"
-                            stroke="#97C992"/>
-                    </svg>
-                    <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="green"
-                         xmlns="http://www.w3.org/2000/svg">
-                        <path
-                            d="M2.39362 3.54634C2.62144 1.80354 4.10646 0.5 5.8641 0.5H14.1359C15.8935 0.5 17.3786 1.80354 17.6064 3.54634L19.4304 17.5H0.569613L2.39362 3.54634Z"
-                            stroke="#97C992"/>
-                    </svg>
-                    <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="green"
-                         xmlns="http://www.w3.org/2000/svg">
-                        <path
-                            d="M2.39362 3.54634C2.62144 1.80354 4.10646 0.5 5.8641 0.5H14.1359C15.8935 0.5 17.3786 1.80354 17.6064 3.54634L19.4304 17.5H0.569613L2.39362 3.54634Z"
-                            stroke="#97C992"/>
-                    </svg>
+                    @foreach($rows['balcony']['items']['on_right'] as $col)
+                        @php
+                            $class = $loop->iteration === 3 ? 'mr1' : '';
+                        @endphp
+                            <svg
+                                data-uid="{{ $col['active'] ? $col['id'] : '' }}"
+                                data-col-id="{{ $col['id'] }}"
+                                data-row-id="{{ $col['row_id'] }}"
+                                width="20"
+                                height="18"
+                                viewBox="0 0 20 18"
+                                fill="none"
+                                class="seats green {{ $class }} {{ $col['active'] ? 'active' : '' }}"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M2.39362 3.54634C2.62144 1.80354 4.10646 0.5 5.8641 0.5H14.1359C15.8935 0.5 17.3786 1.80354 17.6064 3.54634L19.4304 17.5H0.569613L2.39362 3.54634Z"
+                                    stroke="#97C992"/>
+                            </svg>
+
+                    @endforeach
                 </div>
             </div>
             <div class="seats-row d-flex">
                 <div class="seats-center-wr">
-                    <span class="seat-num">Loja balcon</span>
+                    <span class="seat-num">{{ $vars['spectacle_map_lodge'] }} {{ $vars['spectacle_map_balcon'] }}</span>
                     <div class="seats-center">
-                        <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="red"
-                             xmlns="http://www.w3.org/2000/svg">
-                            <path
-                                d="M2.39362 3.54634C2.62144 1.80354 4.10646 0.5 5.8641 0.5H14.1359C15.8935 0.5 17.3786 1.80354 17.6064 3.54634L19.4304 17.5H0.569613L2.39362 3.54634Z"
-                                stroke="#97C992"/>
-                        </svg>
-                        <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="red"
-                             xmlns="http://www.w3.org/2000/svg">
-                            <path
-                                d="M2.39362 3.54634C2.62144 1.80354 4.10646 0.5 5.8641 0.5H14.1359C15.8935 0.5 17.3786 1.80354 17.6064 3.54634L19.4304 17.5H0.569613L2.39362 3.54634Z"
-                                stroke="#97C992"/>
-                        </svg>
-                        <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="red"
-                             xmlns="http://www.w3.org/2000/svg">
-                            <path
-                                d="M2.39362 3.54634C2.62144 1.80354 4.10646 0.5 5.8641 0.5H14.1359C15.8935 0.5 17.3786 1.80354 17.6064 3.54634L19.4304 17.5H0.569613L2.39362 3.54634Z"
-                                stroke="#97C992"/>
-                        </svg>
+                        @foreach($rows['balcony']['loggia'] as $col)
+                            <svg
+                                data-uid="{{ $col['active'] ? $col['id'] : '' }}"
+                                data-col-id="{{ $col['id'] }}"
+                                data-row-id="{{ $col['row_id'] }}"
+                                width="20"
+                                height="18"
+                                viewBox="0 0 20 18"
+                                fill="none"
+                                class="seats red {{ $col['active'] ? 'active' : '' }}"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M2.39362 3.54634C2.62144 1.80354 4.10646 0.5 5.8641 0.5H14.1359C15.8935 0.5 17.3786 1.80354 17.6064 3.54634L19.4304 17.5H0.569613L2.39362 3.54634Z"
+                                    stroke="#97C992"/>
+                            </svg>
+                        @endforeach
                     </div>
                 </div>
             </div>
             <div class="seats-row d-flex">
                 <div class="seats-left pl1 pr1">
-                    <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="blue ml1"
-                         xmlns="http://www.w3.org/2000/svg">
-                        <path
-                            d="M2.39362 3.54634C2.62144 1.80354 4.10646 0.5 5.8641 0.5H14.1359C15.8935 0.5 17.3786 1.80354 17.6064 3.54634L19.4304 17.5H0.569613L2.39362 3.54634Z"
-                            stroke="#97C992"/>
-                    </svg>
-                    <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="blue"
-                         xmlns="http://www.w3.org/2000/svg">
-                        <path
-                            d="M2.39362 3.54634C2.62144 1.80354 4.10646 0.5 5.8641 0.5H14.1359C15.8935 0.5 17.3786 1.80354 17.6064 3.54634L19.4304 17.5H0.569613L2.39362 3.54634Z"
-                            stroke="#97C992"/>
-                    </svg>
-                    <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="blue"
-                         xmlns="http://www.w3.org/2000/svg">
-                        <path
-                            d="M2.39362 3.54634C2.62144 1.80354 4.10646 0.5 5.8641 0.5H14.1359C15.8935 0.5 17.3786 1.80354 17.6064 3.54634L19.4304 17.5H0.569613L2.39362 3.54634Z"
-                            stroke="#97C992"/>
-                    </svg>
-                    <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="blue"
-                         xmlns="http://www.w3.org/2000/svg">
-                        <path
-                            d="M2.39362 3.54634C2.62144 1.80354 4.10646 0.5 5.8641 0.5H14.1359C15.8935 0.5 17.3786 1.80354 17.6064 3.54634L19.4304 17.5H0.569613L2.39362 3.54634Z"
-                            stroke="#97C992"/>
-                    </svg>
-                    <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="blue"
-                         xmlns="http://www.w3.org/2000/svg">
-                        <path
-                            d="M2.39362 3.54634C2.62144 1.80354 4.10646 0.5 5.8641 0.5H14.1359C15.8935 0.5 17.3786 1.80354 17.6064 3.54634L19.4304 17.5H0.569613L2.39362 3.54634Z"
-                            stroke="#97C992"/>
-                    </svg>
-                    <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="blue"
-                         xmlns="http://www.w3.org/2000/svg">
-                        <path
-                            d="M2.39362 3.54634C2.62144 1.80354 4.10646 0.5 5.8641 0.5H14.1359C15.8935 0.5 17.3786 1.80354 17.6064 3.54634L19.4304 17.5H0.569613L2.39362 3.54634Z"
-                            stroke="#97C992"/>
-                    </svg>
-                    <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="blue"
-                         xmlns="http://www.w3.org/2000/svg">
-                        <path
-                            d="M2.39362 3.54634C2.62144 1.80354 4.10646 0.5 5.8641 0.5H14.1359C15.8935 0.5 17.3786 1.80354 17.6064 3.54634L19.4304 17.5H0.569613L2.39362 3.54634Z"
-                            stroke="#97C992"/>
-                    </svg>
-                    <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="blue"
-                         xmlns="http://www.w3.org/2000/svg">
-                        <path
-                            d="M2.39362 3.54634C2.62144 1.80354 4.10646 0.5 5.8641 0.5H14.1359C15.8935 0.5 17.3786 1.80354 17.6064 3.54634L19.4304 17.5H0.569613L2.39362 3.54634Z"
-                            stroke="#97C992"/>
-                    </svg>
-                    <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="blue"
-                         xmlns="http://www.w3.org/2000/svg">
-                        <path
-                            d="M2.39362 3.54634C2.62144 1.80354 4.10646 0.5 5.8641 0.5H14.1359C15.8935 0.5 17.3786 1.80354 17.6064 3.54634L19.4304 17.5H0.569613L2.39362 3.54634Z"
-                            stroke="#97C992"/>
-                    </svg>
-                    <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="blue"
-                         xmlns="http://www.w3.org/2000/svg">
-                        <path
-                            d="M2.39362 3.54634C2.62144 1.80354 4.10646 0.5 5.8641 0.5H14.1359C15.8935 0.5 17.3786 1.80354 17.6064 3.54634L19.4304 17.5H0.569613L2.39362 3.54634Z"
-                            stroke="#97C992"/>
-                    </svg>
-                    <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="blue"
-                         xmlns="http://www.w3.org/2000/svg">
-                        <path
-                            d="M2.39362 3.54634C2.62144 1.80354 4.10646 0.5 5.8641 0.5H14.1359C15.8935 0.5 17.3786 1.80354 17.6064 3.54634L19.4304 17.5H0.569613L2.39362 3.54634Z"
-                            stroke="#97C992"/>
-                    </svg>
-                    <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="blue"
-                         xmlns="http://www.w3.org/2000/svg">
-                        <path
-                            d="M2.39362 3.54634C2.62144 1.80354 4.10646 0.5 5.8641 0.5H14.1359C15.8935 0.5 17.3786 1.80354 17.6064 3.54634L19.4304 17.5H0.569613L2.39362 3.54634Z"
-                            stroke="#97C992"/>
-                    </svg>
-                    <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="blue"
-                         xmlns="http://www.w3.org/2000/svg">
-                        <path
-                            d="M2.39362 3.54634C2.62144 1.80354 4.10646 0.5 5.8641 0.5H14.1359C15.8935 0.5 17.3786 1.80354 17.6064 3.54634L19.4304 17.5H0.569613L2.39362 3.54634Z"
-                            stroke="#97C992"/>
-                    </svg>
-                    <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="blue"
-                         xmlns="http://www.w3.org/2000/svg">
-                        <path
-                            d="M2.39362 3.54634C2.62144 1.80354 4.10646 0.5 5.8641 0.5H14.1359C15.8935 0.5 17.3786 1.80354 17.6064 3.54634L19.4304 17.5H0.569613L2.39362 3.54634Z"
-                            stroke="#97C992"/>
-                    </svg>
-                    <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="blue"
-                         xmlns="http://www.w3.org/2000/svg">
-                        <path
-                            d="M2.39362 3.54634C2.62144 1.80354 4.10646 0.5 5.8641 0.5H14.1359C15.8935 0.5 17.3786 1.80354 17.6064 3.54634L19.4304 17.5H0.569613L2.39362 3.54634Z"
-                            stroke="#97C992"/>
-                    </svg>
-                    <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="blue"
-                         xmlns="http://www.w3.org/2000/svg">
-                        <path
-                            d="M2.39362 3.54634C2.62144 1.80354 4.10646 0.5 5.8641 0.5H14.1359C15.8935 0.5 17.3786 1.80354 17.6064 3.54634L19.4304 17.5H0.569613L2.39362 3.54634Z"
-                            stroke="#97C992"/>
-                    </svg>
-                    <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="blue"
-                         xmlns="http://www.w3.org/2000/svg">
-                        <path
-                            d="M2.39362 3.54634C2.62144 1.80354 4.10646 0.5 5.8641 0.5H14.1359C15.8935 0.5 17.3786 1.80354 17.6064 3.54634L19.4304 17.5H0.569613L2.39362 3.54634Z"
-                            stroke="#97C992"/>
-                    </svg>
-                    <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="blue"
-                         xmlns="http://www.w3.org/2000/svg">
-                        <path
-                            d="M2.39362 3.54634C2.62144 1.80354 4.10646 0.5 5.8641 0.5H14.1359C15.8935 0.5 17.3786 1.80354 17.6064 3.54634L19.4304 17.5H0.569613L2.39362 3.54634Z"
-                            stroke="#97C992"/>
-                    </svg>
-                    <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="blue busy"
-                         xmlns="http://www.w3.org/2000/svg">
-                        <path
-                            d="M2.39362 3.54634C2.62144 1.80354 4.10646 0.5 5.8641 0.5H14.1359C15.8935 0.5 17.3786 1.80354 17.6064 3.54634L19.4304 17.5H0.569613L2.39362 3.54634Z"
-                            stroke="#97C992"/>
-                    </svg>
-                    <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="blue"
-                         xmlns="http://www.w3.org/2000/svg">
-                        <path
-                            d="M2.39362 3.54634C2.62144 1.80354 4.10646 0.5 5.8641 0.5H14.1359C15.8935 0.5 17.3786 1.80354 17.6064 3.54634L19.4304 17.5H0.569613L2.39362 3.54634Z"
-                            stroke="#97C992"/>
-                    </svg>
-                    <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="blue"
-                         xmlns="http://www.w3.org/2000/svg">
-                        <path
-                            d="M2.39362 3.54634C2.62144 1.80354 4.10646 0.5 5.8641 0.5H14.1359C15.8935 0.5 17.3786 1.80354 17.6064 3.54634L19.4304 17.5H0.569613L2.39362 3.54634Z"
-                            stroke="#97C992"/>
-                    </svg>
-                    <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="blue"
-                         xmlns="http://www.w3.org/2000/svg">
-                        <path
-                            d="M2.39362 3.54634C2.62144 1.80354 4.10646 0.5 5.8641 0.5H14.1359C15.8935 0.5 17.3786 1.80354 17.6064 3.54634L19.4304 17.5H0.569613L2.39362 3.54634Z"
-                            stroke="#97C992"/>
-                    </svg>
-                    <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="blue busy"
-                         xmlns="http://www.w3.org/2000/svg">
-                        <path
-                            d="M2.39362 3.54634C2.62144 1.80354 4.10646 0.5 5.8641 0.5H14.1359C15.8935 0.5 17.3786 1.80354 17.6064 3.54634L19.4304 17.5H0.569613L2.39362 3.54634Z"
-                            stroke="#97C992"/>
-                    </svg>
-                    <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="blue busy"
-                         xmlns="http://www.w3.org/2000/svg">
-                        <path
-                            d="M2.39362 3.54634C2.62144 1.80354 4.10646 0.5 5.8641 0.5H14.1359C15.8935 0.5 17.3786 1.80354 17.6064 3.54634L19.4304 17.5H0.569613L2.39362 3.54634Z"
-                            stroke="#97C992"/>
-                    </svg>
-                    <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="blue"
-                         xmlns="http://www.w3.org/2000/svg">
-                        <path
-                            d="M2.39362 3.54634C2.62144 1.80354 4.10646 0.5 5.8641 0.5H14.1359C15.8935 0.5 17.3786 1.80354 17.6064 3.54634L19.4304 17.5H0.569613L2.39362 3.54634Z"
-                            stroke="#97C992"/>
-                    </svg>
-                    <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="blue"
-                         xmlns="http://www.w3.org/2000/svg">
-                        <path
-                            d="M2.39362 3.54634C2.62144 1.80354 4.10646 0.5 5.8641 0.5H14.1359C15.8935 0.5 17.3786 1.80354 17.6064 3.54634L19.4304 17.5H0.569613L2.39362 3.54634Z"
-                            stroke="#97C992"/>
-                    </svg>
-                    <!-- purple seats -->
-                    <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="purple"
-                         xmlns="http://www.w3.org/2000/svg">
-                        <path
-                            d="M2.39362 3.54634C2.62144 1.80354 4.10646 0.5 5.8641 0.5H14.1359C15.8935 0.5 17.3786 1.80354 17.6064 3.54634L19.4304 17.5H0.569613L2.39362 3.54634Z"
-                            stroke="#97C992"/>
-                    </svg>
-                    <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="purple"
-                         xmlns="http://www.w3.org/2000/svg">
-                        <path
-                            d="M2.39362 3.54634C2.62144 1.80354 4.10646 0.5 5.8641 0.5H14.1359C15.8935 0.5 17.3786 1.80354 17.6064 3.54634L19.4304 17.5H0.569613L2.39362 3.54634Z"
-                            stroke="#97C992"/>
-                    </svg>
-                    <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="purple"
-                         xmlns="http://www.w3.org/2000/svg">
-                        <path
-                            d="M2.39362 3.54634C2.62144 1.80354 4.10646 0.5 5.8641 0.5H14.1359C15.8935 0.5 17.3786 1.80354 17.6064 3.54634L19.4304 17.5H0.569613L2.39362 3.54634Z"
-                            stroke="#97C992"/>
-                    </svg>
-                    <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="purple"
-                         xmlns="http://www.w3.org/2000/svg">
-                        <path
-                            d="M2.39362 3.54634C2.62144 1.80354 4.10646 0.5 5.8641 0.5H14.1359C15.8935 0.5 17.3786 1.80354 17.6064 3.54634L19.4304 17.5H0.569613L2.39362 3.54634Z"
-                            stroke="#97C992"/>
-                    </svg>
-                    <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="purple"
-                         xmlns="http://www.w3.org/2000/svg">
-                        <path
-                            d="M2.39362 3.54634C2.62144 1.80354 4.10646 0.5 5.8641 0.5H14.1359C15.8935 0.5 17.3786 1.80354 17.6064 3.54634L19.4304 17.5H0.569613L2.39362 3.54634Z"
-                            stroke="#97C992"/>
-                    </svg>
-                    <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="purple"
-                         xmlns="http://www.w3.org/2000/svg">
-                        <path
-                            d="M2.39362 3.54634C2.62144 1.80354 4.10646 0.5 5.8641 0.5H14.1359C15.8935 0.5 17.3786 1.80354 17.6064 3.54634L19.4304 17.5H0.569613L2.39362 3.54634Z"
-                            stroke="#97C992"/>
-                    </svg>
-                    <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="purple"
-                         xmlns="http://www.w3.org/2000/svg">
-                        <path
-                            d="M2.39362 3.54634C2.62144 1.80354 4.10646 0.5 5.8641 0.5H14.1359C15.8935 0.5 17.3786 1.80354 17.6064 3.54634L19.4304 17.5H0.569613L2.39362 3.54634Z"
-                            stroke="#97C992"/>
-                    </svg>
-                    <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="purple"
-                         xmlns="http://www.w3.org/2000/svg">
-                        <path
-                            d="M2.39362 3.54634C2.62144 1.80354 4.10646 0.5 5.8641 0.5H14.1359C15.8935 0.5 17.3786 1.80354 17.6064 3.54634L19.4304 17.5H0.569613L2.39362 3.54634Z"
-                            stroke="#97C992"/>
-                    </svg>
-                    <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="purple"
-                         xmlns="http://www.w3.org/2000/svg">
-                        <path
-                            d="M2.39362 3.54634C2.62144 1.80354 4.10646 0.5 5.8641 0.5H14.1359C15.8935 0.5 17.3786 1.80354 17.6064 3.54634L19.4304 17.5H0.569613L2.39362 3.54634Z"
-                            stroke="#97C992"/>
-                    </svg>
-                    <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="purple"
-                         xmlns="http://www.w3.org/2000/svg">
-                        <path
-                            d="M2.39362 3.54634C2.62144 1.80354 4.10646 0.5 5.8641 0.5H14.1359C15.8935 0.5 17.3786 1.80354 17.6064 3.54634L19.4304 17.5H0.569613L2.39362 3.54634Z"
-                            stroke="#97C992"/>
-                    </svg>
-                    <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="purple"
-                         xmlns="http://www.w3.org/2000/svg">
-                        <path
-                            d="M2.39362 3.54634C2.62144 1.80354 4.10646 0.5 5.8641 0.5H14.1359C15.8935 0.5 17.3786 1.80354 17.6064 3.54634L19.4304 17.5H0.569613L2.39362 3.54634Z"
-                            stroke="#97C992"/>
-                    </svg>
-                    <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="purple"
-                         xmlns="http://www.w3.org/2000/svg">
-                        <path
-                            d="M2.39362 3.54634C2.62144 1.80354 4.10646 0.5 5.8641 0.5H14.1359C15.8935 0.5 17.3786 1.80354 17.6064 3.54634L19.4304 17.5H0.569613L2.39362 3.54634Z"
-                            stroke="#97C992"/>
-                    </svg>
-                    <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="purple"
-                         xmlns="http://www.w3.org/2000/svg">
-                        <path
-                            d="M2.39362 3.54634C2.62144 1.80354 4.10646 0.5 5.8641 0.5H14.1359C15.8935 0.5 17.3786 1.80354 17.6064 3.54634L19.4304 17.5H0.569613L2.39362 3.54634Z"
-                            stroke="#97C992"/>
-                    </svg>
-                    <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="purple"
-                         xmlns="http://www.w3.org/2000/svg">
-                        <path
-                            d="M2.39362 3.54634C2.62144 1.80354 4.10646 0.5 5.8641 0.5H14.1359C15.8935 0.5 17.3786 1.80354 17.6064 3.54634L19.4304 17.5H0.569613L2.39362 3.54634Z"
-                            stroke="#97C992"/>
-                    </svg>
-                    <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="purple"
-                         xmlns="http://www.w3.org/2000/svg">
-                        <path
-                            d="M2.39362 3.54634C2.62144 1.80354 4.10646 0.5 5.8641 0.5H14.1359C15.8935 0.5 17.3786 1.80354 17.6064 3.54634L19.4304 17.5H0.569613L2.39362 3.54634Z"
-                            stroke="#97C992"/>
-                    </svg>
-                    <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="purple"
-                         xmlns="http://www.w3.org/2000/svg">
-                        <path
-                            d="M2.39362 3.54634C2.62144 1.80354 4.10646 0.5 5.8641 0.5H14.1359C15.8935 0.5 17.3786 1.80354 17.6064 3.54634L19.4304 17.5H0.569613L2.39362 3.54634Z"
-                            stroke="#97C992"/>
-                    </svg>
-                    <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="purple"
-                         xmlns="http://www.w3.org/2000/svg">
-                        <path
-                            d="M2.39362 3.54634C2.62144 1.80354 4.10646 0.5 5.8641 0.5H14.1359C15.8935 0.5 17.3786 1.80354 17.6064 3.54634L19.4304 17.5H0.569613L2.39362 3.54634Z"
-                            stroke="#97C992"/>
-                    </svg>
-                    <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="purple"
-                         xmlns="http://www.w3.org/2000/svg">
-                        <path
-                            d="M2.39362 3.54634C2.62144 1.80354 4.10646 0.5 5.8641 0.5H14.1359C15.8935 0.5 17.3786 1.80354 17.6064 3.54634L19.4304 17.5H0.569613L2.39362 3.54634Z"
-                            stroke="#97C992"/>
-                    </svg>
+                    @foreach($rows['rows']['items'][13]['data']['on_left'] as $col)
+                        @php
+                            $class = $loop->iteration === 1 ? 'ml1' : '';
+                        @endphp
+
+                        <svg
+                            data-uid="{{ $col['active'] ? $col['id'] : '' }}"
+                            data-col-id="{{ $col['id'] }}"
+                            data-row-id="{{ $col['row_id'] }}"
+                            width="20"
+                            height="18"
+                            viewBox="0 0 20 18"
+                            fill="none"
+                            class="seats {{ $rows['rows']['items'][13]['color'] }} {{ $class }} {{ $col['active'] ? 'active' : '' }}"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M2.39362 3.54634C2.62144 1.80354 4.10646 0.5 5.8641 0.5H14.1359C15.8935 0.5 17.3786 1.80354 17.6064 3.54634L19.4304 17.5H0.569613L2.39362 3.54634Z"
+                                stroke="#97C992"/>
+                        </svg>
+                    @endforeach
+
+                    @foreach($rows['rows']['items'][12]['data']['on_left'] as $col)
+                        <svg
+                            data-uid="{{ $col['active'] ? $col['id'] : '' }}"
+                            data-col-id="{{ $col['id'] }}"
+                            data-row-id="{{ $col['row_id'] }}"
+                            width="20"
+                            height="18"
+                            viewBox="0 0 20 18"
+                            fill="none"
+                            class="seats {{ $rows['rows']['items'][12]['color'] }} {{ $col['active'] ? 'active' : '' }}"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M2.39362 3.54634C2.62144 1.80354 4.10646 0.5 5.8641 0.5H14.1359C15.8935 0.5 17.3786 1.80354 17.6064 3.54634L19.4304 17.5H0.569613L2.39362 3.54634Z"
+                                stroke="#97C992"/>
+                        </svg>
+                    @endforeach
+
+                    @foreach($rows['rows']['items'][11]['data']['on_left'] as $col)
+                        <svg
+                            data-uid="{{ $col['active'] ? $col['id'] : '' }}"
+                            data-col-id="{{ $col['id'] }}"
+                            data-row-id="{{ $col['row_id'] }}"
+                            width="20"
+                            height="18"
+                            viewBox="0 0 20 18"
+                            fill="none"
+                            class="seats {{ $rows['rows']['items'][11]['color'] }} {{ $col['active'] ? 'active' : '' }}"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M2.39362 3.54634C2.62144 1.80354 4.10646 0.5 5.8641 0.5H14.1359C15.8935 0.5 17.3786 1.80354 17.6064 3.54634L19.4304 17.5H0.569613L2.39362 3.54634Z"
+                                stroke="#97C992"/>
+                        </svg>
+                    @endforeach
+
+                    @foreach($rows['rows']['items'][10]['data']['on_left'] as $col)
+                        <svg
+                            data-uid="{{ $col['active'] ? $col['id'] : '' }}"
+                            data-col-id="{{ $col['id'] }}"
+                            data-row-id="{{ $col['row_id'] }}"
+                            width="20"
+                            height="18"
+                            viewBox="0 0 20 18"
+                            fill="none"
+                            class="seats {{ $rows['rows']['items'][10]['color'] }} {{ $col['active'] ? 'active' : '' }}"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M2.39362 3.54634C2.62144 1.80354 4.10646 0.5 5.8641 0.5H14.1359C15.8935 0.5 17.3786 1.80354 17.6064 3.54634L19.4304 17.5H0.569613L2.39362 3.54634Z"
+                                stroke="#97C992"/>
+                        </svg>
+                    @endforeach
+
+                    @foreach($rows['rows']['items'][9]['data']['on_left'] as $col)
+                        <svg
+                            data-uid="{{ $col['active'] ? $col['id'] : '' }}"
+                            data-col-id="{{ $col['id'] }}"
+                            data-row-id="{{ $col['row_id'] }}"
+                            width="20"
+                            height="18"
+                            viewBox="0 0 20 18"
+                            fill="none"
+                            class="seats {{ $rows['rows']['items'][9]['color'] }} {{ $col['active'] ? 'active' : '' }}"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M2.39362 3.54634C2.62144 1.80354 4.10646 0.5 5.8641 0.5H14.1359C15.8935 0.5 17.3786 1.80354 17.6064 3.54634L19.4304 17.5H0.569613L2.39362 3.54634Z"
+                                stroke="#97C992"/>
+                        </svg>
+                    @endforeach
                 </div>
                 <div class="seats-num mr1 ml1">
                     <span class="seat-num">13</span>
@@ -493,418 +179,181 @@
                     <span class="seat-num">9</span>
                 </div>
                 <div class="seats-right pl1 pr1 mr1">
-                    <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="blue"
-                         xmlns="http://www.w3.org/2000/svg">
-                        <path
-                            d="M2.39362 3.54634C2.62144 1.80354 4.10646 0.5 5.8641 0.5H14.1359C15.8935 0.5 17.3786 1.80354 17.6064 3.54634L19.4304 17.5H0.569613L2.39362 3.54634Z"
-                            stroke="#97C992"/>
-                    </svg>
-                    <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="blue"
-                         xmlns="http://www.w3.org/2000/svg">
-                        <path
-                            d="M2.39362 3.54634C2.62144 1.80354 4.10646 0.5 5.8641 0.5H14.1359C15.8935 0.5 17.3786 1.80354 17.6064 3.54634L19.4304 17.5H0.569613L2.39362 3.54634Z"
-                            stroke="#97C992"/>
-                    </svg>
-                    <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="blue"
-                         xmlns="http://www.w3.org/2000/svg">
-                        <path
-                            d="M2.39362 3.54634C2.62144 1.80354 4.10646 0.5 5.8641 0.5H14.1359C15.8935 0.5 17.3786 1.80354 17.6064 3.54634L19.4304 17.5H0.569613L2.39362 3.54634Z"
-                            stroke="#97C992"/>
-                    </svg>
-                    <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="blue"
-                         xmlns="http://www.w3.org/2000/svg">
-                        <path
-                            d="M2.39362 3.54634C2.62144 1.80354 4.10646 0.5 5.8641 0.5H14.1359C15.8935 0.5 17.3786 1.80354 17.6064 3.54634L19.4304 17.5H0.569613L2.39362 3.54634Z"
-                            stroke="#97C992"/>
-                    </svg>
-                    <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="blue"
-                         xmlns="http://www.w3.org/2000/svg">
-                        <path
-                            d="M2.39362 3.54634C2.62144 1.80354 4.10646 0.5 5.8641 0.5H14.1359C15.8935 0.5 17.3786 1.80354 17.6064 3.54634L19.4304 17.5H0.569613L2.39362 3.54634Z"
-                            stroke="#97C992"/>
-                    </svg>
-                    <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="blue"
-                         xmlns="http://www.w3.org/2000/svg">
-                        <path
-                            d="M2.39362 3.54634C2.62144 1.80354 4.10646 0.5 5.8641 0.5H14.1359C15.8935 0.5 17.3786 1.80354 17.6064 3.54634L19.4304 17.5H0.569613L2.39362 3.54634Z"
-                            stroke="#97C992"/>
-                    </svg>
-                    <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="blue mr1"
-                         xmlns="http://www.w3.org/2000/svg">
-                        <path
-                            d="M2.39362 3.54634C2.62144 1.80354 4.10646 0.5 5.8641 0.5H14.1359C15.8935 0.5 17.3786 1.80354 17.6064 3.54634L19.4304 17.5H0.569613L2.39362 3.54634Z"
-                            stroke="#97C992"/>
-                    </svg>
-                    <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="blue"
-                         xmlns="http://www.w3.org/2000/svg">
-                        <path
-                            d="M2.39362 3.54634C2.62144 1.80354 4.10646 0.5 5.8641 0.5H14.1359C15.8935 0.5 17.3786 1.80354 17.6064 3.54634L19.4304 17.5H0.569613L2.39362 3.54634Z"
-                            stroke="#97C992"/>
-                    </svg>
-                    <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="blue"
-                         xmlns="http://www.w3.org/2000/svg">
-                        <path
-                            d="M2.39362 3.54634C2.62144 1.80354 4.10646 0.5 5.8641 0.5H14.1359C15.8935 0.5 17.3786 1.80354 17.6064 3.54634L19.4304 17.5H0.569613L2.39362 3.54634Z"
-                            stroke="#97C992"/>
-                    </svg>
-                    <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="blue"
-                         xmlns="http://www.w3.org/2000/svg">
-                        <path
-                            d="M2.39362 3.54634C2.62144 1.80354 4.10646 0.5 5.8641 0.5H14.1359C15.8935 0.5 17.3786 1.80354 17.6064 3.54634L19.4304 17.5H0.569613L2.39362 3.54634Z"
-                            stroke="#97C992"/>
-                    </svg>
-                    <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="blue"
-                         xmlns="http://www.w3.org/2000/svg">
-                        <path
-                            d="M2.39362 3.54634C2.62144 1.80354 4.10646 0.5 5.8641 0.5H14.1359C15.8935 0.5 17.3786 1.80354 17.6064 3.54634L19.4304 17.5H0.569613L2.39362 3.54634Z"
-                            stroke="#97C992"/>
-                    </svg>
-                    <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="blue"
-                         xmlns="http://www.w3.org/2000/svg">
-                        <path
-                            d="M2.39362 3.54634C2.62144 1.80354 4.10646 0.5 5.8641 0.5H14.1359C15.8935 0.5 17.3786 1.80354 17.6064 3.54634L19.4304 17.5H0.569613L2.39362 3.54634Z"
-                            stroke="#97C992"/>
-                    </svg>
-                    <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="blue"
-                         xmlns="http://www.w3.org/2000/svg">
-                        <path
-                            d="M2.39362 3.54634C2.62144 1.80354 4.10646 0.5 5.8641 0.5H14.1359C15.8935 0.5 17.3786 1.80354 17.6064 3.54634L19.4304 17.5H0.569613L2.39362 3.54634Z"
-                            stroke="#97C992"/>
-                    </svg>
-                    <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="blue"
-                         xmlns="http://www.w3.org/2000/svg">
-                        <path
-                            d="M2.39362 3.54634C2.62144 1.80354 4.10646 0.5 5.8641 0.5H14.1359C15.8935 0.5 17.3786 1.80354 17.6064 3.54634L19.4304 17.5H0.569613L2.39362 3.54634Z"
-                            stroke="#97C992"/>
-                    </svg>
-                    <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="blue"
-                         xmlns="http://www.w3.org/2000/svg">
-                        <path
-                            d="M2.39362 3.54634C2.62144 1.80354 4.10646 0.5 5.8641 0.5H14.1359C15.8935 0.5 17.3786 1.80354 17.6064 3.54634L19.4304 17.5H0.569613L2.39362 3.54634Z"
-                            stroke="#97C992"/>
-                    </svg>
-                    <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="blue"
-                         xmlns="http://www.w3.org/2000/svg">
-                        <path
-                            d="M2.39362 3.54634C2.62144 1.80354 4.10646 0.5 5.8641 0.5H14.1359C15.8935 0.5 17.3786 1.80354 17.6064 3.54634L19.4304 17.5H0.569613L2.39362 3.54634Z"
-                            stroke="#97C992"/>
-                    </svg>
-                    <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="blue"
-                         xmlns="http://www.w3.org/2000/svg">
-                        <path
-                            d="M2.39362 3.54634C2.62144 1.80354 4.10646 0.5 5.8641 0.5H14.1359C15.8935 0.5 17.3786 1.80354 17.6064 3.54634L19.4304 17.5H0.569613L2.39362 3.54634Z"
-                            stroke="#97C992"/>
-                    </svg>
-                    <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="blue"
-                         xmlns="http://www.w3.org/2000/svg">
-                        <path
-                            d="M2.39362 3.54634C2.62144 1.80354 4.10646 0.5 5.8641 0.5H14.1359C15.8935 0.5 17.3786 1.80354 17.6064 3.54634L19.4304 17.5H0.569613L2.39362 3.54634Z"
-                            stroke="#97C992"/>
-                    </svg>
-                    <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="blue"
-                         xmlns="http://www.w3.org/2000/svg">
-                        <path
-                            d="M2.39362 3.54634C2.62144 1.80354 4.10646 0.5 5.8641 0.5H14.1359C15.8935 0.5 17.3786 1.80354 17.6064 3.54634L19.4304 17.5H0.569613L2.39362 3.54634Z"
-                            stroke="#97C992"/>
-                    </svg>
-                    <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="blue"
-                         xmlns="http://www.w3.org/2000/svg">
-                        <path
-                            d="M2.39362 3.54634C2.62144 1.80354 4.10646 0.5 5.8641 0.5H14.1359C15.8935 0.5 17.3786 1.80354 17.6064 3.54634L19.4304 17.5H0.569613L2.39362 3.54634Z"
-                            stroke="#97C992"/>
-                    </svg>
-                    <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="blue"
-                         xmlns="http://www.w3.org/2000/svg">
-                        <path
-                            d="M2.39362 3.54634C2.62144 1.80354 4.10646 0.5 5.8641 0.5H14.1359C15.8935 0.5 17.3786 1.80354 17.6064 3.54634L19.4304 17.5H0.569613L2.39362 3.54634Z"
-                            stroke="#97C992"/>
-                    </svg>
-                    <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="blue"
-                         xmlns="http://www.w3.org/2000/svg">
-                        <path
-                            d="M2.39362 3.54634C2.62144 1.80354 4.10646 0.5 5.8641 0.5H14.1359C15.8935 0.5 17.3786 1.80354 17.6064 3.54634L19.4304 17.5H0.569613L2.39362 3.54634Z"
-                            stroke="#97C992"/>
-                    </svg>
-                    <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="blue"
-                         xmlns="http://www.w3.org/2000/svg">
-                        <path
-                            d="M2.39362 3.54634C2.62144 1.80354 4.10646 0.5 5.8641 0.5H14.1359C15.8935 0.5 17.3786 1.80354 17.6064 3.54634L19.4304 17.5H0.569613L2.39362 3.54634Z"
-                            stroke="#97C992"/>
-                    </svg>
-                    <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="purple"
-                         xmlns="http://www.w3.org/2000/svg">
-                        <path
-                            d="M2.39362 3.54634C2.62144 1.80354 4.10646 0.5 5.8641 0.5H14.1359C15.8935 0.5 17.3786 1.80354 17.6064 3.54634L19.4304 17.5H0.569613L2.39362 3.54634Z"
-                            stroke="#97C992"/>
-                    </svg>
-                    <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="purple"
-                         xmlns="http://www.w3.org/2000/svg">
-                        <path
-                            d="M2.39362 3.54634C2.62144 1.80354 4.10646 0.5 5.8641 0.5H14.1359C15.8935 0.5 17.3786 1.80354 17.6064 3.54634L19.4304 17.5H0.569613L2.39362 3.54634Z"
-                            stroke="#97C992"/>
-                    </svg>
-                    <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="purple"
-                         xmlns="http://www.w3.org/2000/svg">
-                        <path
-                            d="M2.39362 3.54634C2.62144 1.80354 4.10646 0.5 5.8641 0.5H14.1359C15.8935 0.5 17.3786 1.80354 17.6064 3.54634L19.4304 17.5H0.569613L2.39362 3.54634Z"
-                            stroke="#97C992"/>
-                    </svg>
-                    <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="purple"
-                         xmlns="http://www.w3.org/2000/svg">
-                        <path
-                            d="M2.39362 3.54634C2.62144 1.80354 4.10646 0.5 5.8641 0.5H14.1359C15.8935 0.5 17.3786 1.80354 17.6064 3.54634L19.4304 17.5H0.569613L2.39362 3.54634Z"
-                            stroke="#97C992"/>
-                    </svg>
-                    <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="purple"
-                         xmlns="http://www.w3.org/2000/svg">
-                        <path
-                            d="M2.39362 3.54634C2.62144 1.80354 4.10646 0.5 5.8641 0.5H14.1359C15.8935 0.5 17.3786 1.80354 17.6064 3.54634L19.4304 17.5H0.569613L2.39362 3.54634Z"
-                            stroke="#97C992"/>
-                    </svg>
-                    <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="purple"
-                         xmlns="http://www.w3.org/2000/svg">
-                        <path
-                            d="M2.39362 3.54634C2.62144 1.80354 4.10646 0.5 5.8641 0.5H14.1359C15.8935 0.5 17.3786 1.80354 17.6064 3.54634L19.4304 17.5H0.569613L2.39362 3.54634Z"
-                            stroke="#97C992"/>
-                    </svg>
-                    <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="purple"
-                         xmlns="http://www.w3.org/2000/svg">
-                        <path
-                            d="M2.39362 3.54634C2.62144 1.80354 4.10646 0.5 5.8641 0.5H14.1359C15.8935 0.5 17.3786 1.80354 17.6064 3.54634L19.4304 17.5H0.569613L2.39362 3.54634Z"
-                            stroke="#97C992"/>
-                    </svg>
-                    <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="purple"
-                         xmlns="http://www.w3.org/2000/svg">
-                        <path
-                            d="M2.39362 3.54634C2.62144 1.80354 4.10646 0.5 5.8641 0.5H14.1359C15.8935 0.5 17.3786 1.80354 17.6064 3.54634L19.4304 17.5H0.569613L2.39362 3.54634Z"
-                            stroke="#97C992"/>
-                    </svg>
-                    <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="purple"
-                         xmlns="http://www.w3.org/2000/svg">
-                        <path
-                            d="M2.39362 3.54634C2.62144 1.80354 4.10646 0.5 5.8641 0.5H14.1359C15.8935 0.5 17.3786 1.80354 17.6064 3.54634L19.4304 17.5H0.569613L2.39362 3.54634Z"
-                            stroke="#97C992"/>
-                    </svg>
-                    <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="purple"
-                         xmlns="http://www.w3.org/2000/svg">
-                        <path
-                            d="M2.39362 3.54634C2.62144 1.80354 4.10646 0.5 5.8641 0.5H14.1359C15.8935 0.5 17.3786 1.80354 17.6064 3.54634L19.4304 17.5H0.569613L2.39362 3.54634Z"
-                            stroke="#97C992"/>
-                    </svg>
-                    <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="purple"
-                         xmlns="http://www.w3.org/2000/svg">
-                        <path
-                            d="M2.39362 3.54634C2.62144 1.80354 4.10646 0.5 5.8641 0.5H14.1359C15.8935 0.5 17.3786 1.80354 17.6064 3.54634L19.4304 17.5H0.569613L2.39362 3.54634Z"
-                            stroke="#97C992"/>
-                    </svg>
-                    <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="purple"
-                         xmlns="http://www.w3.org/2000/svg">
-                        <path
-                            d="M2.39362 3.54634C2.62144 1.80354 4.10646 0.5 5.8641 0.5H14.1359C15.8935 0.5 17.3786 1.80354 17.6064 3.54634L19.4304 17.5H0.569613L2.39362 3.54634Z"
-                            stroke="#97C992"/>
-                    </svg>
-                    <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="purple busy"
-                         xmlns="http://www.w3.org/2000/svg">
-                        <path
-                            d="M2.39362 3.54634C2.62144 1.80354 4.10646 0.5 5.8641 0.5H14.1359C15.8935 0.5 17.3786 1.80354 17.6064 3.54634L19.4304 17.5H0.569613L2.39362 3.54634Z"
-                            stroke="#97C992"/>
-                    </svg>
-                    <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="purple busy"
-                         xmlns="http://www.w3.org/2000/svg">
-                        <path
-                            d="M2.39362 3.54634C2.62144 1.80354 4.10646 0.5 5.8641 0.5H14.1359C15.8935 0.5 17.3786 1.80354 17.6064 3.54634L19.4304 17.5H0.569613L2.39362 3.54634Z"
-                            stroke="#97C992"/>
-                    </svg>
-                    <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="purple busy"
-                         xmlns="http://www.w3.org/2000/svg">
-                        <path
-                            d="M2.39362 3.54634C2.62144 1.80354 4.10646 0.5 5.8641 0.5H14.1359C15.8935 0.5 17.3786 1.80354 17.6064 3.54634L19.4304 17.5H0.569613L2.39362 3.54634Z"
-                            stroke="#97C992"/>
-                    </svg>
-                    <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="purple busy"
-                         xmlns="http://www.w3.org/2000/svg">
-                        <path
-                            d="M2.39362 3.54634C2.62144 1.80354 4.10646 0.5 5.8641 0.5H14.1359C15.8935 0.5 17.3786 1.80354 17.6064 3.54634L19.4304 17.5H0.569613L2.39362 3.54634Z"
-                            stroke="#97C992"/>
-                    </svg>
+                    @foreach($rows['rows']['items'][13]['data']['on_right'] as $col)
+                        @php
+                            $class = $loop->last ? 'mr1' : '';
+                        @endphp
+
+                        <svg
+                            data-uid="{{ $col['active'] ? $col['id'] : '' }}"
+                            data-col-id="{{ $col['id'] }}"
+                            data-row-id="{{ $col['row_id'] }}"
+                            width="20"
+                            height="18"
+                            viewBox="0 0 20 18"
+                            fill="none"
+                            class="seats {{ $rows['rows']['items'][13]['color'] }} {{ $class }} {{ $col['active'] ? 'active' : '' }}"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M2.39362 3.54634C2.62144 1.80354 4.10646 0.5 5.8641 0.5H14.1359C15.8935 0.5 17.3786 1.80354 17.6064 3.54634L19.4304 17.5H0.569613L2.39362 3.54634Z"
+                                stroke="#97C992"/>
+                        </svg>
+                    @endforeach
+
+                    @foreach($rows['rows']['items'][12]['data']['on_right'] as $col)
+                        <svg
+                            data-uid="{{ $col['active'] ? $col['id'] : '' }}"
+                            data-col-id="{{ $col['id'] }}"
+                            data-row-id="{{ $col['row_id'] }}"
+                            width="20"
+                            height="18"
+                            viewBox="0 0 20 18"
+                            fill="none"
+                            class="seats {{ $rows['rows']['items'][12]['color'] }} {{ $col['active'] ? 'active' : '' }}"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M2.39362 3.54634C2.62144 1.80354 4.10646 0.5 5.8641 0.5H14.1359C15.8935 0.5 17.3786 1.80354 17.6064 3.54634L19.4304 17.5H0.569613L2.39362 3.54634Z"
+                                stroke="#97C992"/>
+                        </svg>
+                    @endforeach
+
+                    @foreach($rows['rows']['items'][11]['data']['on_right'] as $col)
+                        <svg
+                            data-uid="{{ $col['active'] ? $col['id'] : '' }}"
+                            data-col-id="{{ $col['id'] }}"
+                            data-row-id="{{ $col['row_id'] }}"
+                            width="20"
+                            height="18"
+                            viewBox="0 0 20 18"
+                            fill="none"
+                            class="seats {{ $rows['rows']['items'][11]['color'] }} {{ $col['active'] ? 'active' : '' }}"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M2.39362 3.54634C2.62144 1.80354 4.10646 0.5 5.8641 0.5H14.1359C15.8935 0.5 17.3786 1.80354 17.6064 3.54634L19.4304 17.5H0.569613L2.39362 3.54634Z"
+                                stroke="#97C992"/>
+                        </svg>
+                    @endforeach
+
+                    @foreach($rows['rows']['items'][10]['data']['on_right'] as $col)
+                        <svg
+                            data-uid="{{ $col['active'] ? $col['id'] : '' }}"
+                            data-col-id="{{ $col['id'] }}"
+                            data-row-id="{{ $col['row_id'] }}"
+                            width="20"
+                            height="18"
+                            viewBox="0 0 20 18"
+                            fill="none"
+                            class="seats {{ $rows['rows']['items'][10]['color'] }} {{ $col['active'] ? 'active' : '' }}"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M2.39362 3.54634C2.62144 1.80354 4.10646 0.5 5.8641 0.5H14.1359C15.8935 0.5 17.3786 1.80354 17.6064 3.54634L19.4304 17.5H0.569613L2.39362 3.54634Z"
+                                stroke="#97C992"/>
+                        </svg>
+                    @endforeach
+
+                    @foreach($rows['rows']['items'][9]['data']['on_right'] as $col)
+                        <svg
+                            data-uid="{{ $col['active'] ? $col['id'] : '' }}"
+                            data-col-id="{{ $col['id'] }}"
+                            data-row-id="{{ $col['row_id'] }}"
+                            width="20"
+                            height="18"
+                            viewBox="0 0 20 18"
+                            fill="none"
+                            class="seats {{ $rows['rows']['items'][9]['color'] }} {{ $col['active'] ? 'active' : '' }}"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M2.39362 3.54634C2.62144 1.80354 4.10646 0.5 5.8641 0.5H14.1359C15.8935 0.5 17.3786 1.80354 17.6064 3.54634L19.4304 17.5H0.569613L2.39362 3.54634Z"
+                                stroke="#97C992"/>
+                        </svg>
+                    @endforeach
                 </div>
             </div>
             <div class="seats-row d-flex mb50">
                 <div class="seats-left pl2 pr1">
-                    <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="yellow"
-                         xmlns="http://www.w3.org/2000/svg">
-                        <path
-                            d="M2.39362 3.54634C2.62144 1.80354 4.10646 0.5 5.8641 0.5H14.1359C15.8935 0.5 17.3786 1.80354 17.6064 3.54634L19.4304 17.5H0.569613L2.39362 3.54634Z"
-                            stroke="#97C992"/>
-                    </svg>
-                    <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="yellow"
-                         xmlns="http://www.w3.org/2000/svg">
-                        <path
-                            d="M2.39362 3.54634C2.62144 1.80354 4.10646 0.5 5.8641 0.5H14.1359C15.8935 0.5 17.3786 1.80354 17.6064 3.54634L19.4304 17.5H0.569613L2.39362 3.54634Z"
-                            stroke="#97C992"/>
-                    </svg>
-                    <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="yellow"
-                         xmlns="http://www.w3.org/2000/svg">
-                        <path
-                            d="M2.39362 3.54634C2.62144 1.80354 4.10646 0.5 5.8641 0.5H14.1359C15.8935 0.5 17.3786 1.80354 17.6064 3.54634L19.4304 17.5H0.569613L2.39362 3.54634Z"
-                            stroke="#97C992"/>
-                    </svg>
-                    <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="yellow"
-                         xmlns="http://www.w3.org/2000/svg">
-                        <path
-                            d="M2.39362 3.54634C2.62144 1.80354 4.10646 0.5 5.8641 0.5H14.1359C15.8935 0.5 17.3786 1.80354 17.6064 3.54634L19.4304 17.5H0.569613L2.39362 3.54634Z"
-                            stroke="#97C992"/>
-                    </svg>
-                    <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="yellow"
-                         xmlns="http://www.w3.org/2000/svg">
-                        <path
-                            d="M2.39362 3.54634C2.62144 1.80354 4.10646 0.5 5.8641 0.5H14.1359C15.8935 0.5 17.3786 1.80354 17.6064 3.54634L19.4304 17.5H0.569613L2.39362 3.54634Z"
-                            stroke="#97C992"/>
-                    </svg>
-                    <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="yellow"
-                         xmlns="http://www.w3.org/2000/svg">
-                        <path
-                            d="M2.39362 3.54634C2.62144 1.80354 4.10646 0.5 5.8641 0.5H14.1359C15.8935 0.5 17.3786 1.80354 17.6064 3.54634L19.4304 17.5H0.569613L2.39362 3.54634Z"
-                            stroke="#97C992"/>
-                    </svg>
-                    <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="yellow"
-                         xmlns="http://www.w3.org/2000/svg">
-                        <path
-                            d="M2.39362 3.54634C2.62144 1.80354 4.10646 0.5 5.8641 0.5H14.1359C15.8935 0.5 17.3786 1.80354 17.6064 3.54634L19.4304 17.5H0.569613L2.39362 3.54634Z"
-                            stroke="#97C992"/>
-                    </svg>
-                    <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="yellow"
-                         xmlns="http://www.w3.org/2000/svg">
-                        <path
-                            d="M2.39362 3.54634C2.62144 1.80354 4.10646 0.5 5.8641 0.5H14.1359C15.8935 0.5 17.3786 1.80354 17.6064 3.54634L19.4304 17.5H0.569613L2.39362 3.54634Z"
-                            stroke="#97C992"/>
-                    </svg>
-                    <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="yellow ml1"
-                         xmlns="http://www.w3.org/2000/svg">
-                        <path
-                            d="M2.39362 3.54634C2.62144 1.80354 4.10646 0.5 5.8641 0.5H14.1359C15.8935 0.5 17.3786 1.80354 17.6064 3.54634L19.4304 17.5H0.569613L2.39362 3.54634Z"
-                            stroke="#97C992"/>
-                    </svg>
-                    <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="yellow"
-                         xmlns="http://www.w3.org/2000/svg">
-                        <path
-                            d="M2.39362 3.54634C2.62144 1.80354 4.10646 0.5 5.8641 0.5H14.1359C15.8935 0.5 17.3786 1.80354 17.6064 3.54634L19.4304 17.5H0.569613L2.39362 3.54634Z"
-                            stroke="#97C992"/>
-                    </svg>
-                    <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="yellow"
-                         xmlns="http://www.w3.org/2000/svg">
-                        <path
-                            d="M2.39362 3.54634C2.62144 1.80354 4.10646 0.5 5.8641 0.5H14.1359C15.8935 0.5 17.3786 1.80354 17.6064 3.54634L19.4304 17.5H0.569613L2.39362 3.54634Z"
-                            stroke="#97C992"/>
-                    </svg>
-                    <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="yellow"
-                         xmlns="http://www.w3.org/2000/svg">
-                        <path
-                            d="M2.39362 3.54634C2.62144 1.80354 4.10646 0.5 5.8641 0.5H14.1359C15.8935 0.5 17.3786 1.80354 17.6064 3.54634L19.4304 17.5H0.569613L2.39362 3.54634Z"
-                            stroke="#97C992"/>
-                    </svg>
-                    <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="yellow"
-                         xmlns="http://www.w3.org/2000/svg">
-                        <path
-                            d="M2.39362 3.54634C2.62144 1.80354 4.10646 0.5 5.8641 0.5H14.1359C15.8935 0.5 17.3786 1.80354 17.6064 3.54634L19.4304 17.5H0.569613L2.39362 3.54634Z"
-                            stroke="#97C992"/>
-                    </svg>
-                    <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="yellow"
-                         xmlns="http://www.w3.org/2000/svg">
-                        <path
-                            d="M2.39362 3.54634C2.62144 1.80354 4.10646 0.5 5.8641 0.5H14.1359C15.8935 0.5 17.3786 1.80354 17.6064 3.54634L19.4304 17.5H0.569613L2.39362 3.54634Z"
-                            stroke="#97C992"/>
-                    </svg>
-                    <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="yellow"
-                         xmlns="http://www.w3.org/2000/svg">
-                        <path
-                            d="M2.39362 3.54634C2.62144 1.80354 4.10646 0.5 5.8641 0.5H14.1359C15.8935 0.5 17.3786 1.80354 17.6064 3.54634L19.4304 17.5H0.569613L2.39362 3.54634Z"
-                            stroke="#97C992"/>
-                    </svg>
-                    <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="yellow ml1"
-                         xmlns="http://www.w3.org/2000/svg">
-                        <path
-                            d="M2.39362 3.54634C2.62144 1.80354 4.10646 0.5 5.8641 0.5H14.1359C15.8935 0.5 17.3786 1.80354 17.6064 3.54634L19.4304 17.5H0.569613L2.39362 3.54634Z"
-                            stroke="#97C992"/>
-                    </svg>
-                    <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="yellow"
-                         xmlns="http://www.w3.org/2000/svg">
-                        <path
-                            d="M2.39362 3.54634C2.62144 1.80354 4.10646 0.5 5.8641 0.5H14.1359C15.8935 0.5 17.3786 1.80354 17.6064 3.54634L19.4304 17.5H0.569613L2.39362 3.54634Z"
-                            stroke="#97C992"/>
-                    </svg>
-                    <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="yellow"
-                         xmlns="http://www.w3.org/2000/svg">
-                        <path
-                            d="M2.39362 3.54634C2.62144 1.80354 4.10646 0.5 5.8641 0.5H14.1359C15.8935 0.5 17.3786 1.80354 17.6064 3.54634L19.4304 17.5H0.569613L2.39362 3.54634Z"
-                            stroke="#97C992"/>
-                    </svg>
-                    <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="yellow"
-                         xmlns="http://www.w3.org/2000/svg">
-                        <path
-                            d="M2.39362 3.54634C2.62144 1.80354 4.10646 0.5 5.8641 0.5H14.1359C15.8935 0.5 17.3786 1.80354 17.6064 3.54634L19.4304 17.5H0.569613L2.39362 3.54634Z"
-                            stroke="#97C992"/>
-                    </svg>
-                    <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="yellow"
-                         xmlns="http://www.w3.org/2000/svg">
-                        <path
-                            d="M2.39362 3.54634C2.62144 1.80354 4.10646 0.5 5.8641 0.5H14.1359C15.8935 0.5 17.3786 1.80354 17.6064 3.54634L19.4304 17.5H0.569613L2.39362 3.54634Z"
-                            stroke="#97C992"/>
-                    </svg>
-                    <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="yellow"
-                         xmlns="http://www.w3.org/2000/svg">
-                        <path
-                            d="M2.39362 3.54634C2.62144 1.80354 4.10646 0.5 5.8641 0.5H14.1359C15.8935 0.5 17.3786 1.80354 17.6064 3.54634L19.4304 17.5H0.569613L2.39362 3.54634Z"
-                            stroke="#97C992"/>
-                    </svg>
-                    <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="yellow"
-                         xmlns="http://www.w3.org/2000/svg">
-                        <path
-                            d="M2.39362 3.54634C2.62144 1.80354 4.10646 0.5 5.8641 0.5H14.1359C15.8935 0.5 17.3786 1.80354 17.6064 3.54634L19.4304 17.5H0.569613L2.39362 3.54634Z"
-                            stroke="#97C992"/>
-                    </svg>
-                    <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="red ml1"
-                         xmlns="http://www.w3.org/2000/svg">
-                        <path
-                            d="M2.39362 3.54634C2.62144 1.80354 4.10646 0.5 5.8641 0.5H14.1359C15.8935 0.5 17.3786 1.80354 17.6064 3.54634L19.4304 17.5H0.569613L2.39362 3.54634Z"
-                            stroke="#97C992"/>
-                    </svg>
-                    <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="red"
-                         xmlns="http://www.w3.org/2000/svg">
-                        <path
-                            d="M2.39362 3.54634C2.62144 1.80354 4.10646 0.5 5.8641 0.5H14.1359C15.8935 0.5 17.3786 1.80354 17.6064 3.54634L19.4304 17.5H0.569613L2.39362 3.54634Z"
-                            stroke="#97C992"/>
-                    </svg>
-                    <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="red"
-                         xmlns="http://www.w3.org/2000/svg">
-                        <path
-                            d="M2.39362 3.54634C2.62144 1.80354 4.10646 0.5 5.8641 0.5H14.1359C15.8935 0.5 17.3786 1.80354 17.6064 3.54634L19.4304 17.5H0.569613L2.39362 3.54634Z"
-                            stroke="#97C992"/>
-                    </svg>
-                    <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="red"
-                         xmlns="http://www.w3.org/2000/svg">
-                        <path
-                            d="M2.39362 3.54634C2.62144 1.80354 4.10646 0.5 5.8641 0.5H14.1359C15.8935 0.5 17.3786 1.80354 17.6064 3.54634L19.4304 17.5H0.569613L2.39362 3.54634Z"
-                            stroke="#97C992"/>
-                    </svg>
-                    <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="red"
-                         xmlns="http://www.w3.org/2000/svg">
-                        <path
-                            d="M2.39362 3.54634C2.62144 1.80354 4.10646 0.5 5.8641 0.5H14.1359C15.8935 0.5 17.3786 1.80354 17.6064 3.54634L19.4304 17.5H0.569613L2.39362 3.54634Z"
-                            stroke="#97C992"/>
-                    </svg>
-                    <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="red"
-                         xmlns="http://www.w3.org/2000/svg">
-                        <path
-                            d="M2.39362 3.54634C2.62144 1.80354 4.10646 0.5 5.8641 0.5H14.1359C15.8935 0.5 17.3786 1.80354 17.6064 3.54634L19.4304 17.5H0.569613L2.39362 3.54634Z"
-                            stroke="#97C992"/>
-                    </svg>
-                    <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="red"
-                         xmlns="http://www.w3.org/2000/svg">
-                        <path
-                            d="M2.39362 3.54634C2.62144 1.80354 4.10646 0.5 5.8641 0.5H14.1359C15.8935 0.5 17.3786 1.80354 17.6064 3.54634L19.4304 17.5H0.569613L2.39362 3.54634Z"
-                            stroke="#97C992"/>
-                    </svg>
+                    @foreach($rows['rows']['items'][8]['data']['on_left'] as $col)
+                        <svg
+                            data-uid="{{ $col['active'] ? $col['id'] : '' }}"
+                            data-col-id="{{ $col['id'] }}"
+                            data-row-id="{{ $col['row_id'] }}"
+                            width="20"
+                            height="18"
+                            viewBox="0 0 20 18"
+                            fill="none"
+                            class="seats {{ $rows['rows']['items'][8]['color'] }} {{ $col['active'] ? 'active' : '' }}"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M2.39362 3.54634C2.62144 1.80354 4.10646 0.5 5.8641 0.5H14.1359C15.8935 0.5 17.3786 1.80354 17.6064 3.54634L19.4304 17.5H0.569613L2.39362 3.54634Z"
+                                stroke="#97C992"/>
+                        </svg>
+                    @endforeach
+
+                    @foreach($rows['rows']['items'][7]['data']['on_left'] as $col)
+                        @php
+                            $class = $loop->first ? 'ml1' : '';
+                        @endphp
+
+                        <svg
+                            data-uid="{{ $col['active'] ? $col['id'] : '' }}"
+                            data-col-id="{{ $col['id'] }}"
+                            data-row-id="{{ $col['row_id'] }}"
+                            width="20"
+                            height="18"
+                            viewBox="0 0 20 18"
+                            fill="none"
+                            class="seats {{ $rows['rows']['items'][7]['color'] }} {{ $class }} {{ $col['active'] ? 'active' : '' }}"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M2.39362 3.54634C2.62144 1.80354 4.10646 0.5 5.8641 0.5H14.1359C15.8935 0.5 17.3786 1.80354 17.6064 3.54634L19.4304 17.5H0.569613L2.39362 3.54634Z"
+                                stroke="#97C992"/>
+                        </svg>
+                    @endforeach
+
+                    @foreach($rows['rows']['items'][6]['data']['on_left'] as $col)
+                        @php
+                            $class = $loop->first ? 'ml1' : '';
+                        @endphp
+
+                        <svg
+                            data-uid="{{ $col['active'] ? $col['id'] : '' }}"
+                            data-col-id="{{ $col['id'] }}"
+                            data-row-id="{{ $col['row_id'] }}"
+                            width="20"
+                            height="18"
+                            viewBox="0 0 20 18"
+                            fill="none"
+                            class="seats {{ $rows['rows']['items'][6]['color'] }} {{ $class }} {{ $col['active'] ? 'active' : '' }}"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M2.39362 3.54634C2.62144 1.80354 4.10646 0.5 5.8641 0.5H14.1359C15.8935 0.5 17.3786 1.80354 17.6064 3.54634L19.4304 17.5H0.569613L2.39362 3.54634Z"
+                                stroke="#97C992"/>
+                        </svg>
+                    @endforeach
+
+                    @foreach($rows['rows']['items'][5]['data']['on_left'] as $col)
+                        @if($col['seat'] === 1)
+                            @continue
+                        @endif
+
+                        @php
+                            $class = $loop->iteration === 2 ? 'ml1' : '';
+                        @endphp
+
+                        <svg
+                            data-uid="{{ $col['active'] ? $col['id'] : '' }}"
+                            data-col-id="{{ $col['id'] }}"
+                            data-row-id="{{ $col['row_id'] }}"
+                            width="20"
+                            height="18"
+                            viewBox="0 0 20 18"
+                            fill="none"
+                            class="seats {{ $rows['rows']['items'][5]['color'] }} {{ $class }} {{ $col['active'] ? 'active' : '' }}"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M2.39362 3.54634C2.62144 1.80354 4.10646 0.5 5.8641 0.5H14.1359C15.8935 0.5 17.3786 1.80354 17.6064 3.54634L19.4304 17.5H0.569613L2.39362 3.54634Z"
+                                stroke="#97C992"/>
+                        </svg>
+                    @endforeach
                 </div>
                 <div class="seats-num ml1 mr1">
                     <span class="seat-num">8</span>
@@ -913,385 +362,181 @@
                     <span class="seat-num">5</span>
                 </div>
                 <div class="seats-right pl1 pr1 mr1">
-                    <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="yellow"
-                         xmlns="http://www.w3.org/2000/svg">
-                        <path
-                            d="M2.39362 3.54634C2.62144 1.80354 4.10646 0.5 5.8641 0.5H14.1359C15.8935 0.5 17.3786 1.80354 17.6064 3.54634L19.4304 17.5H0.569613L2.39362 3.54634Z"
-                            stroke="#97C992"/>
-                    </svg>
-                    <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="yellow"
-                         xmlns="http://www.w3.org/2000/svg">
-                        <path
-                            d="M2.39362 3.54634C2.62144 1.80354 4.10646 0.5 5.8641 0.5H14.1359C15.8935 0.5 17.3786 1.80354 17.6064 3.54634L19.4304 17.5H0.569613L2.39362 3.54634Z"
-                            stroke="#97C992"/>
-                    </svg>
-                    <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="yellow"
-                         xmlns="http://www.w3.org/2000/svg">
-                        <path
-                            d="M2.39362 3.54634C2.62144 1.80354 4.10646 0.5 5.8641 0.5H14.1359C15.8935 0.5 17.3786 1.80354 17.6064 3.54634L19.4304 17.5H0.569613L2.39362 3.54634Z"
-                            stroke="#97C992"/>
-                    </svg>
-                    <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="yellow"
-                         xmlns="http://www.w3.org/2000/svg">
-                        <path
-                            d="M2.39362 3.54634C2.62144 1.80354 4.10646 0.5 5.8641 0.5H14.1359C15.8935 0.5 17.3786 1.80354 17.6064 3.54634L19.4304 17.5H0.569613L2.39362 3.54634Z"
-                            stroke="#97C992"/>
-                    </svg>
-                    <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="yellow"
-                         xmlns="http://www.w3.org/2000/svg">
-                        <path
-                            d="M2.39362 3.54634C2.62144 1.80354 4.10646 0.5 5.8641 0.5H14.1359C15.8935 0.5 17.3786 1.80354 17.6064 3.54634L19.4304 17.5H0.569613L2.39362 3.54634Z"
-                            stroke="#97C992"/>
-                    </svg>
-                    <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="yellow"
-                         xmlns="http://www.w3.org/2000/svg">
-                        <path
-                            d="M2.39362 3.54634C2.62144 1.80354 4.10646 0.5 5.8641 0.5H14.1359C15.8935 0.5 17.3786 1.80354 17.6064 3.54634L19.4304 17.5H0.569613L2.39362 3.54634Z"
-                            stroke="#97C992"/>
-                    </svg>
-                    <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="yellow mr1"
-                         xmlns="http://www.w3.org/2000/svg">
-                        <path
-                            d="M2.39362 3.54634C2.62144 1.80354 4.10646 0.5 5.8641 0.5H14.1359C15.8935 0.5 17.3786 1.80354 17.6064 3.54634L19.4304 17.5H0.569613L2.39362 3.54634Z"
-                            stroke="#97C992"/>
-                    </svg>
-                    <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="yellow"
-                         xmlns="http://www.w3.org/2000/svg">
-                        <path
-                            d="M2.39362 3.54634C2.62144 1.80354 4.10646 0.5 5.8641 0.5H14.1359C15.8935 0.5 17.3786 1.80354 17.6064 3.54634L19.4304 17.5H0.569613L2.39362 3.54634Z"
-                            stroke="#97C992"/>
-                    </svg>
-                    <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="yellow"
-                         xmlns="http://www.w3.org/2000/svg">
-                        <path
-                            d="M2.39362 3.54634C2.62144 1.80354 4.10646 0.5 5.8641 0.5H14.1359C15.8935 0.5 17.3786 1.80354 17.6064 3.54634L19.4304 17.5H0.569613L2.39362 3.54634Z"
-                            stroke="#97C992"/>
-                    </svg>
-                    <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="yellow"
-                         xmlns="http://www.w3.org/2000/svg">
-                        <path
-                            d="M2.39362 3.54634C2.62144 1.80354 4.10646 0.5 5.8641 0.5H14.1359C15.8935 0.5 17.3786 1.80354 17.6064 3.54634L19.4304 17.5H0.569613L2.39362 3.54634Z"
-                            stroke="#97C992"/>
-                    </svg>
-                    <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="yellow"
-                         xmlns="http://www.w3.org/2000/svg">
-                        <path
-                            d="M2.39362 3.54634C2.62144 1.80354 4.10646 0.5 5.8641 0.5H14.1359C15.8935 0.5 17.3786 1.80354 17.6064 3.54634L19.4304 17.5H0.569613L2.39362 3.54634Z"
-                            stroke="#97C992"/>
-                    </svg>
-                    <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="yellow"
-                         xmlns="http://www.w3.org/2000/svg">
-                        <path
-                            d="M2.39362 3.54634C2.62144 1.80354 4.10646 0.5 5.8641 0.5H14.1359C15.8935 0.5 17.3786 1.80354 17.6064 3.54634L19.4304 17.5H0.569613L2.39362 3.54634Z"
-                            stroke="#97C992"/>
-                    </svg>
-                    <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="yellow mr2"
-                         xmlns="http://www.w3.org/2000/svg">
-                        <path
-                            d="M2.39362 3.54634C2.62144 1.80354 4.10646 0.5 5.8641 0.5H14.1359C15.8935 0.5 17.3786 1.80354 17.6064 3.54634L19.4304 17.5H0.569613L2.39362 3.54634Z"
-                            stroke="#97C992"/>
-                    </svg>
-                    <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="yellow"
-                         xmlns="http://www.w3.org/2000/svg">
-                        <path
-                            d="M2.39362 3.54634C2.62144 1.80354 4.10646 0.5 5.8641 0.5H14.1359C15.8935 0.5 17.3786 1.80354 17.6064 3.54634L19.4304 17.5H0.569613L2.39362 3.54634Z"
-                            stroke="#97C992"/>
-                    </svg>
-                    <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="yellow"
-                         xmlns="http://www.w3.org/2000/svg">
-                        <path
-                            d="M2.39362 3.54634C2.62144 1.80354 4.10646 0.5 5.8641 0.5H14.1359C15.8935 0.5 17.3786 1.80354 17.6064 3.54634L19.4304 17.5H0.569613L2.39362 3.54634Z"
-                            stroke="#97C992"/>
-                    </svg>
-                    <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="yellow"
-                         xmlns="http://www.w3.org/2000/svg">
-                        <path
-                            d="M2.39362 3.54634C2.62144 1.80354 4.10646 0.5 5.8641 0.5H14.1359C15.8935 0.5 17.3786 1.80354 17.6064 3.54634L19.4304 17.5H0.569613L2.39362 3.54634Z"
-                            stroke="#97C992"/>
-                    </svg>
-                    <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="yellow"
-                         xmlns="http://www.w3.org/2000/svg">
-                        <path
-                            d="M2.39362 3.54634C2.62144 1.80354 4.10646 0.5 5.8641 0.5H14.1359C15.8935 0.5 17.3786 1.80354 17.6064 3.54634L19.4304 17.5H0.569613L2.39362 3.54634Z"
-                            stroke="#97C992"/>
-                    </svg>
-                    <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="yellow"
-                         xmlns="http://www.w3.org/2000/svg">
-                        <path
-                            d="M2.39362 3.54634C2.62144 1.80354 4.10646 0.5 5.8641 0.5H14.1359C15.8935 0.5 17.3786 1.80354 17.6064 3.54634L19.4304 17.5H0.569613L2.39362 3.54634Z"
-                            stroke="#97C992"/>
-                    </svg>
-                    <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="yellow mr2"
-                         xmlns="http://www.w3.org/2000/svg">
-                        <path
-                            d="M2.39362 3.54634C2.62144 1.80354 4.10646 0.5 5.8641 0.5H14.1359C15.8935 0.5 17.3786 1.80354 17.6064 3.54634L19.4304 17.5H0.569613L2.39362 3.54634Z"
-                            stroke="#97C992"/>
-                    </svg>
-                    <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="red"
-                         xmlns="http://www.w3.org/2000/svg">
-                        <path
-                            d="M2.39362 3.54634C2.62144 1.80354 4.10646 0.5 5.8641 0.5H14.1359C15.8935 0.5 17.3786 1.80354 17.6064 3.54634L19.4304 17.5H0.569613L2.39362 3.54634Z"
-                            stroke="#97C992"/>
-                    </svg>
-                    <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="red"
-                         xmlns="http://www.w3.org/2000/svg">
-                        <path
-                            d="M2.39362 3.54634C2.62144 1.80354 4.10646 0.5 5.8641 0.5H14.1359C15.8935 0.5 17.3786 1.80354 17.6064 3.54634L19.4304 17.5H0.569613L2.39362 3.54634Z"
-                            stroke="#97C992"/>
-                    </svg>
-                    <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="red"
-                         xmlns="http://www.w3.org/2000/svg">
-                        <path
-                            d="M2.39362 3.54634C2.62144 1.80354 4.10646 0.5 5.8641 0.5H14.1359C15.8935 0.5 17.3786 1.80354 17.6064 3.54634L19.4304 17.5H0.569613L2.39362 3.54634Z"
-                            stroke="#97C992"/>
-                    </svg>
-                    <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="red"
-                         xmlns="http://www.w3.org/2000/svg">
-                        <path
-                            d="M2.39362 3.54634C2.62144 1.80354 4.10646 0.5 5.8641 0.5H14.1359C15.8935 0.5 17.3786 1.80354 17.6064 3.54634L19.4304 17.5H0.569613L2.39362 3.54634Z"
-                            stroke="#97C992"/>
-                    </svg>
-                    <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="red"
-                         xmlns="http://www.w3.org/2000/svg">
-                        <path
-                            d="M2.39362 3.54634C2.62144 1.80354 4.10646 0.5 5.8641 0.5H14.1359C15.8935 0.5 17.3786 1.80354 17.6064 3.54634L19.4304 17.5H0.569613L2.39362 3.54634Z"
-                            stroke="#97C992"/>
-                    </svg>
-                    <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="red"
-                         xmlns="http://www.w3.org/2000/svg">
-                        <path
-                            d="M2.39362 3.54634C2.62144 1.80354 4.10646 0.5 5.8641 0.5H14.1359C15.8935 0.5 17.3786 1.80354 17.6064 3.54634L19.4304 17.5H0.569613L2.39362 3.54634Z"
-                            stroke="#97C992"/>
-                    </svg>
+                    @foreach($rows['rows']['items'][8]['data']['on_right'] as $col)
+                        @php
+                            $class = $loop->last ? 'mr1' : '';
+                        @endphp
+
+                        <svg
+                            data-uid="{{ $col['active'] ? $col['id'] : '' }}"
+                            data-col-id="{{ $col['id'] }}"
+                            data-row-id="{{ $col['row_id'] }}"
+                            width="20"
+                            height="18"
+                            viewBox="0 0 20 18"
+                            fill="none"
+                            class="seats {{ $rows['rows']['items'][8]['color'] }} {{ $class }} {{ $col['active'] ? 'active' : '' }}"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M2.39362 3.54634C2.62144 1.80354 4.10646 0.5 5.8641 0.5H14.1359C15.8935 0.5 17.3786 1.80354 17.6064 3.54634L19.4304 17.5H0.569613L2.39362 3.54634Z"
+                                stroke="#97C992"/>
+                        </svg>
+                    @endforeach
+
+                    @foreach($rows['rows']['items'][7]['data']['on_right'] as $col)
+                        @php
+                            $class = $loop->last ? 'mr2' : '';
+                        @endphp
+
+                        <svg
+                            data-uid="{{ $col['active'] ? $col['id'] : '' }}"
+                            data-col-id="{{ $col['id'] }}"
+                            data-row-id="{{ $col['row_id'] }}"
+                            width="20"
+                            height="18"
+                            viewBox="0 0 20 18"
+                            fill="none"
+                            class="seats {{ $rows['rows']['items'][7]['color'] }} {{ $class }} {{ $col['active'] ? 'active' : '' }}"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M2.39362 3.54634C2.62144 1.80354 4.10646 0.5 5.8641 0.5H14.1359C15.8935 0.5 17.3786 1.80354 17.6064 3.54634L19.4304 17.5H0.569613L2.39362 3.54634Z"
+                                stroke="#97C992"/>
+                        </svg>
+                    @endforeach
+
+                    @foreach($rows['rows']['items'][6]['data']['on_right'] as $col)
+                        @php
+                            $class = $loop->last ? 'mr2' : '';
+                        @endphp
+
+                        <svg
+                            data-uid="{{ $col['active'] ? $col['id'] : '' }}"
+                            data-col-id="{{ $col['id'] }}"
+                            data-row-id="{{ $col['row_id'] }}"
+                            width="20"
+                            height="18"
+                            viewBox="0 0 20 18"
+                            fill="none"
+                            class="seats {{ $rows['rows']['items'][6]['color'] }} {{ $class }} {{ $col['active'] ? 'active' : '' }}"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M2.39362 3.54634C2.62144 1.80354 4.10646 0.5 5.8641 0.5H14.1359C15.8935 0.5 17.3786 1.80354 17.6064 3.54634L19.4304 17.5H0.569613L2.39362 3.54634Z"
+                                stroke="#97C992"/>
+                        </svg>
+                    @endforeach
+
+                    @foreach($rows['rows']['items'][5]['data']['on_right'] as $col)
+                        @if($col['seat'] === 15)
+                            @continue
+                        @endif
+
+                        <svg
+                            data-uid="{{ $col['active'] ? $col['id'] : '' }}"
+                            data-col-id="{{ $col['id'] }}"
+                            data-row-id="{{ $col['row_id'] }}"
+                            width="20"
+                            height="18"
+                            viewBox="0 0 20 18"
+                            fill="none"
+                            class="seats {{ $rows['rows']['items'][5]['color'] }} {{ $col['active'] ? 'active' : '' }}"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M2.39362 3.54634C2.62144 1.80354 4.10646 0.5 5.8641 0.5H14.1359C15.8935 0.5 17.3786 1.80354 17.6064 3.54634L19.4304 17.5H0.569613L2.39362 3.54634Z"
+                                stroke="#97C992"/>
+                        </svg>
+                    @endforeach
                 </div>
             </div>
             <div class="seats-row d-flex mb25">
                 <div class="seats-left pl1">
-                    <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="red ml1"
-                         xmlns="http://www.w3.org/2000/svg">
-                        <path
-                            d="M2.39362 3.54634C2.62144 1.80354 4.10646 0.5 5.8641 0.5H14.1359C15.8935 0.5 17.3786 1.80354 17.6064 3.54634L19.4304 17.5H0.569613L2.39362 3.54634Z"
-                            stroke="#97C992"/>
-                    </svg>
-                    <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="red"
-                         xmlns="http://www.w3.org/2000/svg">
-                        <path
-                            d="M2.39362 3.54634C2.62144 1.80354 4.10646 0.5 5.8641 0.5H14.1359C15.8935 0.5 17.3786 1.80354 17.6064 3.54634L19.4304 17.5H0.569613L2.39362 3.54634Z"
-                            stroke="#97C992"/>
-                    </svg>
-                    <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="red"
-                         xmlns="http://www.w3.org/2000/svg">
-                        <path
-                            d="M2.39362 3.54634C2.62144 1.80354 4.10646 0.5 5.8641 0.5H14.1359C15.8935 0.5 17.3786 1.80354 17.6064 3.54634L19.4304 17.5H0.569613L2.39362 3.54634Z"
-                            stroke="#97C992"/>
-                    </svg>
-                    <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="red"
-                         xmlns="http://www.w3.org/2000/svg">
-                        <path
-                            d="M2.39362 3.54634C2.62144 1.80354 4.10646 0.5 5.8641 0.5H14.1359C15.8935 0.5 17.3786 1.80354 17.6064 3.54634L19.4304 17.5H0.569613L2.39362 3.54634Z"
-                            stroke="#97C992"/>
-                    </svg>
-                    <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="red"
-                         xmlns="http://www.w3.org/2000/svg">
-                        <path
-                            d="M2.39362 3.54634C2.62144 1.80354 4.10646 0.5 5.8641 0.5H14.1359C15.8935 0.5 17.3786 1.80354 17.6064 3.54634L19.4304 17.5H0.569613L2.39362 3.54634Z"
-                            stroke="#97C992"/>
-                    </svg>
-                    <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="red"
-                         xmlns="http://www.w3.org/2000/svg">
-                        <path
-                            d="M2.39362 3.54634C2.62144 1.80354 4.10646 0.5 5.8641 0.5H14.1359C15.8935 0.5 17.3786 1.80354 17.6064 3.54634L19.4304 17.5H0.569613L2.39362 3.54634Z"
-                            stroke="#97C992"/>
-                    </svg>
-                    <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="red"
-                         xmlns="http://www.w3.org/2000/svg">
-                        <path
-                            d="M2.39362 3.54634C2.62144 1.80354 4.10646 0.5 5.8641 0.5H14.1359C15.8935 0.5 17.3786 1.80354 17.6064 3.54634L19.4304 17.5H0.569613L2.39362 3.54634Z"
-                            stroke="#97C992"/>
-                    </svg>
-                    <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="red"
-                         xmlns="http://www.w3.org/2000/svg">
-                        <path
-                            d="M2.39362 3.54634C2.62144 1.80354 4.10646 0.5 5.8641 0.5H14.1359C15.8935 0.5 17.3786 1.80354 17.6064 3.54634L19.4304 17.5H0.569613L2.39362 3.54634Z"
-                            stroke="#97C992"/>
-                    </svg>
-                    <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="red"
-                         xmlns="http://www.w3.org/2000/svg">
-                        <path
-                            d="M2.39362 3.54634C2.62144 1.80354 4.10646 0.5 5.8641 0.5H14.1359C15.8935 0.5 17.3786 1.80354 17.6064 3.54634L19.4304 17.5H0.569613L2.39362 3.54634Z"
-                            stroke="#97C992"/>
-                    </svg>
-                    <!-- yellow -->
-                    <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="yellow ml1"
-                         xmlns="http://www.w3.org/2000/svg">
-                        <path
-                            d="M2.39362 3.54634C2.62144 1.80354 4.10646 0.5 5.8641 0.5H14.1359C15.8935 0.5 17.3786 1.80354 17.6064 3.54634L19.4304 17.5H0.569613L2.39362 3.54634Z"
-                            stroke="#97C992"/>
-                    </svg>
-                    <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="yellow"
-                         xmlns="http://www.w3.org/2000/svg">
-                        <path
-                            d="M2.39362 3.54634C2.62144 1.80354 4.10646 0.5 5.8641 0.5H14.1359C15.8935 0.5 17.3786 1.80354 17.6064 3.54634L19.4304 17.5H0.569613L2.39362 3.54634Z"
-                            stroke="#97C992"/>
-                    </svg>
-                    <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="yellow busy"
-                         xmlns="http://www.w3.org/2000/svg">
-                        <path
-                            d="M2.39362 3.54634C2.62144 1.80354 4.10646 0.5 5.8641 0.5H14.1359C15.8935 0.5 17.3786 1.80354 17.6064 3.54634L19.4304 17.5H0.569613L2.39362 3.54634Z"
-                            stroke="#97C992"/>
-                    </svg>
-                    <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="yellow"
-                         xmlns="http://www.w3.org/2000/svg">
-                        <path
-                            d="M2.39362 3.54634C2.62144 1.80354 4.10646 0.5 5.8641 0.5H14.1359C15.8935 0.5 17.3786 1.80354 17.6064 3.54634L19.4304 17.5H0.569613L2.39362 3.54634Z"
-                            stroke="#97C992"/>
-                    </svg>
-                    <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="yellow"
-                         xmlns="http://www.w3.org/2000/svg">
-                        <path
-                            d="M2.39362 3.54634C2.62144 1.80354 4.10646 0.5 5.8641 0.5H14.1359C15.8935 0.5 17.3786 1.80354 17.6064 3.54634L19.4304 17.5H0.569613L2.39362 3.54634Z"
-                            stroke="#97C992"/>
-                    </svg>
-                    <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="yellow"
-                         xmlns="http://www.w3.org/2000/svg">
-                        <path
-                            d="M2.39362 3.54634C2.62144 1.80354 4.10646 0.5 5.8641 0.5H14.1359C15.8935 0.5 17.3786 1.80354 17.6064 3.54634L19.4304 17.5H0.569613L2.39362 3.54634Z"
-                            stroke="#97C992"/>
-                    </svg>
-                    <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="yellow busy"
-                         xmlns="http://www.w3.org/2000/svg">
-                        <path
-                            d="M2.39362 3.54634C2.62144 1.80354 4.10646 0.5 5.8641 0.5H14.1359C15.8935 0.5 17.3786 1.80354 17.6064 3.54634L19.4304 17.5H0.569613L2.39362 3.54634Z"
-                            stroke="#97C992"/>
-                    </svg>
-                    <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="yellow busy"
-                         xmlns="http://www.w3.org/2000/svg">
-                        <path
-                            d="M2.39362 3.54634C2.62144 1.80354 4.10646 0.5 5.8641 0.5H14.1359C15.8935 0.5 17.3786 1.80354 17.6064 3.54634L19.4304 17.5H0.569613L2.39362 3.54634Z"
-                            stroke="#97C992"/>
-                    </svg>
-                    <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="yellow"
-                         xmlns="http://www.w3.org/2000/svg">
-                        <path
-                            d="M2.39362 3.54634C2.62144 1.80354 4.10646 0.5 5.8641 0.5H14.1359C15.8935 0.5 17.3786 1.80354 17.6064 3.54634L19.4304 17.5H0.569613L2.39362 3.54634Z"
-                            stroke="#97C992"/>
-                    </svg>
-                    <!-- divider -->
-                    <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="yellow ml1"
-                         xmlns="http://www.w3.org/2000/svg">
-                        <path
-                            d="M2.39362 3.54634C2.62144 1.80354 4.10646 0.5 5.8641 0.5H14.1359C15.8935 0.5 17.3786 1.80354 17.6064 3.54634L19.4304 17.5H0.569613L2.39362 3.54634Z"
-                            stroke="#97C992"/>
-                    </svg>
-                    <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="yellow"
-                         xmlns="http://www.w3.org/2000/svg">
-                        <path
-                            d="M2.39362 3.54634C2.62144 1.80354 4.10646 0.5 5.8641 0.5H14.1359C15.8935 0.5 17.3786 1.80354 17.6064 3.54634L19.4304 17.5H0.569613L2.39362 3.54634Z"
-                            stroke="#97C992"/>
-                    </svg>
-                    <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="yellow"
-                         xmlns="http://www.w3.org/2000/svg">
-                        <path
-                            d="M2.39362 3.54634C2.62144 1.80354 4.10646 0.5 5.8641 0.5H14.1359C15.8935 0.5 17.3786 1.80354 17.6064 3.54634L19.4304 17.5H0.569613L2.39362 3.54634Z"
-                            stroke="#97C992"/>
-                    </svg>
-                    <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="yellow"
-                         xmlns="http://www.w3.org/2000/svg">
-                        <path
-                            d="M2.39362 3.54634C2.62144 1.80354 4.10646 0.5 5.8641 0.5H14.1359C15.8935 0.5 17.3786 1.80354 17.6064 3.54634L19.4304 17.5H0.569613L2.39362 3.54634Z"
-                            stroke="#97C992"/>
-                    </svg>
-                    <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="yellow"
-                         xmlns="http://www.w3.org/2000/svg">
-                        <path
-                            d="M2.39362 3.54634C2.62144 1.80354 4.10646 0.5 5.8641 0.5H14.1359C15.8935 0.5 17.3786 1.80354 17.6064 3.54634L19.4304 17.5H0.569613L2.39362 3.54634Z"
-                            stroke="#97C992"/>
-                    </svg>
-                    <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="yellow"
-                         xmlns="http://www.w3.org/2000/svg">
-                        <path
-                            d="M2.39362 3.54634C2.62144 1.80354 4.10646 0.5 5.8641 0.5H14.1359C15.8935 0.5 17.3786 1.80354 17.6064 3.54634L19.4304 17.5H0.569613L2.39362 3.54634Z"
-                            stroke="#97C992"/>
-                    </svg>
-                    <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="yellow"
-                         xmlns="http://www.w3.org/2000/svg">
-                        <path
-                            d="M2.39362 3.54634C2.62144 1.80354 4.10646 0.5 5.8641 0.5H14.1359C15.8935 0.5 17.3786 1.80354 17.6064 3.54634L19.4304 17.5H0.569613L2.39362 3.54634Z"
-                            stroke="#97C992"/>
-                    </svg>
-                    <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="yellow"
-                         xmlns="http://www.w3.org/2000/svg">
-                        <path
-                            d="M2.39362 3.54634C2.62144 1.80354 4.10646 0.5 5.8641 0.5H14.1359C15.8935 0.5 17.3786 1.80354 17.6064 3.54634L19.4304 17.5H0.569613L2.39362 3.54634Z"
-                            stroke="#97C992"/>
-                    </svg>
-                    <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="yellow"
-                         xmlns="http://www.w3.org/2000/svg">
-                        <path
-                            d="M2.39362 3.54634C2.62144 1.80354 4.10646 0.5 5.8641 0.5H14.1359C15.8935 0.5 17.3786 1.80354 17.6064 3.54634L19.4304 17.5H0.569613L2.39362 3.54634Z"
-                            stroke="#97C992"/>
-                    </svg>
-                    <!-- divider -->
-                    <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="purple"
-                         xmlns="http://www.w3.org/2000/svg">
-                        <path
-                            d="M2.39362 3.54634C2.62144 1.80354 4.10646 0.5 5.8641 0.5H14.1359C15.8935 0.5 17.3786 1.80354 17.6064 3.54634L19.4304 17.5H0.569613L2.39362 3.54634Z"
-                            stroke="#97C992"/>
-                    </svg>
-                    <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="purple"
-                         xmlns="http://www.w3.org/2000/svg">
-                        <path
-                            d="M2.39362 3.54634C2.62144 1.80354 4.10646 0.5 5.8641 0.5H14.1359C15.8935 0.5 17.3786 1.80354 17.6064 3.54634L19.4304 17.5H0.569613L2.39362 3.54634Z"
-                            stroke="#97C992"/>
-                    </svg>
-                    <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="purple"
-                         xmlns="http://www.w3.org/2000/svg">
-                        <path
-                            d="M2.39362 3.54634C2.62144 1.80354 4.10646 0.5 5.8641 0.5H14.1359C15.8935 0.5 17.3786 1.80354 17.6064 3.54634L19.4304 17.5H0.569613L2.39362 3.54634Z"
-                            stroke="#97C992"/>
-                    </svg>
-                    <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="purple"
-                         xmlns="http://www.w3.org/2000/svg">
-                        <path
-                            d="M2.39362 3.54634C2.62144 1.80354 4.10646 0.5 5.8641 0.5H14.1359C15.8935 0.5 17.3786 1.80354 17.6064 3.54634L19.4304 17.5H0.569613L2.39362 3.54634Z"
-                            stroke="#97C992"/>
-                    </svg>
-                    <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="purple"
-                         xmlns="http://www.w3.org/2000/svg">
-                        <path
-                            d="M2.39362 3.54634C2.62144 1.80354 4.10646 0.5 5.8641 0.5H14.1359C15.8935 0.5 17.3786 1.80354 17.6064 3.54634L19.4304 17.5H0.569613L2.39362 3.54634Z"
-                            stroke="#97C992"/>
-                    </svg>
-                    <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="purple"
-                         xmlns="http://www.w3.org/2000/svg">
-                        <path
-                            d="M2.39362 3.54634C2.62144 1.80354 4.10646 0.5 5.8641 0.5H14.1359C15.8935 0.5 17.3786 1.80354 17.6064 3.54634L19.4304 17.5H0.569613L2.39362 3.54634Z"
-                            stroke="#97C992"/>
-                    </svg>
-                    <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="purple"
-                         xmlns="http://www.w3.org/2000/svg">
-                        <path
-                            d="M2.39362 3.54634C2.62144 1.80354 4.10646 0.5 5.8641 0.5H14.1359C15.8935 0.5 17.3786 1.80354 17.6064 3.54634L19.4304 17.5H0.569613L2.39362 3.54634Z"
-                            stroke="#97C992"/>
-                    </svg>
-                    <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="purple"
-                         xmlns="http://www.w3.org/2000/svg">
-                        <path
-                            d="M2.39362 3.54634C2.62144 1.80354 4.10646 0.5 5.8641 0.5H14.1359C15.8935 0.5 17.3786 1.80354 17.6064 3.54634L19.4304 17.5H0.569613L2.39362 3.54634Z"
-                            stroke="#97C992"/>
-                    </svg>
-                    <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="purple"
-                         xmlns="http://www.w3.org/2000/svg">
-                        <path
-                            d="M2.39362 3.54634C2.62144 1.80354 4.10646 0.5 5.8641 0.5H14.1359C15.8935 0.5 17.3786 1.80354 17.6064 3.54634L19.4304 17.5H0.569613L2.39362 3.54634Z"
-                            stroke="#97C992"/>
-                    </svg>
-                    <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="purple"
-                         xmlns="http://www.w3.org/2000/svg">
-                        <path
-                            d="M2.39362 3.54634C2.62144 1.80354 4.10646 0.5 5.8641 0.5H14.1359C15.8935 0.5 17.3786 1.80354 17.6064 3.54634L19.4304 17.5H0.569613L2.39362 3.54634Z"
-                            stroke="#97C992"/>
-                    </svg>
+                    @foreach($rows['rows']['items'][4]['data']['on_left'] as $col)
+                        @php
+                            $class = $loop->first ? 'ml1' : '';
+                        @endphp
+
+                        <svg
+                            data-uid="{{ $col['active'] ? $col['id'] : '' }}"
+                            data-col-id="{{ $col['id'] }}"
+                            data-row-id="{{ $col['row_id'] }}"
+                            width="20"
+                            height="18"
+                            viewBox="0 0 20 18"
+                            fill="none"
+                            class="seats {{ $rows['rows']['items'][4]['color'] }} {{ $class }} {{ $col['active'] ? 'active' : '' }}"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M2.39362 3.54634C2.62144 1.80354 4.10646 0.5 5.8641 0.5H14.1359C15.8935 0.5 17.3786 1.80354 17.6064 3.54634L19.4304 17.5H0.569613L2.39362 3.54634Z"
+                                stroke="#97C992"/>
+                        </svg>
+                    @endforeach
+
+                    @foreach($rows['rows']['items'][3]['data']['on_left'] as $col)
+                        @php
+                            $class = $loop->first ? 'ml1' : '';
+                        @endphp
+
+                        <svg
+                            data-uid="{{ $col['active'] ? $col['id'] : '' }}"
+                            data-col-id="{{ $col['id'] }}"
+                            data-row-id="{{ $col['row_id'] }}"
+                            width="20"
+                            height="18"
+                            viewBox="0 0 20 18"
+                            fill="none"
+                            class="seats {{ $rows['rows']['items'][3]['color'] }} {{ $class }} {{ $col['active'] ? 'active' : '' }}"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M2.39362 3.54634C2.62144 1.80354 4.10646 0.5 5.8641 0.5H14.1359C15.8935 0.5 17.3786 1.80354 17.6064 3.54634L19.4304 17.5H0.569613L2.39362 3.54634Z"
+                                stroke="#97C992"/>
+                        </svg>
+                    @endforeach
+
+                    @foreach($rows['rows']['items'][2]['data']['on_left'] as $col)
+                        @if($col['seat'] === 1)
+                            @continue
+                        @endif
+
+                        @php
+                            $class = $loop->iteration === 2 ? 'ml1' : '';
+                        @endphp
+
+                        <svg
+                            data-uid="{{ $col['active'] ? $col['id'] : '' }}"
+                            data-col-id="{{ $col['id'] }}"
+                            data-row-id="{{ $col['row_id'] }}"
+                            width="20"
+                            height="18"
+                            viewBox="0 0 20 18"
+                            fill="none"
+                            class="seats {{ $rows['rows']['items'][2]['color'] }} {{ $class }} {{ $col['active'] ? 'active' : '' }}"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M2.39362 3.54634C2.62144 1.80354 4.10646 0.5 5.8641 0.5H14.1359C15.8935 0.5 17.3786 1.80354 17.6064 3.54634L19.4304 17.5H0.569613L2.39362 3.54634Z"
+                                stroke="#97C992"/>
+                        </svg>
+                    @endforeach
+
+                    @foreach($rows['rows']['items'][1]['data']['on_left'] as $col)
+                        @php
+                            $class = '';
+                        @endphp
+
+                        <svg
+                            data-uid="{{ $col['active'] ? $col['id'] : '' }}"
+                            data-col-id="{{ $col['id'] }}"
+                            data-row-id="{{ $col['row_id'] }}"
+                            width="20"
+                            height="18"
+                            viewBox="0 0 20 18"
+                            fill="none"
+                            class="seats {{ $rows['rows']['items'][1]['color'] }} {{ $class }} {{ $col['active'] ? 'active' : '' }}"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M2.39362 3.54634C2.62144 1.80354 4.10646 0.5 5.8641 0.5H14.1359C15.8935 0.5 17.3786 1.80354 17.6064 3.54634L19.4304 17.5H0.569613L2.39362 3.54634Z"
+                                stroke="#97C992"/>
+                        </svg>
+                    @endforeach
+
                 </div>
                 <div class="seats-num">
                     <span class="seat-num">4</span>
@@ -1300,443 +545,379 @@
                     <span class="seat-num">1</span>
                 </div>
                 <div class="seats-right mr1">
-                    <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="red"
-                         xmlns="http://www.w3.org/2000/svg">
-                        <path
-                            d="M2.39362 3.54634C2.62144 1.80354 4.10646 0.5 5.8641 0.5H14.1359C15.8935 0.5 17.3786 1.80354 17.6064 3.54634L19.4304 17.5H0.569613L2.39362 3.54634Z"
-                            stroke="#97C992"/>
-                    </svg>
-                    <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="red"
-                         xmlns="http://www.w3.org/2000/svg">
-                        <path
-                            d="M2.39362 3.54634C2.62144 1.80354 4.10646 0.5 5.8641 0.5H14.1359C15.8935 0.5 17.3786 1.80354 17.6064 3.54634L19.4304 17.5H0.569613L2.39362 3.54634Z"
-                            stroke="#97C992"/>
-                    </svg>
-                    <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="red"
-                         xmlns="http://www.w3.org/2000/svg">
-                        <path
-                            d="M2.39362 3.54634C2.62144 1.80354 4.10646 0.5 5.8641 0.5H14.1359C15.8935 0.5 17.3786 1.80354 17.6064 3.54634L19.4304 17.5H0.569613L2.39362 3.54634Z"
-                            stroke="#97C992"/>
-                    </svg>
-                    <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="red"
-                         xmlns="http://www.w3.org/2000/svg">
-                        <path
-                            d="M2.39362 3.54634C2.62144 1.80354 4.10646 0.5 5.8641 0.5H14.1359C15.8935 0.5 17.3786 1.80354 17.6064 3.54634L19.4304 17.5H0.569613L2.39362 3.54634Z"
-                            stroke="#97C992"/>
-                    </svg>
-                    <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="red"
-                         xmlns="http://www.w3.org/2000/svg">
-                        <path
-                            d="M2.39362 3.54634C2.62144 1.80354 4.10646 0.5 5.8641 0.5H14.1359C15.8935 0.5 17.3786 1.80354 17.6064 3.54634L19.4304 17.5H0.569613L2.39362 3.54634Z"
-                            stroke="#97C992"/>
-                    </svg>
-                    <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="red"
-                         xmlns="http://www.w3.org/2000/svg">
-                        <path
-                            d="M2.39362 3.54634C2.62144 1.80354 4.10646 0.5 5.8641 0.5H14.1359C15.8935 0.5 17.3786 1.80354 17.6064 3.54634L19.4304 17.5H0.569613L2.39362 3.54634Z"
-                            stroke="#97C992"/>
-                    </svg>
-                    <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="red"
-                         xmlns="http://www.w3.org/2000/svg">
-                        <path
-                            d="M2.39362 3.54634C2.62144 1.80354 4.10646 0.5 5.8641 0.5H14.1359C15.8935 0.5 17.3786 1.80354 17.6064 3.54634L19.4304 17.5H0.569613L2.39362 3.54634Z"
-                            stroke="#97C992"/>
-                    </svg>
-                    <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="red"
-                         xmlns="http://www.w3.org/2000/svg">
-                        <path
-                            d="M2.39362 3.54634C2.62144 1.80354 4.10646 0.5 5.8641 0.5H14.1359C15.8935 0.5 17.3786 1.80354 17.6064 3.54634L19.4304 17.5H0.569613L2.39362 3.54634Z"
-                            stroke="#97C992"/>
-                    </svg>
-                    <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="red mr1"
-                         xmlns="http://www.w3.org/2000/svg">
-                        <path
-                            d="M2.39362 3.54634C2.62144 1.80354 4.10646 0.5 5.8641 0.5H14.1359C15.8935 0.5 17.3786 1.80354 17.6064 3.54634L19.4304 17.5H0.569613L2.39362 3.54634Z"
-                            stroke="#97C992"/>
-                    </svg>
-                    <!-- yellow -->
-                    <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="yellow"
-                         xmlns="http://www.w3.org/2000/svg">
-                        <path
-                            d="M2.39362 3.54634C2.62144 1.80354 4.10646 0.5 5.8641 0.5H14.1359C15.8935 0.5 17.3786 1.80354 17.6064 3.54634L19.4304 17.5H0.569613L2.39362 3.54634Z"
-                            stroke="#97C992"/>
-                    </svg>
-                    <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="yellow"
-                         xmlns="http://www.w3.org/2000/svg">
-                        <path
-                            d="M2.39362 3.54634C2.62144 1.80354 4.10646 0.5 5.8641 0.5H14.1359C15.8935 0.5 17.3786 1.80354 17.6064 3.54634L19.4304 17.5H0.569613L2.39362 3.54634Z"
-                            stroke="#97C992"/>
-                    </svg>
-                    <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="yellow busy"
-                         xmlns="http://www.w3.org/2000/svg">
-                        <path
-                            d="M2.39362 3.54634C2.62144 1.80354 4.10646 0.5 5.8641 0.5H14.1359C15.8935 0.5 17.3786 1.80354 17.6064 3.54634L19.4304 17.5H0.569613L2.39362 3.54634Z"
-                            stroke="#97C992"/>
-                    </svg>
-                    <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="yellow"
-                         xmlns="http://www.w3.org/2000/svg">
-                        <path
-                            d="M2.39362 3.54634C2.62144 1.80354 4.10646 0.5 5.8641 0.5H14.1359C15.8935 0.5 17.3786 1.80354 17.6064 3.54634L19.4304 17.5H0.569613L2.39362 3.54634Z"
-                            stroke="#97C992"/>
-                    </svg>
-                    <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="yellow"
-                         xmlns="http://www.w3.org/2000/svg">
-                        <path
-                            d="M2.39362 3.54634C2.62144 1.80354 4.10646 0.5 5.8641 0.5H14.1359C15.8935 0.5 17.3786 1.80354 17.6064 3.54634L19.4304 17.5H0.569613L2.39362 3.54634Z"
-                            stroke="#97C992"/>
-                    </svg>
-                    <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="yellow"
-                         xmlns="http://www.w3.org/2000/svg">
-                        <path
-                            d="M2.39362 3.54634C2.62144 1.80354 4.10646 0.5 5.8641 0.5H14.1359C15.8935 0.5 17.3786 1.80354 17.6064 3.54634L19.4304 17.5H0.569613L2.39362 3.54634Z"
-                            stroke="#97C992"/>
-                    </svg>
-                    <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="yellow busy"
-                         xmlns="http://www.w3.org/2000/svg">
-                        <path
-                            d="M2.39362 3.54634C2.62144 1.80354 4.10646 0.5 5.8641 0.5H14.1359C15.8935 0.5 17.3786 1.80354 17.6064 3.54634L19.4304 17.5H0.569613L2.39362 3.54634Z"
-                            stroke="#97C992"/>
-                    </svg>
-                    <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="yellow busy"
-                         xmlns="http://www.w3.org/2000/svg">
-                        <path
-                            d="M2.39362 3.54634C2.62144 1.80354 4.10646 0.5 5.8641 0.5H14.1359C15.8935 0.5 17.3786 1.80354 17.6064 3.54634L19.4304 17.5H0.569613L2.39362 3.54634Z"
-                            stroke="#97C992"/>
-                    </svg>
-                    <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="yellow mr1"
-                         xmlns="http://www.w3.org/2000/svg">
-                        <path
-                            d="M2.39362 3.54634C2.62144 1.80354 4.10646 0.5 5.8641 0.5H14.1359C15.8935 0.5 17.3786 1.80354 17.6064 3.54634L19.4304 17.5H0.569613L2.39362 3.54634Z"
-                            stroke="#97C992"/>
-                    </svg>
-                    <!-- divider -->
-                    <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="yellow"
-                         xmlns="http://www.w3.org/2000/svg">
-                        <path
-                            d="M2.39362 3.54634C2.62144 1.80354 4.10646 0.5 5.8641 0.5H14.1359C15.8935 0.5 17.3786 1.80354 17.6064 3.54634L19.4304 17.5H0.569613L2.39362 3.54634Z"
-                            stroke="#97C992"/>
-                    </svg>
-                    <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="yellow"
-                         xmlns="http://www.w3.org/2000/svg">
-                        <path
-                            d="M2.39362 3.54634C2.62144 1.80354 4.10646 0.5 5.8641 0.5H14.1359C15.8935 0.5 17.3786 1.80354 17.6064 3.54634L19.4304 17.5H0.569613L2.39362 3.54634Z"
-                            stroke="#97C992"/>
-                    </svg>
-                    <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="yellow"
-                         xmlns="http://www.w3.org/2000/svg">
-                        <path
-                            d="M2.39362 3.54634C2.62144 1.80354 4.10646 0.5 5.8641 0.5H14.1359C15.8935 0.5 17.3786 1.80354 17.6064 3.54634L19.4304 17.5H0.569613L2.39362 3.54634Z"
-                            stroke="#97C992"/>
-                    </svg>
-                    <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="yellow"
-                         xmlns="http://www.w3.org/2000/svg">
-                        <path
-                            d="M2.39362 3.54634C2.62144 1.80354 4.10646 0.5 5.8641 0.5H14.1359C15.8935 0.5 17.3786 1.80354 17.6064 3.54634L19.4304 17.5H0.569613L2.39362 3.54634Z"
-                            stroke="#97C992"/>
-                    </svg>
-                    <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="yellow"
-                         xmlns="http://www.w3.org/2000/svg">
-                        <path
-                            d="M2.39362 3.54634C2.62144 1.80354 4.10646 0.5 5.8641 0.5H14.1359C15.8935 0.5 17.3786 1.80354 17.6064 3.54634L19.4304 17.5H0.569613L2.39362 3.54634Z"
-                            stroke="#97C992"/>
-                    </svg>
-                    <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="yellow"
-                         xmlns="http://www.w3.org/2000/svg">
-                        <path
-                            d="M2.39362 3.54634C2.62144 1.80354 4.10646 0.5 5.8641 0.5H14.1359C15.8935 0.5 17.3786 1.80354 17.6064 3.54634L19.4304 17.5H0.569613L2.39362 3.54634Z"
-                            stroke="#97C992"/>
-                    </svg>
-                    <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="yellow"
-                         xmlns="http://www.w3.org/2000/svg">
-                        <path
-                            d="M2.39362 3.54634C2.62144 1.80354 4.10646 0.5 5.8641 0.5H14.1359C15.8935 0.5 17.3786 1.80354 17.6064 3.54634L19.4304 17.5H0.569613L2.39362 3.54634Z"
-                            stroke="#97C992"/>
-                    </svg>
-                    <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="yellow"
-                         xmlns="http://www.w3.org/2000/svg">
-                        <path
-                            d="M2.39362 3.54634C2.62144 1.80354 4.10646 0.5 5.8641 0.5H14.1359C15.8935 0.5 17.3786 1.80354 17.6064 3.54634L19.4304 17.5H0.569613L2.39362 3.54634Z"
-                            stroke="#97C992"/>
-                    </svg>
-                    <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="yellow mr1"
-                         xmlns="http://www.w3.org/2000/svg">
-                        <path
-                            d="M2.39362 3.54634C2.62144 1.80354 4.10646 0.5 5.8641 0.5H14.1359C15.8935 0.5 17.3786 1.80354 17.6064 3.54634L19.4304 17.5H0.569613L2.39362 3.54634Z"
-                            stroke="#97C992"/>
-                    </svg>
-                    <!-- divider -->
-                    <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="purple"
-                         xmlns="http://www.w3.org/2000/svg">
-                        <path
-                            d="M2.39362 3.54634C2.62144 1.80354 4.10646 0.5 5.8641 0.5H14.1359C15.8935 0.5 17.3786 1.80354 17.6064 3.54634L19.4304 17.5H0.569613L2.39362 3.54634Z"
-                            stroke="#97C992"/>
-                    </svg>
-                    <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="purple"
-                         xmlns="http://www.w3.org/2000/svg">
-                        <path
-                            d="M2.39362 3.54634C2.62144 1.80354 4.10646 0.5 5.8641 0.5H14.1359C15.8935 0.5 17.3786 1.80354 17.6064 3.54634L19.4304 17.5H0.569613L2.39362 3.54634Z"
-                            stroke="#97C992"/>
-                    </svg>
-                    <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="purple"
-                         xmlns="http://www.w3.org/2000/svg">
-                        <path
-                            d="M2.39362 3.54634C2.62144 1.80354 4.10646 0.5 5.8641 0.5H14.1359C15.8935 0.5 17.3786 1.80354 17.6064 3.54634L19.4304 17.5H0.569613L2.39362 3.54634Z"
-                            stroke="#97C992"/>
-                    </svg>
-                    <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="purple"
-                         xmlns="http://www.w3.org/2000/svg">
-                        <path
-                            d="M2.39362 3.54634C2.62144 1.80354 4.10646 0.5 5.8641 0.5H14.1359C15.8935 0.5 17.3786 1.80354 17.6064 3.54634L19.4304 17.5H0.569613L2.39362 3.54634Z"
-                            stroke="#97C992"/>
-                    </svg>
-                    <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="purple"
-                         xmlns="http://www.w3.org/2000/svg">
-                        <path
-                            d="M2.39362 3.54634C2.62144 1.80354 4.10646 0.5 5.8641 0.5H14.1359C15.8935 0.5 17.3786 1.80354 17.6064 3.54634L19.4304 17.5H0.569613L2.39362 3.54634Z"
-                            stroke="#97C992"/>
-                    </svg>
-                    <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="purple"
-                         xmlns="http://www.w3.org/2000/svg">
-                        <path
-                            d="M2.39362 3.54634C2.62144 1.80354 4.10646 0.5 5.8641 0.5H14.1359C15.8935 0.5 17.3786 1.80354 17.6064 3.54634L19.4304 17.5H0.569613L2.39362 3.54634Z"
-                            stroke="#97C992"/>
-                    </svg>
-                    <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="purple"
-                         xmlns="http://www.w3.org/2000/svg">
-                        <path
-                            d="M2.39362 3.54634C2.62144 1.80354 4.10646 0.5 5.8641 0.5H14.1359C15.8935 0.5 17.3786 1.80354 17.6064 3.54634L19.4304 17.5H0.569613L2.39362 3.54634Z"
-                            stroke="#97C992"/>
-                    </svg>
-                    <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="purple"
-                         xmlns="http://www.w3.org/2000/svg">
-                        <path
-                            d="M2.39362 3.54634C2.62144 1.80354 4.10646 0.5 5.8641 0.5H14.1359C15.8935 0.5 17.3786 1.80354 17.6064 3.54634L19.4304 17.5H0.569613L2.39362 3.54634Z"
-                            stroke="#97C992"/>
-                    </svg>
-                    <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="purple"
-                         xmlns="http://www.w3.org/2000/svg">
-                        <path
-                            d="M2.39362 3.54634C2.62144 1.80354 4.10646 0.5 5.8641 0.5H14.1359C15.8935 0.5 17.3786 1.80354 17.6064 3.54634L19.4304 17.5H0.569613L2.39362 3.54634Z"
-                            stroke="#97C992"/>
-                    </svg>
-                    <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="purple"
-                         xmlns="http://www.w3.org/2000/svg">
-                        <path
-                            d="M2.39362 3.54634C2.62144 1.80354 4.10646 0.5 5.8641 0.5H14.1359C15.8935 0.5 17.3786 1.80354 17.6064 3.54634L19.4304 17.5H0.569613L2.39362 3.54634Z"
-                            stroke="#97C992"/>
-                    </svg>
+                    @foreach($rows['rows']['items'][4]['data']['on_right'] as $col)
+                        @php
+                            $class = $loop->last ? 'mr1' : '';
+                        @endphp
+
+                        <svg
+                            data-uid="{{ $col['active'] ? $col['id'] : '' }}"
+                            data-col-id="{{ $col['id'] }}"
+                            data-row-id="{{ $col['row_id'] }}"
+                            width="20"
+                            height="18"
+                            viewBox="0 0 20 18"
+                            fill="none"
+                            class="seats {{ $rows['rows']['items'][4]['color'] }} {{ $class }} {{ $col['active'] ? 'active' : '' }}"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M2.39362 3.54634C2.62144 1.80354 4.10646 0.5 5.8641 0.5H14.1359C15.8935 0.5 17.3786 1.80354 17.6064 3.54634L19.4304 17.5H0.569613L2.39362 3.54634Z"
+                                stroke="#97C992"/>
+                        </svg>
+                    @endforeach
+
+                    @foreach($rows['rows']['items'][3]['data']['on_right'] as $col)
+                        @php
+                            $class = $loop->last ? 'mr1' : '';
+                        @endphp
+
+                        <svg
+                            data-uid="{{ $col['active'] ? $col['id'] : '' }}"
+                            data-col-id="{{ $col['id'] }}"
+                            data-row-id="{{ $col['row_id'] }}"
+                            width="20"
+                            height="18"
+                            viewBox="0 0 20 18"
+                            fill="none"
+                            class="seats {{ $rows['rows']['items'][3]['color'] }} {{ $class }} {{ $col['active'] ? 'active' : '' }}"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M2.39362 3.54634C2.62144 1.80354 4.10646 0.5 5.8641 0.5H14.1359C15.8935 0.5 17.3786 1.80354 17.6064 3.54634L19.4304 17.5H0.569613L2.39362 3.54634Z"
+                                stroke="#97C992"/>
+                        </svg>
+                    @endforeach
+
+                    @foreach($rows['rows']['items'][2]['data']['on_right'] as $col)
+                        @if($col['seat'] === 20)
+                            @continue
+                        @endif
+
+                        @php
+                            $class = $col['seat'] === 19 ? 'mr1' : '';
+                        @endphp
+
+                        <svg
+                            data-uid="{{ $col['active'] ? $col['id'] : '' }}"
+                            data-col-id="{{ $col['id'] }}"
+                            data-row-id="{{ $col['row_id'] }}"
+                            width="20"
+                            height="18"
+                            viewBox="0 0 20 18"
+                            fill="none"
+                            class="seats {{ $rows['rows']['items'][2]['color'] }} {{ $class }} {{ $col['active'] ? 'active' : '' }}"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M2.39362 3.54634C2.62144 1.80354 4.10646 0.5 5.8641 0.5H14.1359C15.8935 0.5 17.3786 1.80354 17.6064 3.54634L19.4304 17.5H0.569613L2.39362 3.54634Z"
+                                stroke="#97C992"/>
+                        </svg>
+                    @endforeach
+
+                    @foreach($rows['rows']['items'][1]['data']['on_right'] as $col)
+                        @php
+                            $class = '';
+                        @endphp
+                        <svg
+                            data-uid="{{ $col['active'] ? $col['id'] : '' }}"
+                            data-col-id="{{ $col['id'] }}"
+                            data-row-id="{{ $col['row_id'] }}"
+                            width="20"
+                            height="18"
+                            viewBox="0 0 20 18"
+                            fill="none"
+                            class="seats {{ $rows['rows']['items'][1]['color'] }} {{ $class }} {{ $col['active'] ? 'active' : '' }}"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M2.39362 3.54634C2.62144 1.80354 4.10646 0.5 5.8641 0.5H14.1359C15.8935 0.5 17.3786 1.80354 17.6064 3.54634L19.4304 17.5H0.569613L2.39362 3.54634Z"
+                                stroke="#97C992"/>
+                        </svg>
+                    @endforeach
                 </div>
             </div>
             <div class="seats-parter seats-parter-left">
                 <div class="seats-parter-block d-flex">
                     <div class="parter-col">
-                        <span class="seat-num">Parter</span>
-                        <span class="seat-num">Loja 2</span>
-                        <span class="seat-num">Dreapta</span>
+                        <span class="seat-num">{{ $vars['spectacle_map_first_floor'] }} </span>
+                        <span class="seat-num">{{ $vars['spectacle_map_lodge'] }} 2</span>
+                        <span class="seat-num">{{ $vars['spectacle_map_right'] }}</span>
                     </div>
                     <div class="parter-col">
-                        <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="red"
-                             xmlns="http://www.w3.org/2000/svg">
-                            <path
-                                d="M2.39362 3.54634C2.62144 1.80354 4.10646 0.5 5.8641 0.5H14.1359C15.8935 0.5 17.3786 1.80354 17.6064 3.54634L19.4304 17.5H0.569613L2.39362 3.54634Z"
-                                stroke="#97C992"/>
-                        </svg>
-                        <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="red"
-                             xmlns="http://www.w3.org/2000/svg">
-                            <path
-                                d="M2.39362 3.54634C2.62144 1.80354 4.10646 0.5 5.8641 0.5H14.1359C15.8935 0.5 17.3786 1.80354 17.6064 3.54634L19.4304 17.5H0.569613L2.39362 3.54634Z"
-                                stroke="#97C992"/>
-                        </svg>
-                        <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="red"
-                             xmlns="http://www.w3.org/2000/svg">
-                            <path
-                                d="M2.39362 3.54634C2.62144 1.80354 4.10646 0.5 5.8641 0.5H14.1359C15.8935 0.5 17.3786 1.80354 17.6064 3.54634L19.4304 17.5H0.569613L2.39362 3.54634Z"
-                                stroke="#97C992"/>
-                        </svg>
-                        <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="red"
-                             xmlns="http://www.w3.org/2000/svg">
-                            <path
-                                d="M2.39362 3.54634C2.62144 1.80354 4.10646 0.5 5.8641 0.5H14.1359C15.8935 0.5 17.3786 1.80354 17.6064 3.54634L19.4304 17.5H0.569613L2.39362 3.54634Z"
-                                stroke="#97C992"/>
-                        </svg>
-                        <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="red"
-                             xmlns="http://www.w3.org/2000/svg">
-                            <path
-                                d="M2.39362 3.54634C2.62144 1.80354 4.10646 0.5 5.8641 0.5H14.1359C15.8935 0.5 17.3786 1.80354 17.6064 3.54634L19.4304 17.5H0.569613L2.39362 3.54634Z"
-                                stroke="#97C992"/>
-                        </svg>
+                        @foreach(array_reverse($rows['rows']['loggia'][14]['data']['on_left']) as $col)
+                            @php
+                                $class = '';
+                            @endphp
+
+                            <svg
+                                data-uid="{{ $col['active'] ? $col['id'] : '' }}"
+                                data-col-id="{{ $col['id'] }}"
+                                data-row-id="{{ $col['row_id'] }}"
+                                width="20"
+                                height="18"
+                                viewBox="0 0 20 18"
+                                fill="none"
+                                class="seats {{ $rows['rows']['loggia'][14]['color'] }} {{ $class }} {{ $col['active'] ? 'active' : '' }}"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M2.39362 3.54634C2.62144 1.80354 4.10646 0.5 5.8641 0.5H14.1359C15.8935 0.5 17.3786 1.80354 17.6064 3.54634L19.4304 17.5H0.569613L2.39362 3.54634Z"
+                                    stroke="#97C992"/>
+                            </svg>
+                        @endforeach
+
+                        @foreach($rows['rows']['items'][5]['data']['on_left'] as $col)
+                            @if($col['seat'] === 1)
+                                @php
+                                    $class = '';
+                                @endphp
+
+                                <svg
+                                    data-uid="{{ $col['active'] ? $col['id'] : '' }}"
+                                    data-col-id="{{ $col['id'] }}"
+                                    data-row-id="{{ $col['row_id'] }}"
+                                    width="20"
+                                    height="18"
+                                    viewBox="0 0 20 18"
+                                    fill="none"
+                                    class="seats {{ $rows['rows']['items'][5]['color'] }} {{ $class }} {{ $col['active'] ? 'active' : '' }}"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M2.39362 3.54634C2.62144 1.80354 4.10646 0.5 5.8641 0.5H14.1359C15.8935 0.5 17.3786 1.80354 17.6064 3.54634L19.4304 17.5H0.569613L2.39362 3.54634Z"
+                                        stroke="#97C992"/>
+                                </svg>
+                            @endif
+                        @endforeach
                     </div>
                 </div>
                 <div class="seats-parter-block d-flex">
                     <div class="parter-col">
-                        <span class="seat-num">Parter</span>
-                        <span class="seat-num">Loja 1</span>
-                        <span class="seat-num">Dreapta</span>
+                        <span class="seat-num">{{ $vars['spectacle_map_first_floor'] }} </span>
+                        <span class="seat-num">{{ $vars['spectacle_map_lodge'] }} 1</span>
+                        <span class="seat-num">{{ $vars['spectacle_map_right'] }}</span>
                     </div>
                     <div class="parter-col">
-                        <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="red"
-                             xmlns="http://www.w3.org/2000/svg">
-                            <path
-                                d="M2.39362 3.54634C2.62144 1.80354 4.10646 0.5 5.8641 0.5H14.1359C15.8935 0.5 17.3786 1.80354 17.6064 3.54634L19.4304 17.5H0.569613L2.39362 3.54634Z"
-                                stroke="#97C992"/>
-                        </svg>
-                        <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="red"
-                             xmlns="http://www.w3.org/2000/svg">
-                            <path
-                                d="M2.39362 3.54634C2.62144 1.80354 4.10646 0.5 5.8641 0.5H14.1359C15.8935 0.5 17.3786 1.80354 17.6064 3.54634L19.4304 17.5H0.569613L2.39362 3.54634Z"
-                                stroke="#97C992"/>
-                        </svg>
-                        <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="red"
-                             xmlns="http://www.w3.org/2000/svg">
-                            <path
-                                d="M2.39362 3.54634C2.62144 1.80354 4.10646 0.5 5.8641 0.5H14.1359C15.8935 0.5 17.3786 1.80354 17.6064 3.54634L19.4304 17.5H0.569613L2.39362 3.54634Z"
-                                stroke="#97C992"/>
-                        </svg>
-                        <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="red"
-                             xmlns="http://www.w3.org/2000/svg">
-                            <path
-                                d="M2.39362 3.54634C2.62144 1.80354 4.10646 0.5 5.8641 0.5H14.1359C15.8935 0.5 17.3786 1.80354 17.6064 3.54634L19.4304 17.5H0.569613L2.39362 3.54634Z"
-                                stroke="#97C992"/>
-                        </svg>
-                        <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="yellow"
-                             xmlns="http://www.w3.org/2000/svg">
-                            <path
-                                d="M2.39362 3.54634C2.62144 1.80354 4.10646 0.5 5.8641 0.5H14.1359C15.8935 0.5 17.3786 1.80354 17.6064 3.54634L19.4304 17.5H0.569613L2.39362 3.54634Z"
-                                stroke="#97C992"/>
-                        </svg>
+                        @foreach(array_reverse($rows['rows']['loggia'][15]['data']['on_left']) as $col)
+                            @php
+                                $class = '';
+                            @endphp
+
+                            <svg
+                                data-uid="{{ $col['active'] ? $col['id'] : '' }}"
+                                data-col-id="{{ $col['id'] }}"
+                                data-row-id="{{ $col['row_id'] }}"
+                                width="20"
+                                height="18"
+                                viewBox="0 0 20 18"
+                                fill="none"
+                                class="seats {{ $rows['rows']['loggia'][15]['color'] }} {{ $class }} {{ $col['active'] ? 'active' : '' }}"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M2.39362 3.54634C2.62144 1.80354 4.10646 0.5 5.8641 0.5H14.1359C15.8935 0.5 17.3786 1.80354 17.6064 3.54634L19.4304 17.5H0.569613L2.39362 3.54634Z"
+                                    stroke="#97C992"/>
+                            </svg>
+                        @endforeach
+
+                            @foreach($rows['rows']['items'][2]['data']['on_left'] as $col)
+                                @if($col['seat'] === 1)
+                                    @php
+                                        $class = '';
+                                    @endphp
+                                    <svg
+                                        data-uid="{{ $col['active'] ? $col['id'] : '' }}"
+                                        data-col-id="{{ $col['id'] }}"
+                                        data-row-id="{{ $col['row_id'] }}"
+                                        width="20"
+                                        height="18"
+                                        viewBox="0 0 20 18"
+                                        fill="none"
+                                        class="seats {{ $rows['rows']['items'][2]['color'] }} {{ $class }} {{ $col['active'] ? 'active' : '' }}"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M2.39362 3.54634C2.62144 1.80354 4.10646 0.5 5.8641 0.5H14.1359C15.8935 0.5 17.3786 1.80354 17.6064 3.54634L19.4304 17.5H0.569613L2.39362 3.54634Z"
+                                            stroke="#97C992"/>
+                                    </svg>
+                                @endif
+                            @endforeach
                     </div>
                 </div>
             </div>
             <div class="seats-parter seats-parter-right">
                 <div class="seats-parter-block d-flex">
                     <div class="parter-col">
-                        <span class="seat-num">Parter</span>
-                        <span class="seat-num">Loja 2</span>
-                        <span class="seat-num">Stanga</span>
+                        <span class="seat-num">{{ $vars['spectacle_map_first_floor'] }} </span>
+                        <span class="seat-num">{{ $vars['spectacle_map_lodge'] }} 2</span>
+                        <span class="seat-num">{{ $vars['spectacle_map_left'] }}</span>
                     </div>
                     <div class="parter-col">
-                        <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="red"
-                             xmlns="http://www.w3.org/2000/svg">
-                            <path
-                                d="M2.39362 3.54634C2.62144 1.80354 4.10646 0.5 5.8641 0.5H14.1359C15.8935 0.5 17.3786 1.80354 17.6064 3.54634L19.4304 17.5H0.569613L2.39362 3.54634Z"
-                                stroke="#97C992"/>
-                        </svg>
-                        <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="red"
-                             xmlns="http://www.w3.org/2000/svg">
-                            <path
-                                d="M2.39362 3.54634C2.62144 1.80354 4.10646 0.5 5.8641 0.5H14.1359C15.8935 0.5 17.3786 1.80354 17.6064 3.54634L19.4304 17.5H0.569613L2.39362 3.54634Z"
-                                stroke="#97C992"/>
-                        </svg>
-                        <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="red"
-                             xmlns="http://www.w3.org/2000/svg">
-                            <path
-                                d="M2.39362 3.54634C2.62144 1.80354 4.10646 0.5 5.8641 0.5H14.1359C15.8935 0.5 17.3786 1.80354 17.6064 3.54634L19.4304 17.5H0.569613L2.39362 3.54634Z"
-                                stroke="#97C992"/>
-                        </svg>
-                        <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="red"
-                             xmlns="http://www.w3.org/2000/svg">
-                            <path
-                                d="M2.39362 3.54634C2.62144 1.80354 4.10646 0.5 5.8641 0.5H14.1359C15.8935 0.5 17.3786 1.80354 17.6064 3.54634L19.4304 17.5H0.569613L2.39362 3.54634Z"
-                                stroke="#97C992"/>
-                        </svg>
-                        <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="red"
-                             xmlns="http://www.w3.org/2000/svg">
-                            <path
-                                d="M2.39362 3.54634C2.62144 1.80354 4.10646 0.5 5.8641 0.5H14.1359C15.8935 0.5 17.3786 1.80354 17.6064 3.54634L19.4304 17.5H0.569613L2.39362 3.54634Z"
-                                stroke="#97C992"/>
-                        </svg>
+                        @foreach(array_reverse($rows['rows']['loggia'][16]['data']['on_right']) as $col)
+                            @php
+                                $class = '';
+                            @endphp
+
+                            <svg
+                                data-uid="{{ $col['active'] ? $col['id'] : '' }}"
+                                data-col-id="{{ $col['id'] }}"
+                                data-row-id="{{ $col['row_id'] }}"
+                                width="20"
+                                height="18"
+                                viewBox="0 0 20 18"
+                                fill="none"
+                                class="seats {{ $rows['rows']['loggia'][16]['color'] }} {{ $class }} {{ $col['active'] ? 'active' : '' }}"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M2.39362 3.54634C2.62144 1.80354 4.10646 0.5 5.8641 0.5H14.1359C15.8935 0.5 17.3786 1.80354 17.6064 3.54634L19.4304 17.5H0.569613L2.39362 3.54634Z"
+                                    stroke="#97C992"/>
+                            </svg>
+                        @endforeach
+
+                        @foreach($rows['rows']['items'][5]['data']['on_right'] as $col)
+                            @if($col['seat'] === 15)
+                                @php
+                                    $class = '';
+                                @endphp
+                                <svg
+                                    data-uid="{{ $col['active'] ? $col['id'] : '' }}"
+                                    data-col-id="{{ $col['id'] }}"
+                                    data-row-id="{{ $col['row_id'] }}"
+                                    width="20"
+                                    height="18"
+                                    viewBox="0 0 20 18"
+                                    fill="none"
+                                    class="seats {{ $rows['rows']['items'][5]['color'] }} {{ $class }} {{ $col['active'] ? 'active' : '' }}"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M2.39362 3.54634C2.62144 1.80354 4.10646 0.5 5.8641 0.5H14.1359C15.8935 0.5 17.3786 1.80354 17.6064 3.54634L19.4304 17.5H0.569613L2.39362 3.54634Z"
+                                        stroke="#97C992"/>
+                                </svg>
+                            @endif
+                        @endforeach
                     </div>
                 </div>
                 <div class="seats-parter-block d-flex">
                     <div class="parter-col">
-                        <span class="seat-num">Parter</span>
-                        <span class="seat-num">Loja 1</span>
-                        <span class="seat-num">Stanga</span>
+                        <span class="seat-num">{{ $vars['spectacle_map_first_floor'] }}</span>
+                        <span class="seat-num">{{ $vars['spectacle_map_lodge'] }} 1</span>
+                        <span class="seat-num">{{ $vars['spectacle_map_left'] }}</span>
                     </div>
                     <div class="parter-col">
-                        <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="red"
-                             xmlns="http://www.w3.org/2000/svg">
-                            <path
-                                d="M2.39362 3.54634C2.62144 1.80354 4.10646 0.5 5.8641 0.5H14.1359C15.8935 0.5 17.3786 1.80354 17.6064 3.54634L19.4304 17.5H0.569613L2.39362 3.54634Z"
-                                stroke="#97C992"/>
-                        </svg>
-                        <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="red"
-                             xmlns="http://www.w3.org/2000/svg">
-                            <path
-                                d="M2.39362 3.54634C2.62144 1.80354 4.10646 0.5 5.8641 0.5H14.1359C15.8935 0.5 17.3786 1.80354 17.6064 3.54634L19.4304 17.5H0.569613L2.39362 3.54634Z"
-                                stroke="#97C992"/>
-                        </svg>
-                        <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="red"
-                             xmlns="http://www.w3.org/2000/svg">
-                            <path
-                                d="M2.39362 3.54634C2.62144 1.80354 4.10646 0.5 5.8641 0.5H14.1359C15.8935 0.5 17.3786 1.80354 17.6064 3.54634L19.4304 17.5H0.569613L2.39362 3.54634Z"
-                                stroke="#97C992"/>
-                        </svg>
-                        <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="red"
-                             xmlns="http://www.w3.org/2000/svg">
-                            <path
-                                d="M2.39362 3.54634C2.62144 1.80354 4.10646 0.5 5.8641 0.5H14.1359C15.8935 0.5 17.3786 1.80354 17.6064 3.54634L19.4304 17.5H0.569613L2.39362 3.54634Z"
-                                stroke="#97C992"/>
-                        </svg>
-                        <svg width="20" height="18" viewBox="0 0 20 18" fill="none" class="yellow"
-                             xmlns="http://www.w3.org/2000/svg">
-                            <path
-                                d="M2.39362 3.54634C2.62144 1.80354 4.10646 0.5 5.8641 0.5H14.1359C15.8935 0.5 17.3786 1.80354 17.6064 3.54634L19.4304 17.5H0.569613L2.39362 3.54634Z"
-                                stroke="#97C992"/>
-                        </svg>
+                        @foreach(array_reverse($rows['rows']['loggia'][17]['data']['on_right']) as $col)
+                            @php
+                                $class = '';
+                            @endphp
+
+                            <svg
+                                data-uid="{{ $col['active'] ? $col['id'] : '' }}"
+                                data-col-id="{{ $col['id'] }}"
+                                data-row-id="{{ $col['row_id'] }}"
+                                width="20"
+                                height="18"
+                                viewBox="0 0 20 18"
+                                fill="none"
+                                class="seats {{ $rows['rows']['loggia'][17]['color'] }} {{ $class }} {{ $col['active'] ? 'active' : '' }}"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M2.39362 3.54634C2.62144 1.80354 4.10646 0.5 5.8641 0.5H14.1359C15.8935 0.5 17.3786 1.80354 17.6064 3.54634L19.4304 17.5H0.569613L2.39362 3.54634Z"
+                                    stroke="#97C992"/>
+                            </svg>
+                        @endforeach
+
+                        @foreach($rows['rows']['items'][2]['data']['on_right'] as $col)
+                            @if($col['seat'] === 20)
+                                @php
+                                    $class = '';
+                                @endphp
+
+                                <svg
+                                    data-uid="{{ $col['active'] ? $col['id'] : '' }}"
+                                    data-col-id="{{ $col['id'] }}"
+                                    data-row-id="{{ $col['row_id'] }}"
+                                    width="20"
+                                    height="18"
+                                    viewBox="0 0 20 18"
+                                    fill="none"
+                                    class="seats {{ $rows['rows']['items'][2]['color'] }} {{ $class }} {{ $col['active'] ? 'active' : '' }}"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M2.39362 3.54634C2.62144 1.80354 4.10646 0.5 5.8641 0.5H14.1359C15.8935 0.5 17.3786 1.80354 17.6064 3.54634L19.4304 17.5H0.569613L2.39362 3.54634Z"
+                                        stroke="#97C992"/>
+                                </svg>
+                            @endif
+                        @endforeach
                     </div>
                 </div>
             </div>
         </div>
         <div class="seats-buy-btn d-660">
-            <a href="#" class="btn-buy">scenă</a>
+            <a href="#" class="btn-buy">{{ $vars['spectacle_map_scene'] }}</a>
         </div>
     </div>
     <div class="seats-buy-btn m-660">
-        <a href="#" class="btn-buy">scenă</a>
+        <a href="#" class="btn-buy">{{ $vars['spectacle_map_scene'] }}</a>
     </div>
     <div class="seats-pricing d-flex">
-        <span class="green">40 lei</span>
-        <span class="blue">50 lei</span>
-        <span class="purple">60 lei</span>
-        <span class="yellow">80 lei</span>
-        <span class="red">100 lei</span>
-        <span class="busy">Ocupat</span>
+        @foreach($spectacle->schema->colors as $color)
+            @if ($color->name === 'busy')
+                @continue
+            @endif
+            <span class="{{ $color->name }}">{{ $color->data->price }} lei</span>
+        @endforeach
+        <span class="busy">{{ __('global.busy') }}</span>
     </div>
 </div>
 
 @section('scripts')
     <script>
         $(function () {
-
             $.ajaxSetup({
                 headers: {
                     'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
                 }
             });
 
+            let totals = $("#totals");
+            let totalBase = $("#total-base");
+
             $(".seats").click(function (e) {
-                let colId = $(this).data('col-id');
-                let rowId = $(this).data('row-id');
+                e.preventDefault();
+
                 let place = $(this);
-                let classItem = $(this).attr('class');
+                let colId = place.data('col-id');
+                let rowId = place.data('row-id');
+                let uId = place.attr('data-uid');
+                let classItem = place.attr('class');
 
                 let formData = new FormData();
                 formData.append('spectacle_id', '{{ $spectacle->id }}');
                 formData.append('spectacle_name', '{{ $spectacle->name }}');
                 formData.append('col_id', colId);
                 formData.append('row_id', rowId);
+                formData.append('u_id', uId);
 
                 $.ajax({
                     type: "POST",
-                    url: '{{ route('cart.add') }}',
+                    url: '{{ route('cart.toggle') }}',
                     data: formData,
                     cache: false,
                     contentType: false,
                     processData: false,
                     success: function (response) {
                         if (response.success === true) {
-                            place.attr('class', classItem + ' active');
+                            if (response.u_id === null) {
+                                place.attr('class', classItem.replace('active', ''));
+                                place.attr('data-uid', '');
+
+                            } else {
+                                place.attr('class', classItem + ' active');
+                                place.attr('data-uid', response.u_id);
+                            }
+
+                            totals.empty();
+                            let object = response.totals;
+                            for (var prop in object) {
+                                totals.append('<span>' + object[prop] + ' {{ $vars['spectacle_map_tickets_for'] }} ' + prop + ', </span>');
+                            }
+
+                            totalBase
+                                .empty()
+                                .append('<span>' + response.total + ' {{ $vars['spectacle_map_lei'] }} </span>')
+
                         } else {
                             alert('Something went wrong');
                         }

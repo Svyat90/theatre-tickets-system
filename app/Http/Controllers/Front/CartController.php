@@ -17,10 +17,11 @@ class CartController extends FrontController
      *
      * @return JsonResponse
      */
-    public function add(Request $request)
+    public function toggle(Request $request)
     {
         $spectacle = Spectacle::query()->find($request->spectacle_id);
         $row = Row::query()->findOrFail($request->row_id);
+        $uid = null;
 
         $price = ColorSchema::query()
             ->where('color_id', $row->color_id)
@@ -28,10 +29,41 @@ class CartController extends FrontController
             ->firstOrFail()
             ->price;
 
-        // ToDo check on exists
+        if (! $request->u_id) {
+            $uid = $this->create($price, $request);
+
+        } else {
+            $cartItems = \Cart::getContent()->toArray();
+
+            if (isset($cartItems[$request->u_id])) {
+                \Cart::remove($request->u_id);
+
+            } else {
+                $uid = $this->create($price, $request);
+            }
+        }
+
+        return response()->json([
+            'success' => true,
+            'u_id' => $uid,
+            'count' => \Cart::getTotalQuantity(),
+            'total' => \Cart::getTotal(),
+            'totals' => $this->getGroupTotals()
+        ]);
+    }
+
+    /**
+     * @param $price
+     * @param $request
+     *
+     * @return int
+     */
+    private function create($price, $request) : int
+    {
+        $uid = $request->col_id;
 
         \Cart::add([
-            'id' => $id = rand(1, 1000000),
+            'id' => $uid,
             'name' => ! empty($spectacle->name) ? $spectacle->name : 'Test' ?? 'Test',
             'price' => $price,
             'quantity' => 1,
@@ -42,11 +74,7 @@ class CartController extends FrontController
             ],
         ]);
 
-        return response()->json([
-            'success' => true,
-            'count' => \Cart::getTotalQuantity(),
-            'total' => \Cart::getTotal(),
-        ]);
+        return $uid;
     }
 
     public function show()
@@ -55,4 +83,32 @@ class CartController extends FrontController
 
         dd($items);
     }
+
+    public function getGroupTotals()
+    {
+        $items = \Cart::getContent();
+        $totals = [];
+        foreach ($items->toArray() as $key => $value) {
+            $price = $value['price'];
+
+            if (! isset($totals[$price])) {
+                $totals[$price] = 0;
+            }
+
+            $totals[$price] += $value['quantity'];
+        }
+
+        return $totals;
+    }
+
+    public function deleteAll()
+    {
+        $items = \Cart::getContent();
+
+        foreach ($items->toArray() as $key => $value)
+        {
+            \Cart::remove("$key");
+        }
+    }
+
 }

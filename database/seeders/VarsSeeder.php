@@ -362,6 +362,46 @@ class VarsSeeder extends Seeder
             'ro' => 'Galerie',
             'en' => 'Galerie'
         ],
+        'spectacle_map_scene' => [
+            'ru' => 'Сцена',
+            'ro' => 'Scenă',
+            'en' => 'Scena'
+        ],
+        'spectacle_map_first_floor' => [
+            'ru' => 'Первый этаж',
+            'ro' => 'Parter',
+            'en' => 'Scena'
+        ],
+        'spectacle_map_lodge' => [
+            'ru' => 'Лоджыя',
+            'ro' => 'Loja',
+            'en' => 'Lodge'
+        ],
+        'spectacle_map_left' => [
+            'ru' => 'Слева',
+            'ro' => 'Stanga',
+            'en' => 'Left'
+        ],
+        'spectacle_map_right' => [
+            'ru' => 'Справа',
+            'ro' => 'Dreapta',
+            'en' => 'Right'
+        ],
+        'spectacle_map_balcon' => [
+            'ru' => 'Балкон',
+            'ro' => 'Balcon',
+            'en' => 'Balcony'
+        ],
+        'spectacle_map_tickets_for' => [
+            'ru' => 'билеты на',
+            'ro' => 'bilete pentru',
+            'en' => 'tickets for'
+        ],
+        'spectacle_map_lei' => [
+            'ru' => 'лей',
+            'ro' => 'lei',
+            'en' => 'lei'
+        ],
     ];
 
     /**
