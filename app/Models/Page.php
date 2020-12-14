@@ -45,6 +45,11 @@ class Page extends BaseModel
     protected $dates = ['date'];
 
     /**
+     * @var string[]
+     */
+    protected $casts = ['is_static' => 'bool'];
+
+    /**
      * @return BelongsTo
      */
     public function parent()

@@ -79,7 +79,7 @@ class StaticPageSeeder extends Seeder
             'order_footer' => 4,
             'is_static' => true,
         ]));
-        $page->update(['slug' => 'page/contacts']);
+        $page->update(['slug' => 'contacts']);
 
         $page = $service->createPage(new StorePageRequest([
             'name' => [
@@ -95,6 +95,6 @@ class StaticPageSeeder extends Seeder
             'order_footer' => 5,
             'is_static' => true,
         ]));
-        $page->update(['slug' => 'page/about']);
+        $page->update(['slug' => 'about']);
     }
 }

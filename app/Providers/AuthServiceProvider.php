@@ -19,12 +19,14 @@ class AuthServiceProvider extends ServiceProvider
 
     /**
      * Register any authentication / authorization services.
-     *
+     *~
      * @return void
      */
     public function boot()
     {
-        URL::forceScheme('https');
+        if ($this->app->environment('production')) {
+            URL::forceScheme('https');
+        }
 
         $this->registerPolicies();
     }
