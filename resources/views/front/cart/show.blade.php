@@ -61,14 +61,14 @@
                                             <span class="place">
                                                 {{ $place['name'] }}
                                             </span>
-                                                <span class="cost">{{ $place['price'] }} {{ $vars['spectacle_map_lei'] }}</span>
+                                                <span class="cost">{{ $place['price'] }} {{ $vars['spectacle_lei'] }}</span>
                                                 <a href="{{ route('cart.delete', $place['col_id']) }}" class="material-icons delete">close</a>
                                             </p>
                                         @endforeach
                                     </div>
                                     <div class="tickets-total">
                                         <p class="total-text">
-                                            {{ $vars['spectacle_total'] }}: <span class="total-num">{{ $total }} {{ $vars['spectacle_map_lei'] }}</span>
+                                            {{ $vars['spectacle_total'] }}: <span class="total-num">{{ $total }} {{ $vars['spectacle_lei'] }}</span>
                                         </p>
                                     </div>
                                 </div>
@@ -84,7 +84,7 @@
                 <div class="confirm-wr">
                     <div class="confirm">
                         <p class="total-price">
-                            {{ $vars['spectacle_total'] }}: <span class="total-num">{{ $total }} {{ $vars['spectacle_map_lei'] }}</span>
+                            {{ $vars['spectacle_total'] }}: <span class="total-num">{{ $total }} {{ $vars['spectacle_lei'] }}</span>
                         </p>
                         <button class="bt book-btn">
                             <a href="{{ route('cart.buy') }}" class="home-link">

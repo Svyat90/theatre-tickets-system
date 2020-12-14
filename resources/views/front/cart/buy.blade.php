@@ -76,7 +76,7 @@
                     <div class="confirm-wr mob">
                         <div class="confirm">
                             <p class="total-price">
-                                Total: <span class="total-num">{{ $total }} {{ $vars['spectacle_map_lei'] }}</span>
+                                {{ $vars['spectacle_total'] }}: <span class="total-num">{{ $total }} {{ $vars['spectacle_lei'] }}</span>
                             </p>
                             <button class="bt home-btn">
                                 <a class="home-link" href="{{ route('cart.order') }}">{{ $vars['spectacles_reserve_tickets'] }}</a>
@@ -104,7 +104,7 @@
                                         <span class="place">
                                             {{ $place['name'] }}
                                         </span>
-                                            <span class="cost">{{ $place['price'] }} {{ $vars['spectacle_map_lei'] }}</span>
+                                            <span class="cost">{{ $place['price'] }} {{ $vars['spectacle_lei'] }}</span>
                                         </p>
                                     @endforeach
                                 </div>
@@ -115,7 +115,7 @@
                 <div class="confirm-wr des">
                     <div class="confirm">
                         <p class="total-price">
-                            {{ $vars['spectacle_total'] }}: <span class="total-num">{{ $total }} {{ $vars['spectacle_map_lei'] }}</span>
+                            {{ $vars['spectacle_total'] }}: <span class="total-num">{{ $total }} {{ $vars['spectacle_lei'] }}</span>
                         </p>
                         <button class="bt home-btn" id="order-btn">
                             <a class="home-link" href="{{ route('cart.order') }}">{{ $vars['spectacles_reserve_tickets'] }}</a>

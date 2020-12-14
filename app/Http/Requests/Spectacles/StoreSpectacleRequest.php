@@ -21,6 +21,11 @@ use Illuminate\Foundation\Http\FormRequest;
  * @property array $image_gallery
  * @property array $category_ids
  * @property int $schema_id
+ * @property string $video_youtube_url
+ * @property string $video_title
+ * @property string $video_desc
+ * @property string $video_link
+ * @property string $video_date
  */
 class StoreSpectacleRequest extends FormRequest
 {
@@ -58,7 +63,16 @@ class StoreSpectacleRequest extends FormRequest
             'image_gallery.*' => 'required|string',
             'category_ids'   => 'sometimes|array',
             'category_ids.*' => 'integer|exists:categories,id',
-            'schema_id' => 'required|exists:schemas,id'
+            'schema_id' => 'required|exists:schemas,id',
+            'video_youtube_url' => 'sometimes|array',
+            'video_youtube_url.*' => 'string|nullable|max:256',
+            'video_title' => 'sometimes|array',
+            'video_title.*' => 'string|nullable|max:256',
+            'video_desc' => 'sometimes|array',
+            'video_desc.*' => 'string|nullable|max:256',
+            'video_link' => 'sometimes|array',
+            'video_link.*' => 'string|nullable|max:256',
+            'video_date' => 'sometimes|string',
         ];
     }
 

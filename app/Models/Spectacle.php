@@ -32,7 +32,8 @@ class Spectacle extends BaseModel
      * @var array|string[]
      */
     protected array $translatable = [
-        'name', 'author', 'producer', 'description'
+        'name', 'author', 'producer', 'description',
+        'video_youtube_url', 'video_title', 'video_desc', 'video_link'
     ];
 
     /**
@@ -40,19 +41,20 @@ class Spectacle extends BaseModel
      */
     protected $fillable = [
         'name', 'author', 'producer', 'description', 'slug', 'schema_id',
-        'min_age', 'duration', 'active', 'start_at', 'is_premiera'
+        'min_age', 'duration', 'active', 'start_at', 'is_premiera',
+        'video_youtube_url', 'video_title', 'video_desc', 'video_link', 'video_date'
     ];
 
     /**
      * @var string[]
      */
-    protected $dates = ['start_at'];
+    protected $dates = ['start_at', 'video_date'];
 
     /**
      * @var string[]
      */
     protected $appends = [
-        'image_grid', 'image_detail', 'image_gallery'
+        'image_grid', 'image_detail', 'image_gallery' , 'range_price'
     ];
 
     /**
@@ -124,6 +126,29 @@ class Spectacle extends BaseModel
         return $mediaCollect->map(function (Media $media) {
             return $this->fillMedia($media);
         });
+    }
+
+    /**
+     * @return string
+     */
+    public function getRangePriceAttribute()
+    {
+        $min = $max = 0;
+        foreach ($this->schema->colors as $key => $color) {
+            if ($key === 0) {
+                $min = $max = (int) $color->data->price;
+            }
+
+            if ($color->data->price > $max) {
+                $max = (int) $color->data->price;
+            }
+
+            if ($color->data->price < $min) {
+                $min = (int) $color->data->price;
+            }
+        }
+
+        return sprintf('%s-%s', $min, $max);
     }
 
 }

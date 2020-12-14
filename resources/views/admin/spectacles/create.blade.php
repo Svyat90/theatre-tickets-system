@@ -80,6 +80,14 @@
                         @endif
                         <span class="help-block">{{ __("cruds.spectacles.fields.{$name}_helper") }}</span>
                     </div>
+                    <div class="form-group col-md-12 col-sm-12 col-xs-12">
+                        <label class="required" for="{{ $name = 'video_date' }}">{{ __("cruds.spectacles.fields.$name") }}</label>
+                        <input name="{{ $name }}" id="datetimepicker" value="{{ old($name, '') }}" type='text' class="form-control datetime" />
+                        @if($errors->has($name))
+                            <span class="text-danger">{{ $errors->first($name) }}</span>
+                        @endif
+                        <span class="help-block">{{ __("cruds.spectacles.fields.{$name}_helper") }}</span>
+                    </div>
 
                     <div class="form-group col-md-12 col-sm-12 col-xs-12">
                         <label class="required" for="{{ $name = 'active' }}">{{ __("cruds.spectacles.fields.$name") }}</label>
@@ -126,7 +134,7 @@
                     </div>
 
                     <div class="form-group col-md-12 col-sm-12 col-xs-12">
-                        <label class="" for="{{ $name = 'schema_id' }}">{{ __('global.schema') }}</label>
+                        <label class="required" for="{{ $name = 'schema_id' }}">{{ __('global.schema') }}</label>
                         <select class="form-control {{ $errors->has($name) ? 'is-invalid' : '' }}"
                                 name="{{ $name }}"
                                 id="{{ $name }}" >

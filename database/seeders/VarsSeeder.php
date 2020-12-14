@@ -52,6 +52,11 @@ class VarsSeeder extends Seeder
             'ro' => 'Alege spectacol',
             'en' => 'Select spectacle'
         ],
+        'place_select' => [
+            'ru' => 'Выберите место',
+            'ro' => 'Alege un loc',
+            'en' => 'Select place'
+        ],
         'spectacles_repertoire' => [
             'ru' => 'Репертуар',
             'ro' => 'Repertoriu',
@@ -76,6 +81,21 @@ class VarsSeeder extends Seeder
             'ru' => 'МИН',
             'ro' => 'MIN',
             'en' => 'MIN'
+        ],
+        'spectacles_program' => [
+            'ru' => 'Програма спектакля',
+            'ro' => 'Program spectacole',
+            'en' => 'Spectacle Program'
+        ],
+        'spectacle_video_read_more' => [
+            'ru' => 'Читать больше',
+            'ro' => 'Citeste mai mult',
+            'en' => 'Read more'
+        ],
+        'spectacle_price' => [
+            'ru' => 'Цена',
+            'ro' => 'Price',
+            'en' => 'Price'
         ],
         'news' => [
             'ru' => 'Новости',
@@ -372,6 +392,21 @@ class VarsSeeder extends Seeder
             'ro' => 'Galerie',
             'en' => 'Galerie'
         ],
+        'spectacle_gallery_title' => [
+            'ru' => 'Galerie',
+            'ro' => 'Galerie',
+            'en' => 'Galerie'
+        ],
+        'spectacle_start' => [
+            'ru' => 'Старт',
+            'ro' => 'Start',
+            'en' => 'Start'
+        ],
+        'spectacle_duration' => [
+            'ru' => 'Продолжительность выступления',
+            'ro' => 'Durata performanței',
+            'en' => 'Performance duration'
+        ],
         'spectacle_map_scene' => [
             'ru' => 'Сцена',
             'ro' => 'Scenă',
@@ -407,7 +442,7 @@ class VarsSeeder extends Seeder
             'ro' => 'bilete pentru',
             'en' => 'tickets for'
         ],
-        'spectacle_map_lei' => [
+        'spectacle_lei' => [
             'ru' => 'лей',
             'ro' => 'lei',
             'en' => 'lei'

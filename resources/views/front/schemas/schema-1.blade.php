@@ -1126,7 +1126,7 @@
 
                                 totalBase
                                     .empty()
-                                    .append('<span>' + response.total + ' {{ $vars['spectacle_map_lei'] }} </span>')
+                                    .append('<span>' + response.total + ' {{ $vars['spectacle_lei'] }} </span>')
 
                             } else {
                                 alert('Something went wrong');

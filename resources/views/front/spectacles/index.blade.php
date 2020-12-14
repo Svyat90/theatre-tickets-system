@@ -31,6 +31,7 @@
             </h2>
             <div class="sl-tabs-wr">
                 <p class="tabs swiper-wrapper">
+                    <a href="{{ route('spectacles.index') }}" class="act-link {{ ! request()->input('category_id', null) ? 'active' : '' }}">{{ $vars['base_all'] }}</a>
                     @foreach($categories as $category)
                         <a href="{{ route('spectacles.index', ['category_id' => $category->id]) }}"
                             class="act-link {{ request()->input('category_id', null) == $category->id ? 'active' : '' }}" >
@@ -51,13 +52,12 @@
                                 @endif
                             </p>
                             <div class="heading-date">
-                                <p class="m-age">{{ $spectacle->min_age }}+</p>
                                 <p class="day">{{ DateHelper::dayWeek($spectacle, 'start_at') }}</p>
                                 <h4 class="num-day">{{ DateHelper::day($spectacle, 'start_at') }}</h4>
                                 <p class="month">{{ DateHelper::month($spectacle, 'start_at') }}</p>
                             </div>
                         </div>
-                        <div class="col-content d-flex" style="{{ 'background: linear-gradient(269.55deg, rgba(32, 32, 32, 0) 85.72%, #202020 99.54%), url(' . MediaHelper::getImageUrl($spectacle, 'image_grid') . ') no-repeat !important;' }}">
+                        <div class="col-content d-flex" style="{{ 'background: linear-gradient(269.55deg, rgba(32, 32, 32, 0) 85.72%, #202020 99.54%), url(' . MediaHelper::getImageUrl($spectacle, 'image_grid') . ') no-repeat !important; background-position: bottom 0px right -1px !important;' }}">
                             <div class="heading-title">
                                 <p class="title-author">{{ $spectacle->author }}</p>
                                 <p class="title-group">{{ $spectacle->producer }}</p>
@@ -65,19 +65,16 @@
                             </div>
                             <div class="ticket-info">
                                 <div class="info-time">
-                                    <span class="info-text">{{  DateHelper::time($spectacle, 'start_at') }}</span>
+                                    <span class="info-text">{{ DateHelper::time($spectacle, 'start_at') }}</span>
                                 </div>
                                 <div class="info-duration mr-auto">
-                                    <span class="info-text">{{  $spectacle->duration  }} {{ $vars['spectacles_min'] }}</span>
-                                </div>
-                                <div class="info-age">
-                                    <span class="info-sala">{{ $spectacle->schema->name }}</span>
+                                    <span class="info-text">{{ $spectacle->duration }} {{ $vars['spectacles_min'] }}</span>
                                 </div>
                             </div>
                         </div>
                         <div class="col-tickets d-flex">
                             <div class="tickets-wr">
-                                <p class="home-link">Pret: 40-100 lei</p>
+                                <p class="home-link">{{ $vars['spectacle_price'] }}: {{ $spectacle->range_price }} {{ $vars['spectacle_lei'] }}</p>
                                 <a href="{{ route('spectacles.show', $spectacle->id) }}" class="ticket-buy-link">{{ $vars['spectacles_buy_tickets'] }}</a>
                             </div>
                             <div class="tickets-total">
