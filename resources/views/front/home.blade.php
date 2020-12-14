@@ -308,11 +308,11 @@
                     <div class="team-wr swiper-wrapper">
                         @foreach($workers as $worker)
                             <div class="team-item">
-                                <a class="item-img-wr">
+                                <a class="item-img-wr" href="{{ route('workers.show', $worker->id) }}">
                                     <img src="{{ MediaHelper::getImageUrl($worker) }}" alt="">
                                 </a>
                                 <div class="item-text-wr">
-                                    <a class="item-text item-text-name">
+                                    <a class="item-text item-text-name" href="{{ route('workers.show', $worker->id) }}">
                                         {{ $worker->name }}
                                     </a>
                                     <p class="item-text">

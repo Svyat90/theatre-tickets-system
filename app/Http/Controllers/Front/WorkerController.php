@@ -10,6 +10,8 @@ use App\Helpers\CollectionHelper;
 use App\Repositories\Workers\WorkerCategoryRepository;
 use App\Services\Workers\WorkerService;
 use App\Http\Controllers\FrontController;
+use Illuminate\Http\Request;
+use App\Models\Workers\Worker;
 
 class WorkerController extends FrontController
 {
@@ -31,6 +33,17 @@ class WorkerController extends FrontController
             ]);;
 
         return view('front.workers.index', compact('workers', 'categories', 'workerTop'));
+    }
+
+    /**
+     * @param Request $request
+     * @param Worker  $worker
+     *
+     * @return Application|Factory|View
+     */
+    public function show(Request $request, Worker $worker)
+    {
+        return view('front.workers.show', compact('worker'));
     }
 
 }

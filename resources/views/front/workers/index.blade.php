@@ -42,12 +42,12 @@
                 <div class="team-wr swiper-wrapper">
                     @if($workerTop && ! request()->input('category_id', false))
                         <div class="team-item director">
-                            <a class="item-img-wr">
+                            <a class="item-img-wr" href="{{ route('workers.show', $workerTop->id) }}">
                                 <img src="{{ MediaHelper::getImageUrl($workerTop) }}"
                                      alt="{{ $workerTop->name }}. {{ $workerTop->title }}">
                             </a>
                             <div class="item-text-wr">
-                                <a class="item-text item-text-name">
+                                <a class="item-text item-text-name" href="{{ route('workers.show', $workerTop->id) }}">
                                     {{ $workerTop->name }}
                                 </a>
                                 <p class="item-text">
@@ -59,11 +59,11 @@
 
                     @foreach($workers as $worker)
                         <div class="team-item">
-                            <a class="item-img-wr">
+                            <a class="item-img-wr" href="{{ route('workers.show', $worker->id) }}">
                                 <img src="{{ MediaHelper::getImageUrl($worker) }}" alt="">
                             </a>
                             <div class="item-text-wr">
-                                <a class="item-text item-text-name">
+                                <a class="item-text item-text-name" href="{{ route('workers.show', $worker->id) }}">
                                     {{ $worker->name }}
                                 </a>
                                 <p class="item-text">

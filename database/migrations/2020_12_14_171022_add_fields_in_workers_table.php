@@ -4,8 +4,9 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateAboutTable extends Migration
+class AddFieldsInWorkersTable extends Migration
 {
+
     /**
      * Run the migrations.
      *
@@ -13,10 +14,7 @@ class CreateAboutTable extends Migration
      */
     public function up()
     {
-        Schema::create('about', function (Blueprint $table) {
-            $table->id();
-            $table->text('name')->nullable();
-            $table->text('title')->nullable();
+        Schema::table('workers', function (Blueprint $table) {
             $table->text('text_1')->nullable();
             $table->text('text_2')->nullable();
             $table->text('text_3')->nullable();
@@ -33,6 +31,9 @@ class CreateAboutTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('about');
+        Schema::table('workers', function (Blueprint $table) {
+            $table->dropColumn(['text_1', 'text_2', 'text_3', 'text_4', 'text_5', 'text_6',]);
+        });
     }
+
 }

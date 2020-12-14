@@ -104,6 +104,11 @@ class WorkerService
     private function handleMediaFiles($request, Worker $worker) : void
     {
         MediaHelper::handleMedia($worker, 'image', $request->image);
+        MediaHelper::handleMedia($worker, 'image_1', $request->image_1);
+        MediaHelper::handleMedia($worker, 'image_2', $request->image_2);
+        MediaHelper::handleMedia($worker, 'image_3', $request->image_3);
+        MediaHelper::handleMedia($worker, 'image_4', $request->image_4);
+        MediaHelper::handleMediaCollect($worker, 'image_gallery', $request->image_gallery);
     }
 
     /**

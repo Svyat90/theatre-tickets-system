@@ -50,6 +50,11 @@
                     @include('admin.partials.item-action-table-dates', ['model' => $worker])
 
                     @include('admin.partials.media-library.show-media', ['name' => 'image', 'model' => $worker, 'namespace' => 'workers'])
+                    @include('admin.partials.media-library.show-media', ['name' => 'image_1', 'model' => $worker, 'namespace' => 'workers'])
+                    @include('admin.partials.media-library.show-media', ['name' => 'image_2', 'model' => $worker, 'namespace' => 'workers'])
+                    @include('admin.partials.media-library.show-media', ['name' => 'image_3', 'model' => $worker, 'namespace' => 'workers'])
+                    @include('admin.partials.media-library.show-media', ['name' => 'image_4', 'model' => $worker, 'namespace' => 'workers'])
+                    @include('admin.partials.media-library.show-media', ['name' => 'image_gallery', 'model' => $worker, 'namespace' => 'workers'])
 
                     </tbody>
                 </table>

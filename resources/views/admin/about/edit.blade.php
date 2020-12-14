@@ -134,7 +134,7 @@
 
 @section('scripts')
     <script>
-        let image1GridDropZone = new Dropzone("#image_1", {
+        let image1DropZone = new Dropzone("#image_1", {
             url: '{{ route('admin.about.store_media') }}',
             maxFilesize: 50, // MB
             maxFiles: 1,
@@ -186,7 +186,7 @@
             }
         })
 
-        let image2GridDropZone = new Dropzone("#image_2", {
+        let image2DropZone = new Dropzone("#image_2", {
             url: '{{ route('admin.about.store_media') }}',
             maxFilesize: 50, // MB
             maxFiles: 1,
@@ -238,7 +238,7 @@
             }
         })
 
-        let image3GridDropZone = new Dropzone("#image_3", {
+        let image3DropZone = new Dropzone("#image_3", {
             url: '{{ route('admin.about.store_media') }}',
             maxFilesize: 50, // MB
             maxFiles: 1,
@@ -290,7 +290,7 @@
             }
         })
 
-        let image4GridDropZone = new Dropzone("#image_4", {
+        let image4DropZone = new Dropzone("#image_4", {
             url: '{{ route('admin.about.store_media') }}',
             maxFilesize: 50, // MB
             maxFiles: 1,

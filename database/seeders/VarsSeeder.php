@@ -378,9 +378,9 @@ class VarsSeeder extends Seeder
             'en' => 'În 30 ani de activitate Teatrul Național Satiricus Ion Luca <br> Caragiale a realizat următoarele spectacole de referinţă:'
         ],
         'about_history_title' => [
-            'ru' => 'Teatrul participă la mai multe festivaluri şi concursuri, obţinând <br> următoarle trofee:',
-            'ro' => 'Teatrul participă la mai multe festivaluri şi concursuri, obţinând <br> următoarle trofee:',
-            'en' => 'Teatrul participă la mai multe festivaluri şi concursuri, obţinând <br> următoarle trofee:'
+            'ru' => 'История',
+            'ro' => 'Istorie',
+            'en' => 'History'
         ],
         'about_tours_title' => [
             'ru' => 'Trupa realizează un şir de turnee importante peste hotare, inclusiv',
@@ -391,6 +391,26 @@ class VarsSeeder extends Seeder
             'ru' => 'Galerie',
             'ro' => 'Galerie',
             'en' => 'Galerie'
+        ],
+        'worker_spectacles_title' => [
+            'ru' => 'În 30 ani de activitate Teatrul Național Satiricus Ion Luca <br> Caragiale a realizat următoarele spectacole de referinţă:',
+            'ro' => 'În 30 ani de activitate Teatrul Național Satiricus Ion Luca <br> Caragiale a realizat următoarele spectacole de referinţă:',
+            'en' => 'În 30 ani de activitate Teatrul Național Satiricus Ion Luca <br> Caragiale a realizat următoarele spectacole de referinţă:'
+        ],
+        'worker_tours_title' => [
+            'ru' => 'Trupa realizează un şir de turnee importante peste hotare, inclusiv',
+            'ro' => 'Trupa realizează un şir de turnee importante peste hotare, inclusiv',
+            'en' => 'Trupa realizează un şir de turnee importante peste hotare, inclusiv'
+        ],
+        'worker_gallery_title' => [
+            'ru' => 'Galerie',
+            'ro' => 'Galerie',
+            'en' => 'Galerie'
+        ],
+        'worker_history_title' => [
+            'ru' => 'История',
+            'ro' => 'Istorie',
+            'en' => 'History'
         ],
         'spectacle_gallery_title' => [
             'ru' => 'Galerie',

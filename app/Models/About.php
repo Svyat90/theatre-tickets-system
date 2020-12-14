@@ -42,7 +42,7 @@ class About extends BaseModel
      * @var string[]
      */
     protected $appends = [
-        'image_1', 'image_2', 'image_3', 'image_4',
+        'image_1', 'image_2', 'image_3', 'image_4', 'image_gallery'
     ];
 
     /**

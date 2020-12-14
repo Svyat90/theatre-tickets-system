@@ -53,7 +53,7 @@
                         </div>
                     </div>
 
-                    <div class="form-group col-md-4 col-sm-4 col-xs-4">
+                    <div class="form-group col-md-6 col-sm-6 col-xs-6">
                         <label class="required" for="{{ $name = 'worker_category_id' }}">{{ __('global.worker_category') }}</label>
                         <select class="form-control {{ $errors->has($name) ? 'is-invalid' : '' }}"
                                 name="{{ $name }}"
@@ -68,7 +68,7 @@
                         @endif
                     </div>
 
-                    <div class="form-group col-md-4 col-sm-4 col-xs-4">
+                    <div class="form-group col-md-6 col-sm-6 col-xs-6">
                         <label class="required" for="{{ $name = 'on_home' }}">{{ __("cruds.workers.fields.$name") }}</label>
                         <select name="{{ $name }}" id="{{ $name }}" class="form-control">
                             <option value="0" {{ old($name, null) == "0" ? 'selected' : '' }}>{{ __('global.no') }}</option>
@@ -80,7 +80,7 @@
                         <span class="help-block">{{ __("cruds.workers.fields.{$name}_helper") }}</span>
                     </div>
 
-                    <div class="form-group col-md-4 col-sm-4 col-xs-4">
+                    <div class="form-group col-md-6 col-sm-6 col-xs-6">
                         <label class="required" for="{{ $name = 'on_top' }}">{{ __("cruds.workers.fields.$name") }}</label>
                         <select name="{{ $name }}" id="{{ $name }}" class="form-control">
                             <option value="0" {{ old($name, null) == "0" ? 'selected' : '' }}>{{ __('global.no') }}</option>
@@ -92,7 +92,7 @@
                         <span class="help-block">{{ __("cruds.workers.fields.{$name}_helper") }}</span>
                     </div>
 
-                    <div class="form-group col-md-4 col-sm-4 col-xs-4">
+                    <div class="form-group col-md-6 col-sm-6 col-xs-6">
                         <label class="required" for="{{ $name = 'active' }}">{{ __("cruds.workers.fields.$name") }}</label>
                         <select name="{{ $name }}" id="{{ $name }}" class="form-control">
                             <option value="0" {{ old($name, null) == "0" ? 'selected' : '' }}>{{ __('global.no') }}</option>
@@ -107,6 +107,53 @@
                     <div class="form-group col-md-12 col-sm-12 col-xs-12">
                         <label class="" for="{{ $name = 'image' }}">{{ __("cruds.workers.fields.$name") }}</label>
                         <div class="needsclick dropzone {{ $errors->has('file') ? 'is-invalid' : '' }}" id="{{ $name }}">
+                        </div>
+                        @if($errors->has($name))
+                            <span class="text-danger">{{ $errors->first($name) }}</span>
+                        @endif
+                        <span class="help-block">{{ __("cruds.workers.fields.{$name}_helper") }}</span>
+                    </div>
+
+                    <div class="form-group col-md-12 col-sm-12 col-xs-12">
+                        <label class="required" for="{{ $name = 'image_1' }}">{{ __("cruds.workers.fields.$name") }}</label>
+                        <div class="needsclick dropzone {{ $errors->has('file') ? 'is-invalid' : '' }}" id="{{ $name }}">
+                        </div>
+                        @if($errors->has($name))
+                            <span class="text-danger">{{ $errors->first($name) }}</span>
+                        @endif
+                        <span class="help-block">{{ __("cruds.workers.fields.{$name}_helper") }}</span>
+                    </div>
+                    <div class="form-group col-md-12 col-sm-12 col-xs-12">
+                        <label class="required" for="{{ $name = 'image_2' }}">{{ __("cruds.workers.fields.$name") }}</label>
+                        <div class="needsclick dropzone {{ $errors->has('file') ? 'is-invalid' : '' }}" id="{{ $name }}">
+                        </div>
+                        @if($errors->has($name))
+                            <span class="text-danger">{{ $errors->first($name) }}</span>
+                        @endif
+                        <span class="help-block">{{ __("cruds.workers.fields.{$name}_helper") }}</span>
+                    </div>
+                    <div class="form-group col-md-12 col-sm-12 col-xs-12">
+                        <label class="required" for="{{ $name = 'image_3' }}">{{ __("cruds.workers.fields.$name") }}</label>
+                        <div class="needsclick dropzone {{ $errors->has('file') ? 'is-invalid' : '' }}" id="{{ $name }}">
+                        </div>
+                        @if($errors->has($name))
+                            <span class="text-danger">{{ $errors->first($name) }}</span>
+                        @endif
+                        <span class="help-block">{{ __("cruds.workers.fields.{$name}_helper") }}</span>
+                    </div>
+                    <div class="form-group col-md-12 col-sm-12 col-xs-12">
+                        <label class="required" for="{{ $name = 'image_4' }}">{{ __("cruds.workers.fields.$name") }}</label>
+                        <div class="needsclick dropzone {{ $errors->has('file') ? 'is-invalid' : '' }}" id="{{ $name }}">
+                        </div>
+                        @if($errors->has($name))
+                            <span class="text-danger">{{ $errors->first($name) }}</span>
+                        @endif
+                        <span class="help-block">{{ __("cruds.workers.fields.{$name}_helper") }}</span>
+                    </div>
+
+                    <div class="form-group col-md-12 col-sm-12 col-xs-12">
+                        <label class="required" for="{{ $name = 'image_gallery' }}">{{ __("cruds.workers.fields.$name") }}</label>
+                        <div class="needsclick dropzone {{ $errors->has($name) ? 'is-invalid' : '' }}" id="{{ $name }}">
                         </div>
                         @if($errors->has($name))
                             <span class="text-danger">{{ $errors->first($name) }}</span>
@@ -158,6 +205,226 @@
             error: function (file, response) {
                 if ($.type(response) === 'string') {
                     var message = response //dropzone sends it's own error messages in string
+                } else {
+                    var message = response.errors.file
+                }
+                file.previewElement.classList.add('dz-error')
+                _ref = file.previewElement.querySelectorAll('[data-dz-errormessage]')
+                _results = []
+                for (_i = 0, _len = _ref.length; _i < _len; _i++) {
+                    node = _ref[_i]
+                    _results.push(node.textContent = message)
+                }
+
+                return _results
+            }
+        })
+
+        let image1DropZone = new Dropzone("#image_1", {
+            url: '{{ route('admin.workers.store_media') }}',
+            maxFilesize: 50, // MB
+            maxFiles: 1,
+            addRemoveLinks: true,
+            headers: {
+                'X-CSRF-TOKEN': "{{ csrf_token() }}"
+            },
+            params: {
+                size: 50
+            },
+            acceptedFiles: ".jpeg,.jpg,.png,.gif",
+            success: function (file, response) {
+                $('form').find('input[name="image_1"]').remove()
+                $('form').append('<input type="hidden" name="image_1" value="' + response.name + '">')
+            },
+            removedfile: function (file) {
+                file.previewElement.remove()
+                if (file.status !== 'error') {
+                    $('form').find('input[name="image_1"]').remove()
+                    this.options.maxFiles = this.options.maxFiles + 1
+                }
+            },
+            init: function () {
+
+            },
+            error: function (file, response) {
+                if ($.type(response) === 'string') {
+                    var message = response //dropzone sends it's own error messages in string
+                } else {
+                    var message = response.errors.file
+                }
+                file.previewElement.classList.add('dz-error')
+                _ref = file.previewElement.querySelectorAll('[data-dz-errormessage]')
+                _results = []
+                for (_i = 0, _len = _ref.length; _i < _len; _i++) {
+                    node = _ref[_i]
+                    _results.push(node.textContent = message)
+                }
+
+                return _results
+            }
+        })
+
+        let image2DropZone = new Dropzone("#image_2", {
+            url: '{{ route('admin.workers.store_media') }}',
+            maxFilesize: 50, // MB
+            maxFiles: 1,
+            addRemoveLinks: true,
+            headers: {
+                'X-CSRF-TOKEN': "{{ csrf_token() }}"
+            },
+            params: {
+                size: 50
+            },
+            acceptedFiles: ".jpeg,.jpg,.png,.gif",
+            success: function (file, response) {
+                $('form').find('input[name="image_2"]').remove()
+                $('form').append('<input type="hidden" name="image_2" value="' + response.name + '">')
+            },
+            removedfile: function (file) {
+                file.previewElement.remove()
+                if (file.status !== 'error') {
+                    $('form').find('input[name="image_2"]').remove()
+                    this.options.maxFiles = this.options.maxFiles + 1
+                }
+            },
+            init: function () {
+
+            },
+            error: function (file, response) {
+                if ($.type(response) === 'string') {
+                    var message = response //dropzone sends it's own error messages in string
+                } else {
+                    var message = response.errors.file
+                }
+                file.previewElement.classList.add('dz-error')
+                _ref = file.previewElement.querySelectorAll('[data-dz-errormessage]')
+                _results = []
+                for (_i = 0, _len = _ref.length; _i < _len; _i++) {
+                    node = _ref[_i]
+                    _results.push(node.textContent = message)
+                }
+
+                return _results
+            }
+        })
+
+        let image3DropZone = new Dropzone("#image_3", {
+            url: '{{ route('admin.workers.store_media') }}',
+            maxFilesize: 50, // MB
+            maxFiles: 1,
+            addRemoveLinks: true,
+            headers: {
+                'X-CSRF-TOKEN': "{{ csrf_token() }}"
+            },
+            params: {
+                size: 50
+            },
+            acceptedFiles: ".jpeg,.jpg,.png,.gif",
+            success: function (file, response) {
+                $('form').find('input[name="image_3"]').remove()
+                $('form').append('<input type="hidden" name="image_3" value="' + response.name + '">')
+            },
+            removedfile: function (file) {
+                file.previewElement.remove()
+                if (file.status !== 'error') {
+                    $('form').find('input[name="image_3"]').remove()
+                    this.options.maxFiles = this.options.maxFiles + 1
+                }
+            },
+            init: function () {
+
+            },
+            error: function (file, response) {
+                if ($.type(response) === 'string') {
+                    var message = response //dropzone sends it's own error messages in string
+                } else {
+                    var message = response.errors.file
+                }
+                file.previewElement.classList.add('dz-error')
+                _ref = file.previewElement.querySelectorAll('[data-dz-errormessage]')
+                _results = []
+                for (_i = 0, _len = _ref.length; _i < _len; _i++) {
+                    node = _ref[_i]
+                    _results.push(node.textContent = message)
+                }
+
+                return _results
+            }
+        })
+
+        let image4DropZone = new Dropzone("#image_4", {
+            url: '{{ route('admin.workers.store_media') }}',
+            maxFilesize: 50, // MB
+            maxFiles: 1,
+            addRemoveLinks: true,
+            headers: {
+                'X-CSRF-TOKEN': "{{ csrf_token() }}"
+            },
+            params: {
+                size: 50
+            },
+            acceptedFiles: ".jpeg,.jpg,.png,.gif",
+            success: function (file, response) {
+                $('form').find('input[name="image_4"]').remove()
+                $('form').append('<input type="hidden" name="image_4" value="' + response.name + '">')
+            },
+            removedfile: function (file) {
+                file.previewElement.remove()
+                if (file.status !== 'error') {
+                    $('form').find('input[name="image_4"]').remove()
+                    this.options.maxFiles = this.options.maxFiles + 1
+                }
+            },
+            init: function () {
+
+            },
+            error: function (file, response) {
+                if ($.type(response) === 'string') {
+                    var message = response //dropzone sends it's own error messages in string
+                } else {
+                    var message = response.errors.file
+                }
+                file.previewElement.classList.add('dz-error')
+                _ref = file.previewElement.querySelectorAll('[data-dz-errormessage]')
+                _results = []
+                for (_i = 0, _len = _ref.length; _i < _len; _i++) {
+                    node = _ref[_i]
+                    _results.push(node.textContent = message)
+                }
+
+                return _results
+            }
+        })
+
+        let imageGalleryDropZone = new Dropzone("#image_gallery", {
+            url: '{{ route('admin.workers.store_media') }}',
+            maxFilesize: 50, // MB
+            maxFiles: 20,
+            addRemoveLinks: true,
+            headers: {
+                'X-CSRF-TOKEN': "{{ csrf_token() }}"
+            },
+            params: {
+                size: 50
+            },
+            acceptedFiles: ".jpeg,.jpg,.png,.gif",
+            success: function (file, response) {
+                $('form').find('input[name="image_gallery"]').remove()
+                $('form').append('<input type="hidden" name="image_gallery[]" value="' + response.name + '">')
+            },
+            removedfile: function (file) {
+                file.previewElement.remove()
+                if (file.status !== 'error') {
+                    $('form').find('input[id="image_gallery_' + file.id + '"]').remove()
+                    this.options.maxFiles = this.options.maxFiles + 1
+                }
+            },
+            init: function () {
+
+            },
+            error: function (file, response) {
+                if ($.type(response) === 'string') {
+                    var message = response // dropzone sends it's own error messages in string
                 } else {
                     var message = response.errors.file
                 }
