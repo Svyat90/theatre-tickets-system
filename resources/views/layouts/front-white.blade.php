@@ -23,7 +23,7 @@
 <div class="wrapper">
     <header class="header header-white">
         <nav class="navbar navbar-expand-lg">
-            <a class="navbar-brand" href="#">
+            <a class="navbar-brand" href="{{ route('front.home') }}">
                 <img id="logo" src="{{ asset('front/img/header-logo-white.png') }}" alt="Satiricus">
             </a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
@@ -74,18 +74,6 @@
                         @endif
                     @endforeach
 
-                    <li class="nav-item">
-                        <a class="nav-link" href="{{ route('workers.index') }}">{{ $vars['menu_workers_' . app()->getLocale()] }}</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="{{ route('spectacles.index') }}">{{ $vars['menu_spectacles_' . app()->getLocale()] }}</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="{{ route('articles.index') }}">{{ $vars['menu_blog_' . app()->getLocale()] }}</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="{{ route('pages.contacts') }}">{{ $vars['menu_contacts_' . app()->getLocale()] }}</a>
-                    </li>
                     <li class="nav-item mob-lang">
                         <a href="{{ route('set_locate', 'ro') }}" class="nav-link {{ app()->getLocale() === 'ro' ? 'active' : '' }}">RO</a>
                         <a href="{{ route('set_locate', 'en') }}" class="nav-link {{ app()->getLocale() === 'en' ? 'active' : '' }}">EN</a>

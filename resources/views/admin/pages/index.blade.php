@@ -36,7 +36,10 @@
                         {{ __('cruds.pages.fields.type') }}
                     </th>
                     <th>
-                        {{ __('cruds.pages.fields.order') }}
+                        {{ __('cruds.pages.fields.order_top') }}
+                    </th>
+                    <th>
+                        {{ __('cruds.pages.fields.order_footer') }}
                     </th>
                     <th>
                         {{ __('cruds.pages.fields.on_header') }}
@@ -112,7 +115,8 @@
                     {data: 'name', name: 'name'},
                     {data: 'title', name: 'title'},
                     {data: 'type', name: 'type'},
-                    {data: 'order', name: 'order'},
+                    {data: 'order_top', name: 'order_top'},
+                    {data: 'order_footer', name: 'order_footer'},
                     {data: 'on_header', name: 'on_header'},
                     {data: 'on_footer', name: 'on_footer'},
                     {data: 'active', name: 'active'},

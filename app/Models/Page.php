@@ -35,7 +35,8 @@ class Page extends BaseModel
      */
     protected $fillable = [
         'name', 'title', 'description', 'content', 'url', 'slug',
-        'order', 'on_header', 'on_footer', 'active', 'date', 'type'
+        'order_top', 'order_footer', 'on_header', 'on_footer',
+        'active', 'date', 'type', 'is_static'
     ];
 
     /**

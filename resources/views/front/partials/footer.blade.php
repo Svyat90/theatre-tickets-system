@@ -6,20 +6,6 @@
         <div class="footer-nav">
             @foreach($footerPages as $chunkPages)
                 <ul class="footer-navlist" id="{{ $loop->last ? 'last' : '' }}">
-                    @if($loop->first)
-                        <li class="footer-item">
-                            <a href="{{ route('workers.index') }}">{{ $vars['menu_workers'] }}</a>
-                        </li>
-                    @elseif($loop->last)
-                        <li class="footer-item">
-                            <a href="{{ route('pages.contacts') }}">{{ $vars['menu_contacts'] }}</a>
-                        </li>
-                    @else
-                        <li class="footer-item">
-                            <a href="{{ route('pages.about') }}">{{ $vars['menu_about'] }}</a>
-                        </li>
-                    @endif
-
                     @foreach($chunkPages as $chunkPage)
                         <li class="footer-item">
                             <a href="{{ route('pages.show', $chunkPage->slug) }}">{{ $chunkPage->name }}</a>
@@ -27,6 +13,7 @@
                     @endforeach
                 </ul>
             @endforeach
+
             <ul class="footer-navlist" id="last">
                 <li class="footer-item"><a href="#">Blog</a></li>
                 @foreach($footerArticles as $footerArticle)

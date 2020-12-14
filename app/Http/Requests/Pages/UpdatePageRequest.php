@@ -10,7 +10,8 @@ use App\Services\PageService;
  * Class UpdateDictionaryRequest
  *
  * @property int $parent_id
- * @property int $order
+ * @property int $order_top
+ * @property int $order_footer
  * @property boolean $on_header
  * @property boolean $on_footer
  * @property boolean $active
@@ -42,7 +43,8 @@ class UpdatePageRequest extends FormRequest
         return [
             'parent_id' => 'sometimes|int',
             'url' => 'sometimes|nullable|string|max:256',
-            'order' => 'sometimes|nullable|int',
+            'order_top' => 'sometimes|nullable|int',
+            'order_footer' => 'sometimes|nullable|int',
             'on_header' => 'required|bool',
             'on_footer' => 'required|bool',
             'active' => 'required|bool',

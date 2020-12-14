@@ -38,7 +38,7 @@ class PageRepository extends Model
             ->with('children')
             ->active()
             ->where('on_header', true)
-            ->orderBy('order')
+            ->orderBy('order_top')
             ->get();
     }
 
@@ -50,10 +50,10 @@ class PageRepository extends Model
         return Page::query()
             ->active()
             ->where('on_footer', true)
-            ->orderBy('order')
+            ->orderBy('order_footer')
             ->limit(9)
             ->get()
-            ->chunk(3);
+            ->chunk(4);
     }
 
     /**
