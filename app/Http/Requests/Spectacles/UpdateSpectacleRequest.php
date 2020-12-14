@@ -74,7 +74,7 @@ class UpdateSpectacleRequest extends FormRequest
             'video_desc.*' => 'string|nullable|max:256',
             'video_link' => 'sometimes|array',
             'video_link.*' => 'string|nullable|max:256',
-            'video_date' => 'sometimes|string',
+            'video_date' => 'sometimes|nullable',
         ];
     }
 
