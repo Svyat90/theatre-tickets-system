@@ -1,10 +1,13 @@
-@extends('layouts.front')
+@extends('layouts.front-white')
+
+@section('title', $vars['success_title'])
 
 @section('styles')
     <link rel="stylesheet" href="{{ asset('front/css/info-page.css') }}">
 @endsection
 
 @section('content')
+
     <main class="main success">
         <div class="main-content">
             <div class="img-wr">
@@ -17,11 +20,9 @@
                 {!! $vars['success_desc'] !!}
             </p>
             <button class="bt home-btn">
-                <a class="home-link" href="/">{{ $vars['success_download_tickets'] }}</a>
+                <a class="home-link" href="{{ route('front.home') }}">{{ $vars['cart_success_home'] }}</a>
             </button>
         </div>
     </main>
-@endsection
 
-@section('scripts')
 @endsection

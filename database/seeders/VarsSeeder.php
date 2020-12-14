@@ -532,6 +532,41 @@ class VarsSeeder extends Seeder
             'ro' => 'Reserved tickets for',
             'en' => 'Reserved tickets for'
         ],
+        '404_home' => [
+            'ru' => 'Главная',
+            'ro' => 'Home Page',
+            'en' => 'Home Page'
+        ],
+        'cart_success_home' => [
+            'ru' => 'Главная',
+            'ro' => 'Home Page',
+            'en' => 'Home Page'
+        ],
+        '404_title' => [
+            'ru' => 'Error 404! This page was not found',
+            'ro' => 'Error 404! This page was not found',
+            'en' => 'Error 404! This page was not found'
+        ],
+        '404_info' => [
+            'ru' => 'Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit.',
+            'ro' => 'Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit.',
+            'en' => 'Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit.'
+        ],
+        '500_home' => [
+            'ru' => 'Главная',
+            'ro' => 'Home Page',
+            'en' => 'Home Page'
+        ],
+        '500_title' => [
+            'ru' => 'Error 500! Something went wrong',
+            'ro' => 'Error 500! Something went wrong',
+            'en' => 'Error 500! Something went wrong'
+        ],
+        '500_info' => [
+            'ru' => 'Please try later again',
+            'ro' => 'Please try later again',
+            'en' => 'Please try later again'
+        ],
     ];
 
     /**

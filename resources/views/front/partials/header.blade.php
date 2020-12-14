@@ -80,7 +80,7 @@
                 <a href="{{ route('set_locate', 'ru') }}" class="nav-link {{ app()->getLocale() === 'ru' ? 'active' : '' }}">RU</a>
             </div>
         </div>
-        <a href="#" class="nav-link nav-link-gold m">
+        <a href="{{ route('cart.show') }}" class="nav-link nav-link-gold m">
             <img src="{{ asset('front/img/mobile-cart.svg') }}" alt="">
             @if(\Cart::getTotalQuantity() > 0)
                 <span id="count">{{ \Cart::getTotalQuantity() }}</span>
