@@ -16,7 +16,8 @@ class CreateArticlesTable extends Migration
         Schema::create('articles', function (Blueprint $table) {
             $table->id();
             $table->unsignedInteger('article_category_id')->nullable();
-            $table->string('slug', 256)->unique();
+            $table->string('slug', 128);
+            $table->unique('slug');
             $table->string('video_url', 256)->nullable();
             $table->boolean('on_header')->default(false);
             $table->boolean('on_footer')->default(false);

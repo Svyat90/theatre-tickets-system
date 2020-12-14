@@ -17,22 +17,22 @@ class CreateTicketsTable extends Migration
             $table->id();
             $table->string('name', 128);
 
-            $table->unsignedBigInteger('order_id')->after('id');
+            $table->unsignedBigInteger('order_id');
             $table->foreign('order_id')
                 ->references('id')->on('orders')
                 ->onUpdate('cascade')->onDelete('cascade');
 
-            $table->unsignedBigInteger('spectacle_id')->after('id');
+            $table->unsignedBigInteger('spectacle_id');
             $table->foreign('spectacle_id')
                 ->references('id')->on('spectacles')
                 ->onUpdate('cascade')->onDelete('cascade');
 
-            $table->unsignedBigInteger('row_id')->after('id');
+            $table->unsignedBigInteger('row_id');
             $table->foreign('row_id')
                 ->references('id')->on('rows')
                 ->onUpdate('cascade')->onDelete('cascade');
 
-            $table->unsignedBigInteger('col_id')->after('id');
+            $table->unsignedBigInteger('col_id');
             $table->foreign('col_id')
                 ->references('id')->on('cols')
                 ->onUpdate('cascade')->onDelete('cascade');

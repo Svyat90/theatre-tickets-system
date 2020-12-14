@@ -68,7 +68,7 @@
                     </div>
                     <div class="form-input-wr">
                         <input name="first_name" type="text" class="input-text" required>
-                        <span class="floating-label">{{ $vars['contact_form_fist_name'] }}</span>
+                        <span class="floating-label">{{ $vars['contact_form_first_name'] }}</span>
                     </div>
                     <div class="form-input-wr">
                         <input name="phone" type="tel" class="input-text" required>

@@ -16,7 +16,8 @@ class CreatePagesTable extends Migration
         Schema::create('pages', function (Blueprint $table) {
             $table->id();
             $table->unsignedInteger('parent_id')->nullable();
-            $table->string('slug', 128)->unique();
+            $table->string('slug', 128);
+            $table->unique('slug');
             $table->string('url', 256)->nullable();
             $table->unsignedInteger('order')->nullable();
             $table->boolean('on_header')->default(false);

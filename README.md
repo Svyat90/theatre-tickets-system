@@ -13,8 +13,8 @@ chmod -R 777 /var/www/html/bootstrap/cache
 #### Run Commands:
 ```bash
 composer install
-php artisan migrate --seed
 php artisan storage:link
+php artisan migrate --seed
 php artisan key:generate
 php artisan config:cache
 ```
