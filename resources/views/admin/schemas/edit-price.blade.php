@@ -16,7 +16,7 @@
                         <label for="{{ $name = 'price' }}">
                             {{ __("cruds.colors.fields.$name") }}
                         </label>
-                        <input class="form-control ckeditor {{ $errors->has($name) ? 'is-invalid' : '' }}"
+                        <input class="form-control {{ $errors->has($name) ? 'is-invalid' : '' }}"
                                name="{{ $name }}" id="{{ $name }}" value="{{ old($name, $colorPivot->price) }}">
                         @if($errors->has($name))
                             <span class="text-danger">{{ $errors->first($name) }}</span>

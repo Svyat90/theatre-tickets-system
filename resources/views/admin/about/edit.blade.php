@@ -41,7 +41,7 @@
                                                         <label for="{{ $name = $field . '[' . $language->locale . ']' }}">
                                                             {{ __("cruds.about.fields.$field") }}
                                                         </label>
-                                                        <textarea class="form-control ckeditor {{ $errors->has($name) ? 'is-invalid' : '' }}"
+                                                        <textarea class="form-control tinymceTextarea {{ $errors->has($name) ? 'is-invalid' : '' }}"
                                                                   name="{{ $name }}" id="{{ $name }}">{!! $oldLocale[$language->locale] ?? $about->getTranslation($field, $language->locale) !!}</textarea>
                                                         @if($errors->has($name))
                                                             <span class="text-danger">{{ $errors->first($name) }}</span>
@@ -134,19 +134,6 @@
 
 @section('scripts')
     <script>
-        $(function () {
-            // ClassicEditor.editorConfig = function( config ) {
-            //     config.allowedContent = true;
-            //     config.removeFormatAttributes = '';
-            //     config.extraAllowedContent = 'span;ul;li;table;td;style;*[id];*(*);*{*}';
-            // }
-
-            var allEditors = document.querySelectorAll('.ckeditor');
-            for (var i = 0; i < allEditors.length; ++i) {
-                ClassicEditor.create(allEditors[i])
-            }
-        });
-
         let image1GridDropZone = new Dropzone("#image_1", {
             url: '{{ route('admin.about.store_media') }}',
             maxFilesize: 50, // MB

@@ -41,7 +41,7 @@
                                                         <label for="{{ $name = $field . '[' . $language->locale . ']' }}">
                                                             {{ __("cruds.articles.fields.$field") }}
                                                         </label>
-                                                        <textarea class="form-control ckeditor {{ $errors->has($name) ? 'is-invalid' : '' }}"
+                                                        <textarea class="form-control tinymceTextarea {{ $errors->has($name) ? 'is-invalid' : '' }}"
                                                                   name="{{ $name }}" id="{{ $name }}">{!! $oldLocale[$language->locale] ?? $article->getTranslation($field, $language->locale) !!}</textarea>
                                                         @if($errors->has($name))
                                                             <span class="text-danger">{{ $errors->first($name) }}</span>
@@ -158,11 +158,6 @@
             $('#datetimepicker').datetimepicker({
                 minDate: moment().startOf('minute').add(180, 'm'),
             });
-
-            var allEditors = document.querySelectorAll('.ckeditor');
-            for (var i = 0; i < allEditors.length; ++i) {
-                ClassicEditor.create(allEditors[i]);
-            }
         });
 
         let imageGridDropZone = new Dropzone("#image", {
