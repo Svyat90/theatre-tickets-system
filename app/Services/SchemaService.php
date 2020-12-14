@@ -62,8 +62,8 @@ class SchemaService
 
     private function fillCartIds() : void
     {
-        foreach (\Cart::getContent()->toArray() as $key => $value){
-            if (! in_array($key, $this->cartColIds)) {
+        foreach (\Cart::getContent()->toArray() as $key => $value) {
+            if ($value['attributes']['spectacle_id'] == $this->spectacle->id && ! in_array($key, $this->cartColIds)) {
                 $this->cartColIds[] = $key;
             }
         }
