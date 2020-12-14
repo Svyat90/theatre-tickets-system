@@ -22,23 +22,23 @@
                             {{ $vars['cart_buy_fill_details'] }}
                         </h2>
                         <div class="form-input-wr">
-                            <input name="first_name" type="text" class="input-text" required>
+                            <input name="first_name" value="{{ old('first_name') }}" type="text" class="input-text" required>
                             <span class="floating-label">{{ $vars['contact_form_first_name'] }}</span>
                         </div>
                         <div class="form-input-wr">
-                            <input name="last_name" type="text" class="input-text" required>
+                            <input name="last_name" value="{{ old('last_name') }}" type="text" class="input-text" required>
                             <span class="floating-label">{{ $vars['contact_form_last_name'] }}</span>
                         </div>
                         <div class="form-input-wr">
-                            <input name="phone" type="tel" class="input-text" required>
+                            <input name="phone" value="{{ old('phone') }}" type="tel" class="input-text" required>
                             <span class="floating-label">{{ $vars['contact_form_phone'] }}</span>
                         </div>
                         <div class="form-input-wr">
-                            <input name="email" type="email" class="input-text" required>
+                            <input name="email" value="{{ old('email') }}" type="email" class="input-text" required>
                             <span class="floating-label">{{ $vars['contact_form_email'] }}</span>
                         </div>
                         <div class="form-input-wr">
-                            <input type="checkbox" class="form-checkbox" id="accept-rules" required>
+                            <input name="accept_terms" type="checkbox" class="form-checkbox" id="accept-rules" {{ old('accept_terms') ? 'checked' : '' }} required>
                             <label for="accept-rules">
                                 {{ $vars['cart_buy_accept'] }} &nbsp;<a href="{{ $vars['cart_buy_terms_link'] }}" class="red-link">{{ $vars['cart_buy_terms_and_cond'] }}</a>
                             </label>
