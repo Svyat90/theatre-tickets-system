@@ -70,4 +70,5 @@ return [
     "prices" => "Prices",
     "scene" => "Scene",
     "busy" => "busy",
+    "orders" => "Orders",
 ];

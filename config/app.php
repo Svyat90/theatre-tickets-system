@@ -229,6 +229,7 @@ return [
         'View' => Illuminate\Support\Facades\View::class,
         'MediaHelper' => App\Helpers\MediaHelper::class,
         'DateHelper' => App\Helpers\DateHelper::class,
+        'TicketHelper' => App\Helpers\TicketHelper::class,
         'Cart' => Darryldecode\Cart\Facades\CartFacade::class
     ],
 

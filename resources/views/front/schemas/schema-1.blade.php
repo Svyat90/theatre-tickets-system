@@ -3,7 +3,7 @@
         <div class="swiper-slide">
             <div class="seats-row d-flex">
                 <div class="seats-left pt1 ">
-                    @foreach($rows['balcony']['items'][20]['on_left'] as $col)
+                    @foreach($rows['balcony']['items'][20][$side = 'on_left'] as $col)
                         @php
                             $class = $loop->first ? 'ml1' : '';
                         @endphp
@@ -14,6 +14,7 @@
                             data-seat="{{ $col['seat'] }}"
                             data-row-id="{{ $col['row_id'] }}"
                             data-row="{{ $col['row'] }}"
+                            data-name="{{ TicketHelper::generateName($vars, $col, $side, 2) }}"
                             width="20"
                             height="18"
                             viewBox="0 0 20 18"
@@ -26,7 +27,7 @@
                         </svg>
                     @endforeach
 
-                    @foreach($rows['balcony']['items'][19]['on_left'] as $col)
+                    @foreach($rows['balcony']['items'][19][$side = 'on_left'] as $col)
                         @php
                             $class = $loop->last ? 'mr1' : '';
                         @endphp
@@ -37,6 +38,7 @@
                             data-seat="{{ $col['seat'] }}"
                             data-row-id="{{ $col['row_id'] }}"
                             data-row="{{ $col['row'] }}"
+                            data-name="{{ TicketHelper::generateName($vars, $col, $side, 2) }}"
                             width="20"
                             height="18"
                             viewBox="0 0 20 18"
@@ -49,7 +51,7 @@
                         </svg>
                     @endforeach
 
-                    @foreach($rows['balcony']['items'][18]['on_left'] as $col)
+                    @foreach($rows['balcony']['items'][18][$side = 'on_left'] as $col)
                         @php
                             $class = '';
                         @endphp
@@ -60,6 +62,7 @@
                             data-seat="{{ $col['seat'] }}"
                             data-row-id="{{ $col['row_id'] }}"
                             data-row="{{ $col['row'] }}"
+                            data-name="{{ TicketHelper::generateName($vars, $col, $side, 2) }}"
                             width="20"
                             height="18"
                             viewBox="0 0 20 18"
@@ -80,7 +83,7 @@
                 </div>
                 <div class="seats-right pt1 ml1 pr1">
 
-                    @foreach($rows['balcony']['items'][20]['on_right'] as $col)
+                    @foreach($rows['balcony']['items'][20][$side = 'on_right'] as $col)
                         @php
                             $class = $loop->iteration === 3 ? 'mr1' : '';
                         @endphp
@@ -91,6 +94,7 @@
                             data-seat="{{ $col['seat'] }}"
                             data-row-id="{{ $col['row_id'] }}"
                             data-row="{{ $col['row'] }}"
+                            data-name="{{ TicketHelper::generateName($vars, $col, $side, 2) }}"
                             width="20"
                             height="18"
                             viewBox="0 0 20 18"
@@ -103,7 +107,7 @@
                         </svg>
                     @endforeach
 
-                    @foreach($rows['balcony']['items'][19]['on_right'] as $col)
+                    @foreach($rows['balcony']['items'][19][$side = 'on_right'] as $col)
                         @php
                             $class = '';
                         @endphp
@@ -114,6 +118,7 @@
                             data-seat="{{ $col['seat'] }}"
                             data-row-id="{{ $col['row_id'] }}"
                             data-row="{{ $col['row'] }}"
+                            data-name="{{ TicketHelper::generateName($vars, $col, $side, 2) }}"
                             width="20"
                             height="18"
                             viewBox="0 0 20 18"
@@ -126,7 +131,7 @@
                         </svg>
                     @endforeach
 
-                    @foreach($rows['balcony']['items'][18]['on_right'] as $col)
+                    @foreach($rows['balcony']['items'][18][$side = 'on_right'] as $col)
                         @php
                             $class = '';
                         @endphp
@@ -137,6 +142,7 @@
                             data-seat="{{ $col['seat'] }}"
                             data-row-id="{{ $col['row_id'] }}"
                             data-row="{{ $col['row'] }}"
+                            data-name="{{ TicketHelper::generateName($vars, $col, $side, 2) }}"
                             width="20"
                             height="18"
                             viewBox="0 0 20 18"
@@ -161,6 +167,7 @@
                                 data-seat="{{ $col['seat'] }}"
                                 data-row-id="{{ $col['row_id'] }}"
                                 data-row="{{ $col['row'] }}"
+                                data-name="{{ TicketHelper::generateName($vars, $col, null, 2, true) }}"
                                 width="20"
                                 height="18"
                                 viewBox="0 0 20 18"
@@ -177,7 +184,7 @@
             </div>
             <div class="seats-row d-flex">
                 <div class="seats-left pl1 pr1">
-                    @foreach($rows['rows']['items'][13]['data']['on_left'] as $col)
+                    @foreach($rows['rows']['items'][13]['data'][$side = 'on_left'] as $col)
                         @php
                             $class = $loop->iteration === 1 ? 'ml1' : '';
                         @endphp
@@ -188,6 +195,7 @@
                             data-seat="{{ $col['seat'] }}"
                             data-row-id="{{ $col['row_id'] }}"
                             data-row="{{ $col['row'] }}"
+                            data-name="{{ TicketHelper::generateName($vars, $col, $side) }}"
                             width="20"
                             height="18"
                             viewBox="0 0 20 18"
@@ -207,6 +215,7 @@
                             data-seat="{{ $col['seat'] }}"
                             data-row-id="{{ $col['row_id'] }}"
                             data-row="{{ $col['row'] }}"
+                            data-name="{{ TicketHelper::generateName($vars, $col, $side) }}"
                             width="20"
                             height="18"
                             viewBox="0 0 20 18"
@@ -226,6 +235,7 @@
                             data-seat="{{ $col['seat'] }}"
                             data-row-id="{{ $col['row_id'] }}"
                             data-row="{{ $col['row'] }}"
+                            data-name="{{ TicketHelper::generateName($vars, $col, $side) }}"
                             width="20"
                             height="18"
                             viewBox="0 0 20 18"
@@ -245,6 +255,7 @@
                             data-seat="{{ $col['seat'] }}"
                             data-row-id="{{ $col['row_id'] }}"
                             data-row="{{ $col['row'] }}"
+                            data-name="{{ TicketHelper::generateName($vars, $col, $side) }}"
                             width="20"
                             height="18"
                             viewBox="0 0 20 18"
@@ -264,6 +275,7 @@
                             data-seat="{{ $col['seat'] }}"
                             data-row-id="{{ $col['row_id'] }}"
                             data-row="{{ $col['row'] }}"
+                            data-name="{{ TicketHelper::generateName($vars, $col, $side) }}"
                             width="20"
                             height="18"
                             viewBox="0 0 20 18"
@@ -284,7 +296,7 @@
                     <span class="seat-num">9</span>
                 </div>
                 <div class="seats-right pl1 pr1 mr1">
-                    @foreach($rows['rows']['items'][13]['data']['on_right'] as $col)
+                    @foreach($rows['rows']['items'][13]['data'][$side = 'on_right'] as $col)
                         @php
                             $class = $loop->last ? 'mr1' : '';
                         @endphp
@@ -295,6 +307,7 @@
                             data-seat="{{ $col['seat'] }}"
                             data-row-id="{{ $col['row_id'] }}"
                             data-row="{{ $col['row'] }}"
+                            data-name="{{ TicketHelper::generateName($vars, $col, $side) }}"
                             width="20"
                             height="18"
                             viewBox="0 0 20 18"
@@ -307,13 +320,14 @@
                         </svg>
                     @endforeach
 
-                    @foreach($rows['rows']['items'][12]['data']['on_right'] as $col)
+                    @foreach($rows['rows']['items'][12]['data'][$side = 'on_right'] as $col)
                         <svg
                             data-uid="{{ $col['active'] ? $col['id'] : '' }}"
                             data-col-id="{{ $col['id'] }}"
                             data-seat="{{ $col['seat'] }}"
                             data-row-id="{{ $col['row_id'] }}"
                             data-row="{{ $col['row'] }}"
+                            data-name="{{ TicketHelper::generateName($vars, $col, $side) }}"
                             width="20"
                             height="18"
                             viewBox="0 0 20 18"
@@ -326,13 +340,14 @@
                         </svg>
                     @endforeach
 
-                    @foreach($rows['rows']['items'][11]['data']['on_right'] as $col)
+                    @foreach($rows['rows']['items'][11]['data'][$side = 'on_right'] as $col)
                         <svg
                             data-uid="{{ $col['active'] ? $col['id'] : '' }}"
                             data-col-id="{{ $col['id'] }}"
                             data-seat="{{ $col['seat'] }}"
                             data-row-id="{{ $col['row_id'] }}"
                             data-row="{{ $col['row'] }}"
+                            data-name="{{ TicketHelper::generateName($vars, $col, $side) }}"
                             width="20"
                             height="18"
                             viewBox="0 0 20 18"
@@ -345,13 +360,14 @@
                         </svg>
                     @endforeach
 
-                    @foreach($rows['rows']['items'][10]['data']['on_right'] as $col)
+                    @foreach($rows['rows']['items'][10]['data'][$side = 'on_right'] as $col)
                         <svg
                             data-uid="{{ $col['active'] ? $col['id'] : '' }}"
                             data-col-id="{{ $col['id'] }}"
                             data-seat="{{ $col['seat'] }}"
                             data-row-id="{{ $col['row_id'] }}"
                             data-row="{{ $col['row'] }}"
+                            data-name="{{ TicketHelper::generateName($vars, $col, $side) }}"
                             width="20"
                             height="18"
                             viewBox="0 0 20 18"
@@ -364,13 +380,14 @@
                         </svg>
                     @endforeach
 
-                    @foreach($rows['rows']['items'][9]['data']['on_right'] as $col)
+                    @foreach($rows['rows']['items'][9]['data'][$side = 'on_right'] as $col)
                         <svg
                             data-uid="{{ $col['active'] ? $col['id'] : '' }}"
                             data-col-id="{{ $col['id'] }}"
                             data-seat="{{ $col['seat'] }}"
                             data-row-id="{{ $col['row_id'] }}"
                             data-row="{{ $col['row'] }}"
+                            data-name="{{ TicketHelper::generateName($vars, $col, $side) }}"
                             width="20"
                             height="18"
                             viewBox="0 0 20 18"
@@ -386,13 +403,14 @@
             </div>
             <div class="seats-row d-flex mb50">
                 <div class="seats-left pl2 pr1">
-                    @foreach($rows['rows']['items'][8]['data']['on_left'] as $col)
+                    @foreach($rows['rows']['items'][8]['data'][$side = 'on_left'] as $col)
                         <svg
                             data-uid="{{ $col['active'] ? $col['id'] : '' }}"
                             data-col-id="{{ $col['id'] }}"
                             data-seat="{{ $col['seat'] }}"
                             data-row-id="{{ $col['row_id'] }}"
                             data-row="{{ $col['row'] }}"
+                            data-name="{{ TicketHelper::generateName($vars, $col, $side) }}"
                             width="20"
                             height="18"
                             viewBox="0 0 20 18"
@@ -405,7 +423,7 @@
                         </svg>
                     @endforeach
 
-                    @foreach($rows['rows']['items'][7]['data']['on_left'] as $col)
+                    @foreach($rows['rows']['items'][7]['data'][$side = 'on_left'] as $col)
                         @php
                             $class = $loop->first ? 'ml1' : '';
                         @endphp
@@ -416,6 +434,7 @@
                             data-seat="{{ $col['seat'] }}"
                             data-row-id="{{ $col['row_id'] }}"
                             data-row="{{ $col['row'] }}"
+                            data-name="{{ TicketHelper::generateName($vars, $col, $side) }}"
                             width="20"
                             height="18"
                             viewBox="0 0 20 18"
@@ -428,7 +447,7 @@
                         </svg>
                     @endforeach
 
-                    @foreach($rows['rows']['items'][6]['data']['on_left'] as $col)
+                    @foreach($rows['rows']['items'][6]['data'][$side = 'on_left'] as $col)
                         @php
                             $class = $loop->first ? 'ml1' : '';
                         @endphp
@@ -439,6 +458,7 @@
                             data-seat="{{ $col['seat'] }}"
                             data-row-id="{{ $col['row_id'] }}"
                             data-row="{{ $col['row'] }}"
+                            data-name="{{ TicketHelper::generateName($vars, $col, $side) }}"
                             width="20"
                             height="18"
                             viewBox="0 0 20 18"
@@ -451,7 +471,7 @@
                         </svg>
                     @endforeach
 
-                    @foreach($rows['rows']['items'][5]['data']['on_left'] as $col)
+                    @foreach($rows['rows']['items'][5]['data'][$side = 'on_left'] as $col)
                         @if($col['seat'] === 1)
                             @continue
                         @endif
@@ -466,6 +486,7 @@
                             data-seat="{{ $col['seat'] }}"
                             data-row-id="{{ $col['row_id'] }}"
                             data-row="{{ $col['row'] }}"
+                            data-name="{{ TicketHelper::generateName($vars, $col, $side) }}"
                             width="20"
                             height="18"
                             viewBox="0 0 20 18"
@@ -485,7 +506,7 @@
                     <span class="seat-num">5</span>
                 </div>
                 <div class="seats-right pl1 pr1 mr1">
-                    @foreach($rows['rows']['items'][8]['data']['on_right'] as $col)
+                    @foreach($rows['rows']['items'][8]['data'][$side = 'on_right'] as $col)
                         @php
                             $class = $loop->last ? 'mr1' : '';
                         @endphp
@@ -496,6 +517,7 @@
                             data-seat="{{ $col['seat'] }}"
                             data-row-id="{{ $col['row_id'] }}"
                             data-row="{{ $col['row'] }}"
+                            data-name="{{ TicketHelper::generateName($vars, $col, $side) }}"
                             width="20"
                             height="18"
                             viewBox="0 0 20 18"
@@ -508,7 +530,7 @@
                         </svg>
                     @endforeach
 
-                    @foreach($rows['rows']['items'][7]['data']['on_right'] as $col)
+                    @foreach($rows['rows']['items'][7]['data'][$side = 'on_right'] as $col)
                         @php
                             $class = $loop->last ? 'mr2' : '';
                         @endphp
@@ -519,6 +541,7 @@
                             data-seat="{{ $col['seat'] }}"
                             data-row-id="{{ $col['row_id'] }}"
                             data-row="{{ $col['row'] }}"
+                            data-name="{{ TicketHelper::generateName($vars, $col, $side) }}"
                             width="20"
                             height="18"
                             viewBox="0 0 20 18"
@@ -531,7 +554,7 @@
                         </svg>
                     @endforeach
 
-                    @foreach($rows['rows']['items'][6]['data']['on_right'] as $col)
+                    @foreach($rows['rows']['items'][6]['data'][$side = 'on_right'] as $col)
                         @php
                             $class = $loop->last ? 'mr2' : '';
                         @endphp
@@ -542,6 +565,7 @@
                             data-seat="{{ $col['seat'] }}"
                             data-row-id="{{ $col['row_id'] }}"
                             data-row="{{ $col['row'] }}"
+                            data-name="{{ TicketHelper::generateName($vars, $col, $side) }}"
                             width="20"
                             height="18"
                             viewBox="0 0 20 18"
@@ -554,7 +578,7 @@
                         </svg>
                     @endforeach
 
-                    @foreach($rows['rows']['items'][5]['data']['on_right'] as $col)
+                    @foreach($rows['rows']['items'][5]['data'][$side = 'on_right'] as $col)
                         @if($col['seat'] === 15)
                             @continue
                         @endif
@@ -565,6 +589,7 @@
                             data-seat="{{ $col['seat'] }}"
                             data-row-id="{{ $col['row_id'] }}"
                             data-row="{{ $col['row'] }}"
+                            data-name="{{ TicketHelper::generateName($vars, $col, $side) }}"
                             width="20"
                             height="18"
                             viewBox="0 0 20 18"
@@ -580,7 +605,7 @@
             </div>
             <div class="seats-row d-flex mb25">
                 <div class="seats-left pl1">
-                    @foreach($rows['rows']['items'][4]['data']['on_left'] as $col)
+                    @foreach($rows['rows']['items'][4]['data'][$side = 'on_left'] as $col)
                         @php
                             $class = $loop->first ? 'ml1' : '';
                         @endphp
@@ -591,6 +616,7 @@
                             data-seat="{{ $col['seat'] }}"
                             data-row-id="{{ $col['row_id'] }}"
                             data-row="{{ $col['row'] }}"
+                            data-name="{{ TicketHelper::generateName($vars, $col, $side) }}"
                             width="20"
                             height="18"
                             viewBox="0 0 20 18"
@@ -603,7 +629,7 @@
                         </svg>
                     @endforeach
 
-                    @foreach($rows['rows']['items'][3]['data']['on_left'] as $col)
+                    @foreach($rows['rows']['items'][3]['data'][$side = 'on_left'] as $col)
                         @php
                             $class = $loop->first ? 'ml1' : '';
                         @endphp
@@ -614,6 +640,7 @@
                             data-seat="{{ $col['seat'] }}"
                             data-row-id="{{ $col['row_id'] }}"
                             data-row="{{ $col['row'] }}"
+                            data-name="{{ TicketHelper::generateName($vars, $col, $side) }}"
                             width="20"
                             height="18"
                             viewBox="0 0 20 18"
@@ -626,7 +653,7 @@
                         </svg>
                     @endforeach
 
-                    @foreach($rows['rows']['items'][2]['data']['on_left'] as $col)
+                    @foreach($rows['rows']['items'][2]['data'][$side = 'on_left'] as $col)
                         @if($col['seat'] === 1)
                             @continue
                         @endif
@@ -641,6 +668,7 @@
                             data-seat="{{ $col['seat'] }}"
                             data-row-id="{{ $col['row_id'] }}"
                             data-row="{{ $col['row'] }}"
+                            data-name="{{ TicketHelper::generateName($vars, $col, $side) }}"
                             width="20"
                             height="18"
                             viewBox="0 0 20 18"
@@ -653,7 +681,7 @@
                         </svg>
                     @endforeach
 
-                    @foreach($rows['rows']['items'][1]['data']['on_left'] as $col)
+                    @foreach($rows['rows']['items'][1]['data'][$side = 'on_left'] as $col)
                         @php
                             $class = '';
                         @endphp
@@ -664,6 +692,7 @@
                             data-seat="{{ $col['seat'] }}"
                             data-row-id="{{ $col['row_id'] }}"
                             data-row="{{ $col['row'] }}"
+                            data-name="{{ TicketHelper::generateName($vars, $col, $side) }}"
                             width="20"
                             height="18"
                             viewBox="0 0 20 18"
@@ -684,7 +713,7 @@
                     <span class="seat-num">1</span>
                 </div>
                 <div class="seats-right mr1">
-                    @foreach($rows['rows']['items'][4]['data']['on_right'] as $col)
+                    @foreach($rows['rows']['items'][4]['data'][$side = 'on_right'] as $col)
                         @php
                             $class = $loop->last ? 'mr1' : '';
                         @endphp
@@ -695,6 +724,7 @@
                             data-seat="{{ $col['seat'] }}"
                             data-row-id="{{ $col['row_id'] }}"
                             data-row="{{ $col['row'] }}"
+                            data-name="{{ TicketHelper::generateName($vars, $col, $side) }}"
                             width="20"
                             height="18"
                             viewBox="0 0 20 18"
@@ -707,7 +737,7 @@
                         </svg>
                     @endforeach
 
-                    @foreach($rows['rows']['items'][3]['data']['on_right'] as $col)
+                    @foreach($rows['rows']['items'][3]['data'][$side = 'on_right'] as $col)
                         @php
                             $class = $loop->last ? 'mr1' : '';
                         @endphp
@@ -718,6 +748,7 @@
                             data-seat="{{ $col['seat'] }}"
                             data-row-id="{{ $col['row_id'] }}"
                             data-row="{{ $col['row'] }}"
+                            data-name="{{ TicketHelper::generateName($vars, $col, $side) }}"
                             width="20"
                             height="18"
                             viewBox="0 0 20 18"
@@ -730,7 +761,7 @@
                         </svg>
                     @endforeach
 
-                    @foreach($rows['rows']['items'][2]['data']['on_right'] as $col)
+                    @foreach($rows['rows']['items'][2]['data'][$side = 'on_right'] as $col)
                         @if($col['seat'] === 20)
                             @continue
                         @endif
@@ -745,6 +776,7 @@
                             data-seat="{{ $col['seat'] }}"
                             data-row-id="{{ $col['row_id'] }}"
                             data-row="{{ $col['row'] }}"
+                            data-name="{{ TicketHelper::generateName($vars, $col, $side) }}"
                             width="20"
                             height="18"
                             viewBox="0 0 20 18"
@@ -757,7 +789,7 @@
                         </svg>
                     @endforeach
 
-                    @foreach($rows['rows']['items'][1]['data']['on_right'] as $col)
+                    @foreach($rows['rows']['items'][1]['data'][$side = 'on_right'] as $col)
                         @php
                             $class = '';
                         @endphp
@@ -767,6 +799,7 @@
                             data-seat="{{ $col['seat'] }}"
                             data-row-id="{{ $col['row_id'] }}"
                             data-row="{{ $col['row'] }}"
+                            data-name="{{ TicketHelper::generateName($vars, $col, $side) }}"
                             width="20"
                             height="18"
                             viewBox="0 0 20 18"
@@ -788,7 +821,7 @@
                         <span class="seat-num">{{ $vars['spectacle_map_right'] }}</span>
                     </div>
                     <div class="parter-col">
-                        @foreach(array_reverse($rows['rows']['loggia'][14]['data']['on_left']) as $col)
+                        @foreach(array_reverse($rows['rows']['loggia'][14]['data'][$side = 'on_left']) as $col)
                             @php
                                 $class = '';
                             @endphp
@@ -799,6 +832,7 @@
                                 data-seat="{{ $col['seat'] }}"
                                 data-row-id="{{ $col['row_id'] }}"
                                 data-row="{{ $col['row'] }}"
+                                data-name="{{ TicketHelper::generateName($vars, $col, $side, 1, true) }}"
                                 width="20"
                                 height="18"
                                 viewBox="0 0 20 18"
@@ -811,7 +845,7 @@
                             </svg>
                         @endforeach
 
-                        @foreach($rows['rows']['items'][5]['data']['on_left'] as $col)
+                        @foreach($rows['rows']['items'][5]['data'][$side = 'on_left'] as $col)
                             @if($col['seat'] === 1)
                                 @php
                                     $class = '';
@@ -823,6 +857,7 @@
                                     data-seat="{{ $col['seat'] }}"
                                     data-row-id="{{ $col['row_id'] }}"
                                     data-row="{{ $col['row'] }}"
+                                    data-name="{{ TicketHelper::generateName($vars, $col, $side) }}"
                                     width="20"
                                     height="18"
                                     viewBox="0 0 20 18"
@@ -844,7 +879,7 @@
                         <span class="seat-num">{{ $vars['spectacle_map_right'] }}</span>
                     </div>
                     <div class="parter-col">
-                        @foreach(array_reverse($rows['rows']['loggia'][15]['data']['on_left']) as $col)
+                        @foreach(array_reverse($rows['rows']['loggia'][15]['data'][$side = 'on_left']) as $col)
                             @php
                                 $class = '';
                             @endphp
@@ -855,6 +890,7 @@
                                 data-seat="{{ $col['seat'] }}"
                                 data-row-id="{{ $col['row_id'] }}"
                                 data-row="{{ $col['row'] }}"
+                                data-name="{{ TicketHelper::generateName($vars, $col, $side, 1, true) }}"
                                 width="20"
                                 height="18"
                                 viewBox="0 0 20 18"
@@ -867,7 +903,7 @@
                             </svg>
                         @endforeach
 
-                            @foreach($rows['rows']['items'][2]['data']['on_left'] as $col)
+                            @foreach($rows['rows']['items'][2]['data'][$side = 'on_left'] as $col)
                                 @if($col['seat'] === 1)
                                     @php
                                         $class = '';
@@ -878,6 +914,7 @@
                                         data-seat="{{ $col['seat'] }}"
                                         data-row-id="{{ $col['row_id'] }}"
                                         data-row="{{ $col['row'] }}"
+                                        data-name="{{ TicketHelper::generateName($vars, $col, $side) }}"
                                         width="20"
                                         height="18"
                                         viewBox="0 0 20 18"
@@ -901,7 +938,7 @@
                         <span class="seat-num">{{ $vars['spectacle_map_left'] }}</span>
                     </div>
                     <div class="parter-col">
-                        @foreach(array_reverse($rows['rows']['loggia'][16]['data']['on_right']) as $col)
+                        @foreach(array_reverse($rows['rows']['loggia'][16]['data'][$side = 'on_right']) as $col)
                             @php
                                 $class = '';
                             @endphp
@@ -912,6 +949,7 @@
                                 data-seat="{{ $col['seat'] }}"
                                 data-row-id="{{ $col['row_id'] }}"
                                 data-row="{{ $col['row'] }}"
+                                data-name="{{ TicketHelper::generateName($vars, $col, $side, 1, true) }}"
                                 width="20"
                                 height="18"
                                 viewBox="0 0 20 18"
@@ -924,7 +962,7 @@
                             </svg>
                         @endforeach
 
-                        @foreach($rows['rows']['items'][5]['data']['on_right'] as $col)
+                        @foreach($rows['rows']['items'][5]['data'][$side = 'on_right'] as $col)
                             @if($col['seat'] === 15)
                                 @php
                                     $class = '';
@@ -935,6 +973,7 @@
                                     data-seat="{{ $col['seat'] }}"
                                     data-row-id="{{ $col['row_id'] }}"
                                     data-row="{{ $col['row'] }}"
+                                    data-name="{{ TicketHelper::generateName($vars, $col, $side) }}"
                                     width="20"
                                     height="18"
                                     viewBox="0 0 20 18"
@@ -956,7 +995,7 @@
                         <span class="seat-num">{{ $vars['spectacle_map_left'] }}</span>
                     </div>
                     <div class="parter-col">
-                        @foreach(array_reverse($rows['rows']['loggia'][17]['data']['on_right']) as $col)
+                        @foreach(array_reverse($rows['rows']['loggia'][17]['data'][$side = 'on_right']) as $col)
                             @php
                                 $class = '';
                             @endphp
@@ -967,6 +1006,7 @@
                                 data-seat="{{ $col['seat'] }}"
                                 data-row-id="{{ $col['row_id'] }}"
                                 data-row="{{ $col['row'] }}"
+                                data-name="{{ TicketHelper::generateName($vars, $col, $side, 1, true) }}"
                                 width="20"
                                 height="18"
                                 viewBox="0 0 20 18"
@@ -979,7 +1019,7 @@
                             </svg>
                         @endforeach
 
-                        @foreach($rows['rows']['items'][2]['data']['on_right'] as $col)
+                        @foreach($rows['rows']['items'][2]['data'][$side = 'on_right'] as $col)
                             @if($col['seat'] === 20)
                                 @php
                                     $class = '';
@@ -991,6 +1031,7 @@
                                     data-seat="{{ $col['seat'] }}"
                                     data-row-id="{{ $col['row_id'] }}"
                                     data-row="{{ $col['row'] }}"
+                                    data-name="{{ TicketHelper::generateName($vars, $col, $side) }}"
                                     width="20"
                                     height="18"
                                     viewBox="0 0 20 18"
@@ -1045,12 +1086,13 @@
                 let rowId = place.data('row-id');
                 let seat = place.data('seat');
                 let row = place.data('row');
+                let placeName = place.data('name');
                 let uId = place.attr('data-uid');
                 let classItem = place.attr('class');
 
                 let formData = new FormData();
                 formData.append('spectacle_id', '{{ $spectacle->id }}');
-                formData.append('spectacle_name', '{{ $spectacle->name }}');
+                formData.append('place_name', placeName);
                 formData.append('col_id', colId);
                 formData.append('row_id', rowId);
                 formData.append('seat', seat);

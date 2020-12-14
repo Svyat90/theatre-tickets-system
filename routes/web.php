@@ -55,7 +55,7 @@ Route::prefix(LocaleMiddleware::getLocale())->namespace('Front')->group(function
     Route::post('cart/order', [CartController::class, 'order'])->name('cart.order');
     Route::post('cart/toggle', [CartController::class, 'toggle'])->name('cart.toggle');
     Route::get('cart/delete/{uid}', [CartController::class, 'delete'])->name('cart.delete');
-    Route::get('cart/delete-all', [CartController::class, 'deleteAll'])->name('cart.delete_all');
+    Route::get('cart/delete-all/{spectacle_id}', [CartController::class, 'deleteAll'])->name('cart.delete_all');
 });
 
 // Admin

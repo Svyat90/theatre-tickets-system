@@ -6,6 +6,7 @@ use App\Models\Row;
 use App\Models\Col;
 use App\Models\Schema;
 use App\Models\Spectacle;
+use App\Models\Ticket;
 
 class SchemaService
 {
@@ -31,6 +32,11 @@ class SchemaService
     private array $reservedColIds = [];
 
     /**
+     * @var Spectacle
+     */
+    private Spectacle $spectacle;
+
+    /**
      * @param Schema    $schema
      * @param Spectacle $spectacle
      *
@@ -39,8 +45,9 @@ class SchemaService
     public function generateRowsData(Schema $schema, Spectacle $spectacle) : array
     {
         $this->schema = $schema;
+        $this->spectacle = $spectacle;
 
-        $this->fillBusyIds($spectacle);
+        $this->fillBusyIds();
         $this->fillCartIds();
         $this->fillBalcony();
         $this->fillRows();
@@ -48,9 +55,9 @@ class SchemaService
         return $this->data;
     }
 
-    private function fillBusyIds(Spectacle $spectacle) : void
+    private function fillBusyIds() : void
     {
-        $this->reservedColIds = $spectacle->tickets->pluck('col_id')->toArray();
+        $this->reservedColIds = $this->spectacle->tickets->pluck('col_id')->toArray();
     }
 
     private function fillCartIds() : void
@@ -139,12 +146,22 @@ class SchemaService
      */
     private function setClass(array $colData) : array
     {
-        $colData['class'] = "";
+        $colData['class'] = '';
         if (in_array($colData['id'], $this->cartColIds)) {
             $colData['class'] = 'active';
 
         } elseif (in_array($colData['id'], $this->reservedColIds)) {
             $colData['class'] = 'busy';
+
+            $order = Ticket::query()
+                ->where('spectacle_id', $this->spectacle->id)
+                ->where('col_id', $colData['id'])
+                ->first()->order;
+
+            $colData['name'] = $order->first_name . ' '
+                . $order->last_name . ' '
+                . $order->phone . ' '
+                . $order->email;
         }
 
         $colData['active'] = false;

@@ -58,10 +58,12 @@ class EmailService
             'data' => $mailData
         ];
 
-        Mail::send('mails.tickets', $data, function ($message) use ($name, $emailTo) {
+        $reservedStr = (new VarRepository())->getVar('email_reserved_tickets_for');
+
+        Mail::send('mails.tickets', $data, function ($message) use ($name, $emailTo, $reservedStr) {
             $message
                 ->to($emailTo)
-                ->subject(config('app.name') . ' - ' . __('email_reserved_tickets_for') . ' - ' . $name);
+                ->subject(config('app.name') . ' - ' . $reservedStr . ' - ' . $name);
         });
 
         $this->checkFailures();

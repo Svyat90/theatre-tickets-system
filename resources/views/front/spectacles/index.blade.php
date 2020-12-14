@@ -57,8 +57,7 @@
                                 <p class="month">{{ DateHelper::month($spectacle, 'start_at') }}</p>
                             </div>
                         </div>
-                        <div class="col-content d-flex"
-                             style="{{ 'background: linear-gradient(269.55deg, rgba(32, 32, 32, 0) 85.72%, #202020 99.54%), url(' . MediaHelper::getImageUrl($spectacle, 'image_grid') . ') no-repeat !important;' }}">
+                        <div class="col-content d-flex" style="{{ 'background: linear-gradient(269.55deg, rgba(32, 32, 32, 0) 85.72%, #202020 99.54%), url(' . MediaHelper::getImageUrl($spectacle, 'image_grid') . ') no-repeat !important;' }}">
                             <div class="heading-title">
                                 <p class="title-author">{{ $spectacle->author }}</p>
                                 <p class="title-group">{{ $spectacle->producer }}</p>

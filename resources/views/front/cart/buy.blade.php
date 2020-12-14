@@ -102,8 +102,7 @@
                                     @foreach($spectacle['places'] as $place)
                                         <p class="tickets-ticket">
                                         <span class="place">
-                                            {{ $vars['spectacle_row'] }} {{ $place['row'] }}
-                                            {{ $vars['spectacle_place'] }} {{ $place['place'] }}
+                                            {{ $place['name'] }}
                                         </span>
                                             <span class="cost">{{ $place['price'] }} {{ $vars['spectacle_map_lei'] }}</span>
                                         </p>

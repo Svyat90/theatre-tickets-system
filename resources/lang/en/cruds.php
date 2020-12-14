@@ -284,4 +284,22 @@ return [
             'price_helper'       => '',
         ],
     ],
+    'orders'                     => [
+        'title'          => 'Orders',
+        'title_singular' => 'Order',
+        'fields'         => [
+            'first_name'              => 'First Name',
+            'first_name_helper'       => '',
+            'last_name'              => 'Last Name',
+            'last_name_helper'       => '',
+            'phone'              => 'Phone',
+            'phone_helper'       => 'Email',
+            'email'              => 'Phone',
+            'email_helper'       => '',
+            'total'              => 'Total',
+            'total_helper'       => '',
+            'short_desc'              => 'Short Description',
+            'short_desc_helper'       => '',
+        ],
+    ],
 ];

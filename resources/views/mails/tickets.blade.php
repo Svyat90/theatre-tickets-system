@@ -7,20 +7,12 @@
                 @foreach($data as $id => $spectacle)
                     <tr>
                         <td style="font-family: sans-serif; font-size: 14px; vertical-align: top;">
-                            <p style="font-family: sans-serif; font-size: 14px; font-weight: normal; margin: 0; Margin-bottom: 15px;">Name: {{ $spectacle['model']->name }}</p>
-                            <p style="font-family: sans-serif; font-size: 14px; font-weight: normal; margin: 0; Margin-bottom: 15px;">Author: {{ $spectacle['model']->author }}}</p>
+                            <p style="font-family: sans-serif; font-size: 14px; font-weight: normal; margin: 0; Margin-bottom: 15px;">Spectacle Name: {{ $spectacle['model']->name }}</p>
+                            <p style="font-family: sans-serif; font-size: 14px; font-weight: normal; margin: 0; Margin-bottom: 15px;">Author: {{ $spectacle['model']->author }}</p>
                             <p style="font-family: sans-serif; font-size: 14px; font-weight: normal; margin: 0; Margin-bottom: 15px;">Producer: {{ $spectacle['model']->producer }}</p>
                             <p style="font-family: sans-serif; font-size: 14px; font-weight: normal; margin: 0; Margin-bottom: 15px;">Date: {{ $spectacle['model']->start_at }}</p>
+                            <p style="font-family: sans-serif; font-size: 14px; font-weight: normal; margin: 0; Margin-bottom: 15px;">Places: {{ $spectacle['short_desc'] }}</p>
                         </td>
-                    </tr>
-                    <tr>
-                        @foreach($spectacle['items'] as $item)
-                            <td style="font-family: sans-serif; font-size: 14px; vertical-align: top;">
-                                <p style="font-family: sans-serif; font-size: 14px; font-weight: normal; margin: 0; Margin-bottom: 15px;">Row: {{ $item['row'] }}</p>
-                                <p style="font-family: sans-serif; font-size: 14px; font-weight: normal; margin: 0; Margin-bottom: 15px;">Place: {{ $item['place'] }}</p>
-                                <p style="font-family: sans-serif; font-size: 14px; font-weight: normal; margin: 0; Margin-bottom: 15px;">Price: {{ $item['price'] }}</p>
-                            </td>
-                        @endforeach
                     </tr>
                 @endforeach
             </table>

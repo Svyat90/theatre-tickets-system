@@ -21,6 +21,7 @@ class CreateOrdersTable extends Migration
             $table->string('phone', 128);
             $table->string('email', 128);
             $table->double('total');
+            $table->text('short_desc')->nullable();
             $table->timestamps();
             $table->softDeletes();
         });
@@ -47,7 +48,7 @@ class CreateOrdersTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('orders');
         Schema::dropIfExists('order_spectacle');
+        Schema::dropIfExists('orders');
     }
 }

@@ -53,12 +53,19 @@ class CartController extends FrontController
 
     /**
      * @param Request $request
+     * @param string  $spectacleId
      *
      * @return RedirectResponse
      */
-    public function deleteAll(Request $request)
+    public function deleteAll(Request $request, string $spectacleId)
     {
-        \Cart::clear();
+        $items = \Cart::getContent();
+        foreach ($items->toArray() as $data) {
+            $id = $data['attributes']['spectacle_id'];
+            if ($id == $spectacleId) {
+                \Cart::remove($data['attributes']['col_id']);
+            }
+        }
 
         return back();
     }
@@ -95,25 +102,36 @@ class CartController extends FrontController
         $order->spectacles()->sync(array_keys($spectacles));
 
         $mailData = [];
+        $orderShortDesc = "";
         foreach ($spectacles as $spectacleData) {
+            $shortDesc = "";
             /** @var Spectacle $spectacle */
             $spectacle = $spectacleData['model'];
             foreach ($spectacleData['places'] as $place) {
                 $insertData = [
+                    'order_id' => $order->id,
                     'row_id' => $place['row_id'],
                     'col_id' => $place['col_id'],
                     'price' => $place['price'],
                     'place' => $place['place'],
                     'row' => $place['row'],
+                    'name' => $place['name'],
                     'status' => 'reserved'
                 ];
+                $shortDesc .= $place['name'] . ', ';
                 $mailData[$spectacle->id]['items'][] = $insertData;
                 $mailData[$spectacle->id]['model'] = $spectacle;
                 $spectacle->tickets()->create($insertData);
 
                 \Cart::remove($place['col_id']);
             }
+            $mailData[$spectacle->id]['short_desc'] = rtrim($shortDesc,  ', ');
+            $orderShortDesc .= $mailData[$spectacle->id]['short_desc'] . "; ";
         }
+
+        $order->update([
+            'short_desc' => $orderShortDesc
+        ]);
 
         $emailService->sendTicketsToUser(
             $mailData,
@@ -142,7 +160,7 @@ class CartController extends FrontController
             ->price;
 
         if (! $request->u_id) {
-            $uid = $this->create($price, $request, $spectacle->name);
+            $uid = $this->create($price, $request, $request->place_name);
 
         } else {
             $cartItems = \Cart::getContent()->toArray();
@@ -151,7 +169,7 @@ class CartController extends FrontController
                 \Cart::remove($request->u_id);
 
             } else {
-                $uid = $this->create($price, $request, $spectacle->name);
+                $uid = $this->create($price, $request, $request->place_name);
             }
         }
 
@@ -187,17 +205,17 @@ class CartController extends FrontController
     /**
      * @param        $price
      * @param        $request
-     * @param string $spectacleName
+     * @param string $placeName
      *
      * @return int
      */
-    private function create($price, $request, string $spectacleName = '') : int
+    private function create($price, $request, string $placeName = '') : int
     {
         $uid = $request->col_id;
 
         \Cart::add([
             'id' => $uid,
-            'name' => $spectacleName,
+            'name' => $placeName,
             'price' => $price,
             'quantity' => 1,
             'attributes' => [
@@ -234,6 +252,7 @@ class CartController extends FrontController
                 'place' => $data['attributes']['seat'],
                 'price' => $data['price'],
                 'row' => $data['attributes']['row'],
+                'name' => $data['name'],
             ];
         }
 

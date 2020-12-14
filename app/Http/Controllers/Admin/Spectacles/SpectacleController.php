@@ -18,6 +18,9 @@ use App\Http\Requests\Spectacles\MassDestroySpectacleRequest;
 use App\Repositories\CategoryRepository;
 use App\Services\Spectacles\SpectacleService;
 use App\Models\Schema;
+use App\Services\SchemaService;
+use Illuminate\Support\Facades\App;
+use App\Repositories\VarRepository;
 
 class SpectacleController extends AdminController
 {
@@ -154,18 +157,28 @@ class SpectacleController extends AdminController
     }
 
     /**
-     * @param Request $request
-     * @param         $spectacleId
+     * @param Request       $request
+     * @param               $spectacleId
+     * @param SchemaService $schemaService
+     * @param VarRepository $varRepository
      *
      * @return Application|Factory|View
      */
-    public function places(Request $request, $spectacleId)
+    public function places(Request $request, $spectacleId, SchemaService $schemaService, VarRepository $varRepository)
     {
+        /** @var Spectacle $spectacle */
         $spectacle = Spectacle::query()->find($spectacleId);
+        $spectacle->load('schema', 'orders');
 
-        $spectacle->load('schema');
+        $rows = $schemaService->generateRowsData($spectacle->schema, $spectacle);
 
-        return view('admin.schemas.places', compact('spectacle'));
+        $vars = [];
+        foreach ($varRepository->getAllVars() as $key => $var) {
+            $key = str_replace('_' . App::getLocale(), '', $key);
+            $vars[$key] = $var;
+        }
+
+        return view('admin.schemas.places', compact('spectacle', 'rows', 'vars'));
     }
 
 }

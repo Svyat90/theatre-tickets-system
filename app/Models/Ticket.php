@@ -17,8 +17,8 @@ class Ticket extends Model
      * @var string[]
      */
     protected $fillable = [
-        'spectacle_id', 'row_id', 'col_id',
-        'price', 'status', 'place', 'row'
+        'spectacle_id', 'row_id', 'col_id', 'order_id',
+        'price', 'status', 'place', 'row', 'name'
     ];
 
     /**
@@ -27,6 +27,14 @@ class Ticket extends Model
     public function spectacle()
     {
         return $this->belongsTo(Spectacle::class);
+    }
+
+    /**
+     * @return BelongsTo
+     */
+    public function order()
+    {
+        return $this->belongsTo(Order::class);
     }
 
 }

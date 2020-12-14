@@ -80,6 +80,15 @@ class Spectacle extends BaseModel
     }
 
     /**
+     * @return BelongsToMany
+     */
+    public function orders()
+    {
+        return $this->belongsToMany(Order::class, 'order_spectacle', 'spectacle_id', 'order_id');
+    }
+
+
+    /**
      * @return Media|null
      */
     public function getImageGridAttribute()
