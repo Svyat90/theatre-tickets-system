@@ -57,9 +57,9 @@ class StoreSpectacleRequest extends FormRequest
             'start_at' => 'required|string',
             'active' => 'required|bool',
             'is_premiera' => 'required|bool',
-            'image_grid' => 'required|string',
-            'image_detail' => 'required|string',
-            'image_gallery' => 'required|array',
+            'image_grid' => 'sometimes|nullable|string',
+            'image_detail' => 'sometimes|nullable|string',
+            'image_gallery' => 'sometimes|nullable|array',
             'image_gallery.*' => 'required|string',
             'category_ids'   => 'sometimes|array',
             'category_ids.*' => 'integer|exists:categories,id',
@@ -73,6 +73,8 @@ class StoreSpectacleRequest extends FormRequest
             'video_link' => 'sometimes|array',
             'video_link.*' => 'string|nullable|max:256',
             'video_date' => 'sometimes|nullable',
+            'text_1' => 'required|array',
+            'text_1.*' => 'string|nullable',
         ];
     }
 

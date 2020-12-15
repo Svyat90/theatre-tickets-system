@@ -31,20 +31,36 @@
                                             @php $oldLocale = old($field); @endphp
 
                                             <div class="form-group col-md-12 col-sm-12 col-xs-12">
-                                            <label class="" for="{{ $name = $field . '[' . $language->locale . ']' }}">
-                                                {{ __('cruds.spectacles.fields.' . $field) }}
-                                            </label>
-                                            <input class="form-control {{ $errors->has($name) ? 'is-invalid' : '' }}"
-                                                   type="text"
-                                                   name="{{ $name }}"
-                                                   id="{{ $name }}"
-                                                   value="{{ $oldLocale[$language->locale] ?? "" }}" />
-                                            @if($errors->has($name))
-                                                <span class="text-danger">{{ $errors->first($name) }}</span>
-                                            @endif
-                                            <span
-                                                class="help-block">{{ __("cruds.spectacles.fields.{$field}_helper") }}</span>
-                                        </div>
+                                                <div class="form-group col-md-12 col-sm-12 col-xs-12">
+                                                    @if (in_array($field, ['text_1', 'description', 'video_desc']))
+                                                        <div class="form-group">
+                                                            <label for="{{ $name = $field . '[' . $language->locale . ']' }}">
+                                                                {{ __("cruds.spectacles.fields.$field") }}
+                                                            </label>
+                                                            <textarea class="form-control tinymceTextarea {{ $errors->has($name) ? 'is-invalid' : '' }}"
+                                                                      name="{{ $name }}" id="{{ $name }}">{!! $oldLocale[$language->locale] ?? "" !!}</textarea>
+                                                            @if($errors->has($name))
+                                                                <span class="text-danger">{{ $errors->first($name) }}</span>
+                                                            @endif
+                                                            <span class="help-block">{{ __("cruds.spectacles.fields.{$field}_helper") }}</span>
+                                                        </div>
+                                                    @else
+                                                        <label class="" for="{{ $name = $field . '[' . $language->locale . ']' }}">
+                                                            {{ __('cruds.spectacles.fields.' . $field) }}
+                                                        </label>
+                                                        <input class="form-control {{ $errors->has($name) ? 'is-invalid' : '' }}"
+                                                               type="text"
+                                                               name="{{ $name }}"
+                                                               id="{{ $name }}"
+                                                               value="{{ $oldLocale[$language->locale] ?? "" }}" />
+                                                        @if($errors->has($name))
+                                                            <span class="text-danger">{{ $errors->first($name) }}</span>
+                                                        @endif
+                                                        <span
+                                                            class="help-block">{{ __("cruds.spectacles.fields.{$field}_helper") }}</span>
+                                                    @endif
+                                                </div>
+                                            </div>
                                         @endforeach
                                     </div>
                                 </div>
@@ -81,7 +97,7 @@
                         <span class="help-block">{{ __("cruds.spectacles.fields.{$name}_helper") }}</span>
                     </div>
                     <div class="form-group col-md-12 col-sm-12 col-xs-12">
-                        <label class="required" for="{{ $name = 'video_date' }}">{{ __("cruds.spectacles.fields.$name") }}</label>
+                        <label class="" for="{{ $name = 'video_date' }}">{{ __("cruds.spectacles.fields.$name") }}</label>
                         <input name="{{ $name }}" id="datetimepicker" value="{{ old($name, '') }}" type='text' class="form-control datetime" />
                         @if($errors->has($name))
                             <span class="text-danger">{{ $errors->first($name) }}</span>
@@ -148,7 +164,7 @@
                     </div>
 
                     <div class="form-group col-md-12 col-sm-12 col-xs-12">
-                        <label class="required" for="{{ $name = 'image_grid' }}">{{ __("cruds.spectacles.fields.$name") }}</label>
+                        <label class="" for="{{ $name = 'image_grid' }}">{{ __("cruds.spectacles.fields.$name") }}</label>
                         <div class="needsclick dropzone {{ $errors->has('file') ? 'is-invalid' : '' }}" id="{{ $name }}">
                         </div>
                         @if($errors->has($name))
@@ -158,7 +174,7 @@
                     </div>
 
                     <div class="form-group col-md-12 col-sm-12 col-xs-12">
-                        <label class="required" for="{{ $name = 'image_detail' }}">{{ __("cruds.spectacles.fields.$name") }}</label>
+                        <label class="" for="{{ $name = 'image_detail' }}">{{ __("cruds.spectacles.fields.$name") }}</label>
                         <div class="needsclick dropzone {{ $errors->has($name) ? 'is-invalid' : '' }}" id="{{ $name }}">
                         </div>
                         @if($errors->has($name))
@@ -168,7 +184,7 @@
                     </div>
 
                     <div class="form-group col-md-12 col-sm-12 col-xs-12">
-                        <label class="required" for="{{ $name = 'image_gallery' }}">{{ __("cruds.spectacles.fields.$name") }}</label>
+                        <label class="" for="{{ $name = 'image_gallery' }}">{{ __("cruds.spectacles.fields.$name") }}</label>
                         <div class="needsclick dropzone {{ $errors->has($name) ? 'is-invalid' : '' }}" id="{{ $name }}">
                         </div>
                         @if($errors->has($name))

@@ -32,7 +32,7 @@ class Spectacle extends BaseModel
      * @var array|string[]
      */
     protected array $translatable = [
-        'name', 'author', 'producer', 'description',
+        'name', 'author', 'producer', 'description', 'text_1',
         'video_youtube_url', 'video_title', 'video_desc', 'video_link'
     ];
 
@@ -41,7 +41,7 @@ class Spectacle extends BaseModel
      */
     protected $fillable = [
         'name', 'author', 'producer', 'description', 'slug', 'schema_id',
-        'min_age', 'duration', 'active', 'start_at', 'is_premiera',
+        'min_age', 'duration', 'active', 'start_at', 'is_premiera', 'text_1',
         'video_youtube_url', 'video_title', 'video_desc', 'video_link', 'video_date'
     ];
 

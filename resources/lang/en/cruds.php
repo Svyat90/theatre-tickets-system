@@ -100,6 +100,8 @@ return [
             'video_date_helper'       => '',
             'schema_id'              => 'Schema ID',
             'schema_id_helper'       => '',
+            'text_1'              => 'Text 1',
+            'text_1_helper'       => '',
         ],
     ],
     'languages'                     => [

@@ -65,19 +65,23 @@
                     <h2 class="detail-heading">
                         {{ $vars['spectacle_gallery_title'] }}
                     </h2>
-                    <div class="detail-slider">
-                        <div class="swiper-container">
-                            <div class="swiper-wrapper">
-                                @foreach($spectacle->image_gallery as $image)
-                                    <div class="swiper-slide">
-                                        <img src="{{ $image->url }}" alt="" style="max-width: 220px;">
-                                    </div>
-                                @endforeach
+
+                    @if($spectacle->image_gallery->count())
+                        <div class="detail-slider">
+                            <div class="swiper-container">
+                                <div class="swiper-wrapper">
+                                    @foreach($spectacle->image_gallery as $image)
+                                        <div class="swiper-slide">
+                                            <img src="{{ $image->url }}" alt="" style="max-width: 220px;">
+                                        </div>
+                                    @endforeach
+                                </div>
                             </div>
+                            <div class="next swiper-button-next"></div>
+                            <div class="prev swiper-button-prev"></div>
                         </div>
-                        <div class="next swiper-button-next"></div>
-                        <div class="prev swiper-button-prev"></div>
-                    </div>
+                    @endif
+
                     @if($spectacle->video_youtube_url)
                         <div class="detail-video-wr">
                             <div class="video_wrapper video_wrapper_full js-videoWrapper">
@@ -111,6 +115,7 @@
                     @endif
                 </div>
             </div>
+
             <div class="detail-col-wr detail-program">
                 <div class="detail-col">
                     <h2 class="detail-heading">
@@ -126,36 +131,11 @@
                                 <span class="program-name">{{ $vars['spectacle_duration'] }}</span>
                                 <a href="#" class="info-dur program-desc">{{ $spectacle->duration }} {{ $vars['spectacles_min'] }}</a>
                             </div>
-{{--                            <p class="program-row-divider">Distribuția:</p>--}}
-{{--                            <div class="program-row">--}}
-{{--                                <span class="program-name">Regia artistica, scenografia:</span>--}}
-{{--                                <a href="#" class="program-person">Alexandru GRECU</a>--}}
-{{--                            </div>--}}
-{{--                            <div class="program-row">--}}
-{{--                                <span class="program-name">Muzica:</span>--}}
-{{--                                <a href="#" class="program-person">Anatol STEFANET (Formatia TRIGON)</a>--}}
-{{--                            </div>--}}
-{{--                            <div class="program-row mb-30 bb-0">--}}
-{{--                                <span class="program-name">Costume:</span>--}}
-{{--                                <a href="#" class="program-person">Rodica BARGAN, Lilia CARUTA</a>--}}
-{{--                            </div>--}}
-{{--                            <p class="program-row-divider">Actorii</p>--}}
-{{--                            <div class="program-row">--}}
-{{--                                <span class="program-name">Ance</span>--}}
-{{--                                <a href="#" class="program-person">Ludmila GHEORGHITA</a>--}}
-{{--                            </div>--}}
-{{--                            <div class="program-row">--}}
-{{--                                <span class="program-name">Dragomir</span>--}}
-{{--                                <a href="#" class="program-person">Ion GROSU</a>--}}
-{{--                            </div>--}}
-{{--                            <div class="program-row">--}}
-{{--                                <span class="program-name">Gheorghe</span>--}}
-{{--                                <a href="#" class="program-person">Gheorghe GUSAN</a>--}}
-{{--                            </div>--}}
-{{--                            <div class="program-row bb-0">--}}
-{{--                                <span class="program-name">Ion</span>--}}
-{{--                                <a href="#" class="program-person">Alexandru CRILOV</a>--}}
-{{--                            </div>--}}
+
+                            @if($spectacle->text_1)
+                                {!! $spectacle->text_1 !!}
+                            @endif
+
                         </div>
                         <div class="program-col d-flex">
                             <p class="program-text">
@@ -165,6 +145,7 @@
                     </div>
                 </div>
             </div>
+
         </div>
     </main>
 @endsection
