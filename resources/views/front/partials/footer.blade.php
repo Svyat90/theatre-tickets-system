@@ -4,15 +4,45 @@
             <img src="{{ asset('front/img/header-logo.png') }}" alt="Satiricus">
         </div>
         <div class="footer-nav">
-            @foreach($footerPages as $chunkPages)
-                <ul class="footer-navlist" id="{{ $loop->last ? 'last' : '' }}">
-                    @foreach($chunkPages as $chunkPage)
+
+            <ul class="footer-navlist">
+                <li class="footer-item">
+                    <span>{{ $vars['footer_column_1_title'] }}</span>
+                </li>
+                @if(isset($footerPages['column_1']))
+                    @foreach($footerPages['column_1'] as $page)
                         <li class="footer-item">
-                            <a href="{{ route('pages.show', $chunkPage->slug) }}">{{ $chunkPage->name }}</a>
+                            <a href="{{ route('pages.show', $page->slug) }}">{{ $page->name }}</a>
                         </li>
                     @endforeach
-                </ul>
-            @endforeach
+                @endif
+            </ul>
+
+            <ul class="footer-navlist">
+                <li class="footer-item">
+                    <span>{{ $vars['footer_column_2_title'] }}</span>
+                </li>
+                @if(isset($footerPages['column_2']))
+                    @foreach($footerPages['column_2'] as $page)
+                        <li class="footer-item">
+                            <a href="{{ route('pages.show', $page->slug) }}">{{ $page->name }}</a>
+                        </li>
+                    @endforeach
+                @endif
+            </ul>
+
+            <ul class="footer-navlist">
+                <li class="footer-item">
+                    <span>{{ $vars['footer_column_3_title'] }}</span>
+                </li>
+                @if(isset($footerPages['column_3']))
+                    @foreach($footerPages['column_3'] as $page)
+                        <li class="footer-item">
+                            <a href="{{ route('pages.show', $page->slug) }}">{{ $page->name }}</a>
+                        </li>
+                    @endforeach
+                @endif
+            </ul>
 
             <ul class="footer-navlist" id="last">
                 <li class="footer-item"><a href="#">Blog</a></li>

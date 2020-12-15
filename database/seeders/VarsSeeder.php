@@ -567,6 +567,21 @@ class VarsSeeder extends Seeder
             'ro' => 'Please try later again',
             'en' => 'Please try later again'
         ],
+        'footer_column_1_title' => [
+            'ru' => 'Despre noi',
+            'ro' => 'Despre noi',
+            'en' => 'Despre noi'
+        ],
+        'footer_column_2_title' => [
+            'ru' => 'Spectacles',
+            'ro' => 'Spectacles',
+            'en' => 'Spectacles'
+        ],
+        'footer_column_3_title' => [
+            'ru' => 'Rezervari bilete',
+            'ro' => 'Rezervari bilete',
+            'en' => 'Rezervari bilete'
+        ],
     ];
 
     /**

@@ -166,6 +166,8 @@ return [
             'type_helper'       => '',
             'is_static'              => 'Static Page',
             'is_static_helper'       => '',
+            'footer_column'              => 'Footer Column',
+            'footer_column_helper'       => '',
         ],
     ],
     'articles'                     => [

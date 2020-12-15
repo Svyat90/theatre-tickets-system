@@ -71,4 +71,5 @@ return [
     "scene" => "Scene",
     "busy" => "busy",
     "orders" => "Orders",
+    "footer_column" => "Footer Column"
 ];

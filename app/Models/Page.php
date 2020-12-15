@@ -36,7 +36,7 @@ class Page extends BaseModel
     protected $fillable = [
         'name', 'title', 'description', 'content', 'url', 'slug',
         'order_top', 'order_footer', 'on_header', 'on_footer',
-        'active', 'date', 'type', 'is_static'
+        'active', 'date', 'type', 'is_static', 'footer_column'
     ];
 
     /**

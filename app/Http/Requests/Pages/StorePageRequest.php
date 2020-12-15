@@ -58,7 +58,8 @@ class StorePageRequest extends FormRequest
             'content.*' => 'string|nullable',
             'date' => 'sometimes|nullable|string',
             'image' => 'sometimes|string',
-            'type' => 'required|' . Rule::in($pageService->getTypes())
+            'type' => 'required|' . Rule::in($pageService->getTypes()),
+            'footer_column' => 'sometimes|nullable'
         ];
     }
 

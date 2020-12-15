@@ -43,17 +43,26 @@ class PageRepository extends Model
     }
 
     /**
-     * @return Collection
+     * @return array
      */
-    public function getFooterPages() : Collection
+    public function getFooterPages() : array
     {
-        return Page::query()
+        $pages = Page::query()
             ->active()
             ->where('on_footer', true)
             ->orderBy('order_footer')
-            ->limit(9)
-            ->get()
-            ->chunk(4);
+            ->get();
+
+        $output = [];
+        foreach ($pages as $page) {
+            if (! $page->footer_column) {
+                continue;
+            }
+
+            $output[$page->footer_column][] = $page;
+        }
+
+        return $output;
     }
 
     /**
