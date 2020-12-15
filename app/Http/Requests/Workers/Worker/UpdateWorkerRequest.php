@@ -64,11 +64,11 @@ class UpdateWorkerRequest extends FormRequest
             'text_5.*' => 'string|nullable',
             'text_6' => 'required|array',
             'text_6.*' => 'string|nullable',
-            'image_1' => 'required|string',
-            'image_2' => 'required|string',
-            'image_3' => 'required|string',
-            'image_4' => 'required|string',
-            'image_gallery' => 'required|array',
+            'image_1' => 'sometimes|nullable|string',
+            'image_2' => 'sometimes|nullable|string',
+            'image_3' => 'sometimes|nullable|string',
+            'image_4' => 'sometimes|nullable|string',
+            'image_gallery' => 'sometimes|nullable|array',
             'image_gallery.*' => 'required|string',
         ];
     }

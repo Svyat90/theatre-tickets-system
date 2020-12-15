@@ -27,73 +27,112 @@
                 <h2 class="form-heading">
                     {{ $vars['worker_history_title'] }}
                 </h2>
-                <div class="about-block">
-                    <div class="block-text-wr block-text">
-                       {!! $worker->text_1 !!}
+
+                @if($worker->text_1)
+                    <div class="about-block">
+                        @if($worker->image_1)
+                            <div class="block-text-wr block-text">
+                                {!! $worker->text_1 !!}
+                            </div>
+                            <div class="block-img-wr">
+                                <img src="{{ MediaHelper::getImageUrl($worker, 'image_1') }}" alt="" style="max-width: {{ $maxWidth = 445 }}px;">
+                            </div>
+                        @else
+                            <div class="block-text-wr block-text" style="width: 100%;">
+                                {!! $worker->text_1 !!}
+                            </div>
+                        @endif
                     </div>
-                    <div class="block-img-wr">
-                        <img src="{{ MediaHelper::getImageUrl($worker, 'image_1') }}" alt="" style="max-width: {{ $maxWidth = 445 }}px;">
-                        <img class="sign" src="{{ asset('front/img/about-block-1-2.svg') }}" alt="">
+                @endif
+
+                @if($worker->text_2)
+                    <div class="about-block block-img-first">
+                        @if($worker->image_2 || $worker->image_3)
+                            <div class="block-text-wr block-text">
+                                {!! $worker->text_2 !!}
+                            </div>
+                            <div class="block-img-wr">
+                                <img class="mb-30" src="{{ MediaHelper::getImageUrl($worker, 'image_2') }}" alt="" style="max-width: {{ $maxWidth }}px;">
+                                <img src="{{ MediaHelper::getImageUrl($worker, 'image_3') }}" alt="" style="max-width: {{ $maxWidth }}px;">
+                            </div>
+                        @else
+                            <div class="block-text-wr block-text" style="width: 100%;">
+                                {!! $worker->text_2 !!}
+                            </div>
+                        @endif
                     </div>
-                </div>
-                <div class="about-block block-img-first">
-                    <div class="block-text-wr block-text">
-                        {!! $worker->text_2 !!}
+                @endif
+
+                @if($worker->text_3)
+                    <div class="about-block">
+                        @if($worker->image_4)
+                            <div class="block-text-wr block-text">
+                                {!! $worker->text_3 !!}
+                            </div>
+                            <div class="block-img-wr">
+                                <img src="{{ MediaHelper::getImageUrl($worker, 'image_4') }}" alt="" style="max-width: {{ $maxWidth }}px;">
+                            </div>
+                        @else
+                            <div class="block-text-wr block-text" style="width: 100%;">
+                                {!! $worker->text_3 !!}
+                            </div>
+                        @endif
                     </div>
-                    <div class="block-img-wr">
-                        <img class="mb-30" src="{{ MediaHelper::getImageUrl($worker, 'image_2') }}" alt="" style="max-width: {{ $maxWidth }}px;">
-                        <img src="{{ MediaHelper::getImageUrl($worker, 'image_3') }}" alt="">
-                    </div>
-                </div>
-                <div class="about-block">
-                    <div class="block-text-wr block-text">
-                        {!! $worker->text_3 !!}
-                    </div>
-                    <div class="block-img-wr">
-                        <img src="{{ MediaHelper::getImageUrl($worker, 'image_4') }}" alt="" style="max-width: {{ $maxWidth }}px;">
-                    </div>
-                </div>
+                @endif
             </div>
-            <div class="about-spectacles">
-                <h2 class="form-heading">
-                    {!! $vars['worker_spectacles_title'] !!}
+
+            @if($worker->text_4)
+                <div class="about-spectacles">
+                    <h2 class="form-heading">
+                        {!! $vars['worker_spectacles_title'] !!}
+                    </h2>
+                    {!! $worker->text_4 !!}
+                </div>
+            @endif
+
+            @if($worker->text_5)
+                <div class="about-history">
+                    <h2 class="form-heading">
+                    {!! $vars['worker_history_title'] !!}
                 </h2>
-                {!! $worker->text_4 !!}
-            </div>
-            <div class="about-history">
-                <h2 class="form-heading">
-                {!! $vars['worker_history_title'] !!}
-            </h2>
-            <div class="history-blocks">
-                <div class="dot top"></div>
-                <div class="dot bottom"></div>
-                {!! $worker->text_5 !!}
+                <div class="history-blocks" style="color: #afafaf;">
+                    <div class="dot top"></div>
+                    <div class="dot bottom"></div>
+                    {!! $worker->text_5 !!}
+                    </div>
                 </div>
-            </div>
-            <div class="about-tours">
-                <h2 class="form-heading">
-                    {!! $vars['worker_tours_title'] !!}
-                </h2>
-                {!! $worker->text_6 !!}
-            </div>
-            <div class="about-gallery">
-                <h2 class="form-heading">
-                    {!! $vars['worker_gallery_title'] !!}
-                </h2>
-                <div class="gallery-wr">
-                    @foreach($worker->image_gallery as $image)
-                        @php
-                            $maxWidth = 225;
-                            if ($loop->iteration === 3 || $loop->iteration === 6 || $loop->iteration === 7) {
-                                $maxWidth = 540;
-                            }
-                        @endphp
-                        <div class="gallery-item">
-                            <img src="{{ $image->url }}" alt="" style="max-width: {{ $maxWidth }}px;">
-                        </div>
-                    @endforeach
+            @endif
+
+            @if($worker->text_6)
+                <div class="about-tours">
+                    <h2 class="form-heading">
+                        {!! $vars['worker_tours_title'] !!}
+                    </h2>
+                    {!! $worker->text_6 !!}
                 </div>
-            </div>
+            @endif
+
+            @if($worker->image_gallery->count())
+                <div class="about-gallery">
+                    <h2 class="form-heading">
+                        {!! $vars['worker_gallery_title'] !!}
+                    </h2>
+                    <div class="gallery-wr">
+                        @foreach($worker->image_gallery as $image)
+                            @php
+                                $maxWidth = 225;
+                                if ($loop->iteration === 3 || $loop->iteration === 6 || $loop->iteration === 7) {
+                                    $maxWidth = 540;
+                                }
+                            @endphp
+                            <div class="gallery-item">
+                                <img src="{{ $image->url }}" alt="" style="max-width: {{ $maxWidth }}px;">
+                            </div>
+                        @endforeach
+                    </div>
+                </div>
+            @endif
+
         </div>
     </main>
 @endsection

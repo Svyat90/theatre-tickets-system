@@ -134,7 +134,7 @@
                     </div>
 
                     <div class="form-group col-md-12 col-sm-12 col-xs-12">
-                        <label class="required" for="{{ $name = 'image_1' }}">{{ __("cruds.workers.fields.$name") }}</label>
+                        <label class="" for="{{ $name = 'image_1' }}">{{ __("cruds.workers.fields.$name") }}</label>
                         <div class="needsclick dropzone {{ $errors->has('file') ? 'is-invalid' : '' }}" id="{{ $name }}">
                         </div>
                         @if($errors->has($name))
@@ -143,7 +143,7 @@
                         <span class="help-block">{{ __("cruds.workers.fields.{$name}_helper") }}</span>
                     </div>
                     <div class="form-group col-md-12 col-sm-12 col-xs-12">
-                        <label class="required" for="{{ $name = 'image_2' }}">{{ __("cruds.workers.fields.$name") }}</label>
+                        <label class="" for="{{ $name = 'image_2' }}">{{ __("cruds.workers.fields.$name") }}</label>
                         <div class="needsclick dropzone {{ $errors->has('file') ? 'is-invalid' : '' }}" id="{{ $name }}">
                         </div>
                         @if($errors->has($name))
@@ -152,7 +152,7 @@
                         <span class="help-block">{{ __("cruds.workers.fields.{$name}_helper") }}</span>
                     </div>
                     <div class="form-group col-md-12 col-sm-12 col-xs-12">
-                        <label class="required" for="{{ $name = 'image_3' }}">{{ __("cruds.workers.fields.$name") }}</label>
+                        <label class="" for="{{ $name = 'image_3' }}">{{ __("cruds.workers.fields.$name") }}</label>
                         <div class="needsclick dropzone {{ $errors->has('file') ? 'is-invalid' : '' }}" id="{{ $name }}">
                         </div>
                         @if($errors->has($name))
@@ -161,7 +161,7 @@
                         <span class="help-block">{{ __("cruds.workers.fields.{$name}_helper") }}</span>
                     </div>
                     <div class="form-group col-md-12 col-sm-12 col-xs-12">
-                        <label class="required" for="{{ $name = 'image_4' }}">{{ __("cruds.workers.fields.$name") }}</label>
+                        <label class="" for="{{ $name = 'image_4' }}">{{ __("cruds.workers.fields.$name") }}</label>
                         <div class="needsclick dropzone {{ $errors->has('file') ? 'is-invalid' : '' }}" id="{{ $name }}">
                         </div>
                         @if($errors->has($name))
@@ -171,7 +171,7 @@
                     </div>
 
                     <div class="form-group col-md-12 col-sm-12 col-xs-12">
-                        <label class="required" for="{{ $name = 'image_gallery' }}">{{ __("cruds.workers.fields.$name") }}</label>
+                        <label class="" for="{{ $name = 'image_gallery' }}">{{ __("cruds.workers.fields.$name") }}</label>
                         <div class="needsclick dropzone {{ $errors->has($name) ? 'is-invalid' : '' }}" id="{{ $name }}">
                         </div>
                         @if($errors->has($name))

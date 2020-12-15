@@ -37,14 +37,20 @@
             <div class="blog-detail-blocks">
                 @if($article->text_1)
                     <div class="blog-detail-block block-img-first">
-                        <div class="block-text-wr pt-0">
-                            <div class="block-text">
-                                {!! $article->text_1 !!}
-                            </div>
-                        </div>
                         @if($article->image_1)
+                            <div class="block-text-wr pt-0">
+                                <div class="block-text">
+                                    {!! $article->text_1 !!}
+                                </div>
+                            </div>
                             <div class="block-img-wr">
                                 <img src="{{ MediaHelper::getImageUrl($article, 'image_1') }}" alt="" style="max-width: 350px;">
+                            </div>
+                        @else
+                            <div class="block-text-wr pt-0" style="width: 100%;">
+                                <div class="block-text">
+                                    {!! $article->text_1 !!}
+                                </div>
                             </div>
                         @endif
                     </div>
@@ -58,14 +64,20 @@
                 @endif
                 @if($article->text_3)
                     <div class="blog-detail-block">
-                        <div class="block-text-wr pt-0">
-                            <div class="block-text">
-                                {!! $article->text_3 !!}
-                            </div>
-                        </div>
                         @if($article->image_2)
+                            <div class="block-text-wr pt-0">
+                                <div class="block-text">
+                                    {!! $article->text_3 !!}
+                                </div>
+                            </div>
                             <div class="block-img-wr">
                                 <img src="{{ MediaHelper::getImageUrl($article, 'image_2') }}" alt="" style="max-width: 540px;">
+                            </div>
+                        @else
+                            <div class="block-text-wr pt-0" style="width: 100%;">
+                                <div class="block-text">
+                                    {!! $article->text_3 !!}
+                                </div>
                             </div>
                         @endif
                     </div>

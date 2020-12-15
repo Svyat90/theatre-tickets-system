@@ -42,7 +42,7 @@
                     </div>
                     <div class="block-img-wr">
                         <img class="mb-30" src="{{ MediaHelper::getImageUrl($about, 'image_2') }}" alt="" style="max-width: {{ $maxWidth }}px;">
-                        <img src="{{ MediaHelper::getImageUrl($about, 'image_3') }}" alt="">
+                        <img src="{{ MediaHelper::getImageUrl($about, 'image_3') }}" alt="" style="max-width: {{ $maxWidth }}px;">
                     </div>
                 </div>
                 <div class="about-block">
