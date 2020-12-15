@@ -31,20 +31,34 @@
                                             @php $oldLocale = old($field); @endphp
 
                                             <div class="form-group col-md-12 col-sm-12 col-xs-12">
-                                                <label class="" for="{{ $name = $field . '[' . $language->locale . ']' }}">
-                                                    {{ __('cruds.workers.fields.' . $field) }}
-                                                </label>
-                                                <input class="form-control {{ $errors->has($name) ? 'is-invalid' : '' }}"
-                                                       type="text"
-                                                       name="{{ $name }}"
-                                                       id="{{ $name }}"
-                                                       value="{{ $oldLocale[$language->locale] ?? "" }}" />
-                                                @if($errors->has($name))
-                                                    <span class="text-danger">{{ $errors->first($name) }}</span>
+                                                @if (in_array($field, ['text_1', 'text_2', 'text_3', 'text_4', 'text_5', 'text_6']))
+                                                    <div class="form-group">
+                                                        <label for="{{ $name = $field . '[' . $language->locale . ']' }}">
+                                                            {{ __("cruds.workers.fields.$field") }}
+                                                        </label>
+                                                        <textarea class="form-control tinymceTextarea {{ $errors->has($name) ? 'is-invalid' : '' }}"
+                                                                  name="{{ $name }}" id="{{ $name }}">{!! $oldLocale[$language->locale] ?? "" !!}</textarea>
+                                                        @if($errors->has($name))
+                                                            <span class="text-danger">{{ $errors->first($name) }}</span>
+                                                        @endif
+                                                        <span class="help-block">{{ __("cruds.workers.fields.{$field}_helper") }}</span>
+                                                    </div>
+                                                @else
+                                                    <label class="" for="{{ $name = $field . '[' . $language->locale . ']' }}">
+                                                        {{ __('cruds.workers.fields.' . $field) }}
+                                                    </label>
+                                                    <input class="form-control {{ $errors->has($name) ? 'is-invalid' : '' }}"
+                                                           type="text"
+                                                           name="{{ $name }}"
+                                                           id="{{ $name }}"
+                                                           value="{{ $oldLocale[$language->locale] ?? "" }}" />
+                                                    @if($errors->has($name))
+                                                        <span class="text-danger">{{ $errors->first($name) }}</span>
+                                                    @endif
+                                                    <span class="help-block">
+                                                        {{ __("cruds.workers.fields.{$field}_helper") }}
+                                                    </span>
                                                 @endif
-                                                <span class="help-block">
-                                                    {{ __("cruds.workers.fields.{$field}_helper") }}
-                                                </span>
                                             </div>
                                         @endforeach
                                     </div>

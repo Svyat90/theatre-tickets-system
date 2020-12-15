@@ -386,9 +386,6 @@ class AboutSeeder extends Seeder
             <div class="spectacles-row">
                 <a href="#" class="spectacle-name">Lorem ipsum dolor sit amet consectetur.</a>
                 <span class="spectacle-author">de Mircea M. Ionescu</span>
-            </div>
-            <div class="spectacles-row">
-                <a href="#" class="spectacle-link">vezi mai mult <span class="material-icons">expand_more</span></a>
             </div>',
             'ro' => '<div class="spectacles-row">
                 <a href="#" class="spectacle-name">Ciuleandra</a>
@@ -421,9 +418,6 @@ class AboutSeeder extends Seeder
             <div class="spectacles-row">
                 <a href="#" class="spectacle-name">Lorem ipsum dolor sit amet consectetur.</a>
                 <span class="spectacle-author">de Mircea M. Ionescu</span>
-            </div>
-            <div class="spectacles-row">
-                <a href="#" class="spectacle-link">vezi mai mult <span class="material-icons">expand_more</span></a>
             </div>',
             'en' => '<div class="spectacles-row">
                 <a href="#" class="spectacle-name">Ciuleandra</a>
@@ -456,9 +450,6 @@ class AboutSeeder extends Seeder
             <div class="spectacles-row">
                 <a href="#" class="spectacle-name">Lorem ipsum dolor sit amet consectetur.</a>
                 <span class="spectacle-author">de Mircea M. Ionescu</span>
-            </div>
-            <div class="spectacles-row">
-                <a href="#" class="spectacle-link">vezi mai mult <span class="material-icons">expand_more</span></a>
             </div>',
         ],
         'text_5' => [

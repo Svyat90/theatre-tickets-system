@@ -45,7 +45,17 @@ class StoreArticleRequest extends FormRequest
             'content' => 'sometimes|array',
             'content.*' => 'string|nullable',
             'date' => 'sometimes|nullable|string',
-            'image' => 'sometimes|string'
+            'image' => 'sometimes|string',
+            'text_1' => 'required|array',
+            'text_1.*' => 'string|nullable',
+            'text_2' => 'required|array',
+            'text_2.*' => 'string|nullable',
+            'text_3' => 'required|array',
+            'text_3.*' => 'string|nullable',
+            'text_4' => 'required|array',
+            'text_4.*' => 'string|nullable',
+            'image_1' => 'sometimes|nullable|string',
+            'image_2' => 'sometimes|nullable|string',
         ];
     }
 

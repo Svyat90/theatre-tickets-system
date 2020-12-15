@@ -36,7 +36,7 @@
                                             @endphp
 
                                             <div class="form-group col-md-12 col-sm-12 col-xs-12">
-                                                @if ($field === 'description' || $field === 'content')
+                                                @if (in_array($field, ['text_1', 'text_2', 'text_3', 'text_4', 'description', 'content']))
                                                     <div class="form-group">
                                                         <label for="{{ $name = $field . '[' . $language->locale . ']' }}">
                                                             {{ __("cruds.articles.fields.$field") }}
@@ -139,6 +139,24 @@
                         @endif
                         <span class="help-block">{{ __("cruds.articles.fields.{$name}_helper") }}</span>
                     </div>
+                    <div class="form-group col-md-12 col-sm-12 col-xs-12">
+                        <label class="required" for="{{ $name = 'image_1' }}">{{ __("cruds.workers.fields.$name") }}</label>
+                        <div class="needsclick dropzone {{ $errors->has('file') ? 'is-invalid' : '' }}" id="{{ $name }}">
+                        </div>
+                        @if($errors->has($name))
+                            <span class="text-danger">{{ $errors->first($name) }}</span>
+                        @endif
+                        <span class="help-block">{{ __("cruds.workers.fields.{$name}_helper") }}</span>
+                    </div>
+                    <div class="form-group col-md-12 col-sm-12 col-xs-12">
+                        <label class="required" for="{{ $name = 'image_2' }}">{{ __("cruds.workers.fields.$name") }}</label>
+                        <div class="needsclick dropzone {{ $errors->has('file') ? 'is-invalid' : '' }}" id="{{ $name }}">
+                        </div>
+                        @if($errors->has($name))
+                            <span class="text-danger">{{ $errors->first($name) }}</span>
+                        @endif
+                        <span class="help-block">{{ __("cruds.workers.fields.{$name}_helper") }}</span>
+                    </div>
                 </div>
 
                 <div class="form-group">
@@ -192,6 +210,110 @@
                     file.previewElement.classList.add('dz-complete')
                     $('form').append('<input type="hidden" name="{{ $name }}" value="' + file.file_name + '">')
                     this.options.maxFiles = this.options.maxFiles - 1
+                @endif
+            },
+            error: function (file, response) {
+                if ($.type(response) === 'string') {
+                    var message = response //dropzone sends it's own error messages in string
+                } else {
+                    var message = response.errors.file
+                }
+                file.previewElement.classList.add('dz-error')
+                _ref = file.previewElement.querySelectorAll('[data-dz-errormessage]')
+                _results = []
+                for (_i = 0, _len = _ref.length; _i < _len; _i++) {
+                    node = _ref[_i]
+                    _results.push(node.textContent = message)
+                }
+
+                return _results
+            }
+        })
+
+        let image1DropZone = new Dropzone("#image_1", {
+            url: '{{ route('admin.workers.store_media') }}',
+            maxFilesize: 50, // MB
+            maxFiles: 1,
+            addRemoveLinks: true,
+            headers: {
+                'X-CSRF-TOKEN': "{{ csrf_token() }}"
+            },
+            params: {
+                size: 50
+            },
+            acceptedFiles: ".jpeg,.jpg,.png,.gif",
+            success: function (file, response) {
+                $('form').find('input[name="image_1"]').remove()
+                $('form').append('<input type="hidden" name="image_1" value="' + response.name + '">')
+            },
+            removedfile: function (file) {
+                file.previewElement.remove()
+                if (file.status !== 'error') {
+                    $('form').find('input[name="image_1"]').remove()
+                    this.options.maxFiles = this.options.maxFiles + 1
+                }
+            },
+            init: function () {
+                @php $media = $article->getFirstMedia($name = 'image_1'); @endphp
+                @if($media)
+                var file = {!! json_encode($media) !!}
+                    this.options.addedfile.call(this, file)
+                this.options.thumbnail.call(this, file, '{{ $media->getUrl('thumb') }}')
+                file.previewElement.classList.add('dz-complete')
+                $('form').append('<input type="hidden" name="{{ $name }}" value="' + file.file_name + '">')
+                this.options.maxFiles = this.options.maxFiles - 1
+                @endif
+            },
+            error: function (file, response) {
+                if ($.type(response) === 'string') {
+                    var message = response //dropzone sends it's own error messages in string
+                } else {
+                    var message = response.errors.file
+                }
+                file.previewElement.classList.add('dz-error')
+                _ref = file.previewElement.querySelectorAll('[data-dz-errormessage]')
+                _results = []
+                for (_i = 0, _len = _ref.length; _i < _len; _i++) {
+                    node = _ref[_i]
+                    _results.push(node.textContent = message)
+                }
+
+                return _results
+            }
+        })
+
+        let image2DropZone = new Dropzone("#image_2", {
+            url: '{{ route('admin.workers.store_media') }}',
+            maxFilesize: 50, // MB
+            maxFiles: 1,
+            addRemoveLinks: true,
+            headers: {
+                'X-CSRF-TOKEN': "{{ csrf_token() }}"
+            },
+            params: {
+                size: 50
+            },
+            acceptedFiles: ".jpeg,.jpg,.png,.gif",
+            success: function (file, response) {
+                $('form').find('input[name="image_2"]').remove()
+                $('form').append('<input type="hidden" name="image_2" value="' + response.name + '">')
+            },
+            removedfile: function (file) {
+                file.previewElement.remove()
+                if (file.status !== 'error') {
+                    $('form').find('input[name="image_2"]').remove()
+                    this.options.maxFiles = this.options.maxFiles + 1
+                }
+            },
+            init: function () {
+                @php $media = $article->getFirstMedia($name = 'image_2'); @endphp
+                @if($media)
+                var file = {!! json_encode($media) !!}
+                    this.options.addedfile.call(this, file)
+                this.options.thumbnail.call(this, file, '{{ $media->getUrl('thumb') }}')
+                file.previewElement.classList.add('dz-complete')
+                $('form').append('<input type="hidden" name="{{ $name }}" value="' + file.file_name + '">')
+                this.options.maxFiles = this.options.maxFiles - 1
                 @endif
             },
             error: function (file, response) {

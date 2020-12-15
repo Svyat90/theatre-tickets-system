@@ -104,6 +104,8 @@ class ArticleService
     private function handleMediaFiles($request, Article $article) : void
     {
         MediaHelper::handleMedia($article, 'image', $request->image);
+        MediaHelper::handleMedia($article, 'image_1', $request->image_1);
+        MediaHelper::handleMedia($article, 'image_2', $request->image_2);
     }
 
     /**

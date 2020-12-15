@@ -50,6 +50,8 @@
                     @include('admin.partials.item-action-table-dates', ['model' => $article])
 
                     @include('admin.partials.media-library.show-media', ['name' => 'image', 'model' => $article, 'namespace' => 'articles'])
+                    @include('admin.partials.media-library.show-media', ['name' => 'image_1', 'model' => $article, 'namespace' => 'articles'])
+                    @include('admin.partials.media-library.show-media', ['name' => 'image_2', 'model' => $article, 'namespace' => 'articles'])
 
                     </tbody>
                 </table>
