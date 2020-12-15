@@ -14,7 +14,7 @@ trait VarTrait
 
         $vars = [];
         foreach ($service->getAllVars() as $key => $var) {
-            $key = str_replace('_' . App::getLocale(), '', $key);
+            $key = substr_replace($key, '', -3);
             $vars[$key] = $var;
         }
 
