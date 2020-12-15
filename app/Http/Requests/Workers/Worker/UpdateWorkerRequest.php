@@ -20,7 +20,6 @@ use Spatie\MediaLibrary\MediaCollections\Models\Media;
  * @property string $text_3
  * @property string $text_4
  * @property string $text_5
- * @property Media $image_1
  * @property Media $image_2
  * @property Media $image_3
  * @property Media $image_4
@@ -64,7 +63,6 @@ class UpdateWorkerRequest extends FormRequest
             'text_5.*' => 'string|nullable',
             'text_6' => 'required|array',
             'text_6.*' => 'string|nullable',
-            'image_1' => 'sometimes|nullable|string',
             'image_2' => 'sometimes|nullable|string',
             'image_3' => 'sometimes|nullable|string',
             'image_4' => 'sometimes|nullable|string',

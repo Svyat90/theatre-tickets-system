@@ -30,12 +30,12 @@
 
                 @if($worker->text_1)
                     <div class="about-block">
-                        @if($worker->image_1)
+                        @if($worker->image)
                             <div class="block-text-wr block-text">
                                 {!! $worker->text_1 !!}
                             </div>
                             <div class="block-img-wr">
-                                <img src="{{ MediaHelper::getImageUrl($worker, 'image_1') }}" alt="" style="max-width: {{ $maxWidth = 445 }}px;">
+                                <img src="{{ MediaHelper::getImageUrl($worker, 'image') }}" alt="" style="max-width: {{ $maxWidth = 445 }}px;">
                             </div>
                         @else
                             <div class="block-text-wr block-text" style="width: 100%;">

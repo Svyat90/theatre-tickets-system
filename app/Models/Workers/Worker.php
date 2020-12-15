@@ -50,7 +50,7 @@ class Worker extends BaseModel
      * @var string[]
      */
     protected $appends = [
-        'image_1', 'image_2', 'image_3', 'image_4',
+        'image_2', 'image_3', 'image_4',
     ];
 
     /**
@@ -59,18 +59,6 @@ class Worker extends BaseModel
     public function category()
     {
         return $this->belongsTo(WorkerCategory::class, 'worker_category_id');
-    }
-
-    /**
-     * @return Media|null
-     */
-    public function getImage1Attribute()
-    {
-        if (! $media = $this->getMedia('image_1')->last()) {
-            return null;
-        }
-
-        return $this->fillMedia($media);
     }
 
     /**
