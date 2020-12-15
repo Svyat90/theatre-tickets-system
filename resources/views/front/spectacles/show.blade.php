@@ -88,14 +88,20 @@
                                 <button class="videoPoster js-videoPoster"></button>
                             </div>
                             <div class="video-description">
-                                <h4 class="video-heading">
-                                    {{ $spectacle->video_title }}
-                                </h4>
-                                <p class="video-text">
-                                    {{ $spectacle->video_desc }}
-                                </p>
+                                @if($spectacle->video_title)
+                                    <h4 class="video-heading">
+                                        {{ $spectacle->video_title }}
+                                    </h4>
+                                @endif
+                                @if($spectacle->video_desc)
+                                    <p class="video-text">
+                                        {{ $spectacle->video_desc }}
+                                    </p>
+                                @endif
                                 <div class="description-footer">
-                                    <span class="date">{{ $spectacle->video_date->format('Y.m.d') }}</span>
+                                    @if($spectacle->video_date)
+                                        <span class="date">{{ $spectacle->video_date->format('Y.m.d') }}</span>
+                                    @endif
                                     <a href="{{ $spectacle->video_link }}" class="video-link">{{ $vars['spectacle_video_read_more'] }}
                                         <span class="material-icons">navigate_next</span>
                                     </a>

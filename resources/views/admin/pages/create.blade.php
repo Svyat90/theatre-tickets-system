@@ -80,7 +80,7 @@
                     <div class="form-group col-md-4 col-sm-4 col-xs-4">
                         <label class="required" for="{{ $name = 'order_top' }}">{{ __("cruds.pages.fields.$name") }}</label>
                         <input class="form-control {{ $errors->has($name) ? 'is-invalid' : '' }}" type="number" min="0" name="{{ $name }}"
-                               id="{{ $name }}" value="{{ old($name, '') }}">
+                               id="{{ $name }}" value="{{ old($name, 0) }}">
                         @if($errors->has($name))
                             <span class="text-danger">{{ $errors->first($name) }}</span>
                         @endif
@@ -89,7 +89,7 @@
                     <div class="form-group col-md-4 col-sm-4 col-xs-4">
                         <label class="required" for="{{ $name = 'order_footer' }}">{{ __("cruds.pages.fields.$name") }}</label>
                         <input class="form-control {{ $errors->has($name) ? 'is-invalid' : '' }}" type="number" min="0" name="{{ $name }}"
-                               id="{{ $name }}" value="{{ old($name, '') }}">
+                               id="{{ $name }}" value="{{ old($name, 0) }}">
                         @if($errors->has($name))
                             <span class="text-danger">{{ $errors->first($name) }}</span>
                         @endif

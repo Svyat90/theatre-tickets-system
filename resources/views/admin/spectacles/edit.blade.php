@@ -88,6 +88,14 @@
                         <span class="help-block">{{ __("cruds.spectacles.fields.{$name}_helper") }}</span>
                     </div>
 
+                    <div class="form-group col-md-12 col-sm-12 col-xs-12">
+                        <label class="" for="{{ $name = 'video_date' }}">{{ __("cruds.spectacles.fields.$name") }}</label>
+                        <input name="{{ $name }}" id="datetimepicker" value="{{ old($name, $spectacle->$name) }}" type='text' class="form-control datetime" />
+                        @if($errors->has($name))
+                            <span class="text-danger">{{ $errors->first($name) }}</span>
+                        @endif
+                        <span class="help-block">{{ __("cruds.spectacles.fields.{$name}_helper") }}</span>
+                    </div>
 
                     <div class="form-group col-md-12 col-sm-12 col-xs-12">
                         <label class="required"

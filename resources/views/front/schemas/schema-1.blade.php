@@ -1067,6 +1067,7 @@
 </div>
 
 @section('scripts')
+    @parent
     <script>
         $(function () {
             $.ajaxSetup({
