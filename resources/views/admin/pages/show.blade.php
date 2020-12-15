@@ -29,7 +29,7 @@
                     </tr>
 
                     @foreach($page->getFillable() as $field)
-                        @if($field === 'active' || $field === 'on_header' || $field === 'on_footer' || $field === 'order_top' || $field === 'order_footer')
+                        @if($field === 'active' || $field === 'on_header' || $field === 'on_footer' || $field === 'order_top' || $field === 'order_footer' || $field === 'is_static')
                             <tr>
                                 <th>
                                     {{ __("cruds.pages.fields.{$field}") }}

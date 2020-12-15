@@ -162,6 +162,8 @@ return [
             'image_helper'       => '',
             'type'              => 'Type',
             'type_helper'       => '',
+            'is_static'              => 'Static Page',
+            'is_static_helper'       => '',
         ],
     ],
     'articles'                     => [

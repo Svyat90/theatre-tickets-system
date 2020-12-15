@@ -56,12 +56,13 @@ class PageService
             ->editColumn('order_footer', fn ($row) => $row->order_footer)
             ->editColumn('on_header', fn ($row) => LabelHelper::boolLabel($row->on_header))
             ->editColumn('on_footer', fn ($row) => LabelHelper::boolLabel($row->on_footer))
+            ->editColumn('is_static', fn ($row) => LabelHelper::boolLabel($row->is_static))
             ->editColumn('active', fn ($row) => LabelHelper::boolLabel($row->active))
             ->editColumn('date', fn ($row) => $row->date)
             ->editColumn('created_at', fn ($row) => $row->created_at)
             ->addColumn('image', fn ($row) => ImageHelper::thumbImage($row->image))
             ->addColumn('actions', fn ($row) => DatatablesHelper::renderActionsRow($row, 'pages'))
-            ->rawColumns(['actions', 'placeholder', 'on_header', 'on_footer', 'active', 'image'])
+            ->rawColumns(['actions', 'placeholder', 'on_header', 'on_footer', 'active', 'is_static', 'image'])
             ->make(true);
     }
 

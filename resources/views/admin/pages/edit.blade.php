@@ -83,7 +83,7 @@
                     </div>
 
                     <div class="form-group col-md-4 col-sm-4 col-xs-4">
-                        <label class="" for="{{ $name = 'order_top' }}">{{ __("cruds.pages.fields.$name") }}</label>
+                        <label class="required" for="{{ $name = 'order_top' }}">{{ __("cruds.pages.fields.$name") }}</label>
                         <input class="form-control {{ $errors->has($name) ? 'is-invalid' : '' }}" type="number" min="0" name="{{ $name }}"
                                id="{{ $name }}" value="{{ old($name, $page->$name) }}">
                         @if($errors->has($name))
@@ -92,7 +92,7 @@
                         <span class="help-block">{{ __("cruds.pages.fields.{$name}_helper") }}</span>
                     </div>
                     <div class="form-group col-md-4 col-sm-4 col-xs-4">
-                        <label class="" for="{{ $name = 'order_footer' }}">{{ __("cruds.pages.fields.$name") }}</label>
+                        <label class="required" for="{{ $name = 'order_footer' }}">{{ __("cruds.pages.fields.$name") }}</label>
                         <input class="form-control {{ $errors->has($name) ? 'is-invalid' : '' }}" type="number" min="0" name="{{ $name }}"
                                id="{{ $name }}" value="{{ old($name, $page->$name) }}">
                         @if($errors->has($name))

@@ -15,8 +15,8 @@ class CreateOrderFooterFieldInPagesTable extends Migration
     {
         Schema::table('pages', function (Blueprint $table) {
             $table->dropColumn('order');
-            $table->unsignedInteger('order_top')->default(0);
-            $table->unsignedInteger('order_footer')->default(0);
+            $table->unsignedInteger('order_top')->nullable()->default(0);
+            $table->unsignedInteger('order_footer')->nullable()->default(0);
         });
     }
 

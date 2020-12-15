@@ -51,6 +51,9 @@
                         {{ __('cruds.pages.fields.active') }}
                     </th>
                     <th>
+                        {{ __('cruds.pages.fields.is_static') }}
+                    </th>
+                    <th>
                         {{ __('cruds.pages.fields.date') }}
                     </th>
                     <th>
@@ -120,6 +123,7 @@
                     {data: 'on_header', name: 'on_header'},
                     {data: 'on_footer', name: 'on_footer'},
                     {data: 'active', name: 'active'},
+                    {data: 'is_static', name: 'is_static'},
                     {data: 'date', name: 'date'},
                     {data: 'created_at', name: 'created_at'},
                     {data: 'actions', name: '{{ __('global.actions') }}'}

@@ -19,7 +19,13 @@ class DatatablesHelper
      */
     public static function renderActionsRow(Model $row, string $entityName, bool $withDelete = true)
     {
-        $view = $withDelete ? 'datatables-actions-show-read-del' : 'datatables-actions-show-read';
+        // check on static pages
+        if (isset($row->is_static) && $row->is_static) {
+            $view = 'datatables-actions-show-read';
+
+        } else {
+            $view = $withDelete ? 'datatables-actions-show-read-del' : 'datatables-actions-show-read';
+        }
 
         return view("admin.partials.$view", compact(
             'entityName',

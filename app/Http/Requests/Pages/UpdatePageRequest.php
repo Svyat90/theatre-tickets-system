@@ -43,8 +43,8 @@ class UpdatePageRequest extends FormRequest
         return [
             'parent_id' => 'sometimes|int',
             'url' => 'sometimes|nullable|string|max:256',
-            'order_top' => 'sometimes|nullable|int',
-            'order_footer' => 'sometimes|nullable|int',
+            'order_top' => 'required|int',
+            'order_footer' => 'required|int',
             'on_header' => 'required|bool',
             'on_footer' => 'required|bool',
             'active' => 'required|bool',
