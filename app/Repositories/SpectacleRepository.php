@@ -16,7 +16,7 @@ class SpectacleRepository extends Model
     public function getListForHome() : Collection
     {
         return Spectacle::query()
-            ->latest()
+            ->orderBy('start_at', 'desc')
             ->limit(6)
             ->get();
     }
@@ -52,7 +52,9 @@ class SpectacleRepository extends Model
      */
     public function getCollectionToIndex() : Collection
     {
-        return Spectacle::query()->get();
+        return Spectacle::query()
+            ->orderBy('start_at', 'desc')
+            ->get();
     }
 
     /**

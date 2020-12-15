@@ -39,7 +39,8 @@ class CategoryRepository extends Model
     {
         return Category::query()
             ->find($categoryId)
-            ->spectacles;
+            ->spectacles
+            ->sortBy('start_at');
     }
 
     /**
