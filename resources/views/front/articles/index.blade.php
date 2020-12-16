@@ -81,9 +81,11 @@
                                 {{ $article->name }}
                             </a>
                             <p class="card-text">{{ $article->date ? $article->date->format('d. m. Y') : '' }}
-                                <a href="{{ route('articles.index', ['category_id' => $article->category->id]) }}" class="card-link">
-                                    {{ $article->category ? $article->category->name : ''}}
-                                </a>
+                                @if($article->category)
+                                    <a href="{{ route('articles.index', ['category_id' => $article->category->id]) }}" class="card-link">
+                                        {{ $article->category->name }}
+                                    </a>
+                                @endif
                             </p>
                         </div>
                     </div>

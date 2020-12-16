@@ -98,7 +98,7 @@
                                 id="{{ $name }}" >
                             <option value="0">{{ __('global.pleaseSelect') }}</option>
                             @foreach($articleCategories as $id => $articleCategory)
-                                <option value="{{ $id }}" {{ $id == old($name, $article->category->id ?? 0) ? 'selected' : '' }}>{{ $articleCategory }}</option>
+                                <option value="{{ $id }}" {{ $id == old($name, $article->category ? $article->category->id : 0) ? 'selected' : '' }}>{{ $articleCategory }}</option>
                             @endforeach
                         </select>
                         @if($errors->has($name))
