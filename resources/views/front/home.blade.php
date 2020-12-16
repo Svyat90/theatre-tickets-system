@@ -32,7 +32,7 @@
                                                 <h1 class="spec-name" style="{{ $style }}">
                                                     {{ $slider->title }}
                                                 </h1>
-                                                <p class="spec-desc">{!! $slider->description !!}</p>
+                                                <div class="spec-desc">{!! $slider->description !!}</div>
                                                 <button class="bt home-btn">
                                                     <a href="{{ $slider->url }}" class="home-link">
                                                         {{ $vars['home_add_to_cart'] }}
