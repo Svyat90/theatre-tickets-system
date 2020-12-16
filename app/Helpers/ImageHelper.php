@@ -15,7 +15,7 @@ class ImageHelper
     public static function thumbImage(? Media $media) : string
     {
         return $media
-            ? sprintf('<img ale src="%s" />', $media->getFullUrl('thumb'))
+            ? sprintf('<img src="%s" />', $media->getFullUrl('thumb'))
             : '';
     }
 }

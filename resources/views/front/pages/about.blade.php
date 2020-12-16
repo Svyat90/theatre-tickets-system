@@ -85,17 +85,12 @@
                 </h2>
                 <div class="gallery-wr">
                     @foreach($about->image_gallery as $image)
-                        @php
-                            $maxWidth = 225;
-                            if ($loop->iteration === 3 || $loop->iteration === 6 || $loop->iteration === 7) {
-                                $maxWidth = 540;
-                            }
-                        @endphp
                         <div class="gallery-item">
-                            <img src="{{ $image->url }}" alt="" style="max-width: {{ $maxWidth }}px;">
+                            <img src="{{ $image->url }}" alt="">
                         </div>
                     @endforeach
                 </div>
+
             </div>
         </div>
     </main>
