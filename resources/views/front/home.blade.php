@@ -257,9 +257,9 @@
                             <img src="{{ asset('front/img/home-quot.svg') }}" alt="quotes">
                         </div>
                         <div class="l-wr d-flex">
-                            <p class="citate-text">
+                            <div class="citate-text">
                                 {!! $quote->description !!}
-                            </p>
+                            </div>
                             <div class="citate-person">
                                 <img src="{{ $quote->image ? $quote->image->getFullUrl() : '' }}" alt="">
                                 <p class="person-name">{{ $quote->name }}</p>
