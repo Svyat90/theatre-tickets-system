@@ -12,7 +12,7 @@
                 @if(isset($footerPages['column_1']))
                     @foreach($footerPages['column_1'] as $page)
                         <li class="footer-item">
-                            <a href="{{ route('pages.show', $page->slug) }}">{{ $page->name }}</a>
+                            <a href="{{ \App\Helpers\SlugHelper::href($page->slug) }}">{{ $page->name }}</a>
                         </li>
                     @endforeach
                 @endif
@@ -25,7 +25,7 @@
                 @if(isset($footerPages['column_2']))
                     @foreach($footerPages['column_2'] as $page)
                         <li class="footer-item">
-                            <a href="{{ route('pages.show', $page->slug) }}">{{ $page->name }}</a>
+                            <a href="{{ \App\Helpers\SlugHelper::href($page->slug) }}">{{ $page->name }}</a>
                         </li>
                     @endforeach
                 @endif
@@ -38,7 +38,7 @@
                 @if(isset($footerPages['column_3']))
                     @foreach($footerPages['column_3'] as $page)
                         <li class="footer-item">
-                            <a href="{{ route('pages.show', $page->slug) }}">{{ $page->name }}</a>
+                            <a href="{{ \App\Helpers\SlugHelper::href($page->slug) }}">{{ $page->name }}</a>
                         </li>
                     @endforeach
                 @endif
