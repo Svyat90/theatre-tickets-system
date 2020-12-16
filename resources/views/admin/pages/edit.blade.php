@@ -131,7 +131,7 @@
                                 name="{{ $name }}"
                                 id="{{ $name }}" >
                             @foreach($types as $id => $type)
-                                <option value="{{ $type }}" {{ $id == old($name, $page->type) ? 'selected' : '' }}>{{ $type }}</option>
+                                <option value="{{ $type }}" {{ $type == old($name, $page->type) ? 'selected' : '' }}>{{ $type }}</option>
                             @endforeach
                         </select>
                         @if($errors->has($name))

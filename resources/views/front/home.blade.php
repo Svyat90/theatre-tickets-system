@@ -20,11 +20,19 @@
                                                     <p class="month">{{  DateHelper::month($slider) }}</p>
                                                 <p class="day">{{ DateHelper::day($slider) }}</p>
                                                 <p class="author d-flex">
-                                                    <span class="name">{{ $slider->name }}</span>
+                                                    <span class="name">
+                                                        {{ $slider->name }}
+                                                    </span>
                                                     <span class="time">{{ DateHelper::time($slider) }}</span>
                                                 </p>
-                                                <h1 class="spec-name">{{ $slider->title }}</h1>
-                                                <p class="spec-desc">{{ $slider->description }}</p>
+                                                @php
+                                                    $words = explode(' ', trim($slider->title));
+                                                    $style = count($words) > 1 ? 'font-size: 80px !important; line-height: 70px !important;' : '';
+                                                @endphp
+                                                <h1 class="spec-name" style="{{ $style }}">
+                                                    {{ $slider->title }}
+                                                </h1>
+                                                <p class="spec-desc">{!! $slider->description !!}</p>
                                                 <button class="bt home-btn">
                                                     <a href="{{ $slider->url }}" class="home-link">
                                                         {{ $vars['home_add_to_cart'] }}
@@ -250,7 +258,7 @@
                         </div>
                         <div class="l-wr d-flex">
                             <p class="citate-text">
-                                {{ $quote->description }}
+                                {!! $quote->description !!}
                             </p>
                             <div class="citate-person">
                                 <img src="{{ $quote->image ? $quote->image->getFullUrl() : '' }}" alt="">

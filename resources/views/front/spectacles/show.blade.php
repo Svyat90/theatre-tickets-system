@@ -99,7 +99,7 @@
                                 @endif
                                 @if($spectacle->video_desc)
                                     <p class="video-text">
-                                        {{ $spectacle->video_desc }}
+                                        {!! $spectacle->video_desc !!}
                                     </p>
                                 @endif
                                 <div class="description-footer">
@@ -139,7 +139,7 @@
                         </div>
                         <div class="program-col d-flex">
                             <p class="program-text">
-                                {{ $spectacle->description }}
+                                {!! $spectacle->description !!}
                             </p>
                         </div>
                     </div>
