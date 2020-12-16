@@ -97,6 +97,11 @@ class VarsSeeder extends Seeder
             'ro' => 'Price',
             'en' => 'Price'
         ],
+        'spectacle_title_top' => [
+            'ru' => 'Сезон',
+            'ro' => 'Season',
+            'en' => 'Season'
+        ],
         'news' => [
             'ru' => 'Новости',
             'ro' => 'Noutati',

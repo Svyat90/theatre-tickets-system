@@ -22,7 +22,7 @@
                 </aside>
             </div>
             <div class="heading-text">
-                <h1 class="heading">Echipa</h1>
+                <h1 class="heading">{{ $vars['spectacle_title_top'] }}</h1>
             </div>
         </div>
         <div class="main-content">
