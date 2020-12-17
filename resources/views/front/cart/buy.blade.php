@@ -43,30 +43,30 @@
                                 {{ $vars['cart_buy_accept'] }} &nbsp;<a href="{{ $vars['cart_buy_terms_link'] }}" class="red-link">{{ $vars['cart_buy_terms_and_cond'] }}</a>
                             </label>
                         </div>
-                        {{--                    <h2 class="form-heading">--}}
-                        {{--                        Plată--}}
-                        {{--                    </h2>--}}
-                        {{--                    <div class="form-radio-wr">--}}
-                        {{--                        <label class="radio-label" for="bank">--}}
-                        {{--                            <input type="radio" checked class="form-radio" name="pay" id="bank">--}}
-                        {{--                            <span class="checkmark"></span>--}}
-                        {{--                            Plata cu card bancar--}}
-                        {{--                        </label>--}}
-                        {{--                        <div class="pay-img-wr">--}}
-                        {{--                            <img src="./img/footer-visa.jpg" alt="Pay with VISA">--}}
-                        {{--                        </div>--}}
-                        {{--                        <div class="pay-img-wr">--}}
-                        {{--                            <img src="./img/ticket-mastercard.png" alt="Pay with MasterCard">--}}
-                        {{--                        </div>--}}
-                        {{--                    </div>--}}
-                        {{--                    <div class="form-radio-wr">--}}
-                        {{--                        <label class="radio-label" for="cash">--}}
-                        {{--                            <input type="radio" class="form-radio" name="pay" id="cash">--}}
-                        {{--                            <span class="checkmark"></span>--}}
-                        {{--                            Broneaza in teatru--}}
-                        {{--                        </label>--}}
-                        {{--                    </div>--}}
-                        {{--                    <span class="pay-info">trebuie să plătiți un bilet cu cel puțin o oră înainte de sesiune </span>--}}
+                        <h2 class="form-heading">
+                            {{ $vars['payment_title'] }}
+                        </h2>
+                        <div class="form-radio-wr">
+                            <label class="radio-label" for="bank">
+                                <input type="radio" checked class="form-radio" name="pay" id="bank">
+                                <span class="checkmark"></span>
+                                {{ $vars['payment_by_cart'] }}
+                            </label>
+                            <div class="pay-img-wr">
+                                <img src="{{ asset('front/img/footer-visa.jpg') }}" alt="{{ $vars['payment_visa'] }}">
+                            </div>
+                            <div class="pay-img-wr">
+                                <img src="{{ asset('front/img/ticket-mastercard.png') }}" alt="{{ $vars['payment_master_cart'] }}">
+                            </div>
+                        </div>
+                        <div class="form-radio-wr">
+                            <label class="radio-label" for="cash">
+                                <input type="radio" class="form-radio" name="pay" id="cash">
+                                <span class="checkmark"></span>
+                                {{ $vars['payment_reserve_in_theater'] }}
+                            </label>
+                        </div>
+                        <span class="pay-info">{{ $vars['payment_reserve_in_theater_comment'] }}</span>
                         <div class="form-input-wr" style="{{ $errors->any() ? '' : 'display: none;' }} color: red; text-align: center;">
                             @if($errors->any())
                                 {!! implode('', $errors->all('<strong>:message</strong><br>')) !!}

@@ -587,6 +587,36 @@ class VarsSeeder extends Seeder
             'ro' => 'Rezervari bilete',
             'en' => 'Rezervari bilete'
         ],
+        'payment_title' => [
+            'ru' => 'Оплата',
+            'ro' => 'Plată',
+            'en' => 'The payment'
+        ],
+        'payment_by_cart' => [
+            'ru' => 'Payment by bank card',
+            'ro' => 'Payment by bank card',
+            'en' => 'Payment by bank card'
+        ],
+        'payment_visa' => [
+            'ru' => 'Pay with VISA',
+            'ro' => 'Pay with VISA',
+            'en' => 'Pay with VISA'
+        ],
+        'payment_master_cart' => [
+            'ru' => 'Pay with MasterCard',
+            'ro' => 'Pay with MasterCard',
+            'en' => 'Pay with MasterCard'
+        ],
+        'payment_reserve_in_theater' => [
+            'ru' => 'Broneaza in teatru',
+            'ro' => 'Broneaza in teatru',
+            'en' => 'Broneaza in teatru'
+        ],
+        'payment_reserve_in_theater_comment' => [
+            'ru' => 'необходимо оплатить билет минимум за час до сеанса',
+            'ro' => 'trebuie să plătiți un bilet cu cel puțin o oră înainte de sesiune',
+            'en' => 'you must pay a ticket at least one hour before the session'
+        ],
     ];
 
     /**
