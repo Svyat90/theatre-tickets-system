@@ -1,478 +1,478 @@
-.main-content {
-  display: flex;
-  flex-wrap: wrap;
-  width: 1110px;
-  padding-top: 0;
-  margin: 50px auto 0;
-}
-
-.back-wr,
-.confirm-wr {
-  width: 100%;
-}
-
-.link-back {
-  display: block;
-  padding-right: 30px;
-  margin-bottom: 20px;
-  width: min-content;
-  font-weight: 600;
-  font-size: 12px;
-  line-height: 30px;
-  text-transform: uppercase;
-  text-decoration: none !important;
-  color: #C6A564 !important;
-  transition: color ease 0.3s;
-}
-
-.link-back:hover {
-  color: #cfaf5f !important;
-}
-
-.content-wr {
-  width: 100%;
-  padding-bottom: 68px;
-  margin-bottom: 35px;
-  justify-content: space-between;
-  border-bottom: 1px solid #EDEDED;
-}
-
-.form-input-wr {
-  position: relative;
-  margin-bottom: 20px;
-  width: 540px;
-}
-
-.form-input-wr:nth-child(6) {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  margin-bottom: 73px;
-}
-
-.form-heading {
-  position: relative;
-  font-weight: 600;
-  font-size: 30px;
-  line-height: 30px;
-  color: #161616;
-  margin-bottom: 30px;
-}
-
-.form-heading::before {
-  content: "";
-  position: absolute;
-  left: -62px;
-  top: 15px;
-  height: 1px;
-  width: 42px;
-  background-color: #C6A564;
-}
-
-.input-text:focus~.floating-label,
-.input-text:not(:focus):valid~.floating-label {
-  top: -6px;
-  left: 20px;
-  font-size: 10px;
-  opacity: 1;
-  color: #161616;
-}
-
-.input-text {
-  width: 100%;
-  font-size: 14px;
-  padding-left: 20px;
-  height: 50px;
-  border: 1px solid #EDEDED;
-  border-radius: 4px;
-  cursor: pointer;
-}
-
-.input-text:focus {
-  outline: none;
-  border: 1px solid #000;
-}
-
-.floating-label {
-  font-size: 14px;
-  line-height: 14px;
-  display: block;
-  background-color: white;
-  color: #AFAFAF;
-  padding-left: 3px;
-  padding-right: 3px;
-  position: absolute;
-  pointer-events: none;
-  height: 15px;
-  left: 20px;
-  top: 17px;
-  transition: 0.2s ease all;
-}
-
-.form-checkbox {
-  height: 18px;
-  width: 18px;
-  margin-right: 12px;
-  cursor: pointer;
-}
-
-.red-link {
-  text-decoration: underline;
-  color: #ba2126 !important;
-}
-
-label {
-  font-size: 14px;
-  line-height: 18px;
-  color: #161616;
-  margin-bottom: 0;
-}
-
-label.radio-label {
-  font-size: 16px;
-  line-height: 20px;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  position: relative;
-}
-
-.form-radio-wr {
-  position: relative;
-  margin-bottom: 35px;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-}
-
-.form-radio-wr+.form-radio-wr {
-  margin-bottom: 0;
-}
-
-.form-radio {
-  margin-right: 16px;
-  width: 18px;
-  height: 8px;
-  outline: none !important;
-}
-
-.pay-img-wr {
-  height: 30px;
-  margin-left: auto;
-  margin-right: 20px;
-}
-
-.pay-img-wr:last-child {
-  margin-right: 0;
-  margin-left: 0;
-}
-
-.pay-img-wr img {
-  height: 100%;
-}
-
-.checkmark {
-  position: absolute;
-  top: 0px;
-  left: 0px;
-  height: 20px;
-  width: 20px;
-  background-color: #fff;
-  border-radius: 50%;
-  border: 1px solid #ccc;
-  cursor: pointer;
-  transition: background-color ease 0.4s;;
-}
-
-.form-radio:hover~.checkmark {
-  background-color: #eee;
-}
-
-.checkmark:after {
-  content: "";
-  position: absolute;
-  display: none;
-  top: 5px;
-  left: 5px;
-  width: 8px;
-  height: 8px;
-  border-radius: 50%;
-  background-color: red;
-}
-
-input:checked~.checkmark:after {
-  display: block;
-}
-
-.pay-info {
-  display: block;
-  margin-top: 10px;
-  font-size: 12px;
-  line-height: 20px;
-  padding-left: 36px;
-  color: #AFAFAF;
-}
-
-.main form {
-  margin-right: 125px;
-}
-
-.ticket-cart {
-  width: 445px;
-  background-color: #202020;
-}
-
-.spectacole-block {
-  flex-direction: column;
-}
-
-.spectacole-heading {
-  flex-direction: row;
-  justify-content: space-between;
-  padding: 30px;
-  border-bottom: 1px solid white;
-  border-image: url(../img/ticket-border.png) 1;
-}
-
-.heading-title,
-.heading-date {
-  flex-direction: column;
-}
-
-.heading-title {
-  max-width: 250px;
-}
-
-.title-author {
-  margin-bottom: 0;
-  font-size: 12px;
-  line-height: 30px;
-  text-transform: uppercase;
-  color: #fff;
-}
-
-.title-group {
-  margin-bottom: 19px;
-  font-size: 14px;
-  line-height: 25px;
-  color: #afafaf;
-}
-
-.title-name {
-  margin-bottom: 0;
-  font-family: "Lora", serif;
-  font-size: 30px;
-  line-height: 38px;
-  color: #C6A564;
-}
-
-.heading-date {
-  width: max-content;
-}
-
-.heading-date>* {
-  text-align: center;
-}
-
-.heading-date .day {
-  margin-bottom: 5px;
-  font-size: 12px;
-  line-height: 30px;
-  color: #AFAFAF;
-}
-
-.heading-date .num-day {
-  margin-bottom: 15px;
-  font-family: "Lora", serif;
-  font-weight: bold;
-  font-size: 30px;
-  line-height: 30px;
-  color: #BA2126;
-}
-
-.heading-date .month {
-  font-weight: 600;
-  font-size: 12px;
-  line-height: 16px;
-  text-transform: uppercase;
-  color: #fff;
-}
-
-.spectacole-tickets {
-  padding: 20px 30px;
-  flex-direction: column;
-  border-bottom: 1px solid #4F4F4F;
-  max-height: 240px;
-  overflow-y: auto;
-  scrollbar-color: grey;
-  scrollbar-width: thin;
-  scrollbar-track-color: gray;
-}
-
-.tickets-ticket {
-  margin-bottom: 15px;
-  display: flex;
-  justify-content: space-between;
-  height: 25px;
-}
-
-.tickets-ticket:last-child {
-  margin-bottom: 0;
-}
-
-.tickets-ticket .place {
-  font-size: 14px;
-  line-height: 16px;
-  color: #AFAFAF;
-  display: block;
-}
-
-.tickets-ticket .cost {
-  min-width: 43px;
-  display: block;
-  margin-left: 5px;
-  text-align: right;
-  font-weight: bold;
-  font-size: 14px;
-  line-height: 16px;
-  color: #C6A564;
-}
-
-
-.confirm {
-  width: 303px;
-  display: flex;
-  align-items: center;
-  margin-left: auto;
-}
-
-.total-price {
-  margin-bottom: 0;
-  font-weight: 600;
-  font-size: 16px;
-  line-height: 30px;
-  text-transform: uppercase;
-  color: #000000;
-}
-
-.total-price .total-num {
-  color: #c6a564;
-}
-
-.bt {
-  display: block;
-  width: 171px;
-  height: 50px;
-  margin-left: 20px;
-  text-align: center;
-  border: none;
-  outline: none !important;
-  transition: background-color ease 0.4s;
-}
-
-.home-btn {
-  background-color: #BA2126;
-}
-
-.home-btn:hover {
-  background-color: #ca3146;
-}
-
-.home-link {
-  font-weight: 600;
-  font-size: 12px;
-  line-height: 30px;
-  color: #C6A564 !important;
-  text-decoration: none !important;
-  text-transform: uppercase;
-}
-
-@media (max-width: 1440px) {
-  .main-content {
-    width: calc(100% - 231.6px);
-    margin-left: 115.8px;
-    margin-right: 115.8px;
-  }
-
-  .main form {
-    width: -webkit-fill-available;
-    width: 100%;
-    max-width: 540px;
-  }
-
-  .form-input-wr {
-    min-width: 320px;
-    width: 100%;
-  }
-}
-
-@media (max-width: 1199px) {
-  .main-content {
-    padding-right: 45px;
-    padding-left: 87px;
-    margin-right: 0;
-    margin-left: 0;
-    width: 100%;
-  }
-
-  .form-heading:before {
-    width: 22px;
-    left: -42px;
-  }
-}
-
-@media (max-width: 991px) {
-  .main form {
-    width: unset;
-    margin-right: 20px;
-  }
-}
-
-.mob {
-  display: none;
-}
-
-@media (max-width: 767px) {
-  .content-wr {
-    flex-direction: column;
-  }
-
-  .des {
-    display: none;
-  }
-
-  .mob {
-    display: flex;
-  }
-
-  .content-wr>* {
-    width: 100% !important;
-    max-width: 100% !important;
-  }
-
-  .main form {
-    padding-bottom: 30px;
-    margin-bottom: 30px;
-    border-bottom: 1px solid #ededed;
-  }
-
-  .confirm-wr {
-    margin-bottom: 70px;
-  }
-
-  .content-wr {
-    border: none !important;
-    padding-bottom: 0;
-  }
-
-  .main {
-    padding-bottom: 53px !important;
-  }
-}
-
-@media (max-width: 575px) {
-  .main-content {
-    padding-left: 7px !important;
-    padding-right: 7px !important;
-  }
-}
+.main-content {
+  display: flex;
+  flex-wrap: wrap;
+  width: 1110px;
+  padding-top: 0;
+  margin: 50px auto 0;
+}
+
+.back-wr,
+.confirm-wr {
+  width: 100%;
+}
+
+.link-back {
+  display: block;
+  padding-right: 30px;
+  margin-bottom: 20px;
+  width: min-content;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 30px;
+  text-transform: uppercase;
+  text-decoration: none !important;
+  color: #C6A564 !important;
+  transition: color ease 0.3s;
+}
+
+.link-back:hover {
+  color: #cfaf5f !important;
+}
+
+.content-wr {
+  width: 100%;
+  padding-bottom: 68px;
+  margin-bottom: 35px;
+  justify-content: space-between;
+  border-bottom: 1px solid #EDEDED;
+}
+
+.form-input-wr {
+  position: relative;
+  margin-bottom: 20px;
+  width: 540px;
+}
+
+.form-input-wr:nth-child(6) {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-bottom: 73px;
+}
+
+.form-heading {
+  position: relative;
+  font-weight: 600;
+  font-size: 30px;
+  line-height: 30px;
+  color: #161616;
+  margin-bottom: 30px;
+}
+
+.form-heading::before {
+  content: "";
+  position: absolute;
+  left: -62px;
+  top: 15px;
+  height: 1px;
+  width: 42px;
+  background-color: #C6A564;
+}
+
+.input-text:focus~.floating-label,
+.input-text:not(:focus):valid~.floating-label {
+  top: -6px;
+  left: 20px;
+  font-size: 10px;
+  opacity: 1;
+  color: #161616;
+}
+
+.input-text {
+  width: 100%;
+  font-size: 14px;
+  padding-left: 20px;
+  height: 50px;
+  border: 1px solid #EDEDED;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.input-text:focus {
+  outline: none;
+  border: 1px solid #000;
+}
+
+.floating-label {
+  font-size: 14px;
+  line-height: 14px;
+  display: block;
+  background-color: white;
+  color: #AFAFAF;
+  padding-left: 3px;
+  padding-right: 3px;
+  position: absolute;
+  pointer-events: none;
+  height: 15px;
+  left: 20px;
+  top: 17px;
+  transition: 0.2s ease all;
+}
+
+.form-checkbox {
+  height: 18px;
+  width: 18px;
+  margin-right: 12px;
+  cursor: pointer;
+}
+
+.red-link {
+  text-decoration: underline;
+  color: #ba2126 !important;
+}
+
+label {
+  font-size: 14px;
+  line-height: 18px;
+  color: #161616;
+  margin-bottom: 0;
+}
+
+label.radio-label {
+  font-size: 16px;
+  line-height: 20px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  position: relative;
+}
+
+.form-radio-wr {
+  position: relative;
+  margin-bottom: 35px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.form-radio-wr+.form-radio-wr {
+  margin-bottom: 0;
+}
+
+.form-radio {
+  margin-right: 16px;
+  width: 18px;
+  height: 8px;
+  outline: none !important;
+}
+
+.pay-img-wr {
+  height: 30px;
+  margin-left: auto;
+  margin-right: 20px;
+}
+
+.pay-img-wr:last-child {
+  margin-right: 0;
+  margin-left: 0;
+}
+
+.pay-img-wr img {
+  height: 100%;
+}
+
+.checkmark {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  height: 20px;
+  width: 20px;
+  background-color: #fff;
+  border-radius: 50%;
+  border: 1px solid #ccc;
+  cursor: pointer;
+  transition: background-color ease 0.4s;;
+}
+
+.form-radio:hover~.checkmark {
+  background-color: #eee;
+}
+
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+  top: 5px;
+  left: 5px;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: red;
+}
+
+input:checked~.checkmark:after {
+  display: block;
+}
+
+.pay-info {
+  display: block;
+  margin-top: 10px;
+  font-size: 12px;
+  line-height: 20px;
+  padding-left: 36px;
+  color: #AFAFAF;
+}
+
+.main form {
+  margin-right: 125px;
+}
+
+.ticket-cart {
+  width: 445px;
+  background-color: #202020;
+}
+
+.spectacole-block {
+  flex-direction: column;
+}
+
+.spectacole-heading {
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 30px;
+  border-bottom: 1px solid white;
+  border-image: url(../img/ticket-border.png) 1;
+}
+
+.heading-title,
+.heading-date {
+  flex-direction: column;
+}
+
+.heading-title {
+  max-width: 250px;
+}
+
+.title-author {
+  margin-bottom: 0;
+  font-size: 12px;
+  line-height: 30px;
+  text-transform: uppercase;
+  color: #fff;
+}
+
+.title-group {
+  margin-bottom: 19px;
+  font-size: 14px;
+  line-height: 25px;
+  color: #afafaf;
+}
+
+.title-name {
+  margin-bottom: 0;
+  font-family: "Lora", serif;
+  font-size: 30px;
+  line-height: 38px;
+  color: #C6A564;
+}
+
+.heading-date {
+  width: max-content;
+}
+
+.heading-date>* {
+  text-align: center;
+}
+
+.heading-date .day {
+  margin-bottom: 5px;
+  font-size: 12px;
+  line-height: 30px;
+  color: #AFAFAF;
+}
+
+.heading-date .num-day {
+  margin-bottom: 15px;
+  font-family: "Lora", serif;
+  font-weight: bold;
+  font-size: 30px;
+  line-height: 30px;
+  color: #BA2126;
+}
+
+.heading-date .month {
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 16px;
+  text-transform: uppercase;
+  color: #fff;
+}
+
+.spectacole-tickets {
+  padding: 20px 30px;
+  flex-direction: column;
+  border-bottom: 1px solid #4F4F4F;
+  max-height: 240px;
+  overflow-y: auto;
+  scrollbar-color: grey;
+  scrollbar-width: thin;
+  scrollbar-track-color: gray;
+}
+
+.tickets-ticket {
+  margin-bottom: 15px;
+  display: flex;
+  justify-content: space-between;
+  height: 25px;
+}
+
+.tickets-ticket:last-child {
+  margin-bottom: 0;
+}
+
+.tickets-ticket .place {
+  font-size: 14px;
+  line-height: 16px;
+  color: #AFAFAF;
+  display: block;
+}
+
+.tickets-ticket .cost {
+  min-width: 43px;
+  display: block;
+  margin-left: 5px;
+  text-align: right;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 16px;
+  color: #C6A564;
+}
+
+
+.confirm {
+  width: 303px;
+  display: flex;
+  align-items: center;
+  margin-left: auto;
+}
+
+.total-price {
+  margin-bottom: 0;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 30px;
+  text-transform: uppercase;
+  color: #000000;
+}
+
+.total-price .total-num {
+  color: #c6a564;
+}
+
+.bt {
+  display: block;
+  width: 171px;
+  height: 50px;
+  margin-left: 20px;
+  text-align: center;
+  border: none;
+  outline: none !important;
+  transition: background-color ease 0.4s;
+}
+
+.home-btn {
+  background-color: #BA2126;
+}
+
+.home-btn:hover {
+  background-color: #ca3146;
+}
+
+.home-link {
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 30px;
+  color: #C6A564 !important;
+  text-decoration: none !important;
+  text-transform: uppercase;
+}
+
+@media (max-width: 1440px) {
+  .main-content {
+    width: calc(100% - 231.6px);
+    margin-left: 115.8px;
+    margin-right: 115.8px;
+  }
+
+  .main form {
+    width: -webkit-fill-available;
+    width: 100%;
+    max-width: 540px;
+  }
+
+  .form-input-wr {
+    min-width: 320px;
+    width: 100%;
+  }
+}
+
+@media (max-width: 1199px) {
+  .main-content {
+    padding-right: 45px;
+    padding-left: 87px;
+    margin-right: 0;
+    margin-left: 0;
+    width: 100%;
+  }
+
+  .form-heading:before {
+    width: 22px;
+    left: -42px;
+  }
+}
+
+@media (max-width: 991px) {
+  .main form {
+    width: unset;
+    margin-right: 20px;
+  }
+}
+
+.mob {
+  display: none;
+}
+
+@media (max-width: 767px) {
+  .content-wr {
+    flex-direction: column;
+  }
+
+  .des {
+    display: none;
+  }
+
+  .mob {
+    display: flex;
+  }
+
+  .content-wr>* {
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+
+  .main form {
+    padding-bottom: 30px;
+    margin-bottom: 30px;
+    border-bottom: 1px solid #ededed;
+  }
+
+  .confirm-wr {
+    margin-bottom: 70px;
+  }
+
+  .content-wr {
+    border: none !important;
+    padding-bottom: 0;
+  }
+
+  .main {
+    padding-bottom: 53px !important;
+  }
+}
+
+@media (max-width: 575px) {
+  .main-content {
+    padding-left: 7px !important;
+    padding-right: 7px !important;
+  }
+}

@@ -1,1216 +1,608 @@
 .tabs {
-
   display: flex;
-
   margin-bottom: 50px;
-
   border-bottom: 1px solid #4F4F4F;
-
 }
-
-
 
 .act-link {
-
   display: block;
-
   z-index: 100;
-
   position: relative;
-
   padding-bottom: 9px;
-
   margin-bottom: -1px;
-
   font-weight: 600;
-
   font-size: 12px;
-
   line-height: 30px;
-
   text-align: center;
-
   text-transform: uppercase;
-
   color: #5F5F5F;
-
   text-decoration: none !important;
-
   border-bottom: 1px solid transparent;
-
   transition: color ease 0.4s;
-
 }
-
-
 
 .act-link:first-child {
-
   margin-left: auto;
-
 }
-
-
 
 .act-link:not(:first-child) {
-
   margin-left: 20px;
-
 }
-
-
 
 .act-link:hover,
-
 .act-link.active {
-
   color: #C6A564;
-
   border-bottom: 1px solid #c6a564;
-
 }
-
-
 
 .cart-tickets {
-
   flex-direction: column;
-
   margin-bottom: 50px;
-
 }
-
-
 
 .cart-ticket {
-
   position: relative;
-
   min-height: 310px;
-
   margin-bottom: 50px;
-
   background-color: #202020;
-
   background-position: center;
-
   background-repeat: no-repeat;
-
 }
-
-
 
 .circle {
-
   width: 54px;
-
   height: 27px;
-
   background-color: #161616;
-
 }
-
-
 
 .circle-bottom {
-
   position: absolute;
-
   border-top-right-radius: 54px;
-
   border-top-left-radius: 54px;
-
   z-index: 99;
-
   bottom: -1px;
-
   left: 52.6%;
-
 }
-
-
 
 .circle-top {
-
   position: absolute;
-
   border-bottom-right-radius: 54px;
-
   border-bottom-left-radius: 54px;
-
   z-index: 100;
-
   top: -1px;
-
   left: 52.52%;
-
 }
-
-
 
 .cart-ticket:last-child {
-
   margin-bottom: 0;
-
 }
-
-
 
 .col-date {
-
   position: relative;
-
   min-width: 110px;
-
   flex-direction: column;
-
   justify-content: center;
-
 }
-
-
 
 .premiere-text {
-
   display: none;
-
 }
-
-
 
 .col-date.premiere .premiere-text {
-
   display: block;
-
   position: absolute;
-
   text-transform: uppercase;
-
   font-weight: 600;
-
   font-size: 12px;
-
   line-height: 30px;
-
   color: #C6A564;
-
   left: 20px;
-
   top: 20px;
-
 }
-
-
 
 .col-content {
-
   position: relative;
-
   flex-direction: column;
-
   justify-content: space-between;
-
   width: -webkit-fill-available;
-
   width: -moz-fill-available;
-
   width: -ms-fill-available;
-
   width: 100%;
-
   background: linear-gradient(269.55deg, rgba(32, 32, 32, 0) 85.72%, #202020 99.54%),
-
     url(../img/cart-ticket-img.png) no-repeat;
-
   background-position: bottom 0px right -1px;
-
   border-right: 1px solid white;
-
   border-image: url(../img/cart-border.png) 1;
-
   border-left: 1px solid white;
-
 }
-
-
 
 .heading-title {
-
   height: 100%;
-
   display: flex;
-
   align-items: center;
-
   padding-left: 30px;
-
 }
-
-
 
 .ticket-info,
-
 .tickets-total {
-
   position: absolute;
-
   display: flex;
-
   align-items: center;
-
   width: 100%;
-
   height: 67px;
-
   bottom: 0;
-
   padding-right: 15px;
-
   border-top: 1px solid #4F4F4F;
-
 }
-
-
 
 .info-time,
-
 .info-duration {
-
   display: flex;
-
   align-items: center;
-
   height: 100%;
-
   min-width: 114px;
-
   border-right: 1px solid #4f4f4f;
-
   padding-right: 18px;
-
 }
-
-
 
 .info-text {
-
   display: flex;
-
   align-items: center;
-
   justify-content: flex-end;
-
   font-weight: 600;
-
   font-size: 14px;
-
   line-height: 30px;
-
   text-transform: uppercase;
-
   text-align: right;
-
   color: #5F5F5F;
-
   margin-left: auto;
-
 }
-
-
 
 .info-time span:before,
-
 .info-duration span:before {
-
   content: "";
-
   display: block;
-
   width: 18px;
-
   height: 18px;
-
   margin-right: 8px;
-
 }
-
-
 
 .info-time span:before {
-
   background-image: url(../img/cart-info-time.png);
-
 }
-
-
 
 .info-duration span:before {
-
   background-image: url(../img/cart-info-dur.png);
-
 }
-
-
 
 .info-age .info-text {
-
   color: #BA2126;
-
 }
-
-
 
 .title-author {
-
   top: 20px;
-
   margin-bottom: 0;
-
   font-size: 12px;
-
   line-height: 30px;
-
   text-transform: uppercase;
-
   color: #fff;
-
 }
-
-
 
 .title-author,
-
 .title-group {
-
   position: absolute;
-
 }
-
-
 
 .title-group {
-
   top: 55px;
-
   margin-bottom: 0px;
-
   font-size: 14px;
-
   line-height: 20px;
-
   color: #afafaf;
-
 }
-
-
 
 .spectacole .title-name {
-
   display: block;
-
-  max-width: 550px;
-
+  max-width: 500px;
   margin-bottom: 0;
-
   font-family: "Lora", serif;
-
   font-weight: 300;
-
   font-size: 48px;
-
   letter-spacing: 0.05rem;
-
   line-height: 58px;
-
   color: #C6A564 !important;
-
   text-decoration: none !important;
-
 }
-
-
 
 .heading-date {
-
   text-align: center;
-
 }
-
-
 
 .heading-date>* {
-
   text-align: center !important;
-
 }
-
-
 
 .heading-date .day {
-
   font-family: "Lato", sans-serif;
-
   margin-bottom: 5px;
-
   font-size: 12px;
-
   line-height: 24px;
-
   color: #AFAFAF;
-
 }
-
-
 
 .heading-date .num-day {
-
   margin-bottom: 8px;
-
   font-family: "Lora", serif;
-
   font-weight: bold;
-
   font-size: 50px;
-
   line-height: 52px;
-
   color: #BA2126;
-
 }
-
-
 
 .spectacole .heading-date .month {
-
   font-weight: 600;
-
   margin-bottom: 0;
-
   font-size: 12px;
-
   line-height: 16px;
-
   text-transform: uppercase;
-
   color: #fff;
-
 }
-
-
 
 .col-tickets {
-
   position: relative;
-
   min-width: 254px;
-
   flex-direction: column;
-
 }
-
-
 
 .total-text {
-
   width: 100%;
-
   padding: 0 24px;
-
   justify-content: space-between;
-
   font-weight: 600;
-
   font-size: 12px;
-
   line-height: 30px;
-
   margin-bottom: 0;
-
   text-transform: uppercase;
-
   color: #5f5f5f;
-
 }
-
-
 
 .home-age-num {
-
   color: #BA2126;
-
 }
-
-
 
 .total-text .total-num {
-
   color: #C6A564;
-
   margin-left: 20px;
-
   text-transform: none;
-
 }
-
-
 
 .home-link {
-
   font-weight: 600;
-
   font-size: 12px;
-
   line-height: 30px;
-
   color: #C6A564 !important;
-
   text-decoration: none !important;
-
   text-transform: uppercase;
-
 }
-
-
 
 .tickets-wr {
-
   position: relative;
-
   height: 243px;
-
   overflow-y: auto;
-
   scrollbar-color: grey;
-
   scrollbar-width: thin;
-
   scrollbar-track-color: gray;
-
   padding: 20px 24px 0;
-
 }
-
-
 
 .main-link {
-
   margin-bottom: 0;
-
   align-items: center;
-
   font-weight: 600;
-
   font-size: 12px;
-
   line-height: 30px;
-
   text-transform: uppercase;
-
   color: #C6A564;
-
 }
-
-
 
 .ticket-buy-link {
-
   display: flex;
-
   width: 171px;
-
   height: 50px;
-
   margin-top: 63px;
-
   margin-left: 24px;
-
   justify-content: center;
-
   align-items: center;
-
   background-color: #fff;
-
   font-size: 12px;
-
   line-height: 30px;
-
   text-transform: uppercase;
-
   text-decoration: none !important;
-
   color: #C6A564 !important;
-
   transition: background-color ease 0.4s;
-
 }
-
 /*
-
 .ticket-buy-link.link-red {
-
   background-color: #BA2126;
-
 }*/
 
-
-
 .ticket-buy-link:hover {
-
   background-color: #BA2126;
-
 }
-
-
 
 .ticket-buy-link.link-busy {
-
   cursor: default;
-
   opacity: 0.3;
-
 }
-
-
 
 .cards-pagination {
-
   z-index: 1;
-
   display: flex;
-
   align-items: center;
-
   min-width: 206px;
-
   margin: 0 auto 150px;
-
 }
-
-
 
 .cards-pagination .prev,
-
 .cards-pagination .next {
-
   cursor: pointer;
-
   display: flex;
-
   justify-content: center;
-
   align-items: center;
-
   width: 50px;
-
   height: 50px;
-
   border-radius: 50px;
-
   border: 1px solid #4F4F4F;
-
   color: #fff;
-
   background-repeat: no-repeat;
-
   transition: background-color ease 0.4s;
-
 }
-
-
 
 .prev {
-
   background-image: url(../img/left.svg);
-
   background-position: 45% 50%;
-
   margin-right: 20px
-
 }
-
-
 
 .next {
-
   background-image: url(../img/right.svg);
-
   background-position: 50% 50%
-
 }
-
-
 
 .pagination-num {
-
   cursor: pointer;
-
   font-weight: 600;
-
   font-size: 14px;
-
   line-height: 30px;
-
   color: #fff;
-
   margin-right: 20px;
-
   transition: color ease 0.3s;
-
 }
-
-
 
 .pagination-num.active {
-
   color: #c6a564
-
 }
-
-
 
 .pagination-num:hover {
-
   color: #c6a564
-
 }
-
-
 
 .cards-pagination .next:hover,
-
 .cards-pagination .prev:hover {
-
   background-color: #252525;
-
 }
-
-
 
 .spec-main-bg {
-
   position: absolute;
-
   z-index: 0;
-
 }
-
-
 
 .spec-face-1 {
-
   width: 732px;
-
   bottom: 1070px;
-
   left: 0;
-
 }
-
-
 
 .spec-face-2 {
-
   width: 905px;
-
   bottom: 0;
-
   right: 0;
-
 }
-
-
-
 
 
 @media (max-width: 991px) {
-
   .spectacole .heading-imgwr {
-
     justify-content: center;
-
   }
-
-
 
   .spectacole .heading-imgwr .bg {
-
     width: 100%;
-
   }
-
-
 
   .spectacole .form-heading {
-
     margin-bottom: 15px;
-
   }
-
-
 
   .spectacole .title-name {
-
     font-size: 40px;
-
     line-height: 48px;
-
   }
-
 }
-
-
 
 @media (max-width: 767px) {
 
-
-
   .sl-tabs-wr {
-
     overflow: hidden;
-
     border-bottom: 1px solid #4f4f4f;
-
     margin-bottom: 30px;
-
   }
-
-
 
   .tabs {
-
     border-bottom: none;
-
   }
-
-
 
   .act-link {
-
     margin-left: 0;
-
     min-width: 160px;
-
   }
-
-
 
   .spec-main-bg {
-
     width: 66%;
-
   }
-
-
 
   .cart-ticket {
-
     margin-bottom: 30px;
-
     flex-direction: column;
-
     min-height: 493px;
-
     justify-content: space-between;
-
   }
-
-
 
   .cart-ticket>.d-flex {
-
     width: 100%;
-
     min-width: 100%;
-
   }
-
-
 
   .heading-date,
-
   .info-sala {
-
     display: flex;
-
   }
-
-
 
   .content-wr {
-
     padding-bottom: 30px;
-
   }
-
-
 
   .info-age {
-
     width: 100%;
-
   }
-
-
 
   .info-sala {
-
     font-weight: 600;
-
     font-size: 14px;
-
     display: block;
-
     width: 100%;
-
     line-height: 30px;
-
     text-align: center;
-
     text-transform: uppercase;
-
     color: #5F5F5F;
-
   }
-
-
 
   .info-time {
-
     min-width: 97px;
-
   }
-
-
 
   .heading-date .num-day {
-
     margin-left: auto;
-
     margin-right: 5px;
-
     font-size: 30px;
-
     line-height: 30px;
-
   }
-
-
 
   .heading-date .day,
-
   .info-age .info-text {
-
     display: none;
-
   }
-
-
 
   /* www */
-
   .col-date {
-
     height: 79px;
-
     padding-right: 15px;
-
     padding-left: 25px;
-
     padding-top: 32px;
-
     display: flex;
-
     justify-content: start;
-
   }
-
-
 
   .col-date.premiera .premiera-text {
-
     top: 32px;
-
     left: 66px;
-
   }
-
-
 
   .tickets-wr {
-
     padding-top: 0;
-
     min-height: 50px;
-
     height: 50px;
-
     max-height: 243px;
-
     overflow: unset;
-
   }
-
-
 
   .ticket-info {
-
     margin-bottom: 80px;
-
     border-bottom: 1px solid #4f4f4f;
-
   }
-
-
 
   .cancel-wr {
-
     display: none;
-
   }
-
-
 
   .ticket-buy-link {
-
     margin-top: -50px;
-
     margin-left: auto;
-
     margin-right: auto;
-
   }
-
-
 
   .m-age {
-
     display: block;
-
     font-weight: 600;
-
     font-size: 14px;
-
     line-height: 30px;
-
     text-align: right;
-
     color: #BA2126;
-
     margin-bottom: 0;
-
   }
-
-
 
   .heading-date .month {
-
     line-height: 39px !important;
-
   }
-
-
 
   .col-date.premiere .premiere-text {
-
     top: 32px;
-
     left: 66px;
-
   }
-
-
 
   .col-content {
-
     min-height: 372px;
-
     border-image: url(../img/ticket-border.png) 1;
-
     border-top: 1px solid white;
-
   }
-
-
 
   .m-age {
-
     display: block;
-
     font-weight: 600;
-
     font-size: 14px;
-
     line-height: 30px;
-
     text-align: right;
-
     color: #BA2126;
-
     margin-bottom: 0;
-
   }
-
-
 
   .heading-title {
-
     min-height: 372px;
-
   }
-
-
 
   .cart .title-name {
-
     min-height: 372px;
-
     padding-top: 70px;
-
     padding-bottom: 80px;
-
   }
-
-
 
   .col-content {
-
     background-size: contain;
-
   }
-
-
 
   .tickets-total,
-
   .tickets-wr .home-link {
-
     display: none;
-
   }
-
-
 
   .spectacole .title-name {
-
     font-size: 40px;
-
     min-height: 372px;
-
     padding-top: 80px;
-
     padding-bottom: 145px;
-
   }
-
-
 
   .circle-bottom,
-
   .circle-top {
-
     left: calc(50% - 27px);
-
   }
-
 }
-

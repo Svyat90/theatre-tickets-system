@@ -90,10 +90,10 @@
                         </div>
                     </div>
                 @endforeach
-
-                {{ $articles->links('front.partials.paginator') }}
-
             </div>
+
+            {{ $articles->links('front.partials.paginator') }}
+
         </div>
     </main>
 @endsection

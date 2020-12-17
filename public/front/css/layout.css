@@ -1,332 +1,337 @@
-body {
-  cursor: default;
-}
-
-.main {
-  position: relative;
-  top: -1px;
-  margin-bottom: -1px;
-  padding-bottom: 76px;
-}
-
-.main-content {
-  display: flex;
-  flex-direction: column;
-  width: 1110px;
-  padding-top: 174px;
-  margin: 0 auto;
-  font-family: "Lato", sans-serif;
-}
-
-.form-heading {
-  position: relative;
-  font-weight: 600;
-  font-size: 30px;
-  line-height: 30px;
-  color: #fff;
-  margin-bottom: -15px;
-}
-
-.form-heading::before {
-  content: "";
-  position: absolute;
-  left: -62px;
-  top: 15px;
-  height: 1px;
-  width: 42px;
-  background-color: #C6A564;
-}
-
-.main.detail {
-  background-color: #080808;
-}
-
-.main.spectacole {
-  background-color: #161616;
-}
-
-.page-heading {
-  position: relative;
-}
-
-.heading-imgwr {
-  background-color: #080808;
-  max-height: 502px;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  position: relative;
-}
-
-.spectacole .heading-imgwr {
-  justify-content: start;
-}
-
-.spectacole .heading-imgwr .bg {
-  width: calc(100% - 150px);
-  height: 502px;
-  background: url(../img/spec-bg.jpg);
-  background-repeat: no-repeat;
-  background-position: center center;
-}
-
-.blog .heading-imgwr .bg {
-  width: 1100px;
-  height: 502px;
-  background: linear-gradient(90deg, rgba(8, 8, 8, 0) 89.68%, #080808 100%),
-    linear-gradient(90deg, #080808 0%, rgba(8, 8, 8, 0) 12.88%),
-    url(../img/heading-blog.jpg);
-}
-
-.about .heading-imgwr .bg {
-  width: 1100px;
-  height: 502px;
-  background: linear-gradient(90deg, rgba(8, 8, 8, 0) 89.68%, #080808 100%),
-    linear-gradient(90deg, #080808 0%, rgba(8, 8, 8, 0) 12.88%),
-    url(../img/heading-about.jpg);
-}
-
-.actorii .heading-imgwr .bg {
-  width: 1100px;
-  height: 502px;
-  background: linear-gradient(90deg, rgba(8, 8, 8, 0) 89.68%, #080808 100%),
-    linear-gradient(90deg, #080808 0%, rgba(8, 8, 8, 0) 12.88%),
-    url(../img/heading-actorii.jpg);
-}
-
-.contacte .heading-imgwr .bg {
-  width: 1100px;
-  height: 502px;
-  background: linear-gradient(90deg, rgba(8, 8, 8, 0) 89.68%, #080808 100%),
-    linear-gradient(90deg, #080808 0%, rgba(8, 8, 8, 0) 12.88%),
-    url(../img/heading-blog.jpg);
-}
-
-.detail .heading-imgwr .bg {
-  width: 1100px;
-  height: 502px;
-  background: linear-gradient(90deg, rgba(8, 8, 8, 0) 89.68%, #080808 100%),
-    linear-gradient(90deg, #080808 0%, rgba(8, 8, 8, 0) 12.88%),
-    url(../img/heading-detail.jpg);
-}
-
-.bg {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-}
-
-.bg .heading-date {
-  min-width: 67px;
-  height: 100px;
-  font-family: 'Lora', sans-serif;
-}
-
-.bg .day {
-  font-size: 12px;
-  line-height: 30px;
-  text-align: center;
-  color: #AFAFAF;
-  margin-bottom: 21px;
-}
-
-.bg .num-day {
-  font-weight: 600;
-  font-size: 50px;
-  line-height: 23px;
-  text-align: center;
-  color: #BA2126;
-}
-
-.bg .month {
-  font-weight: 600;
-  font-size: 12px;
-  line-height: 30px;
-  text-align: center;
-  text-transform: uppercase;
-  color: #FFFFFF;
-  margin-bottom: 0;
-}
-
-.main .social-links {
-  position: absolute;
-  right: 0;
-  height: 100%;
-  margin-left: 0;
-  margin-right: 0;
-  justify-content: center;
-  align-items: center;
-  width: 150.8px;
-  border-left: 1px solid #4f4f4f;
-}
-
-.main .soc-link:last-child {
-  position: unset;
-}
-
-.main .soc-link:first-child {
-  margin-bottom: 30px;
-}
-
-.heading-text {
-  min-height: 152px;
-  padding: 51px 100px 51px calc(50% - 550px);
-  position: absolute;
-  background-color: #fff;
-  bottom: 0;
-  transform: translate(0, 50%);
-  max-width: calc(100% - 150.8px);
-}
-
-.heading-text .multiple-text {
-  display: none;
-}
-
-.ticket-buy-link {
-  transition: background-color ease 0.4s;
-}
-
-.main-link {
-  transition: color ease 0.2s;
-}
-
-.main-link:hover {
-  color: #e6c584 !important;
-}
-
-.heading-text.multiple {
-  padding-top: 27px;
-  padding-bottom: 27px;
-}
-
-.heading-text.multiple .heading {
-  line-height: 64px;
-}
-
-.heading-text.multiple .multiple-text {
-  font-family: 'Lato', sans-serif;
-  display: block;
-  position: absolute;
-  bottom: 27px;
-  font-weight: 600;
-  font-size: 12px;
-  line-height: 30px;
-  text-transform: uppercase;
-  margin-top: 5px;
-  margin-bottom: 0;
-}
-
-.heading-text .heading {
-  font-family: "Lora", serif;
-  font-weight: 600;
-  font-size: 50px;
-  line-height: 50px;
-  color: #C6A564;
-  margin-bottom: 0;
-}
-
-.main-content {
-  font-family: "Lato", sans-serif;
-}
-
-@media (max-width: 1440px) {
-  .spectacole .heading-imgwr .bg {
-    width: calc(100% - 115.8px);
-    height: 502px;
-    background: url(../img/spec-bg.jpg);
-    background-repeat: no-repeat;
-    background-position: center center;
-  }
-
-  .main .social-links {
-    width: 115.8px;
-  }
-
-  .bg .heading-text {
-    max-width: calc(100% - 115.8px);
-  }
-
-  .bg .heading-date {
-    margin-left: 45px;
-  }
-}
-
-@media (max-width: 1199px) {
-  .page-heading .heading-text {
-    padding-left: 45px;
-  }
-
-  .main-content {
-    padding-right: 45px;
-    padding-left: 87px;
-    margin-right: 0;
-    margin-left: 0;
-    width: 100%;
-  }
-
-  .form-heading:before {
-    width: 22px;
-    left: -42px;
-  }
-}
-
-@media (max-width: 991px) {
-  aside.social-links {
-    display: none;
-  }
-
-  .page-heading .heading-text {
-    width: 100%;
-    max-width: 100%;
-    min-height: 80px;
-    padding-right: 45px;
-    padding-top: 20px;
-    padding-bottom: 20px;
-    position: unset;
-    transform: none;
-  }
-
-  .heading-text.multiple .multiple-text {
-    position: static;
-    text-align: center;
-  }
-
-  .main-content {
-    padding-top: 75px;
-  }
-
-  .heading-text .heading {
-    text-align: center;
-    font-size: 40px;
-  }
-
-  .blog .heading-imgwr .bg {
-    background-position: center;
-  }
-}
-
-@media (max-width: 767px) {
-  .form-heading:before {
-    width: 42px !important;
-    left: calc(50% - 21px) !important;
-    top: -10px !important;
-  }
-
-  .main-content {
-    padding-left: 45px !important;
-  }
-
-  .form-heading {
-    text-align: center;
-  }
-
-  .blog .heading-imgwr .bg {
-    height: 350px;
-    background-size: cover;
-    align-items: start;
-  }
-
-  .bg .heading-date {
-    margin-top: 65px;
-  }
-}
+body {
+  cursor: default;
+}
+
+.main {
+  position: relative;
+  top: -1px;
+  margin-bottom: -1px;
+  padding-bottom: 76px;
+}
+
+.main-content {
+  display: flex;
+  flex-direction: column;
+  width: 1110px;
+  padding-top: 174px;
+  margin: 0 auto;
+  font-family: "Lato", sans-serif;
+}
+
+.form-heading {
+  position: relative;
+  font-weight: 600;
+  font-size: 30px;
+  line-height: 30px;
+  color: #fff;
+  margin-bottom: -15px;
+}
+
+.form-heading::before {
+  content: "";
+  position: absolute;
+  left: -62px;
+  top: 15px;
+  height: 1px;
+  width: 42px;
+  background-color: #C6A564;
+}
+
+.main.detail {
+  background-color: #080808;
+}
+
+.main.spectacole {
+  background-color: #161616;
+}
+
+.page-heading {
+  position: relative;
+}
+
+.heading-imgwr {
+  background-color: #080808;
+  max-height: 502px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  position: relative;
+}
+
+.spectacole .heading-imgwr {
+  justify-content: start;
+}
+
+.spectacole .heading-imgwr .bg {
+  width: calc(100% - 150px);
+  height: 502px;
+  background: url(../img/spec-bg.jpg);
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+.blog .heading-imgwr .bg {
+  width: 1100px;
+  height: 502px;
+  background: linear-gradient(90deg, rgba(8, 8, 8, 0) 89.68%, #080808 100%),
+    linear-gradient(90deg, #080808 0%, rgba(8, 8, 8, 0) 12.88%),
+    url(../img/heading-blog.jpg);
+}
+
+.about .heading-imgwr .bg {
+  width: 1100px;
+  height: 502px;
+  background: linear-gradient(90deg, rgba(8, 8, 8, 0) 89.68%, #080808 100%),
+    linear-gradient(90deg, #080808 0%, rgba(8, 8, 8, 0) 12.88%),
+    url(../img/heading-about.jpg);
+}
+
+.actorii .heading-imgwr .bg {
+  width: 1100px;
+  height: 502px;
+  background: linear-gradient(90deg, rgba(8, 8, 8, 0) 89.68%, #080808 100%),
+    linear-gradient(90deg, #080808 0%, rgba(8, 8, 8, 0) 12.88%),
+    url(../img/heading-actorii.jpg);
+}
+
+.contacte .heading-imgwr .bg {
+  width: 1100px;
+  height: 502px;
+  background: linear-gradient(90deg, rgba(8, 8, 8, 0) 89.68%, #080808 100%),
+    linear-gradient(90deg, #080808 0%, rgba(8, 8, 8, 0) 12.88%),
+    url(../img/heading-blog.jpg);
+}
+
+.detail .heading-imgwr .bg {
+  width: 1100px;
+  height: 502px;
+  background: linear-gradient(90deg, rgba(8, 8, 8, 0) 89.68%, #080808 100%),
+    linear-gradient(90deg, #080808 0%, rgba(8, 8, 8, 0) 12.88%),
+    url(../img/heading-detail.jpg);
+}
+
+.bg {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.bg .heading-date {
+  min-width: 67px;
+  height: 100px;
+  font-family: 'Lora', sans-serif;
+}
+
+.bg .day {
+  font-size: 12px;
+  line-height: 30px;
+  text-align: center;
+  color: #AFAFAF;
+  margin-bottom: 21px;
+}
+
+.bg .num-day {
+  font-weight: 600;
+  font-size: 50px;
+  line-height: 23px;
+  text-align: center;
+  color: #BA2126;
+}
+
+.bg .month {
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 30px;
+  text-align: center;
+  text-transform: uppercase;
+  color: #FFFFFF;
+  margin-bottom: 0;
+}
+
+.main .social-links {
+  position: absolute;
+  right: 0;
+  height: 100%;
+  margin-left: 0;
+  margin-right: 0;
+  justify-content: center;
+  align-items: center;
+  width: 150.8px;
+  border-left: 1px solid #4f4f4f;
+}
+
+.main .soc-link:last-child {
+  position: unset;
+}
+
+.main .soc-link:first-child {
+  margin-bottom: 30px;
+}
+
+.heading-text {
+  min-height: 152px;
+  padding: 51px 100px 51px calc(50% - 550px);
+  position: absolute;
+  background-color: #fff;
+  bottom: 0;
+  transform: translate(0, 50%);
+  max-width: calc(100% - 150.8px);
+}
+
+.heading-text .multiple-text {
+  display: none;
+}
+
+.ticket-buy-link {
+  transition: background-color ease 0.4s;
+}
+
+.main-link {
+  transition: color ease 0.2s;
+}
+
+.main-link:hover {
+  color: #e6c584 !important;
+}
+
+.heading-text.multiple {
+  padding-top: 27px;
+  padding-bottom: 27px;
+}
+
+.heading-text.multiple .heading {
+  line-height: 64px;
+}
+
+.heading-text.multiple .multiple-text {
+  font-family: 'Lato', sans-serif;
+  display: block;
+  position: absolute;
+  bottom: 27px;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 30px;
+  text-transform: uppercase;
+  margin-top: 5px;
+  margin-bottom: 0;
+}
+
+.heading-text .heading {
+  font-family: "Lora", serif;
+  font-weight: 600;
+  font-size: 50px;
+  line-height: 50px;
+  color: #C6A564;
+  margin-bottom: 0;
+}
+
+.main-content {
+  font-family: "Lato", sans-serif;
+}
+
+@media (max-width: 1440px) {
+  .spectacole .heading-imgwr .bg {
+    width: calc(100% - 115.8px);
+    height: 502px;
+    background: url(../img/spec-bg.jpg);
+    background-repeat: no-repeat;
+    background-position: center center;
+  }
+
+  .main .social-links {
+    width: 140.8px;
+  }
+
+  .bg .heading-text {
+    max-width: calc(100% - 115.8px);
+  }
+
+  .bg .heading-date {
+    margin-left: 45px;
+  }
+}
+
+@media (max-width: 1199px) {
+  .page-heading .heading-text {
+    padding-left: 45px;
+  }
+
+  .main-content {
+    padding-right: 45px;
+    padding-left: 87px;
+    margin-right: 0;
+    margin-left: 0;
+    width: 100%;
+  }
+
+  .form-heading:before {
+    width: 22px;
+    left: -42px;
+  }
+}
+
+@media (max-width: 991px) {
+  aside.social-links {
+    display: none;
+  }
+
+  .page-heading .heading-text {
+    width: 100%;
+    max-width: 100%;
+    min-height: 80px;
+    padding-right: 45px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    position: unset;
+    transform: none;
+  }
+
+  .heading-text.multiple .multiple-text {
+    position: static;
+    text-align: center;
+  }
+
+  .main-content {
+    padding-top: 75px;
+  }
+
+  .heading-text .heading {
+    text-align: center;
+    font-size: 40px;
+  }
+
+  .blog .heading-imgwr .bg {
+    background-position: center;
+  }
+}
+
+@media (max-width: 767px) {
+  .form-heading:before {
+    width: 42px !important;
+    left: calc(50% - 21px) !important;
+    top: -10px !important;
+  }
+
+  .main-content {
+    padding-left: 45px !important;
+  }
+
+  .form-heading {
+    text-align: center;
+  }
+
+  .blog .heading-imgwr .bg {
+    height: 350px;
+    background-size: cover;
+    align-items: start;
+  }
+
+  .bg .heading-date {
+    margin-top: 65px;
+  }
+
+  .heading-text .heading{
+    font-size: 35px;
+  }
+}
+
