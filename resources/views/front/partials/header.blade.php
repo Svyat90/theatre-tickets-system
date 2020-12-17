@@ -1,6 +1,6 @@
 <header class="header header-black">
     <nav class="navbar navbar-expand-lg">
-        <a class="navbar-brand" href="{{ route('front.home') }}">
+        <a class="navbar-brand" href="{{ route('front.home') }}" style="z-index: 99999999">
             <img id="logo" src="{{ asset('front/img/header-logo.png') }}" alt="Satiricus">
         </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
