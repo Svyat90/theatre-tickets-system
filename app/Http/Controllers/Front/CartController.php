@@ -87,7 +87,7 @@ class CartController extends FrontController
      * @param StoreOrderRequest $request
      * @param EmailService      $emailService
      *
-     * @return Application|Factory|View
+     * @return RedirectResponse
      */
     public function order(StoreOrderRequest $request, EmailService $emailService)
     {
@@ -139,7 +139,7 @@ class CartController extends FrontController
             $request->email
         );
 
-        return view('front.cart.success');
+        return redirect()->route('cart.success');
     }
 
     /**
