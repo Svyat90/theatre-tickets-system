@@ -63,13 +63,13 @@
                             </a>
                             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                                 @foreach($page->children as $child)
-                                    <a class="dropdown-item" href="{{ $page->is_static ? config('app.url') . '/' . $page->slug : route('pages.show', $page->slug) }}">{{ $child->name }}</a>
+                                    <a class="dropdown-item" href="{{ \App\Helpers\SlugHelper::href($page->slug) }}">{{ $child->name }}</a>
                                 @endforeach
                             </div>
                         </li>
                         @else
                             <li class="nav-item">
-                                <a class="nav-link" href="{{ $page->is_static ? config('app.url') . '/' . $page->slug : route('pages.show', $page->slug) }}">{{ $page->name }}</a>
+                                <a class="nav-link" href="{{ \App\Helpers\SlugHelper::href($page->slug) }}">{{ $page->name }}</a>
                             </li>
                         @endif
                     @endforeach

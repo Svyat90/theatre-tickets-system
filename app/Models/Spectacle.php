@@ -89,7 +89,6 @@ class Spectacle extends BaseModel
         return $this->belongsToMany(Order::class, 'order_spectacle', 'spectacle_id', 'order_id');
     }
 
-
     /**
      * @return Media|null
      */
