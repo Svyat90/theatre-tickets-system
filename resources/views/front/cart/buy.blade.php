@@ -66,7 +66,7 @@
                                 {{ $vars['payment_reserve_in_theater'] }}
                             </label>
                         </div>
-                        <span class="pay-info">{{ $vars['payment_reserve_in_theater_comment'] }}</span>
+                        <span class="pay-info">{{ $vars['payment_reserve_theater_comm'] }}</span>
                         <div class="form-input-wr" style="{{ $errors->any() ? '' : 'display: none;' }} color: red; text-align: center;">
                             @if($errors->any())
                                 {!! implode('', $errors->all('<strong>:message</strong><br>')) !!}

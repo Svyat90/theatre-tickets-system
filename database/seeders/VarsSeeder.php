@@ -612,7 +612,7 @@ class VarsSeeder extends Seeder
             'ro' => 'Broneaza in teatru',
             'en' => 'Broneaza in teatru'
         ],
-        'payment_reserve_in_theater_comment' => [
+        'payment_reserve_theater_comm' => [
             'ru' => 'необходимо оплатить билет минимум за час до сеанса',
             'ro' => 'trebuie să plătiți un bilet cu cel puțin o oră înainte de sesiune',
             'en' => 'you must pay a ticket at least one hour before the session'
