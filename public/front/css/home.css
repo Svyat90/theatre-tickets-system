@@ -132,7 +132,7 @@
 
 .home-btn {
   background-color: #BA2126;
-  transition: background-color ease 0.4s; 
+  transition: background-color ease 0.4s;
 }
 
 .home-btn:hover {
@@ -393,7 +393,7 @@
 
 .home .title-name {
   display: block;
-  max-width: 500px;
+  max-width: 550px;
   margin-bottom: 0;
   font-family: "Lora", serif;
   font-weight: 300;
