@@ -117,7 +117,7 @@
                         <p class="total-price">
                             {{ $vars['spectacle_total'] }}: <span class="total-num">{{ $total }} {{ $vars['spectacle_lei'] }}</span>
                         </p>
-                        <button class="bt home-btn" id="order-btn">
+                        <button class="bt home-btn">
                             <a class="home-link" href="{{ route('cart.order') }}">{{ $vars['spectacles_reserve_tickets'] }}</a>
                         </button>
                     </div>
@@ -130,9 +130,9 @@
 @section('scripts')
     <script>
         $(function () {
-            $("#order-btn").click(function (e) {
+            $(".home-btn").click(function (e) {
                 e.preventDefault();
-                $('form[name="order"]').submit();;
+                $('form[name="order"]').submit();
             })
         });
     </script>
