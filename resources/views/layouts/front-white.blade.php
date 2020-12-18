@@ -23,7 +23,7 @@
 <div class="wrapper">
     <header class="header header-white">
         <nav class="navbar navbar-expand-lg">
-            <a class="navbar-brand" href="{{ route('front.home') }}">
+            <a class="navbar-brand" href="{{ \App\Helpers\SlugHelper::href('home') }}" style="z-index: 99999999; max-height: 50px;">
                 <img id="logo" src="{{ asset('front/img/header-logo-white.png') }}" alt="Satiricus">
             </a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"

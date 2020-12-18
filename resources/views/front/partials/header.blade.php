@@ -1,7 +1,7 @@
 <header class="header header-black">
     <nav class="navbar navbar-expand-lg">
-        <a class="navbar-brand" href="{{ route('front.home') }}">
-            <img id="logo" src="{{ asset('front/img/header-logo.png') }}" style="z-index: 99999999" alt="Satiricus">
+        <a class="navbar-brand" href="{{ \App\Helpers\SlugHelper::href('home') }}" style="z-index: 99999999; max-height: 50px;">
+            <img id="logo" src="{{ asset('front/img/header-logo.png') }}" alt="Satiricus">
         </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
                 aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">

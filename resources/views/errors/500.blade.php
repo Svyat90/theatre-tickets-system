@@ -20,7 +20,7 @@
                 {{ $vars['500_info_' . app()->getLocale()] }}
             </p>
             <button class="bt home-btn">
-                <a class="home-link" href="{{ route('front.home') }}">{{ $vars['500_home_' . app()->getLocale()] }}</a>
+                <a class="home-link" href="{{  \App\Helpers\SlugHelper::href('home') }}">{{ $vars['500_home_' . app()->getLocale()] }}</a>
             </button>
         </div>
     </main>

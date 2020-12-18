@@ -20,7 +20,7 @@
                 {!! $vars['success_desc'] !!}
             </p>
             <button class="bt home-btn">
-                <a class="home-link" href="{{ route('front.home') }}">{{ $vars['cart_success_home'] }}</a>
+                <a class="home-link" href="{{  \App\Helpers\SlugHelper::href('home') }}">{{ $vars['cart_success_home'] }}</a>
             </button>
         </div>
     </main>
