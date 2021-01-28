@@ -137,7 +137,7 @@
                             @endif
 
                         </div>
-                        <div class="program-col d-flex">
+                        <div class="program-col d-flex" style="color: #afafaf;">
                             <p class="program-text">
                                 {!! $spectacle->description !!}
                             </p>
