@@ -3,6 +3,7 @@
 namespace App\Repositories;
 
 use App\Models\Category;
+use App\Models\Spectacle;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Collection;
 
@@ -40,7 +41,10 @@ class CategoryRepository extends Model
         return Category::query()
             ->find($categoryId)
             ->spectacles
-            ->sortBy('start_at');
+            ->sortBy('start_at')
+            ->filter(function (Spectacle $spectacle) {
+                return $spectacle->active;
+            });
     }
 
     /**

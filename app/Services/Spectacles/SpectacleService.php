@@ -72,7 +72,7 @@ class SpectacleService
             return app(CategoryRepository::class)->getSpectacles($categoryId);
         }
 
-        return $this->repository->getCollectionToIndex();
+        return $this->repository->getActiveSpectacles();
     }
 
     /**
