@@ -417,6 +417,11 @@ class VarsSeeder extends Seeder
             'ro' => 'Istorie',
             'en' => 'History'
         ],
+        'worker_history_chronology' => [
+            'ru' => 'История 2',
+            'ro' => 'Istorie',
+            'en' => 'History'
+        ],
         'spectacle_gallery_title' => [
             'ru' => 'Galerie',
             'ro' => 'Galerie',

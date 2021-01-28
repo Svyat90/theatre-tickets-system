@@ -10,6 +10,7 @@ use Spatie\MediaLibrary\MediaCollections\Models\Media;
  *
  * @property int $worker_category_id
  * @property boolean $active
+ * @property int $order
  * @property boolean $on_home
  * @property boolean $on_top
  * @property array $name
@@ -44,6 +45,7 @@ class StoreWorkerRequest extends FormRequest
         return [
             'worker_category_id' => 'sometimes|nullable|int|exists:worker_categories,id',
             'active' => 'required|bool',
+            'order' => 'sometimes|nullable|integer',
             'on_top' => 'required|bool',
             'on_home' => 'required|bool',
             'name' => 'sometimes|array',

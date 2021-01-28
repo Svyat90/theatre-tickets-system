@@ -123,6 +123,16 @@
                         <span class="help-block">{{ __("cruds.workers.fields.{$name}_helper") }}</span>
                     </div>
 
+                    <div class="form-group col-md-4 col-sm-4 col-xs-4">
+                        <label class="required" for="{{ $name = 'order' }}">{{ __("cruds.workers.fields.$name") }}</label>
+                        <input class="form-control {{ $errors->has($name) ? 'is-invalid' : '' }}" type="number" min="0" name="{{ $name }}"
+                               id="{{ $name }}" value="{{ old($name, $worker->$name) }}">
+                        @if($errors->has($name))
+                            <span class="text-danger">{{ $errors->first($name) }}</span>
+                        @endif
+                        <span class="help-block">{{ __("cruds.workers.fields.{$name}_helper") }}</span>
+                    </div>
+
                     <div class="form-group col-md-12 col-sm-12 col-xs-12">
                         <label class="" for="{{ $name = 'image' }}">{{ __("cruds.workers.fields.$name") }}</label>
                         <div class="needsclick dropzone {{ $errors->has('file') ? 'is-invalid' : '' }}" id="{{ $name }}">

@@ -4,6 +4,10 @@
     <link rel="stylesheet" href="{{ asset('front/css/about.css') }}">
 @endsection
 
+@php
+    $maxWidth = 445;
+@endphp
+
 @section('content')
     <main class="main about">
         <div class="page-heading">
@@ -35,7 +39,7 @@
                                 {!! $worker->text_1 !!}
                             </div>
                             <div class="block-img-wr">
-                                <img src="{{ MediaHelper::getImageUrl($worker, 'image') }}" alt="" style="max-width: {{ $maxWidth = 445 }}px;">
+                                <img src="{{ MediaHelper::getImageUrl($worker, 'image') }}" alt="" style="max-width: {{ $maxWidth }}px;">
                             </div>
                         @else
                             <div class="block-text-wr block-text" style="width: 100%;">
@@ -93,7 +97,7 @@
             @if($worker->text_5)
                 <div class="about-history">
                     <h2 class="form-heading">
-                    {!! $vars['worker_history_title'] !!}
+                    {!! $vars['worker_history_chronology'] !!}
                 </h2>
                 <div class="history-blocks" style="color: #afafaf;">
                     <div class="dot top"></div>

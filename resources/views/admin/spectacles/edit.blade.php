@@ -36,7 +36,7 @@
                                             @endphp
 
                                             <div class="form-group col-md-12 col-sm-12 col-xs-12">
-                                                @if (in_array($field, ['text_1', 'text_2', 'text_3', 'text_4', 'text_5', 'text_6']))
+                                                @if (in_array($field, ['text_1', 'description', 'video_desc']))
                                                     <div class="form-group">
                                                         <label for="{{ $name = $field . '[' . $language->locale . ']' }}">
                                                             {{ __("cruds.spectacles.fields.$field") }}

@@ -248,6 +248,8 @@ return [
             'image_4_helper'       => '',
             'image_gallery'              => 'Images (Gallery)',
             'image_gallery_helper'       => '',
+            'order'              => 'Order',
+            'order_helper'       => '',
         ],
     ],
     'about'                     => [

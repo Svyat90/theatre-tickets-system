@@ -37,9 +37,20 @@ class WorkerRepository extends Model
     {
         return Worker::query()
             ->active()
-            ->latest()
             ->where('on_home', true)
+            ->orderBy('order')
             ->limit(8)
+            ->get();
+    }
+
+    /**
+     * @return Collection
+     */
+    public function getCollection() : Collection
+    {
+        return Worker::query()
+            ->active()
+            ->orderBy('order')
             ->get();
     }
 

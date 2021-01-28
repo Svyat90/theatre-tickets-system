@@ -65,7 +65,7 @@ class WorkerService
             return app(WorkerCategoryRepository::class)->getWorkers($categoryId);
         }
 
-        return $this->repository->getCollectionToIndex();
+        return $this->repository->getCollection();
     }
 
     /**
